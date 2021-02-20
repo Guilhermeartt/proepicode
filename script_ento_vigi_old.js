@@ -57,7 +57,7 @@ function loadCSS(url) {
   var lnk = document.createElement('link');
   lnk.setAttribute('type', "text/css" );
   lnk.setAttribute('rel', "stylesheet" );
-  lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/style_qgis.css" );
+  lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/style_ento_vigi_old.css" );
   
   document.getElementsByTagName("head").item(0).appendChild(lnk);
   
