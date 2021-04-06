@@ -1,5 +1,14 @@
 
- 
+function loadCSS(url) {
+  var lnk = document.createElement('link');
+  lnk.setAttribute('type', "text/css" );
+  lnk.setAttribute('rel', "stylesheet" );
+  lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/cursos/codigos/style_curso.css" );
+  
+  document.getElementsByTagName("head").item(0).appendChild(lnk);
+  
+}
+loadCSS(URL) 
 
 function loadNAV(url) {
   var lnk = document.createElement('link');
