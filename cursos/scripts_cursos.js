@@ -45,6 +45,26 @@ function loadGRID(url) {
 loadGRID(URL)
 
 
+function loadSCRIPTmodal(url) {
+  var lnk = document.createElement('script');
+  lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
+  
+  document.getElementsByTagName("body").item(0).appendChild(lnk);
+  
+}
+loadSCRIPTmodal(URL)
+
+
+function loadSCRIPTnav(url) {
+  var lnk = document.createElement('script');
+  lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js" );
+  
+  document.getElementsByTagName("body").item(0).appendChild(lnk);
+  
+}
+loadSCRIPTnav(URL)
+
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
