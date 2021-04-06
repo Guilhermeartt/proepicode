@@ -1,5 +1,5 @@
 .sidenav {
-  position: inherit;
+  position: sticky;
   top: 15%;
   left: 2%;
   z-index: 1;
