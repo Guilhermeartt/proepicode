@@ -1,10 +1,18 @@
-.sidenav {
+section .sidenav {
   position: sticky;
   top: 15%;
   left: 2%;
   z-index: 1;
 }
-.sidenav button {
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+section .sidenav button {
   background-color: #2a7138;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
@@ -14,13 +22,13 @@
   font-size: 20px;
 }
 
-.sidenav .nav {
+section .sidenav .nav {
   width: 250px;
   background-color: #2a7138;
   border-radius: 2px;
   padding: 20px 0;
 }
-.sidenav .nav a {
+section .sidenav .nav a {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: #fff;
@@ -29,7 +37,7 @@
   padding: 0 20px 0 30px;
   transition: 0.3s;
 }
-.sidenav .nav a#featured {
+section .sidenav .nav a#featured {
   font-weight: bold;
   margin-bottom: 20px;
 }
