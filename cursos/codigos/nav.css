@@ -9,7 +9,7 @@ div.sticky {
   background-color: green;
   border: 2px solid #4CAF50;
 }
-section .sidenav button {
+section > .sidenav button {
   background-color: #2a7138;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
