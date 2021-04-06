@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 
-section {
-  background-color: #e6e6e6;
+section .proepi {
+	  background-color: #e6e6e6;
   width: 100% !important;
 }
 
@@ -53,9 +53,10 @@ p.TtuloAula {
 }
 
 @media screen and (min-width: 992px) {
-  section {
-    width: 992px !important;
-  }
+	section .proepi {
+	  
+	  margin: auto;
+	}
 }
 
 @media screen and (min-width: 1200px) {
