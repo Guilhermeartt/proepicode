@@ -68,17 +68,11 @@
 	  font-size: 8.0pt;
 	  font-family: "Arial", sans-serif;
 	}
-	body {
+	section {
 	  width: 997px !important;
 	  margin: auto;
 	}
-	section {
-	  margin-top: 0px !important;
-	  padding-bottom: 30px;
-	  position: fixed;
-	  width: inherit;
-	  z-index: 1;
-	}
+
 	html {
 	  scroll-behavior: smooth;
 	}
