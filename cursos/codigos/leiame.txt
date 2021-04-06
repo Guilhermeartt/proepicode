@@ -1,0 +1,20 @@
+Comando inicial:
+
+python Format.py
+
+Caminho para o arquivo: (exemplo)
+
+Aula 05/Vacinação_aula_05.html
+
+Arquivo gerado na raiz, mover para a pasta que ele pertence.
+
+
+Passos do Format.py:
+
+1. Remover width de td/tables (width="794")
+2. Remover width de td do style= (width:595.3pt;)
+3. Remover height elementos do style= (height:1.0pt;)
+4. Adicionar tag do código css após tag <title>
+5. Remover --> e <-- do código
+
+cellspacing="34816"
