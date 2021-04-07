@@ -1,0 +1,728 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+	
+	table.MsoTableGrid {
+    border: solid windowtext 1.0pt;
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+    width: 100%;
+}
+p.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+	color: #ffffff;
+	}
+p.Fonte {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    text-align: center;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+    color: gray;
+}
+p.txtrec {
+    margin-top: 12.0pt;
+    margin-right: 5.65pt;
+    margin-bottom: 6.0pt;
+    margin-left: 5.65pt;
+	padding: 10px 20px;
+	line-height:150%;
+    text-align: justify;
+    font-size: 14.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.MsoNormal {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 175% !important;
+    padding: 15px 28px;
+    text-align: justify;
+    font-size: 12pt;
+    font-family: "Arial", sans-serif;
+}
+table.Tabela01 {
+    border: solid white 2.25pt;
+    text-align: center;
+    font-size: 9.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+td li {
+    margin-left: 55px;
+}
+p.txttabela8 {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.txttabela {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+body {
+    width: 997px !important;
+    margin: auto;
+}
+section {
+    margin-top: 0px !important;
+    padding-bottom: 30px;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+h1 {
+    margin-top: 30px
+}
+td li {
+    line-height: 150%;
+    list-style: disc;
+    font-size: 16.0pt !important;
+    font-family: "Arial", sans-serif;
+}
+	td li span{
+    font-size: 16.0pt !important;
+    
+}
+-->
+.SN_sumario {
+    position: fixed;
+    z-index: 1;
+    font-family: "Arial", sans-serif;
+    margin: 2;
+}
+.vertical-menu li {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+table.tabelaneuro {
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+.progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+}
+.Fonte {
+    overflow: hidden;
+}
+.Fonte img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Fonte:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.txtChar {
+    font-family: "Calibri", sans-serif;
+    color: windowtext;
+}
+span.FonteChar {
+    font-family: "Calibri", sans-serif;
+    color: gray;
+}
+
+ul, #SN_menu {
+    list-style-type: none;
+}
+#SN_menu {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-decoration: none;
+    padding-inline-start: 0px !important;
+}
+.caret {    
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+.nested {
+    display: none;
+    transition: 1s;
+}
+.SN_active {
+    display: block;
+    transition: 1s;
+}
+.SN_main {
+    background-color: #FFFfFF;
+    border: solid 1px #ffffff;
+    color: black;    
+}
+    
+a.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+    text-decoration-color: black;
+}  
+
+h1 {
+    padding-top: 50px
+    }
+    
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.MsoTableGridLight {
+border:solid #BFBFBF 1.0pt;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+p.Pimagem {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:center;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+p.MsoCaption {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:18.0pt;
+margin-left:0cm;
+text-align:center;
+font-size:8.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpFirst {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpLast {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptexto {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.Ppargrafo {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.P1Ttulonumerado {
+margin-top:20.0pt;
+margin-right:0cm;
+list-style-type: decimal;
+margin-bottom:18.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:18.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+	td div{
+		    margin-left: -100px;
+
+	}
+	
+	p.P11Ttulonumerado {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:20.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+table.TableNormal {
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.txtrecChar {
+font-family:"Arial",sans-serif;
+}
+	
+	td div.sabimais{
+	border-radius: 70px;
+    background-color: lightgoldenrodyellow;
+    padding: 15px 0px;
+	}
+	td div.ficaafica{
+	border-radius: 70px;
+    background-color: lightcyan;
+    padding: 15px 0px;
+	}
+	td div.curiosidade{
+	border-radius: 70px;
+    background-color: lightblue;
+    padding: 15px 0px;
+	}
+	
+-->
+</style>
+<style type="text/css">
+<!--
+p.Pdestaque {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+line-height:107%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.MZtabela {
+border:solid white 2.25pt;
+text-align:center;
+font-size:11.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptextotabela {
+margin:0cm;
+text-align:center;
+line-height:115%;
+font-size:9.0pt;
+font-family:"Calibri",sans-serif;
+}
+	
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.Ptabela {
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+</head>
+	
+	
+<body>
+
+<table class="Ptabela" border="0" cellspacing="0" cellpadding="0" width="997px" style="width:100.0%;border-collapse:collapse;">
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#2A7138;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#2A7138"><p class="TtuloAula">Aula 1 - Introdução ao Planejamento para Vacinação do Covid-19</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="586" height="316" src="img/Vacinação_aula_01_clip_image002_0000.jpg"></p>
+      <p class="MsoCaption">Figura 1    - Garoto recebendo vacina para caxumba sarampo e rubéola, vacina MMR Por    twenty20photos</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="PpargrafoCxSpFirst">Olá!<span style="font-family:'Times New Roman',serif; "> </span></p>
+      <p class="PpargrafoCxSpLast">Nesta aula você vai aprender a importância da    vacinação para o controle da Covid-19 e entender como identificar e estimar a    população-alvo e analisar a capacidade dos serviços de vacinação.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:<span style="font-family:'Times New Roman',serif; "> </span></p>
+      <ul>
+        <li>Entender a importância da vacinação para o    controle da Covid-19;</li>
+        <li>Compreender como realizar a identificação e    estimativa da população-alvo;</li>
+        <li>Entender como analisar a capacidade dos    serviços de vacinação;</li>
+        <li>Descrever as estratégias de vacinação de seu    local.&nbsp;</li>
+      </ul></td>
+  </tr>
+</table>
+
+<table class="Ptabela" border="0" cellspacing="0" cellpadding="0" width="997px" style="width:100.0%;border-collapse:collapse;">
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+	      <p class="P1Ttulonumerado"><a name="_Toc65449446">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Por que vacinar? <strong>As vacinas são um dos meios mais eficazes    para atingir o controle de alguma doença</strong>. Elas são substâncias produzidas    através do microrganismo de interesse que tem o papel de <strong>preparar o sistema imune </strong>para a possível chegada deste. Dessa    forma, o organismo já estará habilitado a combater esse patógeno e sua    resposta será mais eficaz. Assim, vacinar é um caminho almejado para o    controle da Covid-19, no Brasil e no mundo (ABBAS, A. K.; LICHTMAN, A. H.;    PILLASI, S. H. I. V., 2019).&nbsp;<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><div class="curiosidade" align="center">
+	      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+	        <tr class="anime" >
+	          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="img/Vacinação_aula_01_clip_image002_0000.png"></span><span style="color:black; "> </span></p></td>
+	          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Curiosidade!</span></strong></p>
+	            <p class="txtrec"><span style="color:black; ">O Brasil possuía o Certificado de      Eliminação do Sarampo e esse fato só foi possível devido à grande adesão da      população à vacinação contra a doença. Infelizmente, há alguns anos a      cobertura vacinal reduziu e, associado a outros problemas, a doença voltou      a circular de forma comunitária e perdemos esse certificado. Para ampliar      seu conhecimento acesse o link:</span></p>
+	            <a href="http://bit.ly/38T9RBR" target="_blank"> <p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img border="0" width="161" height="47" src="img/Vacinação_aula_01_clip_image003_0000.png" usemap="#MicrosoftOfficeMap0" alt="Retângulo: Cantos Arredondados: Clique aqui!"></span><span style="color:black; "> </span></p></a>
+	            <p class="MsoCaption"><span style="color:black; ">http://bit.ly/38T9RBR</span></p></td>
+            </tr>
+          </table>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A vacina contra a Covid-19 foi extremamente esperada por    todos, como uma esperança de dias melhores. Portanto, fazer com que ela    chegue às pessoas de forma organizada e segura precisa de planejamento    minucioso. Aqui você poderá compreender e aplicar esse conhecimento em seu    município. O microplanejamento municipal da campanha de vacinação contra a    Covid-19 deve contemplar um <strong>conjunto    de etapas</strong>, sendo que o produto final destas etapas deve ser <strong>adaptável e permitir revisões</strong> recorrentes de suas estratégias, métodos e prioridades. As revisões e    mudanças que poderão acontecer no planejamento da campanha de vacinação podem    ocorrer em função de vários aspectos, que podem variar desde os avanços e    sucessos resultantes do planejamento, como em decorrência dos empecilhos que    poderão ser encontrados durante a realização da campanha ou mais informações    sobre as características das vacinas são disponibilizadas.</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">É muito importante que o microplanejamento esteja <strong>baseado na realidade local</strong>, seja flexível, eficiente, viável,    organizado, e que garanta o empoderamento das equipes de saúde e assegurando    o monitoramento e a avaliação dos resultados alcançados. Além disso, o    microplanejamento deve ser capaz de responder perguntas simples como: Para    quê? Como? Onde?  Quando?</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Pensando nisso, os dez passos descritos nesta e nas    próximas aulas, e que você pode ver no Guia de Planejamento de Campanha de    Vacinação, baseiam-se em orientações de organizações internacionais de saúde    para o planejamento da introdução da vacina contra a Covid-19. Esses passos    têm o objetivo de tornar as orientações mais didáticas, direcionar e auxiliar    a elaboração do microplanejamento da campanha de vacinação contra a Covid-19    em nível local. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Lembre-se que os dez passos aqui apresentados podem ser    desenvolvidos ao mesmo tempo e devem ser abordados em consonância com as    diretrizes constantes nos respectivos planos municipais, estaduais e    nacionais para o microplanejamento a nível local.    </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+	      <p class="P11Ttulonumerado"><a name="_Toc65449447"><span style="color:black; ">Passo 1. Identificação e </span></a><span style="color:black; ">estimativa    da população-alvo</span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A principal meta da vacinação em massa contra a Covid-19 é    alcançar a <strong>imunidade coletiva</strong> necessária para <strong>interromper a cadeia    de transmissão</strong> do novo coronavírus. Para alcançar esta imunidade coletiva    estima-se que uma alta parcela da população seja vacinada (OMS, 2020b), o que    seria alcançado após um tempo considerável, uma vez que, atualmente, não há    ampla disponibilidade de vacinas contra a Covid-19. Essa demora para se    alcançar a imunidade coletiva pode custar a vida de milhares de cidadãos que    desenvolvem a forma grave da doença. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><div class="sabimais" align="center">			
+	      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+	        <tr class="anime" >
+	          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="img/Vacinação_aula_01_clip_image005_0000.png"></span><span style="color:black; "> </span></p></td>
+	          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Saiba Mais!</span></strong></p>
+	            <p class="txtrec"><span style="color:black; ">Você sabe o que é imunidade      coletiva ou imunidade de rebanho? Não? Então <span class="txtrecChar">confira</span> esse vídeo para aprender.</span></p>
+	            <a href="https://www.instagram.com/p/CIY9py8H-E4/" target="_blank"></a><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img border="0" width="161" height="47" src="img/Vacinação_aula_01_clip_image006_0000.png" usemap="#MicrosoftOfficeMap1" alt="Retângulo: Cantos Arredondados: Clique aqui!"></span><span style="color:black; "> </span></p></a>
+	            <p class="MsoCaption"><span style="color:black; "><a href="https://www.instagram.com/p/CIY9py8H-E4/"><span style="text-underline:none; color:black; text-decoration:none; ">https://www.instagram.com/p/CIY9py8H-E4/</span></a></span></p></td>
+            </tr>
+          </table>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Os indivíduos propensos ao agravamento da doença causada    pelo novo coronavírus integram os chamados grupos de risco para a Covid-19    (CDC, 2020). Imunizar e proteger esses grupos em um primeiro momento, no qual    não temos ampla disponibilidade da vacina no mundo, é crucial para o enfrentamento da pandemia.</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><div class="ficaafica" align="center">
+	      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+	        <tr class="anime" >
+	          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><a name="_Hlk65449023"><span style="color:black; "><img border="0" width="127" height="127" src="img/Vacinação_aula_01_clip_image008_0000.png"></span><span style="color:black; "> </span></a></p></td>
+	          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica!</span></strong></p>
+	            <p class="txtrec"><span style="color:black; ">O grupo de risco pode mudar para cada doença. Por      exemplo, para o Covid-19 os grupos considerados de risco são os idosos e      portadores de doenças crônicas, por exemplo. Para a Zika, entretanto, são      considerados grupos de risco as gestantes. É importante avaliar de que      doença você está fazendo o planejamento da campanha de vacinação, para que      seu resultado seja efetivo.</span></p></td>
+            </tr>
+          </table>
+	      </div>
+	      <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;line-height:150%;"><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">O objetivo da vacinação, ao menos inicialmente, deve se    concentrar em (OPAS, 2020a):</p></td>
+  </tr>
+	  <tr class="anime"  style="height:62.45pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:62.45pt;"><ul>
+	      <li><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Reduzir    a <strong>morbidade e mortalidade</strong> associadas à Covid-19, dessa forma garantindo proteção às populações dos    grupos de risco;</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Proteger    o sistema de saúde e a <strong>continuidade    dos serviços essenciais</strong>. </span></li>
+	      </ul></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Em um segundo momento, deve ocorrer a <strong>ampliação do acesso à vacinação</strong> para outros grupos, de acordo com    a disponibilidade de vacinas e visando reduzir a transmissão da infecção e    alcançar a imunidade coletiva contra a doença. Enquanto essa ampla    disponibilidade de doses de vacina não é atingida, as primeiras fases da    campanha de vacinação contra a Covid-19 devem centralizar-se em grupos    prioritários. Mas, lembre-se: mesmo para esses grupos não haverá ampla e    imediata disponibilidade de vacinas e por isso muitos locais podem dividir a    campanha de vacinação em fases e subgrupos (OMS, 2020c; OPAS, 2020a).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Os grupos prioritários que receberão as primeiras doses da    vacina contra a Covid-19 formam a <strong>população-alvo</strong> da campanha no município. Esses grupos são selecionados de acordo com a    situação epidemiológica dos diferentes territórios e sua descrição pode ser    encontrada nos planos nacionais e estaduais de imunização do município. É    natural que <strong>idosos e trabalhadores da    saúde</strong> despontem como os grupos prioritários nas primeiras fases da    campanha, uma vez que representam um dos principais grupos de risco para o    agravamento da doença e a principal força de trabalho no enfrentamento à    pandemia, respectivamente (OMS, 2020c).  </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Identificada a população-alvo para a vacinação dentro do    município, o próximo passo para o planejamento será estimar quantas pessoas,    separadamente, formam essas populações. Avaliar esses números é    imprescindível para (OMS, 2020c):</p></td>
+  </tr>
+	  <tr class="anime"  style="height:124.85pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:124.85pt;"><ul>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">quantificar    o número de <strong>doses necessárias</strong> para    vacinar os grupos prioritários na comunidade, </span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">estabelecer    a quantidade de <strong>insumos necessários</strong>, </span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">determinar,    no futuro, <strong>indicadores</strong> para    monitorar e avaliar o desempenho da campanha de vacinação em cada um dos    grupos prioritários, e</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">definir    as <strong>estratégias</strong> de vacinação.</span></li>
+	      </ul></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Para se alcançar números aproximados dessas populações no    município é fundamental possuir dados atualizados, além de dispor de    informações sobre os padrões migratórios do local. Podem ser utilizados como    referência para essas informações: dados de censos nacionais; planos de    vacinação contra influenza sazonal; dados de associações de pacientes com    patologias crônicas; número de trabalhadores de saúde dos setores público e    privado; registros de estudos de prevalência de doenças crônicas; registros    civis, entre outros (OMS, 2020c; OPAS, 2020a).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+	      <p class="P11Ttulonumerado"><a name="_Toc65449448"><span style="color:black; ">Passo 2. Análise da capacidade dos serviços de    vacinação e estimativa de necessidad</span></a><span style="color:black; ">es</span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Os serviços de vacinações locais devem dispor de todos os <strong>recursos necessários</strong> para a    realização da campanha de vacinação contra a Covid-19. Isso engloba recursos    humanos capacitados, insumos, disponibilidade de equipamentos de proteção    individual, entre outros. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Identificar as necessidades da equipe em nível local é    essencial para o <strong>planejamento das    necessidades</strong>. Um dos primeiros itens que deve ser definido é o número de    profissionais e de equipes necessárias para a vacinação do público-alvo no    município. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A vacina contra a Covid-19 pode ser aplicada por    profissionais legalmente habilitados para esta prática, o que inclui médicos,    enfermeiros, técnicos de enfermagem, entre outros, desde que capacitados.    Assim, devem ser identificados <strong>quais    profissionais irão compor</strong> a campanha de vacinação, a fim de quantificar e    caracterizar todos os <strong>recursos humanos    disponíveis</strong> (OMS, 2020c). </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Um ponto importante a ser ressaltado é que possivelmente a    realização da campanha acontecerá concomitante a aplicação das demais vacinas    de rotina. Consequentemente, é possível que novas equipes de vacinação sejam    formadas e novas salas de vacinação possam ser implementadas para a    realização da campanha de imunização contra Covid-19. Para estimar o número    de profissionais e salas de vacinação necessários para realização da campanha    no local, verifique o número estimado de pessoas que receberão as vacinas em    cada uma das fases da campanha, de acordo com o componente anterior (OMS,    2020c). </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">As necessidades de equipamentos e materiais de consumo    também devem ser levantadas. Inicie levantando o quantitativo já existente de <strong>equipamentos de proteção individual</strong> (EPIs) e outros <strong>insumos básicos</strong>,    como seringas, agulhas, entre outros. Em seguida, estime a quantidade que    será necessária para execução do plano de vacinação, considerando a possível    ampliação da equipe para a realização da campanha, as diferentes estratégias    que serão utilizadas no município e o fator de perda. Lembre-se que o uso de    luvas pelos vacinadores não é exigido nas diretrizes internacionais, à    exceção de quando o vacinador apresentar lesões abertas com soluções de    continuidade nas mãos ou o paciente apresentar lesões, cortes ou erupções    cutâneas (OPAS, 2020b; UNICEF, 2020).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Alguns insumos básicos para a atividade de vacinação    incluem agulhas e seringas, caixas térmicas para acondicionamento e transporte    de vacinas, caixas coletoras de perfurocortantes, bobinas de gelo, sabão,    álcool líquido ou gel, formulários e cadernetas de registro, entre outros.    Todos esses itens deverão ser estimados, incluindo o fator de perda e    considerando as atividades que serão realizadas extramuros, ou seja, fora da    unidade de saúde (OPAS, 2020b).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+	      <p class="P11Ttulonumerado"><a name="_Toc65449449"><span style="color:black; ">Passo 3. </span></a><span style="color:black; ">Estratégias    de vacinação</span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A estratégia é o <strong>como    fazer</strong>, o caminho que se pretende seguir para se alcançar o objetivo de    vacinar toda a população-alvo do plano de vacinação. Nesta etapa todas as    estratégias e táticas que podem ser adotadas no município devem ser    levantadas e descritas. Mas lembre-se que as estratégias adotadas pelos    locais específicos deverão estar de acordo com as fases, os grupos    prioritários e o cronograma estabelecido nos planos estaduais ou nacionais de    sua localidade.</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Assim, antes de definir as estratégias para cumprimento    das fases da campanha, atente-se aos <strong>grupos    populacionais</strong> que formam a população-alvo de cada uma das fases previstas    para a imunização no seu local. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Ao contrário de outras campanhas com alvos muito bem    definidos, diferentes grupos populacionais heterogêneos formam as diversas    fases descritas nos planos nacionais e estaduais de vacinação contra a    Covid-19. Por isso, é importante entender que são necessárias estratégias    variadas para se alcançar o sucesso da vacinação nestes grupos. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Com base nas recomendações da Organização Pan-americana de    Saúde (2020a), indica-se que os municípios organizem as seguintes    estratégias:</p></td>
+  </tr>
+	  <tr class="anime"  style="height:145.9pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:145.9pt;"><ul>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    institucional</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    em locais especiais: como farmácias, supermercados, bancos, locais de    trabalho, entre outros</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    móvel</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    em autoatendimento (drive-thru)</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    com hora marcada</span></li>
+	      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Vacinação    domiciliar</span></li>
+	      </ul></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A <strong>vacinação    institucion</strong><strong>al</strong> é a vacinação programada para    acontecer por tempo limitado nas instituições, esse tipo de estratégia ajuda    na facilitação do acesso à vacina, mas deverá ser articulada e planejada    junto às instituições que manifestem interesse nessa tática. Esse tipo de    estratégia pode ser potencialmente benéfica para alcançar os trabalhadores de    saúde do município, tanto da rede pública como da rede privada, idosos    institucionalizados e pessoas com comorbidades. Potenciais locais de    vacinação podem incluir hospitais públicos e privados, clínicas privadas,    instalações de cuidados a longo prazo, entre outros (OMS, 2020c).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A vacinação em <strong>locais    especiais</strong> também funciona por tempo limitado e para o sucesso dessa    estratégia é importante que os locais escolhidos pelos gestores sejam locais    de referência para a população, como escolas, igrejas, clubes, creches,    supermercados, entre outros. A instalação de postos de vacinação nesses    locais especiais é muito importante para campanhas de vacinação em massa    (OMS, 2020c).</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A estratégia de <strong>vacinação    móvel</strong> utiliza equipes que se deslocam no território com base em um    roteiro pré-definido. Esse tipo de estratégia é importante para levar as    vacinas até pequenas comunidades rurais e áreas de difícil acesso ou com    população dispersa no município, uma vez que essa estratégia permite alcançar    populações que, provavelmente, não teriam acesso à vacina de outras formas. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A <strong>vacinação no    sistema drive-thru</strong>, que permite que as pessoas possam ser vacinadas    dentro de veículos, já foi adotada em algumas localidades durante a campanha    de vacinação contra a influenza sazonal realizada no decorrer da pandemia.    Nessa modalidade, previne-se que haja exposição de grupos vulneráveis a    aglomerações e também inibe-se que aglomerações sejam criadas nas unidades de    saúde. A estratégia de vacinação drive-thru é particularmente interessante    para a vacinação de idosos e grupos com comorbidades. Assim como, o    atendimento com hora marcada, que também auxilia na diminuição das    aglomerações e exposição de grupos de risco (OMS, 2020c). </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Por sua vez, a <strong>vacinação    domiciliar</strong> geralmente é adotada em situações extraordinárias. Similar a    vacinação móvel, esta estratégia também garante maior alcance da    população-alvo, porém requer maior mobilização das equipes envolvidas. A    vacinação domiciliar pode colaborar no alcance de pessoas com condições    médicas especiais, idosos acamados e demais grupos em confinamento domiciliar    (OMS, 2020c). </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Observe que para definir as diferentes estratégias de    vacinação é crucial a identificação da população-alvo no município. Sem a    correta identificação e mapeamento dessas populações será mais difícil    alcançar a meta de imunização desses grupos. Além disso, as diferentes    estratégias extramuros apresentadas podem ser adaptadas às diferentes    realidades encontradas, outras estratégias também poderão ser adotadas e    combinadas com a vacinação que ocorrerá nas unidades de saúde. </p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Portanto, cada município deve analisar minuciosamente    características da sua população e de seu território para definir suas    estratégias, além de examinar todos os aspectos envolvidos na organização dos    seus serviços de saúde.</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+	      <p class="P1Ttulonumerado"><a name="_Toc65449450"><span style="color:black; ">Vamos    relembrar?</span></a><span style="font-family:'Times New Roman',serif; "> </span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Na aula de hoje aprendemos sobre as primeiras fases para    planejamento da campanha de vacinação. Lembrando que essas fases podem    ocorrer ao mesmo tempo, para dar dinamismo à execução do planejamento. Na    primeira fase você tem como objetivo pensar na população-alvo. Na segunda    fase verifique o que você tem disponível e o que vai precisar. E na terceira    fase, pense nas estratégias que você vai usar, utilizando como base a    população-alvo que você tem.</p></td>
+  </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+	      <p class="P1Ttulonumerado"><a name="_Toc65449451"><span style="color:black; ">Conclusão</span></a><span style="line-height:150%; font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+	      </div></td>
+  </tr>
+	  <tr class="anime"  style="height:82.8pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:82.8pt;"><p class="PpargrafoCxSpFirst">Na aula de hoje conhecemos as três primeiras fases    para o planejamento da campanha de vacinação. Agora chegou a vez de preparar    os serviços de vacinação e a cadeia de frio.</p>
+	      <p class="PpargrafoCxSpLast">Até lá!</p></td>
+  </tr>
+</table>
+<br>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+ acc[i].addEventListener("click", function() {
+ this.classList.toggle("active");
+ var panel = this.nextElementSibling;
+ if (panel.style.display === "block") {
+ panel.style.display = "none";
+ } else {
+ panel.style.display = "block";
+ }
+ });
+}
+ 
+ 
+// Adiciona a classe .js ao elemento HTML. Assim eu garanto que os elementos só serão escondidos caso o JavaScript esteja habilitado
+var root = document.documentElement;
+root.className += ' js';
+
+// Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
+function boxTop(idBox) {
+	var boxOffset = $(idBox).offset().top;
+	return boxOffset;
+}
+
+// Verifica se o documento está pronto
+$(document).ready(function() {
+	
+			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
+	var $target = $('.anime'),
+			
+			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
+			animationClass = 'anime-init',
+			
+			// windowHeight pega a altura total da janela do browser
+			windowHeight = $(window).height(),
+			
+			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
+			offset = windowHeight - (windowHeight / 4);
+
+	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
+	function animeScroll() {
+		
+		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
+		var documentTop = $(document).scrollTop();
+		
+		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
+		$target.each(function() {
+			
+			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
+			if (documentTop > boxTop(this) - offset) {
+				
+				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
+				$(this).addClass(animationClass);
+			} else {
+				
+				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+	
+	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
+	animeScroll();
+	
+	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
+	$(document).scroll(function() {
+		
+		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
+		setTimeout(function() {
+			animeScroll()
+		}, 150);
+	});
+});
+
+ 
+ 
+//tree menu
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+ toggler[i].addEventListener("click", function() {
+ this.parentElement.querySelector(".nested").classList.toggle("SN_active");
+ });
+}
+
+ 
+ 
+</script>
+</section>
+</body>
+</html>

@@ -1,0 +1,1744 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+	
+	table.MsoTableGrid {
+    border: solid windowtext 1.0pt;
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+    width: 100%;
+}
+p.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+	color: #ffffff;
+	}
+p.Fonte {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    text-align: center;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+    color: gray;
+}
+p.txtrec {
+    margin-top: 12.0pt;
+    margin-right: 5.65pt;
+    margin-bottom: 6.0pt;
+    margin-left: 5.65pt;
+	padding: 10px 20px;
+	line-height:150%;
+    text-align: justify;
+    font-size: 14.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.MsoNormal {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 175% !important;
+    padding: 15px 28px;
+    text-align: justify;
+    font-size: 12pt;
+    font-family: "Arial", sans-serif;
+}
+table.Tabela01 {
+    border: solid white 2.25pt;
+    text-align: center;
+    font-size: 9.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+td li {
+    margin-left: 55px;
+}
+p.txttabela8 {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.txttabela {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+body {
+    width: 997px !important;
+    margin: auto;
+}
+section {
+    margin-top: 0px !important;
+    padding-bottom: 30px;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+h1 {
+    margin-top: 30px
+}
+td li {
+    line-height: 150%;
+    list-style: disc;
+    font-size: 16.0pt !important;
+    font-family: "Arial", sans-serif;
+}
+	td li span{
+    font-size: 16.0pt !important;
+    
+}
+-->
+.SN_sumario {
+    position: fixed;
+    z-index: 1;
+    font-family: "Arial", sans-serif;
+    margin: 2;
+}
+.vertical-menu li {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+table.tabelaneuro {
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+.progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+}
+.Fonte {
+    overflow: hidden;
+}
+.Fonte img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Fonte:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.txtChar {
+    font-family: "Calibri", sans-serif;
+    color: windowtext;
+}
+span.FonteChar {
+    font-family: "Calibri", sans-serif;
+    color: gray;
+}
+
+ul, #SN_menu {
+    list-style-type: none;
+}
+#SN_menu {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-decoration: none;
+    padding-inline-start: 0px !important;
+}
+.caret {    
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+.nested {
+    display: none;
+    transition: 1s;
+}
+.SN_active {
+    display: block;
+    transition: 1s;
+}
+.SN_main {
+    background-color: #FFFfFF;
+    border: solid 1px #ffffff;
+    color: black;    
+}
+    
+a.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+    text-decoration-color: black;
+}  
+
+h1 {
+    padding-top: 50px
+    }
+    
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.MsoTableGridLight {
+border:solid #BFBFBF 1.0pt;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+p.Pimagem {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:center;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+p.MsoCaption {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:18.0pt;
+margin-left:0cm;
+text-align:center;
+font-size:8.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpFirst {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpLast {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptexto {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.Ppargrafo {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.P1Ttulonumerado {
+margin-top:20.0pt;
+margin-right:0cm;
+list-style-type: decimal;
+margin-bottom:18.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:18.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+	td div{
+		    margin-left: -100px;
+
+	}
+	
+	p.P11Ttulonumerado {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:20.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+table.TableNormal {
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.txtrecChar {
+font-family:"Arial",sans-serif;
+}
+	
+	td div.sabimais{
+	border-radius: 70px;
+    background-color: lightgoldenrodyellow;
+    padding: 15px 0px;
+	}
+	td div.ficaafica{
+	border-radius: 70px;
+    background-color: lightcyan;
+    padding: 15px 0px;
+	}
+	td div.curiosidade{
+	border-radius: 70px;
+    background-color: lightblue;
+    padding: 15px 0px;
+	}
+	
+-->
+</style>
+<style type="text/css">
+<!--
+p.Pdestaque {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+line-height:107%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.MZtabela {
+border:solid white 2.25pt;
+text-align:center;
+font-size:11.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptextotabela {
+margin:0cm;
+text-align:center;
+line-height:115%;
+font-size:9.0pt;
+font-family:"Calibri",sans-serif;
+}
+	
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.Ptabela {
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.PpargrafoChar {
+font-family:"Arial",sans-serif;
+}
+p.P111Ttulonumerado {
+margin-top:30.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.Ptabdestaque {
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.P1111Ttulo {
+margin-top:30.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+	
+<body>
+
+<!-- Modal -->
+<div class="modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="img-modal">
+  <div id="caption"></div>
+</div>
+<table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;">
+  <tr style="height:45.35pt;">
+      <td width="794" valign="top" style="width:595.3pt;background:#1F3864;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;" bgcolor="#1F3864"><p class="TtuloAula">Aula - Elaboração de Plano de Contingência para o     enfrentamento da Pandemia de Covid-19</p></td>
+  </tr>
+    <tr style="height:45.35pt;">
+      <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="Pimagem"><img width="566" height="331" src="Vacinação_aula_06_bonus_clip_image002_0000.jpg"></p>
+        <p class="MsoCaption">Figura 1    – Reunão de planejamento Por Rawpixel</p></td>
+    </tr>
+    <tr style="height:45.35pt;">
+      <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="PpargrafoCxSpFirst">Olá!<span style="font-family:'Times New Roman',serif; "> </span></p>
+        <p class="PpargrafoCxSpLast"><span style="color:black; ">Nesta aula você vai aprender </span>a<span style="color:black; "> </span>desenvolver um <span style="color:black; ">&lsquo;Plano de Contingência para o Enfrentamento da Pandemia    de Covid-19</span>.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+    </tr>
+    <tr style="height:45.35pt;">
+      <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:<span style="font-family:'Times New Roman',serif; "> </span></p>
+        <ul>
+          <li><span style="color:black; ">Identificar </span>e    Aplicar <span style="color:black; ">os passos para elaboração de um plano de    contingência para o enfrentamento da pandemia de Covid-19;</span></li>
+        </ul></td>
+    </tr>
+</table>
+<table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;">
+  <tr class="anime"  style="height:45.35pt;"> </tr>
+</table>
+<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;">
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186650">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento de contingência é parte de uma sequência de    estratégias, na qual, por meio da identificação e monitoramento constante de    riscos, vulnerabilidades e capacidades é possível orientar a implementação de    medidas para a diminuição de riscos, preparação de uma resposta adequada aos    diferentes cenários de crise e consequentemente permanecer em estado de    prontidão (OMS, 2018).</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A probabilidade da <strong>diminuição    de risco</strong> envolve condutas que devem ser adotadas para a redução da    ocorrência de uma emergência em saúde pública, visando, principalmente, a    diminuição dos impactos, como por exemplo a redução da gravidade de uma    determinada doença ou evento.  Já a <strong>preparação, </strong>inclui as ações que podem    ser tomadas para aumentar o conhecimento e a capacidade de antecipação,    resposta e recuperação de danoss causados em uma emergência em saúde pública.    O resultado do planejamento e execução dessas estratégias, juntamente com a    preparação, treinamento, alocação de recursos e organização, é, portanto, a <strong>prontidão</strong> (OMS, 2018).</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Além disso, as estratégias de enfrentamento de emergências em saúde    pública devem focar tanto no  âmbito,    da resposta, como na prevenção e proteção da população. Através da elaboração    de um plano de contingência, é possível conhecer o <strong>perfil de risco</strong> da localidade e <strong>desenvolver capacidades básicas</strong> que são fundamentais para a    efetividade da resposta em uma emergência.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência, assim como qualquer outro plano desse tipo,    deve ter como princípios-chave: <span class="PpargrafoChar"><strong>ser    prático, simples e fácil de executar, viável e realista, monitorado e    atualizado, frequentemente testado por meio de exercícios e simulações,    orientado para uma operacionalização, garantindo, ainda, o uso justificado e    racional dos recursos disponíveis</strong></span> (OMS, 2018). </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O principal <strong>objetivo</strong> de um    plano de contingência é <strong>reunir    informações, diretrizes e procedimentos que devem ser utilizados em uma    situação de crise</strong>. Diversas podem ser as situações de crise, por isso é    importante que para cada uma destas situações, os territórios disponham de    plano de contingência específico. Além disso, o plano de contingência    normalmente agrega outros planos com ações e estratégias que operacionalizam    o planejamento.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todas as fases de uma emergência devem ser levadas em consideração no    plano de contingência. Uma epidemia, por exemplo, pode ser dividida em cinco    fases: <strong>preparar, analisar,    desenvolver, implementar e avaliar</strong>. E o planejamento de contingência deve    ser organizado para atender cada uma dessas fases mediante a uma  emergência em saúde pública. Dessa forma, o<span style="color:black; "> plano pode ser utilizado em <strong>diversos cenários</strong>, desde antes de sua implantação, até o    encerramento do evento adverso (OMS, 2018). </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186651"><span style="color:black; ">Os 10 passos para a    elaboração de um Plano de Contingência para Emergência de Saúde Pública</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Com base no Regulamento Sanitário Internacional (2005), nos documentos    &ldquo;A guide for public health emergency contingency planning at designated    points of entry&rdquo; (OMS, 2012) e &ldquo;Practical actions in cities to strengthen    preparedness for the COVID-19 pandemic and beyond - An interim checklist for    local authorities&rdquo; (OMS, 2020) <span style="background:white; ">e  &ldquo;Considerations in adjusting    public health and social measures in the context of COVID-19&rdquo; (OMS, 2020b), </span>trazemos    a seguir passos que devem ser trabalhados no planejamento e elaboração de um    plano de contingência para o seu território. Esses passos podem ser    utilizados e adaptados para a elaboração de planos para diferentes    emergências. Após a descrição desses passos trazemos informações e tópicos    para a escrita de um plano de contingência específico para o enfrentamento da    pandemia da Covid-19. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr>
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><a name="_Hlk65449023"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image002.png"></span><span style="color:black; "> </span></a></p></td>
+          <td width="80%" style="width:80.0%;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Mesmo que o território já tenha um plano de      contingência em curso contra a Covid-19, aproveite esse momento para      revisá-lo e atualizá-lo de acordo com as recomendações apresentadas.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186652"><span style="color:black; ">Passo</span></a><span style="color:black; "> 1. Estabelecer uma equipe de planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Para iniciar o planejamento de contingência é essencial que seja    estabelecida uma <strong>equipe para o    desenvolvimento do plano</strong>. O líder da equipe deve, quando possível, ter    experiência com gestão em saúde e de emergências; planejamento estratégico e    avaliação de risco. Quando viável, envolver especialistas no assunto tratado    no plano de contingência, mas lembre-se de &ldquo;não tornar a equipe grande e    complicada&rdquo;. Além disso, atente-se aos demais planos desenvolvidos no país ou    região, isso garantirá o alinhamento e consistência entre os planos nacionais    e locais. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186653"><span style="color:black; ">Passo</span></a><span style="color:black; "> 2. Organizar-se para a fase de </span> <span style="color:black; ">planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="572" height="286" src="Vacinação_aula_06_bonus_clip_image004.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento requer uma <strong>metodologia</strong>,    com <strong>estrutura e cronogramas</strong> definidos para que um plano de atividades possa ser seguido. Um aspecto    importante para atentar-se durante essa fase, é de que territórios em regiões    de fronteira com outros países devem dar importância às considerações de    diferentes níveis, além do nível local. Doenças transmissíveis, como a    Covid-19, podem iniciar sua disseminação em pontos de entrada como as    fronteiras e com isso, os responsáveis pelo planejamento nestes locais devem    considerar também os níveis internacional, nacional, regional e local, mesmo    que a preparação se concentre no nível local. Isso se aplica diretamente e    locais de fronteiras terrestres, que possibilitam maior chance de controle.    Entretanto, para tráfego aéreo, esse cenário é mais difícil, uma vez que o    vírus não encontra limites territoriais e pode facilmente transpor    fronteiras.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Durante a organização do planejamento é importante dispor de outros    planos operacionais que possam orientar o seu desenvolvimento. Além disso,    atente-se ao <strong>perfil de risco do    território</strong>, quanto maior a probabilidade do surgimento de uma emergência    de saúde pública, mais importante e necessário será a construção de um plano    completo e viável. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186654"><span style="color:black; ">Passo 3. Iniciar o    planejamento</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image006.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após organizar-se e estabelecer um <strong>plano de atividades</strong>, crie um rascunho do <strong>modelo do plano de contingência</strong>. Com um modelo estruturado,    encaminhe-o para os colaboradores ou especialistas que podem auxiliar nas    informações necessárias para cada uma das seções. Esses colaboradores devem    receber, ainda, as diretrizes e leituras consideradas relevantes para    garantir uma boa redação de cada uma das seções. Lembrando que, sempre que    possível, os rascunhos devem ser analisados periodicamente para verificar se    a elaboração está no caminho correto. Neste momento, verifique também se o    plano é alcançável e realista.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186655"><span style="color:black; ">Passo</span></a><span style="color:black; "> 4. Escreva o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta fase, a equipe responsável pelo planejamento inicia de fato a    escrita do plano de contingência, preenchendo o modelo já estabelecido. É    interessante que um <strong>redator técnico    possa coordenar e ajudar na formatação</strong> do plano, uma vez que, inúmeros    colaboradores estarão auxiliando na elaboração com diferentes seções do    documento. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr>
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image007.png"></span><span style="color:black; "> </span></p></td>
+          <td width="80%" style="width:80.0%;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Na segunda parte desta aula, encontram-se      as etapas para a escrita de um plano de contingência para o enfrentamento      da pandemia da Covid-19.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><strong><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></strong></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186656"><span style="color:black; ">Passo 5. </span></a><span style="color:black; ">Faça</span><span style="color:black; "> a revisão</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image009.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A revisão do plano deve ser conduzida em duas frentes, a primeira    realizada por pares e a segunda pelas partes interessadas. Ambas devem <strong>garantir que os feedbacks produzidos    sejam incorporados</strong> ao plano, quando apropriado. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186657"><span style="color:black; ">Passo</span></a><span style="color:black; "> 6. Teste o plano e faça exercícios regulares</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="371" src="Vacinação_aula_06_bonus_clip_image011.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Testar o plano elaborado é essencial para verificar se o mesmo é    realista e alcançável. Esta etapa não precisa ser complicada e nem necessita    ser realizada em grande escala, em reunião para  discussão pode ser suficiente para desenvolver    um bom exercício de teste, onde diferentes cenários e soluções podem ser    propostos. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após aprovado e divulgado o plano de contingência deve passar por    exercícios regulares, com o objetivo de <strong>atualizá-lo,    identificar suas lacunas e pontos fracos</strong>. Um cronograma de exercícios    pode ser elaborado e diferentes cenários podem ser utilizados, além disso,    esses exercícios devem ser realizados regularmente.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186658"><span style="color:black; ">Passo 7. Obtenha a    aprovação dos interessados</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após a finalização e o teste do plano de contingência, este deverá ser    enviado às partes interessadas para aprovação. As partes interessadas devem    verificar <strong>e concordar com todas as    suas tarefas e responsabilidades designadas no plano</strong>. Pode ser necessário    estabelecer um prazo para devolução do documento, assim as alterações finais    poderão ser revisadas e integradas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186659"><span style="color:black; ">Passo 8. Publique o </span></a><span style="color:black; ">plano</span><span style="color:black; "> de    contingência</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Versões impressas e online podem ser desenvolvidas e as mesmas devem    ser distribuídas a todos os envolvidos na resposta. Quanto mais pessoas    souberem da existência do plano e puderem acessá-lo facilmente, melhor. Por    isso, faça a <strong>disseminação do plano de    contingência</strong> de forma clara, em páginas confiáveis e de fácil acesso.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186660"><span style="color:black; ">Passo 9. Instrua e    treine todos os </span></a><span style="color:black; ">envolvidos</span><span style="color:black; "> na resposta</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image013.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todos os envolvidos na resposta devem estar <strong>cientes de seu papel e preparados para executar</strong> as ações    descritas no plano de contingência. Com isso, pode haver necessidade de    instrução e treinamento de alguns grupos para melhor execução do plano de    contingência. Algumas pessoas podem ser treinadas em múltiplas funções, essas    habilidades adicionais poderão fornecer um importante reserva de segurança    para o caso de outros envolvidos se ausentarem ou adoecerem. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186661"><span style="color:black; ">Passo</span></a><span style="color:black; "> 10. Revise e atualize o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após cada exercício ou emergência que requeira a ativação do plano de    contingência, o mesmo deve passar por uma <strong>revisão e atualização</strong>, levando em conta principalmente as    principais lições que foram aprendidas. Todas as vezes que uma nova versão do    plano for criada garanta que todas as partes envolvidas sejam comunicadas e    recebam uma cópia da nova versão.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186662"><span style="color:black; ">Escrevendo</span></a><span style="color:black; "> o Plano de Contingência    para enfrentamento da pandemia da Covid-19</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As informações e etapas abaixo são essenciais para a escrita de um    plano de contingência, independente do formato e modelo adotado durante o    planejamento. Alguns ajustes foram realizados para melhor direcionamento do    plano para o enfrentamento da Covid-19, entretanto, os tópicos abordados    possibilitam uma visão geral e são essenciais para qualquer plano de    contingência para uma emergência de saúde pública.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim como na seção anterior, dividimos os passos que devem ser    seguidos para a fase de escrita das diferentes partes que compõem o plano de    contingência, agora resumidos em três partes. A primeira, com os pontos que    devem constar na <strong>introdução do plano</strong>,    a segunda com os pontos que devem ser incluídos na <strong>resposta operacional</strong> e a terceira com as <strong>informações detalhadas e anexos</strong> que devem ser incluídos para    apoiar o plano.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186663"><span style="color:black; ">Parte 1. Introdução</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186664">Contextualize o seu plano de contingência</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="378" src="Vacinação_aula_06_bonus_clip_image015.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência deve ser elaborado para os mais diversos    cenários de crise, por isso é importante iniciar a elaboração do plano pela <strong>contextualização da Covid-19 e seu    impacto no território</strong>. Explicações iniciais de como usar o plano também    são sempre bem-vindas nesta seção, além disso também podem ser adicionados    nessa parte o <strong>propósito, objetivos e    escopo</strong> do plano de contingência. Lembre-se de ser claro e sucinto sobre a <strong>finalidade do plano, público-alvo e os    objetivos específicos</strong>.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186665">Delimite o evento de interesse e analise os riscos</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O plano de contingência deve <strong>prever    várias fases</strong> e delimitar todas as ações e processos que deverão ser    realizados por cada um dos agentes envolvidos na situação de crise. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Sendo assim, um passo essencial para elaboração de um plano de    contingência é <strong>delimitar o evento de    interesse e determinar o cenário de crise</strong>. Esse cenário pode ser    nacional, estadual, municipal ou local. Ou seja, não somente o município pode    e deve dispor de um plano de contingência para enfrentamento da pandemia da    Covid-19, mas outras áreas e instituições também podem se apropriar desses    conhecimentos para enfrentar a situação de crise, como escolas,    universidades, mercados, shoppings e igrejas.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186666">Defina todos os agentes envolvidos</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Seguindo as etapas do plano de contingência, agora é necessário <strong>delimitar os agentes envolvidos</strong> nesse    momento de crise. Lembre-se quem são os parceiros que deverão ajustar    atividades e as áreas que deverão ser mobilizadas para apoiar a readequação    de processos.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186667"><span style="color:black; ">Parte 2. Operacional</span></a><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186668">Descreva as estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Aqui deve-se indicar o <strong>agente    que comandará a resposta</strong> no município. É essencial especificar nesta    etapa o que cada um dos <strong>responsáveis    por essas funções deverá executar</strong>. Defina também quem participará das <strong>equipes de operação</strong> e outras funções    e quem estará no comando. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Defina as responsabilidades dos envolvidos </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As funções e responsabilidades de todos os envolvidos na resposta é    extremamente necessária. Para cada função um conjunto de tarefas deve ser    designado, assim pode ser interessante a construção de uma <strong>tabela de funções</strong> de comando e    controle nesta seção, onde as responsabilidades para cada equipe ou indivíduo    envolvido na resposta seja colocada de forma clara para os leitores. Esta    tabela será essencial para o rápido reconhecimento dos responsáveis por cada    uma das ações e decisões.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186669">Descreva as ações para as diferentes partes envolvidas</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Neste momento, descreva todas as ações necessárias para quando o plano    de contingência for ativado, de acordo com cada uma das fases possíveis e os    agentes envolvidos. As instruções nesta seção devem ser específicas e    determinar quem deve fazer o quê, em cada uma das fases previstas, de    preferência em ordem cronológica a partir da ativação da resposta. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo"><span style="color:red; "> </span>Para a    descrição das ações de acordo com as fases da emergência, lembre-se das    quatro fases de uma epidemia, que são:<span style="color:red; "> </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ppargrafo"><strong><span style="color:black; ">Preparação      e Prontidão;</span></strong></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ppargrafo"><strong><span style="color:black; ">Contenção;</span></strong></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ppargrafo"><strong><span style="color:black; ">Emergência;</span></strong></p></td>
+        </tr>
+      </table>
+    </div>
+      <ul style="margin-top:0cm;" type="disc">
+        <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; "> </span></li>
+      </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ppargrafo"><strong><span style="color:black; ">Controle.</span></strong></p></td>
+        </tr>
+      </table>
+    </div>
+      <ul style="margin-top:0cm;" type="disc">
+        <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; "> </span></li>
+      </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Abaixo, encontram-se algumas dicas de ações para o contingenciamento    do número de casos da Covid-19 de acordo com as diferentes fases da pandemia:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    segunda fase, a fase de contenção, enfatize, por exemplo, atividades de    isolamento de casos e acompanhamento de contatos, para contenção da pandemia    da Covid-19. Uma importante informação que deve constar nes</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">t<span style="color:black; ">e momento é a realização de escalas de trabalho para    todos os profissionais envolvidos na resposta e a realização de um contínuo    monitoramento dos casos</span>;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Já para    a fase de emergência, as ações devem ser montadas em torno do isolamento    social, uma vez que o isolamento evita uma maior propagação viral. O uso de    trabalho remoto (conforme o possível) é indicado como uma ação a ser adotada,    assim como adoção de escalas de horários flexíveis, diminuição da circulação    da população e o reforço para que se evite locais com aglomeração</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    fase de controle, é importante a elaboração de relatórios que registrem as    lições aprendidas e dificuldades encontradas por cada agente específico    envolvido na resposta. Também é importante que seja feito um monitoramento    contínuo do impacto da implantação de cada fase do plano de contingência. </span></li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Observe que a resposta eficiente à crise provocada pela Covid-19    necessitará da adequação ou implementação de medidas de saúde pública e    sociais. Essas medidas preventivas são essenciais e devem ser detalhadamente    descritas dentro das ações do plano de contingência. Tais ações irão incluir    principalmente medidas de proteção individual (adoção de etiqueta respiratória,    higiene das mãos e uso de máscaras de proteção) e distanciamento físico, como    isolamento e quarentena. Ações de bloqueio, também conhecidas como <em>lockdown</em> também podem ser necessárias,    essas ações englobam normalmente a restrição de movimentos e viagens, com    fechamento de negócios e escolas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Por fim, atente-se às mudanças que as ações sofrerão de acordo com os    diferentes cenários provocados por cada fase da pandemia, essas    flexibilizações das medidas adotadas deverão ser fundamentadas e realizadas    gradualmente, iniciando pelas áreas com menor incidência da doença.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186670">Defina os protocolos operacionais das estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Quando há uma emergência em saúde pública normalmente há necessidade    de ativação ou implementação de um <strong>Centro    de Operações de Emergência</strong> (COE). O COE é uma <strong>estrutura de comando e controle</strong> onde a resposta é    operacionalizada, dependendo da natureza e tamanho da emergência vários    Centros de Operações de Emergência podem ser necessários. Normalmente estes    centros consistem em uma sala ou instalação onde os comandantes e as equipes    envolvidas na resposta operam e executam as tarefas e funções necessárias    para o enfrentamento da emergência.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim, nesta seção do plano de contingência devem ser descritos os    protocolos operacionais das estruturas de comando e controle. Além do COE,    pode ser necessária a implementação ou ativação de subcomitês. Estes    subcomitês normalmente são responsáveis por uma única área funcional da    resposta e protocolos operacionais específicos para cada uma das áreas que    também deverão ser descritos. Os principais subcomitês articulados junto ao    COE, são:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Planejamento e Inteligência</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelo subcomitê de planejamento e inteligência    organizam e documentam as informações mais recentes sobre a situação e    elaboram <strong>planos de ação</strong> para    alcançar os objetivos e nortear as próximas decisões que devem ser tomadas. É    nesse subcomitê que são antecipados os possíveis cenários e estratégias que    devem ser adotadas para diminuir os impactos causados.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Operações </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelas operações <strong>executam    as funções</strong> e tarefas necessárias, ou seja, executam o plano de ação    estabelecido. Dessa forma, esse subcomitê coordena diferentes equipes    operacionais ou mesmo indivíduos, direcionando-os e auxiliando-os para a    realização de suas tarefas. Diferentes <strong>protocolos    operacionais padrão</strong> podem ser elaborados nesse comitê e anexados na parte    3 do plano de contingência. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Logística </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">É o subcomitê de logística que viabiliza a operação como um todo,    através da <strong>busca, organização e    distribuição de suprimentos</strong> para os locais em que os mesmos sejam    necessários. A gestão do estoque de suprimentos, cadeias de abastecimento,    segurança e proteção do pessoal, entre outros, são de responsabilidade deste    subcomitê.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Administração e finanças</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pela administração e finanças coordenam e monitoram os    recursos relacionados à operação como um todo. Todo o gerenciamento e    contabilidade financeira necessária para execução do plano de contingência é    de responsabilidade deste subcomitê.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Comunicação</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O subcomitê de comunicação deve abordar tanto a <strong>comunicação interna como externa</strong>. Esse subcomitê desempenha    papéis e funções conjuntas para o compartilhamento de informações, além de    elaborar e atualizar o <strong>plano de    comunicação</strong> utilizado durante a emergência. É a comunicação quem    disponibilizará o acesso às ações e notícias durante a emergência,    especialmente as ações executadas pelo plano de contingência e o comando    geral na assistência à comunidade e no monitoramento de casos do local. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Exemplos de ações a serem executadas pelo subcomitê de comunicação    incluem: </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Divulgar amplamente protocolos técnicos e    informações relacionados a prevenção e controle para infecção SARS-CoV2;</li>
+      <li>Divulgar as informações sobre a doença e medidas    de prevenção junto à rede de serviços de saúde e população;</li>
+      <li>Comunicar a respeito de medidas de etiqueta    respiratória, bem como ações de biossegurança;</li>
+      <li>Definir junto aos gestores, e o comando geral do    plano, o responsável pelo diálogo com os veículos de comunicação (porta voz);</li>
+      <li>Elaborar materiais informativos a respeito da    Covid-19 para a comunidade.     </li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186671"><span style="color:black; ">Parte 3. Informações de    apoio (Anexos)</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A última parte do plano de contingência é geralmente compreendida    pelos anexos, uma seção que engloba as principais informações de apoio    detalhadas e relacionadas a temas específicos, como:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Informações de contato (<strong>Lista de contatos</strong>) das partes envolvidas na resposta;</li>
+      <li><strong>Mapas de    áreas operacionais</strong>, este anexo pode-se apresentar uma planta com    identificação das principais áreas e serviços essenciais para o caso da    necessidade de se estabelecer um <em>lockdown</em>;</li>
+      <li><strong>Procedimentos    e/ou protocolos operacionais padrão</strong>;</li>
+      <li><strong>Formulários    e outros modelos necessários</strong>, como declaração de saúde, modelo de    relatório situacional, entre outros;</li>
+      <li>Outros planos vinculados, como <strong>plano de comunicação de risco</strong>.</li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186672"><span style="color:black; ">Vamos relembrar</span></a><span style="line-height:150%; font-size:12.0pt; color:#2F5496; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O estado de prontidão alcançado através de um planejamento de    contingência auxilia na organização, orientação, facilidade e agilidade nas    respostas contra a propagação de doenças e outros eventos de importância para    saúde pública. O plano de contingência uniformiza as ações necessárias para o    controle e combate de ocorrências que colocam em risco o funcionamento    diário, independentemente do tamanho ou especialidade, das organizações,    evitando que interferências desnecessárias sejam realizadas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#DEEAF6;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#DEEAF6"><div style="border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186673"><span style="color:black; ">Conclusão</span></a><span style="line-height:150%; font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta aula vimos que o plano de contingência é uma importante linha de    defesa, mas lembre-se que o mesmo deve ser regularmente atualizado e    complementado, de acordo com as mudanças do cenário epidemiológico, seja da    Covid-19 como de outras emergências em saúde pública.</p></td>
+  </tr>
+</table>
+<table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;">
+  <tr class="anime"  style="height:45.35pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#2A7138;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;" bgcolor="#2A7138"><p class="TtuloAula">Aula - Elaboração de Plano de Contingência para o     enfrentamento da Pandemia de Covid-19</p></td>
+  </tr>
+  <tr class="anime"  style="height:45.35pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="Pimagem"><img width="566" height="331" src="Vacinação_aula_06_bonus_clip_image002_0001.jpg"></p>
+      <p class="MsoCaption">Figura 1    – Reunão de planejamento Por Rawpixel</p></td>
+  </tr>
+  <tr class="anime"  style="height:45.35pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="PpargrafoCxSpFirst">Olá!<span style="font-family:'Times New Roman',serif; "> </span></p>
+      <p class="PpargrafoCxSpLast"><span style="color:black; ">Nesta aula você vai aprender </span>a<span style="color:black; "> </span>desenvolver um <span style="color:black; ">&lsquo;Plano de Contingência para o Enfrentamento da Pandemia    de Covid-19</span>.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="height:45.35pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:45.35pt;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:<span style="font-family:'Times New Roman',serif; "> </span></p>
+      <ul>
+        <li><span style="color:black; ">Identificar </span>e    Aplicar <span style="color:black; ">os passos para elaboração de um plano de    contingência para o enfrentamento da pandemia de Covid-19;</span></li>
+      </ul></td>
+  </tr>
+</table>
+<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;">
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186650">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento de contingência é parte de uma sequência de    estratégias, na qual, por meio da identificação e monitoramento constante de    riscos, vulnerabilidades e capacidades é possível orientar a implementação de    medidas para a diminuição de riscos, preparação de uma resposta adequada aos    diferentes cenários de crise e consequentemente permanecer em estado de    prontidão (OMS, 2018).</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A probabilidade da <strong>diminuição    de risco</strong> envolve condutas que devem ser adotadas para a redução da    ocorrência de uma emergência em saúde pública, visando, principalmente, a    diminuição dos impactos, como por exemplo a redução da gravidade de uma    determinada doença ou evento.  Já a <strong>preparação, </strong>inclui as ações que podem    ser tomadas para aumentar o conhecimento e a capacidade de antecipação,    resposta e recuperação de danoss causados em uma emergência em saúde pública.    O resultado do planejamento e execução dessas estratégias, juntamente com a    preparação, treinamento, alocação de recursos e organização, é, portanto, a <strong>prontidão</strong> (OMS, 2018).</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Além disso, as estratégias de enfrentamento de emergências em saúde    pública devem focar tanto no  âmbito,    da resposta, como na prevenção e proteção da população. Através da elaboração    de um plano de contingência, é possível conhecer o <strong>perfil de risco</strong> da localidade e <strong>desenvolver capacidades básicas</strong> que são fundamentais para a    efetividade da resposta em uma emergência.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência, assim como qualquer outro plano desse tipo,    deve ter como princípios-chave: <span class="PpargrafoChar"><strong>ser    prático, simples e fácil de executar, viável e realista, monitorado e    atualizado, frequentemente testado por meio de exercícios e simulações,    orientado para uma operacionalização, garantindo, ainda, o uso justificado e    racional dos recursos disponíveis</strong></span> (OMS, 2018). </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O principal <strong>objetivo</strong> de um    plano de contingência é <strong>reunir    informações, diretrizes e procedimentos que devem ser utilizados em uma    situação de crise</strong>. Diversas podem ser as situações de crise, por isso é    importante que para cada uma destas situações, os territórios disponham de    plano de contingência específico. Além disso, o plano de contingência    normalmente agrega outros planos com ações e estratégias que operacionalizam    o planejamento.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todas as fases de uma emergência devem ser levadas em consideração no    plano de contingência. Uma epidemia, por exemplo, pode ser dividida em cinco    fases: <strong>preparar, analisar,    desenvolver, implementar e avaliar</strong>. E o planejamento de contingência deve    ser organizado para atender cada uma dessas fases mediante a uma  emergência em saúde pública. Dessa forma, o<span style="color:black; "> plano pode ser utilizado em <strong>diversos cenários</strong>, desde antes de sua implantação, até o    encerramento do evento adverso (OMS, 2018). </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186651"><span style="color:black; ">Os 10 passos para a    elaboração de um Plano de Contingência para Emergência de Saúde Pública</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Com base no Regulamento Sanitário Internacional (2005), nos documentos    &ldquo;A guide for public health emergency contingency planning at designated    points of entry&rdquo; (OMS, 2012) e &ldquo;Practical actions in cities to strengthen    preparedness for the COVID-19 pandemic and beyond - An interim checklist for    local authorities&rdquo; (OMS, 2020) <span style="background:white; ">e  &ldquo;Considerations in adjusting    public health and social measures in the context of COVID-19&rdquo; (OMS, 2020b), </span>trazemos    a seguir passos que devem ser trabalhados no planejamento e elaboração de um    plano de contingência para o seu território. Esses passos podem ser    utilizados e adaptados para a elaboração de planos para diferentes    emergências. Após a descrição desses passos trazemos informações e tópicos    para a escrita de um plano de contingência específico para o enfrentamento da    pandemia da Covid-19. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr>
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><a name="_Hlk65449023"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image002_0001.png"></span><span style="color:black; "> </span></a></p></td>
+          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Mesmo que o território já tenha um plano de      contingência em curso contra a Covid-19, aproveite esse momento para      revisá-lo e atualizá-lo de acordo com as recomendações apresentadas.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186652"><span style="color:black; ">Passo</span></a><span style="color:black; "> 1. Estabelecer uma equipe de planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Para iniciar o planejamento de contingência é essencial que seja    estabelecida uma <strong>equipe para o    desenvolvimento do plano</strong>. O líder da equipe deve, quando possível, ter    experiência com gestão em saúde e de emergências; planejamento estratégico e    avaliação de risco. Quando viável, envolver especialistas no assunto tratado    no plano de contingência, mas lembre-se de &ldquo;não tornar a equipe grande e    complicada&rdquo;. Além disso, atente-se aos demais planos desenvolvidos no país ou    região, isso garantirá o alinhamento e consistência entre os planos nacionais    e locais. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186653"><span style="color:black; ">Passo</span></a><span style="color:black; "> 2. Organizar-se para a fase de </span> <span style="color:black; ">planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="572" height="286" src="Vacinação_aula_06_bonus_clip_image004_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento requer uma <strong>metodologia</strong>,    com <strong>estrutura e cronogramas</strong> definidos para que um plano de atividades possa ser seguido. Um aspecto    importante para atentar-se durante essa fase, é de que territórios em regiões    de fronteira com outros países devem dar importância às considerações de    diferentes níveis, além do nível local. Doenças transmissíveis, como a    Covid-19, podem iniciar sua disseminação em pontos de entrada como as    fronteiras e com isso, os responsáveis pelo planejamento nestes locais devem    considerar também os níveis internacional, nacional, regional e local, mesmo    que a preparação se concentre no nível local. Isso se aplica diretamente e    locais de fronteiras terrestres, que possibilitam maior chance de controle.    Entretanto, para tráfego aéreo, esse cenário é mais difícil, uma vez que o    vírus não encontra limites territoriais e pode facilmente transpor    fronteiras.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Durante a organização do planejamento é importante dispor de outros    planos operacionais que possam orientar o seu desenvolvimento. Além disso,    atente-se ao <strong>perfil de risco do    território</strong>, quanto maior a probabilidade do surgimento de uma emergência    de saúde pública, mais importante e necessário será a construção de um plano    completo e viável. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186654"><span style="color:black; ">Passo 3. Iniciar o    planejamento</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image006_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após organizar-se e estabelecer um <strong>plano de atividades</strong>, crie um rascunho do <strong>modelo do plano de contingência</strong>. Com um modelo estruturado,    encaminhe-o para os colaboradores ou especialistas que podem auxiliar nas    informações necessárias para cada uma das seções. Esses colaboradores devem    receber, ainda, as diretrizes e leituras consideradas relevantes para    garantir uma boa redação de cada uma das seções. Lembrando que, sempre que    possível, os rascunhos devem ser analisados periodicamente para verificar se    a elaboração está no caminho correto. Neste momento, verifique também se o    plano é alcançável e realista.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186655"><span style="color:black; ">Passo</span></a><span style="color:black; "> 4. Escreva o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta fase, a equipe responsável pelo planejamento inicia de fato a    escrita do plano de contingência, preenchendo o modelo já estabelecido. É    interessante que um <strong>redator técnico    possa coordenar e ajudar na formatação</strong> do plano, uma vez que, inúmeros    colaboradores estarão auxiliando na elaboração com diferentes seções do    documento. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr>
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image007_0001.png"></span><span style="color:black; "> </span></p></td>
+          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Na segunda parte desta aula, encontram-se      as etapas para a escrita de um plano de contingência para o enfrentamento      da pandemia da Covid-19.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><strong><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></strong></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186656"><span style="color:black; ">Passo 5. </span></a><span style="color:black; ">Faça</span><span style="color:black; "> a revisão</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image009_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A revisão do plano deve ser conduzida em duas frentes, a primeira    realizada por pares e a segunda pelas partes interessadas. Ambas devem <strong>garantir que os feedbacks produzidos    sejam incorporados</strong> ao plano, quando apropriado. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186657"><span style="color:black; ">Passo</span></a><span style="color:black; "> 6. Teste o plano e faça exercícios regulares</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="371" src="Vacinação_aula_06_bonus_clip_image011_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Testar o plano elaborado é essencial para verificar se o mesmo é    realista e alcançável. Esta etapa não precisa ser complicada e nem necessita    ser realizada em grande escala, em reunião para  discussão pode ser suficiente para desenvolver    um bom exercício de teste, onde diferentes cenários e soluções podem ser    propostos. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após aprovado e divulgado o plano de contingência deve passar por    exercícios regulares, com o objetivo de <strong>atualizá-lo,    identificar suas lacunas e pontos fracos</strong>. Um cronograma de exercícios    pode ser elaborado e diferentes cenários podem ser utilizados, além disso,    esses exercícios devem ser realizados regularmente.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186658"><span style="color:black; ">Passo 7. Obtenha a    aprovação dos interessados</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após a finalização e o teste do plano de contingência, este deverá ser    enviado às partes interessadas para aprovação. As partes interessadas devem    verificar <strong>e concordar com todas as    suas tarefas e responsabilidades designadas no plano</strong>. Pode ser necessário    estabelecer um prazo para devolução do documento, assim as alterações finais    poderão ser revisadas e integradas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186659"><span style="color:black; ">Passo 8. Publique o </span></a><span style="color:black; ">plano</span><span style="color:black; "> de    contingência</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Versões impressas e online podem ser desenvolvidas e as mesmas devem    ser distribuídas a todos os envolvidos na resposta. Quanto mais pessoas    souberem da existência do plano e puderem acessá-lo facilmente, melhor. Por    isso, faça a <strong>disseminação do plano de    contingência</strong> de forma clara, em páginas confiáveis e de fácil acesso.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186660"><span style="color:black; ">Passo 9. Instrua e    treine todos os </span></a><span style="color:black; ">envolvidos</span><span style="color:black; "> na resposta</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image013_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todos os envolvidos na resposta devem estar <strong>cientes de seu papel e preparados para executar</strong> as ações    descritas no plano de contingência. Com isso, pode haver necessidade de    instrução e treinamento de alguns grupos para melhor execução do plano de    contingência. Algumas pessoas podem ser treinadas em múltiplas funções, essas    habilidades adicionais poderão fornecer um importante reserva de segurança    para o caso de outros envolvidos se ausentarem ou adoecerem. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186661"><span style="color:black; ">Passo</span></a><span style="color:black; "> 10. Revise e atualize o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após cada exercício ou emergência que requeira a ativação do plano de    contingência, o mesmo deve passar por uma <strong>revisão e atualização</strong>, levando em conta principalmente as    principais lições que foram aprendidas. Todas as vezes que uma nova versão do    plano for criada garanta que todas as partes envolvidas sejam comunicadas e    recebam uma cópia da nova versão.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186662"><span style="color:black; ">Escrevendo</span></a><span style="color:black; "> o Plano de Contingência    para enfrentamento da pandemia da Covid-19</span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As informações e etapas abaixo são essenciais para a escrita de um    plano de contingência, independente do formato e modelo adotado durante o    planejamento. Alguns ajustes foram realizados para melhor direcionamento do    plano para o enfrentamento da Covid-19, entretanto, os tópicos abordados    possibilitam uma visão geral e são essenciais para qualquer plano de    contingência para uma emergência de saúde pública.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim como na seção anterior, dividimos os passos que devem ser    seguidos para a fase de escrita das diferentes partes que compõem o plano de    contingência, agora resumidos em três partes. A primeira, com os pontos que    devem constar na <strong>introdução do plano</strong>,    a segunda com os pontos que devem ser incluídos na <strong>resposta operacional</strong> e a terceira com as <strong>informações detalhadas e anexos</strong> que devem ser incluídos para    apoiar o plano.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186663"><span style="color:black; ">Parte 1. Introdução</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186664">Contextualize o seu plano de contingência</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="378" src="Vacinação_aula_06_bonus_clip_image015_0001.jpg"></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência deve ser elaborado para os mais diversos    cenários de crise, por isso é importante iniciar a elaboração do plano pela <strong>contextualização da Covid-19 e seu    impacto no território</strong>. Explicações iniciais de como usar o plano também    são sempre bem-vindas nesta seção, além disso também podem ser adicionados    nessa parte o <strong>propósito, objetivos e    escopo</strong> do plano de contingência. Lembre-se de ser claro e sucinto sobre a <strong>finalidade do plano, público-alvo e os    objetivos específicos</strong>.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186665">Delimite o evento de interesse e analise os riscos</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O plano de contingência deve <strong>prever    várias fases</strong> e delimitar todas as ações e processos que deverão ser    realizados por cada um dos agentes envolvidos na situação de crise. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Sendo assim, um passo essencial para elaboração de um plano de    contingência é <strong>delimitar o evento de    interesse e determinar o cenário de crise</strong>. Esse cenário pode ser    nacional, estadual, municipal ou local. Ou seja, não somente o município pode    e deve dispor de um plano de contingência para enfrentamento da pandemia da    Covid-19, mas outras áreas e instituições também podem se apropriar desses    conhecimentos para enfrentar a situação de crise, como escolas,    universidades, mercados, shoppings e igrejas.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186666">Defina todos os agentes envolvidos</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Seguindo as etapas do plano de contingência, agora é necessário <strong>delimitar os agentes envolvidos</strong> nesse    momento de crise. Lembre-se quem são os parceiros que deverão ajustar    atividades e as áreas que deverão ser mobilizadas para apoiar a readequação    de processos.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186667"><span style="color:black; ">Parte 2. Operacional</span></a><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186668">Descreva as estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Aqui deve-se indicar o <strong>agente    que comandará a resposta</strong> no município. É essencial especificar nesta    etapa o que cada um dos <strong>responsáveis    por essas funções deverá executar</strong>. Defina também quem participará das <strong>equipes de operação</strong> e outras funções    e quem estará no comando. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Defina as responsabilidades dos envolvidos </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As funções e responsabilidades de todos os envolvidos na resposta é    extremamente necessária. Para cada função um conjunto de tarefas deve ser    designado, assim pode ser interessante a construção de uma <strong>tabela de funções</strong> de comando e    controle nesta seção, onde as responsabilidades para cada equipe ou indivíduo    envolvido na resposta seja colocada de forma clara para os leitores. Esta    tabela será essencial para o rápido reconhecimento dos responsáveis por cada    uma das ações e decisões.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186669">Descreva as ações para as diferentes partes envolvidas</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Neste momento, descreva todas as ações necessárias para quando o plano    de contingência for ativado, de acordo com cada uma das fases possíveis e os    agentes envolvidos. As instruções nesta seção devem ser específicas e    determinar quem deve fazer o quê, em cada uma das fases previstas, de    preferência em ordem cronológica a partir da ativação da resposta. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo"><span style="color:red; "> </span>Para a    descrição das ações de acordo com as fases da emergência, lembre-se das    quatro fases de uma epidemia, que são:<span style="color:red; "> </span></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="line-height:115%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">preparação e prontidão;</span><span style="line-height:115%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">contenção;</span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">emergência</span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">
+        <ul style="margin-top:0cm;" type="disc">
+          <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+        </ul>
+      </span></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr>
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">controle</span><span style="font-family:'Arial',sans-serif; color:black; ">. </span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">
+        <ul style="margin-top:0cm;" type="disc">
+          <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+        </ul>
+      </span></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Abaixo, encontram-se algumas dicas de ações para o contingenciamento    do número de casos da Covid-19 de acordo com as diferentes fases da pandemia:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    segunda fase, a fase de contenção, enfatize, por exemplo, atividades de    isolamento de casos e acompanhamento de contatos, para contenção da pandemia    da Covid-19. Uma importante informação que deve constar nes</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">t<span style="color:black; ">e momento é a realização de escalas de trabalho para    todos os profissionais envolvidos na resposta e a realização de um contínuo    monitoramento dos casos</span>;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Já para    a fase de emergência, as ações devem ser montadas em torno do isolamento    social, uma vez que o isolamento evita uma maior propagação viral. O uso de    trabalho remoto (conforme o possível) é indicado como uma ação a ser adotada,    assim como adoção de escalas de horários flexíveis, diminuição da circulação    da população e o reforço para que se evite locais com aglomeração</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    fase de controle, é importante a elaboração de relatórios que registrem as    lições aprendidas e dificuldades encontradas por cada agente específico    envolvido na resposta. Também é importante que seja feito um monitoramento    contínuo do impacto da implantação de cada fase do plano de contingência. </span></li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Observe que a resposta eficiente à crise provocada pela Covid-19    necessitará da adequação ou implementação de medidas de saúde pública e    sociais. Essas medidas preventivas são essenciais e devem ser detalhadamente    descritas dentro das ações do plano de contingência. Tais ações irão incluir    principalmente medidas de proteção individual (adoção de etiqueta respiratória,    higiene das mãos e uso de máscaras de proteção) e distanciamento físico, como    isolamento e quarentena. Ações de bloqueio, também conhecidas como <em>lockdown</em> também podem ser necessárias,    essas ações englobam normalmente a restrição de movimentos e viagens, com    fechamento de negócios e escolas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Por fim, atente-se às mudanças que as ações sofrerão de acordo com os    diferentes cenários provocados por cada fase da pandemia, essas    flexibilizações das medidas adotadas deverão ser fundamentadas e realizadas    gradualmente, iniciando pelas áreas com menor incidência da doença.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186670">Defina os protocolos operacionais das estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Quando há uma emergência em saúde pública normalmente há necessidade    de ativação ou implementação de um <strong>Centro    de Operações de Emergência</strong> (COE). O COE é uma <strong>estrutura de comando e controle</strong> onde a resposta é    operacionalizada, dependendo da natureza e tamanho da emergência vários    Centros de Operações de Emergência podem ser necessários. Normalmente estes    centros consistem em uma sala ou instalação onde os comandantes e as equipes    envolvidas na resposta operam e executam as tarefas e funções necessárias    para o enfrentamento da emergência.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim, nesta seção do plano de contingência devem ser descritos os    protocolos operacionais das estruturas de comando e controle. Além do COE,    pode ser necessária a implementação ou ativação de subcomitês. Estes    subcomitês normalmente são responsáveis por uma única área funcional da    resposta e protocolos operacionais específicos para cada uma das áreas que    também deverão ser descritos. Os principais subcomitês articulados junto ao    COE, são:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Planejamento e Inteligência      </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelo subcomitê de planejamento e inteligência    organizam e documentam as informações mais recentes sobre a situação e    elaboram <strong>planos de ação</strong> para    alcançar os objetivos e nortear as próximas decisões que devem ser tomadas. É    nesse subcomitê que são antecipados os possíveis cenários e estratégias que    devem ser adotadas para diminuir os impactos causados.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Operações </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelas operações <strong>executam    as funções</strong> e tarefas necessárias, ou seja, executam o plano de ação    estabelecido. Dessa forma, esse subcomitê coordena diferentes equipes    operacionais ou mesmo indivíduos, direcionando-os e auxiliando-os para a    realização de suas tarefas. Diferentes <strong>protocolos    operacionais padrão</strong> podem ser elaborados nesse comitê e anexados na parte    3 do plano de contingência. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Logística </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">É o subcomitê de logística que viabiliza a operação como um todo,    através da <strong>busca, organização e    distribuição de suprimentos</strong> para os locais em que os mesmos sejam    necessários. A gestão do estoque de suprimentos, cadeias de abastecimento,    segurança e proteção do pessoal, entre outros, são de responsabilidade deste    subcomitê.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Administração e finanças</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pela administração e finanças coordenam e monitoram os    recursos relacionados à operação como um todo. Todo o gerenciamento e    contabilidade financeira necessária para execução do plano de contingência é    de responsabilidade deste subcomitê.</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P1111Ttulo">Comunicação</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O subcomitê de comunicação deve abordar tanto a <strong>comunicação interna como externa</strong>. Esse subcomitê desempenha    papéis e funções conjuntas para o compartilhamento de informações, além de    elaborar e atualizar o <strong>plano de    comunicação</strong> utilizado durante a emergência. É a comunicação quem    disponibilizará o acesso às ações e notícias durante a emergência,    especialmente as ações executadas pelo plano de contingência e o comando    geral na assistência à comunidade e no monitoramento de casos do local. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Exemplos de ações a serem executadas pelo subcomitê de comunicação    incluem: </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Divulgar amplamente protocolos técnicos e    informações relacionados a prevenção e controle para infecção SARS-CoV2;</li>
+      <li>Divulgar as informações sobre a doença e medidas    de prevenção junto à rede de serviços de saúde e população;</li>
+      <li>Comunicar a respeito de medidas de etiqueta    respiratória, bem como ações de biossegurança;</li>
+      <li>Definir junto aos gestores, e o comando geral do    plano, o responsável pelo diálogo com os veículos de comunicação (porta voz);</li>
+      <li>Elaborar materiais informativos a respeito da    Covid-19 para a comunidade.     </li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186671"><span style="color:black; ">Parte 3. Informações de    apoio (Anexos)</span></a></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A última parte do plano de contingência é geralmente compreendida    pelos anexos, uma seção que engloba as principais informações de apoio    detalhadas e relacionadas a temas específicos, como:</p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Informações de contato (<strong>Lista de contatos</strong>) das partes envolvidas na resposta;</li>
+      <li><strong>Mapas de    áreas operacionais</strong>, este anexo pode-se apresentar uma planta com    identificação das principais áreas e serviços essenciais para o caso da    necessidade de se estabelecer um <em>lockdown</em>;</li>
+      <li><strong>Procedimentos    e/ou protocolos operacionais padrão</strong>;</li>
+      <li><strong>Formulários    e outros modelos necessários</strong>, como declaração de saúde, modelo de    relatório situacional, entre outros;</li>
+      <li>Outros planos vinculados, como <strong>plano de comunicação de risco</strong>.</li>
+    </ul></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186672"><span style="color:black; ">Vamos relembrar</span></a><span style="line-height:150%; font-size:12.0pt; color:#2F5496; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O estado de prontidão alcançado através de um planejamento de    contingência auxilia na organização, orientação, facilidade e agilidade nas    respostas contra a propagação de doenças e outros eventos de importância para    saúde pública. O plano de contingência uniformiza as ações necessárias para o    controle e combate de ocorrências que colocam em risco o funcionamento    diário, independentemente do tamanho ou especialidade, das organizações,    evitando que interferências desnecessárias sejam realizadas. </p></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186673"><span style="color:black; ">Conclusão</span></a><span style="line-height:150%; font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta aula vimos que o plano de contingência é uma importante linha de    defesa, mas lembre-se que o mesmo deve ser regularmente atualizado e    complementado, de acordo com as mudanças do cenário epidemiológico, seja da    Covid-19 como de outras emergências em saúde pública.</p></td>
+  </tr>
+</table>
+<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;">
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186650">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento de contingência é parte de uma sequência de    estratégias, na qual, por meio da identificação e monitoramento constante de    riscos, vulnerabilidades e capacidades é possível orientar a implementação de    medidas para a diminuição de riscos, preparação de uma resposta adequada aos    diferentes cenários de crise e consequentemente permanecer em estado de    prontidão (OMS, 2018).</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A probabilidade da <strong>diminuição    de risco</strong> envolve condutas que devem ser adotadas para a redução da    ocorrência de uma emergência em saúde pública, visando, principalmente, a    diminuição dos impactos, como por exemplo a redução da gravidade de uma    determinada doença ou evento.  Já a <strong>preparação, </strong>inclui as ações que podem    ser tomadas para aumentar o conhecimento e a capacidade de antecipação,    resposta e recuperação de danoss causados em uma emergência em saúde pública.    O resultado do planejamento e execução dessas estratégias, juntamente com a    preparação, treinamento, alocação de recursos e organização, é, portanto, a <strong>prontidão</strong> (OMS, 2018).</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Além disso, as estratégias de enfrentamento de emergências em saúde    pública devem focar tanto no  âmbito,    da resposta, como na prevenção e proteção da população. Através da elaboração    de um plano de contingência, é possível conhecer o <strong>perfil de risco</strong> da localidade e <strong>desenvolver capacidades básicas</strong> que são fundamentais para a    efetividade da resposta em uma emergência.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência, assim como qualquer outro plano desse tipo,    deve ter como princípios-chave: <span class="PpargrafoChar"><strong>ser    prático, simples e fácil de executar, viável e realista, monitorado e    atualizado, frequentemente testado por meio de exercícios e simulações,    orientado para uma operacionalização, garantindo, ainda, o uso justificado e    racional dos recursos disponíveis</strong></span> (OMS, 2018). </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O principal <strong>objetivo</strong> de um    plano de contingência é <strong>reunir    informações, diretrizes e procedimentos que devem ser utilizados em uma    situação de crise</strong>. Diversas podem ser as situações de crise, por isso é    importante que para cada uma destas situações, os territórios disponham de    plano de contingência específico. Além disso, o plano de contingência    normalmente agrega outros planos com ações e estratégias que operacionalizam    o planejamento.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todas as fases de uma emergência devem ser levadas em consideração no    plano de contingência. Uma epidemia, por exemplo, pode ser dividida em cinco    fases: <strong>preparar, analisar,    desenvolver, implementar e avaliar</strong>. E o planejamento de contingência deve    ser organizado para atender cada uma dessas fases mediante a uma  emergência em saúde pública. Dessa forma, o<span style="color:black; "> plano pode ser utilizado em <strong>diversos cenários</strong>, desde antes de sua implantação, até o    encerramento do evento adverso (OMS, 2018). </span></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186651"><span style="color:black; ">Os 10 passos para a    elaboração de um Plano de Contingência para Emergência de Saúde Pública</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Com base no Regulamento Sanitário Internacional (2005), nos documentos    &ldquo;A guide for public health emergency contingency planning at designated    points of entry&rdquo; (OMS, 2012) e &ldquo;Practical actions in cities to strengthen    preparedness for the COVID-19 pandemic and beyond - An interim checklist for    local authorities&rdquo; (OMS, 2020) <span style="background:white; ">e  &ldquo;Considerations in adjusting    public health and social measures in the context of COVID-19&rdquo; (OMS, 2020b), </span>trazemos    a seguir passos que devem ser trabalhados no planejamento e elaboração de um    plano de contingência para o seu território. Esses passos podem ser    utilizados e adaptados para a elaboração de planos para diferentes    emergências. Após a descrição desses passos trazemos informações e tópicos    para a escrita de um plano de contingência específico para o enfrentamento da    pandemia da Covid-19. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr class="anime" >
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><a name="_Hlk65449023"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image002_0000.png"></span><span style="color:black; "> </span></a></p></td>
+          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Mesmo que o território já tenha um plano de      contingência em curso contra a Covid-19, aproveite esse momento para      revisá-lo e atualizá-lo de acordo com as recomendações apresentadas.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186652"><span style="color:black; ">Passo</span></a><span style="color:black; "> 1. Estabelecer uma equipe de planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Para iniciar o planejamento de contingência é essencial que seja    estabelecida uma <strong>equipe para o    desenvolvimento do plano</strong>. O líder da equipe deve, quando possível, ter    experiência com gestão em saúde e de emergências; planejamento estratégico e    avaliação de risco. Quando viável, envolver especialistas no assunto tratado    no plano de contingência, mas lembre-se de &ldquo;não tornar a equipe grande e    complicada&rdquo;. Além disso, atente-se aos demais planos desenvolvidos no país ou    região, isso garantirá o alinhamento e consistência entre os planos nacionais    e locais. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186653"><span style="color:black; ">Passo</span></a><span style="color:black; "> 2. Organizar-se para a fase de </span> <span style="color:black; ">planejamento</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="572" height="286" src="Vacinação_aula_06_bonus_clip_image004_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O planejamento requer uma <strong>metodologia</strong>,    com <strong>estrutura e cronogramas</strong> definidos para que um plano de atividades possa ser seguido. Um aspecto    importante para atentar-se durante essa fase, é de que territórios em regiões    de fronteira com outros países devem dar importância às considerações de    diferentes níveis, além do nível local. Doenças transmissíveis, como a    Covid-19, podem iniciar sua disseminação em pontos de entrada como as    fronteiras e com isso, os responsáveis pelo planejamento nestes locais devem    considerar também os níveis internacional, nacional, regional e local, mesmo    que a preparação se concentre no nível local. Isso se aplica diretamente e    locais de fronteiras terrestres, que possibilitam maior chance de controle.    Entretanto, para tráfego aéreo, esse cenário é mais difícil, uma vez que o    vírus não encontra limites territoriais e pode facilmente transpor    fronteiras.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Durante a organização do planejamento é importante dispor de outros    planos operacionais que possam orientar o seu desenvolvimento. Além disso,    atente-se ao <strong>perfil de risco do    território</strong>, quanto maior a probabilidade do surgimento de uma emergência    de saúde pública, mais importante e necessário será a construção de um plano    completo e viável. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186654"><span style="color:black; ">Passo 3. Iniciar o    planejamento</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image006_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após organizar-se e estabelecer um <strong>plano de atividades</strong>, crie um rascunho do <strong>modelo do plano de contingência</strong>. Com um modelo estruturado,    encaminhe-o para os colaboradores ou especialistas que podem auxiliar nas    informações necessárias para cada uma das seções. Esses colaboradores devem    receber, ainda, as diretrizes e leituras consideradas relevantes para    garantir uma boa redação de cada uma das seções. Lembrando que, sempre que    possível, os rascunhos devem ser analisados periodicamente para verificar se    a elaboração está no caminho correto. Neste momento, verifique também se o    plano é alcançável e realista.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186655"><span style="color:black; ">Passo</span></a><span style="color:black; "> 4. Escreva o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta fase, a equipe responsável pelo planejamento inicia de fato a    escrita do plano de contingência, preenchendo o modelo já estabelecido. É    interessante que um <strong>redator técnico    possa coordenar e ajudar na formatação</strong> do plano, uma vez que, inúmeros    colaboradores estarão auxiliando na elaboração com diferentes seções do    documento. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+        <tr class="anime" >
+          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="Vacinação_aula_06_bonus_clip_image007_0000.png"></span><span style="color:black; "> </span></p></td>
+          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Na segunda parte desta aula, encontram-se      as etapas para a escrita de um plano de contingência para o enfrentamento      da pandemia da Covid-19.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="MsoNormal" align="right" style="margin-bottom:0cm;text-align:right;line-height:150%;"><strong><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></strong></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186656"><span style="color:black; ">Passo 5. </span></a><span style="color:black; ">Faça</span><span style="color:black; "> a revisão</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image009_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A revisão do plano deve ser conduzida em duas frentes, a primeira    realizada por pares e a segunda pelas partes interessadas. Ambas devem <strong>garantir que os feedbacks produzidos    sejam incorporados</strong> ao plano, quando apropriado. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186657"><span style="color:black; ">Passo</span></a><span style="color:black; "> 6. Teste o plano e faça exercícios regulares</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="371" src="Vacinação_aula_06_bonus_clip_image011_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Testar o plano elaborado é essencial para verificar se o mesmo é    realista e alcançável. Esta etapa não precisa ser complicada e nem necessita    ser realizada em grande escala, em reunião para  discussão pode ser suficiente para desenvolver    um bom exercício de teste, onde diferentes cenários e soluções podem ser    propostos. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após aprovado e divulgado o plano de contingência deve passar por    exercícios regulares, com o objetivo de <strong>atualizá-lo,    identificar suas lacunas e pontos fracos</strong>. Um cronograma de exercícios    pode ser elaborado e diferentes cenários podem ser utilizados, além disso,    esses exercícios devem ser realizados regularmente.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186658"><span style="color:black; ">Passo 7. Obtenha a    aprovação dos interessados</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após a finalização e o teste do plano de contingência, este deverá ser    enviado às partes interessadas para aprovação. As partes interessadas devem    verificar <strong>e concordar com todas as    suas tarefas e responsabilidades designadas no plano</strong>. Pode ser necessário    estabelecer um prazo para devolução do documento, assim as alterações finais    poderão ser revisadas e integradas. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186659"><span style="color:black; ">Passo 8. Publique o </span></a><span style="color:black; ">plano</span><span style="color:black; "> de    contingência</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Versões impressas e online podem ser desenvolvidas e as mesmas devem    ser distribuídas a todos os envolvidos na resposta. Quanto mais pessoas    souberem da existência do plano e puderem acessá-lo facilmente, melhor. Por    isso, faça a <strong>disseminação do plano de    contingência</strong> de forma clara, em páginas confiáveis e de fácil acesso.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186660"><span style="color:black; ">Passo 9. Instrua e    treine todos os </span></a><span style="color:black; ">envolvidos</span><span style="color:black; "> na resposta</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="377" src="Vacinação_aula_06_bonus_clip_image013_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Todos os envolvidos na resposta devem estar <strong>cientes de seu papel e preparados para executar</strong> as ações    descritas no plano de contingência. Com isso, pode haver necessidade de    instrução e treinamento de alguns grupos para melhor execução do plano de    contingência. Algumas pessoas podem ser treinadas em múltiplas funções, essas    habilidades adicionais poderão fornecer um importante reserva de segurança    para o caso de outros envolvidos se ausentarem ou adoecerem. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186661"><span style="color:black; ">Passo</span></a><span style="color:black; "> 10. Revise e atualize o plano</span><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Após cada exercício ou emergência que requeira a ativação do plano de    contingência, o mesmo deve passar por uma <strong>revisão e atualização</strong>, levando em conta principalmente as    principais lições que foram aprendidas. Todas as vezes que uma nova versão do    plano for criada garanta que todas as partes envolvidas sejam comunicadas e    recebam uma cópia da nova versão.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186662"><span style="color:black; ">Escrevendo</span></a><span style="color:black; "> o Plano de Contingência    para enfrentamento da pandemia da Covid-19</span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As informações e etapas abaixo são essenciais para a escrita de um    plano de contingência, independente do formato e modelo adotado durante o    planejamento. Alguns ajustes foram realizados para melhor direcionamento do    plano para o enfrentamento da Covid-19, entretanto, os tópicos abordados    possibilitam uma visão geral e são essenciais para qualquer plano de    contingência para uma emergência de saúde pública.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim como na seção anterior, dividimos os passos que devem ser    seguidos para a fase de escrita das diferentes partes que compõem o plano de    contingência, agora resumidos em três partes. A primeira, com os pontos que    devem constar na <strong>introdução do plano</strong>,    a segunda com os pontos que devem ser incluídos na <strong>resposta operacional</strong> e a terceira com as <strong>informações detalhadas e anexos</strong> que devem ser incluídos para    apoiar o plano.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186663"><span style="color:black; ">Parte 1. Introdução</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186664">Contextualize o seu plano de contingência</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="566" height="378" src="Vacinação_aula_06_bonus_clip_image015_0000.jpg"></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Um plano de contingência deve ser elaborado para os mais diversos    cenários de crise, por isso é importante iniciar a elaboração do plano pela <strong>contextualização da Covid-19 e seu    impacto no território</strong>. Explicações iniciais de como usar o plano também    são sempre bem-vindas nesta seção, além disso também podem ser adicionados    nessa parte o <strong>propósito, objetivos e    escopo</strong> do plano de contingência. Lembre-se de ser claro e sucinto sobre a <strong>finalidade do plano, público-alvo e os    objetivos específicos</strong>.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186665">Delimite o evento de interesse e analise os riscos</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O plano de contingência deve <strong>prever    várias fases</strong> e delimitar todas as ações e processos que deverão ser    realizados por cada um dos agentes envolvidos na situação de crise. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Sendo assim, um passo essencial para elaboração de um plano de    contingência é <strong>delimitar o evento de    interesse e determinar o cenário de crise</strong>. Esse cenário pode ser    nacional, estadual, municipal ou local. Ou seja, não somente o município pode    e deve dispor de um plano de contingência para enfrentamento da pandemia da    Covid-19, mas outras áreas e instituições também podem se apropriar desses    conhecimentos para enfrentar a situação de crise, como escolas,    universidades, mercados, shoppings e igrejas.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186666">Defina todos os agentes envolvidos</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Seguindo as etapas do plano de contingência, agora é necessário <strong>delimitar os agentes envolvidos</strong> nesse    momento de crise. Lembre-se quem são os parceiros que deverão ajustar    atividades e as áreas que deverão ser mobilizadas para apoiar a readequação    de processos.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186667"><span style="color:black; ">Parte 2. Operacional</span></a><span style="color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186668">Descreva as estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Aqui deve-se indicar o <strong>agente    que comandará a resposta</strong> no município. É essencial especificar nesta    etapa o que cada um dos <strong>responsáveis    por essas funções deverá executar</strong>. Defina também quem participará das <strong>equipes de operação</strong> e outras funções    e quem estará no comando. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Defina    as responsabilidades dos envolvidos </li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">As funções e responsabilidades de todos os envolvidos na resposta é    extremamente necessária. Para cada função um conjunto de tarefas deve ser    designado, assim pode ser interessante a construção de uma <strong>tabela de funções</strong> de comando e    controle nesta seção, onde as responsabilidades para cada equipe ou indivíduo    envolvido na resposta seja colocada de forma clara para os leitores. Esta    tabela será essencial para o rápido reconhecimento dos responsáveis por cada    uma das ações e decisões.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186669">Descreva as ações para as diferentes partes envolvidas</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Neste momento, descreva todas as ações necessárias para quando o plano    de contingência for ativado, de acordo com cada uma das fases possíveis e os    agentes envolvidos. As instruções nesta seção devem ser específicas e    determinar quem deve fazer o quê, em cada uma das fases previstas, de    preferência em ordem cronológica a partir da ativação da resposta. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo"><span style="color:red; "> </span>Para a    descrição das ações de acordo com as fases da emergência, lembre-se das    quatro fases de uma epidemia, que são:<span style="color:red; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr class="anime" >
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="line-height:115%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">preparação e prontidão;</span><span style="line-height:115%; font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr class="anime" >
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">contenção;</span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ptexto"> </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr class="anime" >
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">emergência</span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <span style="line-height:150%; font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">
+        <ul style="margin-top:0cm;" type="disc">
+          <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+        </ul>
+      </span></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><div align="center">
+      <table class="Ptabdestaque" border="0" cellspacing="11" cellpadding="0" width="100%" style="width:100.0%;">
+        <tr class="anime" >
+          <td width="603" valign="top" style="width:452.05pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><ul>
+            <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">controle</span><span style="font-family:'Arial',sans-serif; color:black; ">. </span><span style="font-family:'Arial',sans-serif; "> </span></li>
+          </ul></td>
+        </tr>
+      </table>
+    </div>
+      <span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">
+        <ul style="margin-top:0cm;" type="disc">
+          <li class="MsoNormal" style="color:black;margin-bottom:0cm;text-align:justify;line-height:150%;border:none;"><span style="font-family:'Arial',sans-serif; font-size:12.0pt; "> </span></li>
+        </ul>
+      </span></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Abaixo, encontram-se algumas dicas de ações para o contingenciamento    do número de casos da Covid-19 de acordo com as diferentes fases da pandemia:</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    segunda fase, a fase de contenção, enfatize, por exemplo, atividades de    isolamento de casos e acompanhamento de contatos, para contenção da pandemia    da Covid-19. Uma importante informação que deve constar nes</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">t<span style="color:black; ">e momento é a realização de escalas de trabalho para    todos os profissionais envolvidos na resposta e a realização de um contínuo    monitoramento dos casos</span>;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Já para    a fase de emergência, as ações devem ser montadas em torno do isolamento    social, uma vez que o isolamento evita uma maior propagação viral. O uso de    trabalho remoto (conforme o possível) é indicado como uma ação a ser adotada,    assim como adoção de escalas de horários flexíveis, diminuição da circulação    da população e o reforço para que se evite locais com aglomeração</span><span style="font-family:'Arial',sans-serif; font-size:12.0pt; ">;<span style="color:black; "> </span></span></li>
+      <li><span style="font-family:'Arial',sans-serif; font-size:12.0pt; color:black; ">Para a    fase de controle, é importante a elaboração de relatórios que registrem as    lições aprendidas e dificuldades encontradas por cada agente específico    envolvido na resposta. Também é importante que seja feito um monitoramento    contínuo do impacto da implantação de cada fase do plano de contingência. </span></li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Observe que a resposta eficiente à crise provocada pela Covid-19    necessitará da adequação ou implementação de medidas de saúde pública e    sociais. Essas medidas preventivas são essenciais e devem ser detalhadamente    descritas dentro das ações do plano de contingência. Tais ações irão incluir    principalmente medidas de proteção individual (adoção de etiqueta respiratória,    higiene das mãos e uso de máscaras de proteção) e distanciamento físico, como    isolamento e quarentena. Ações de bloqueio, também conhecidas como <em>lockdown</em> também podem ser necessárias,    essas ações englobam normalmente a restrição de movimentos e viagens, com    fechamento de negócios e escolas. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Por fim, atente-se às mudanças que as ações sofrerão de acordo com os    diferentes cenários provocados por cada fase da pandemia, essas    flexibilizações das medidas adotadas deverão ser fundamentadas e realizadas    gradualmente, iniciando pelas áreas com menor incidência da doença.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="P111Ttulonumerado"><a name="_Toc68186670">Defina os protocolos operacionais das estruturas de comando e controle</a></p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Quando há uma emergência em saúde pública normalmente há necessidade    de ativação ou implementação de um <strong>Centro    de Operações de Emergência</strong> (COE). O COE é uma <strong>estrutura de comando e controle</strong> onde a resposta é    operacionalizada, dependendo da natureza e tamanho da emergência vários    Centros de Operações de Emergência podem ser necessários. Normalmente estes    centros consistem em uma sala ou instalação onde os comandantes e as equipes    envolvidas na resposta operam e executam as tarefas e funções necessárias    para o enfrentamento da emergência.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Assim, nesta seção do plano de contingência devem ser descritos os    protocolos operacionais das estruturas de comando e controle. Além do COE,    pode ser necessária a implementação ou ativação de subcomitês. Estes    subcomitês normalmente são responsáveis por uma única área funcional da    resposta e protocolos operacionais específicos para cada uma das áreas que    também deverão ser descritos. Os principais subcomitês articulados junto ao    COE, são:</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Planejamento    e Inteligência      </li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelo subcomitê de planejamento e inteligência    organizam e documentam as informações mais recentes sobre a situação e    elaboram <strong>planos de ação</strong> para    alcançar os objetivos e nortear as próximas decisões que devem ser tomadas. É    nesse subcomitê que são antecipados os possíveis cenários e estratégias que    devem ser adotadas para diminuir os impactos causados.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Operações </li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pelas operações <strong>executam    as funções</strong> e tarefas necessárias, ou seja, executam o plano de ação    estabelecido. Dessa forma, esse subcomitê coordena diferentes equipes    operacionais ou mesmo indivíduos, direcionando-os e auxiliando-os para a    realização de suas tarefas. Diferentes <strong>protocolos    operacionais padrão</strong> podem ser elaborados nesse comitê e anexados na parte    3 do plano de contingência. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Logística </li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">É o subcomitê de logística que viabiliza a operação como um todo,    através da <strong>busca, organização e    distribuição de suprimentos</strong> para os locais em que os mesmos sejam    necessários. A gestão do estoque de suprimentos, cadeias de abastecimento,    segurança e proteção do pessoal, entre outros, são de responsabilidade deste    subcomitê.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Administração    e finanças</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Os responsáveis pela administração e finanças coordenam e monitoram os    recursos relacionados à operação como um todo. Todo o gerenciamento e    contabilidade financeira necessária para execução do plano de contingência é    de responsabilidade deste subcomitê.</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Comunicação</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O subcomitê de comunicação deve abordar tanto a <strong>comunicação interna como externa</strong>. Esse subcomitê desempenha    papéis e funções conjuntas para o compartilhamento de informações, além de    elaborar e atualizar o <strong>plano de    comunicação</strong> utilizado durante a emergência. É a comunicação quem    disponibilizará o acesso às ações e notícias durante a emergência,    especialmente as ações executadas pelo plano de contingência e o comando    geral na assistência à comunidade e no monitoramento de casos do local. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Exemplos de ações a serem executadas pelo subcomitê de comunicação    incluem: </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Divulgar amplamente protocolos técnicos e    informações relacionados a prevenção e controle para infecção SARS-CoV2;</li>
+      <li>Divulgar as informações sobre a doença e medidas    de prevenção junto à rede de serviços de saúde e população;</li>
+      <li>Comunicar a respeito de medidas de etiqueta    respiratória, bem como ações de biossegurança;</li>
+      <li>Definir junto aos gestores, e o comando geral do    plano, o responsável pelo diálogo com os veículos de comunicação (porta voz);</li>
+      <li>Elaborar materiais informativos a respeito da    Covid-19 para a comunidade.     </li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc68186671"><span style="color:black; ">Parte 3. Informações de    apoio (Anexos)</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">A última parte do plano de contingência é geralmente compreendida    pelos anexos, uma seção que engloba as principais informações de apoio    detalhadas e relacionadas a temas específicos, como:</p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><ul>
+      <li>Informações de contato (<strong>Lista de contatos</strong>) das partes envolvidas na resposta;</li>
+      <li><strong>Mapas de    áreas operacionais</strong>, este anexo pode-se apresentar uma planta com    identificação das principais áreas e serviços essenciais para o caso da    necessidade de se estabelecer um <em>lockdown</em>;</li>
+      <li><strong>Procedimentos    e/ou protocolos operacionais padrão</strong>;</li>
+      <li><strong>Formulários    e outros modelos necessários</strong>, como declaração de saúde, modelo de    relatório situacional, entre outros;</li>
+      <li>Outros planos vinculados, como <strong>plano de comunicação de risco</strong>.</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186672"><span style="color:black; ">Vamos relembrar</span></a><span style="line-height:150%; font-size:12.0pt; color:#2F5496; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">O estado de prontidão alcançado através de um planejamento de    contingência auxilia na organização, orientação, facilidade e agilidade nas    respostas contra a propagação de doenças e outros eventos de importância para    saúde pública. O plano de contingência uniformiza as ações necessárias para o    controle e combate de ocorrências que colocam em risco o funcionamento    diário, independentemente do tamanho ou especialidade, das organizações,    evitando que interferências desnecessárias sejam realizadas. </p></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc68186673"><span style="color:black; ">Conclusão</span></a><span style="line-height:150%; font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="height:1.0pt;">
+    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Nesta aula vimos que o plano de contingência é uma importante linha de    defesa, mas lembre-se que o mesmo deve ser regularmente atualizado e    complementado, de acordo com as mudanças do cenário epidemiológico, seja da    Covid-19 como de outras emergências em saúde pública.</p></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>	
+	
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    
+    
+// Adiciona a classe .js ao elemento HTML. Assim eu garanto que os elementos só serão escondidos caso o JavaScript esteja habilitado
+var root = document.documentElement;
+root.className += ' js';
+
+// Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
+function boxTop(idBox) {
+	var boxOffset = $(idBox).offset().top;
+	return boxOffset;
+}
+
+// Verifica se o documento está pronto
+$(document).ready(function() {
+	
+			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
+	var $target = $('.anime'),
+			
+			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
+			animationClass = 'anime-init',
+			
+			// windowHeight pega a altura total da janela do browser
+			windowHeight = $(window).height(),
+			
+			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
+			offset = windowHeight - (windowHeight / 4);
+
+	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
+	function animeScroll() {
+		
+		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
+		var documentTop = $(document).scrollTop();
+		
+		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
+		$target.each(function() {
+			
+			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
+			if (documentTop > boxTop(this) - offset) {
+				
+				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
+				$(this).addClass(animationClass);
+			} else {
+				
+				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+	
+	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
+	animeScroll();
+	
+	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
+	$(document).scroll(function() {
+		
+		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
+		setTimeout(function() {
+			animeScroll()
+		}, 150);
+	});
+});
+
+ 
+    
+//tree menu
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("SN_active");
+  });
+}
+
+      
+    
+</script> 
+
+<script src="../nav.js"></script>
+<script src="../modal.js"></script>  
+</body>  
+</body>
+    
+    
+</html>

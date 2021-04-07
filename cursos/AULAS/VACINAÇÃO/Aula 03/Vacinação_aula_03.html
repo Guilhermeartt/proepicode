@@ -1,0 +1,648 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+	
+	table.MsoTableGrid {
+    border: solid windowtext 1.0pt;
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+    width: 100%;
+}
+p.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+	color: #ffffff;
+	}
+p.Fonte {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    text-align: center;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+    color: gray;
+}
+p.txtrec {
+    margin-top: 12.0pt;
+    margin-right: 5.65pt;
+    margin-bottom: 6.0pt;
+    margin-left: 5.65pt;
+	padding: 10px 20px;
+	line-height:150%;
+    text-align: justify;
+    font-size: 14.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.MsoNormal {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 175% !important;
+    padding: 15px 28px;
+    text-align: justify;
+    font-size: 12pt;
+    font-family: "Arial", sans-serif;
+}
+table.Tabela01 {
+    border: solid white 2.25pt;
+    text-align: center;
+    font-size: 9.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+td li {
+    margin-left: 55px;
+}
+p.txttabela8 {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.txttabela {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+body {
+    width: 997px !important;
+    margin: auto;
+}
+section {
+    margin-top: 0px !important;
+    padding-bottom: 30px;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+h1 {
+    margin-top: 30px
+}
+td li {
+    line-height: 150%;
+    list-style: disc;
+    font-size: 16.0pt !important;
+    font-family: "Arial", sans-serif;
+}
+	td li span{
+    font-size: 16.0pt !important;
+    
+}
+-->
+.SN_sumario {
+    position: fixed;
+    z-index: 1;
+    font-family: "Arial", sans-serif;
+    margin: 2;
+}
+.vertical-menu li {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+table.tabelaneuro {
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+.progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+}
+.Fonte {
+    overflow: hidden;
+}
+.Fonte img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Fonte:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.txtChar {
+    font-family: "Calibri", sans-serif;
+    color: windowtext;
+}
+span.FonteChar {
+    font-family: "Calibri", sans-serif;
+    color: gray;
+}
+
+ul, #SN_menu {
+    list-style-type: none;
+}
+#SN_menu {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-decoration: none;
+    padding-inline-start: 0px !important;
+}
+.caret {    
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+.nested {
+    display: none;
+    transition: 1s;
+}
+.SN_active {
+    display: block;
+    transition: 1s;
+}
+.SN_main {
+    background-color: #FFFfFF;
+    border: solid 1px #ffffff;
+    color: black;    
+}
+    
+a.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+    text-decoration-color: black;
+}  
+
+h1 {
+    padding-top: 50px
+    }
+    
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.MsoTableGridLight {
+border:solid #BFBFBF 1.0pt;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+p.Pimagem {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:center;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+p.MsoCaption {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:18.0pt;
+margin-left:0cm;
+text-align:center;
+font-size:8.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpFirst {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpLast {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptexto {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.Ppargrafo {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.P1Ttulonumerado {
+margin-top:20.0pt;
+margin-right:0cm;
+list-style-type: decimal;
+margin-bottom:18.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:18.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+	td div{
+		    margin-left: -100px;
+
+	}
+	
+	p.P11Ttulonumerado {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:20.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+table.TableNormal {
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.txtrecChar {
+font-family:"Arial",sans-serif;
+}
+	
+	td div.sabimais{
+	border-radius: 70px;
+    background-color: lightgoldenrodyellow;
+    padding: 15px 0px;
+	}
+	td div.ficaafica{
+	border-radius: 70px;
+    background-color: lightcyan;
+    padding: 15px 0px;
+	}
+	td div.curiosidade{
+	border-radius: 70px;
+    background-color: lightblue;
+    padding: 15px 0px;
+	}
+	
+-->
+</style>
+<style type="text/css">
+<!--
+p.Pdestaque {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+line-height:107%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.MZtabela {
+border:solid white 2.25pt;
+text-align:center;
+font-size:11.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptextotabela {
+margin:0cm;
+text-align:center;
+line-height:115%;
+font-size:9.0pt;
+font-family:"Calibri",sans-serif;
+}
+	
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.Ptabela {
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+</head>
+
+	
+	<body>
+  	
+    <table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;">
+      <tr class="anime"  style="height:1.0pt;">
+        <td width="794" valign="top" style="width:595.3pt;background:#2A7138;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;" bgcolor="#2A7138"><p class="TtuloAula">Aula 3 - Introdução ao planejamento para vacinação do Covid-19     - passos 6 e 7</p></td>
+      </tr>
+      <tr class="anime"  style="height:1.0pt;">
+        <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Pimagem"><img width="588" height="317" src="img/Vacinação_aula_03_clip_image002.jpg"></p>
+          <p class="MsoCaption">Figura 1    - Sistema de informação para para agendamento da testagem sorológica dos    trabalhadores.    https://www.fiocruzimagens.fiocruz.br/media.details.php?mediaID=7021</p></td>
+      </tr>
+      <tr class="anime"  style="height:1.0pt;">
+        <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="PpargrafoCxSpFirst">Olá!</p>
+          <p class="PpargrafoCxSpLast">Nesta aula você vai aprender sobre a utilização do    sistema de informação para registro da vacinação e dos efeitos adversos e a    realizar o monitoramento, supervisão e avaliação utilizando esses dados.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+      </tr>
+      <tr class="anime"  style="height:1.0pt;">
+        <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:1.0pt;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:</p>
+          <ul>
+            <li>Identificar os sistemas de informação    envolvidos na campanha de vacinação;</li>
+            <li>Entender como fazer o monitoramento,    supervisão e avaliação da campanha de vacinação;</li>
+            <li>Elencar indicadores (processo, estrutura e    resultado) para avaliação dos impactos da vacinação. </li>
+          </ul></td>
+      </tr>
+    </table>
+		
+	<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;">
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+	      <p class="P1Ttulonumerado"><a name="_Toc65681072">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+	      </div></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Como temos visto, o planejamento da campanha de vacinação passa por <strong>passos    de organização</strong>. Porém, esses passos não precisam ocorrer de forma    sequencial, mas é importante que todos ocorram. Nesse sentido, já vimos que    devemos identificar a população-alvo, ou seja, aqueles que primeiro deverão    se vacinar, e com isso listar os insumos e recursos necessários para atingir    o objetivo final. Não podemos nos esquecer de elaborar quais estratégias    serão utilizadas para a vacinação, considerando todos os grupos prioritários.    A seguir, vamos tratar de mais dois passos para um bom planejamento, agora    pensando no monitoramento de dados para avaliação da campanha.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+	      <p class="P11Ttulonumerado"><a name="_Toc65681073"><span style="color:black; ">Passo 6. Utilização de sistemas de informação</span></a></p>
+	      </div></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Os <strong>sistemas de informação</strong> aliados à imunização contra a Covid-19    são importantes ferramentas para o monitoramento de dados sobre a vacinação.    Há uma demanda intensa e urgente por esses dados em todo o mundo. Dessa    forma, países, estados e municípios deverão fortalecer o mais rápido possível    seus sistemas de informação para fornecer <strong>relatórios rápidos</strong>, precisos    e frequentes (OMS, 2020c).</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Por meio dos sistemas de informação poderá ser realizada uma avaliação    das <strong>coberturas vacinais</strong> nos diferentes grupos prioritários em um nível    muito detalhado, de bairro e comunidade. Além disso, poderão ser <strong>identificadas    iniquidades </strong>e, ainda, <strong>georreferenciar os dados</strong> coletados.</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Parcerias podem ser estabelecidas para implementar ou mesmo aplicar    novas tecnologias aos sistemas de informação em uso, sempre visando facilitar    a coleta de dados em tempo real. Essas parcerias podem ocorrer,    principalmente, com Ministérios da Ciência, Tecnologia, Comunicações e    Inovações do país. Verifique as parcerias estaduais e nacionais em vigor no    território e considere a adesão do município (OMS, 2020c).</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">É preciso verificar se no seu país já existe um <strong>sistema que    registra as vacinas</strong> aplicadas. Se esse for o caso, é possível que sejam    necessários alguns ajustes para a inclusão de uma nova vacina para uma nova    doença. Se esse não for o caso, e seu país ainda não apresenta um sistema de    informação próprio para vacinas, é importante que você organize isso o quanto    antes. Para isso, é necessário identificar quais os <strong>dados mínimos</strong> que    devem ser registrados, para que durante a campanha você possa monitorar e avaliar.</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">É importante registrar dados que nos permitam fazer análise de    cobertura vacinal, a quantidade de doses aplicadas por tipo de vacina    (considerando que em muitos países serão aplicados tipos diferentes), doses    perdidas, dados que possibilitem acompanhar o estoque, taxa de abandono de    vacina, se a pessoa se enquadra em grupos de risco, entre outras informações.    Não esquecendo também do registro de informações para possíveis eventos    adversos pós vacinação.</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Contudo, é importante atentar-se que o sucesso do uso do sistema de    informações durante a campanha também necessita de outros fatores, uma vez    que não basta apenas a implementação ou simples utilização de um sistema já    em vigor. É necessário que sejam estabelecidos <strong>fluxos e procedimentos</strong> <strong>muito    bem definidos</strong> para que a informação seja enviada do nível local para o    estadual e nacional. Portanto, estabeleça procedimentos, padronização dos    relatórios de dados e periodicidade no envio de informações desde a ponta, ou    seja, da sala de vacina para outras instâncias.</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><div class="ficaafica"  align="center">
+	      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+	        <tr class="anime" >
+	          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="img/Vacinação_aula_03_clip_image002.png"></span><span style="color:black; "> </span></p></td>
+	          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica</span></strong></p>
+	            <p class="txtrec"><span style="color:black; ">É importante que os dados sejam      monitorados de forma correta e que a equipe esteja atenta no processo de      armazenamento.</span></p></td>
+            </tr>
+          </table>
+	      </div>
+	      <p class="Ppargrafo"> </p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+	      <p class="P11Ttulonumerado"><a name="_Toc65681074"><span style="color:black; ">Passo 7. Monitoramento, supervisão e avaliação</span></a><span style="color:black; "> </span></p>
+	      </div></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Para o monitoramento, supervisão e avaliação da campanha no município    é importante o estabelecimento de uma <strong>comissão</strong>. Essa comissão deve    acompanhar, supervisionar e apoiar a execução da campanha, além de ser    responsável por implantar ferramentas para o monitoramento e análise. Para    isso é imprescindível profissionais capacitados para análise de dados, como    sanitaristas e epidemiologistas. É importante, ainda, que a supervisão e    avaliação da campanha transpasse todo o processo acordado com as instâncias    gestoras, desde a esfera federal até a municipal. Algumas responsabilidades    da comissão podem incluir (OPAS, 2020a):</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+	      <li>Implementar <strong>sala de situação</strong> para    monitoramento e análise da campanha.</li>
+	      <li>Revisar <strong>informações geográficas</strong> do    município.</li>
+	      <li>Revisar os <strong>dados atualizados</strong> sobre a    administração de doses por estabelecimentos de saúde e comunidades,    desagregados por grupos prioritários.</li>
+	      <li>Criar um <strong>painel de monitoramento</strong> das    coberturas e de outros indicadores oportunos.</li>
+	      </ul></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Outra interessante ferramenta que pode ser    adotada é um <strong>vacinômetro</strong> municipal, que pode ser <strong>manual ou digital</strong>.    O importante é que o vacinômetro permita o acompanhamento <strong>diário e semanal    das metas</strong> estabelecidas, identifique os possíveis atrasos, a população-alvo    da campanha que ainda não foi vacinada, de modo que a programação das    estratégias possa ser retomada ou readaptada constantemente (OPAS, 2020a).</span></p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><div class="sabimais"  align="center">
+	      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="width:115.0%;">
+	        <tr class="anime" >
+	          <td width="20%" style="width:20.0%;padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img width="127" height="127" src="img/Vacinação_aula_03_clip_image004.png"></span><span style="color:black; "> </span></p></td>
+	          <td width="80%" style="width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Saiba Mais!</span></strong></p>
+	            <p class="txtrec"><span style="color:black; ">Você pode fazer o seu próprio      vacinômetro digital. É simples. Basta seguir os passos do link abaixo:</span></p>
+	            <a href="https://www.instagram.com/p/CHgcI6SHKKB/" target="_blank"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img border="0" width="161" height="47" src="img/Vacinação_aula_03_clip_image005.png" usemap="#MicrosoftOfficeMap0" alt="Retângulo: Cantos Arredondados: Clique aqui!"></span><span style="color:black; "> </span></p></a>
+	            <p class="MsoCaption" style="margin-bottom:6.0pt;"><span style="color:black; ">https://www.instagram.com/p/CHgcI6SHKKB/</span></p></td>
+            </tr>
+          </table>
+	      </div>
+	      <p class="Ppargrafo"><span style="color:black; "> </span></p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Os indicadores utilizados para monitorar o    progresso da vacinação são semelhantes a qualquer indicador de introdução de    uma vacina, a Organização Mundial da Saúde (2020c) sugere os seguintes    indicadores para monitoramento do progresso da vacinação contra a Covid-19:</span></p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+	      <li><strong>Adesão vacinal</strong>: é o número ou proporção de pessoas    vacinadas em um determinado período de tempo. Deve ser calculada por dose,    por exemplo: número de pessoas ou proporção de um grupo prioritário que    recebeu a primeira dose; número ou proporção que recebeu uma segunda ou    terceira dose de reforço; e número de pessoas que completaram o cronograma    vacinal recomendado. </li>
+	      <li><strong>Cobertura vacinal</strong>: é a    proporção vacinada de uma população-alvo, pode parecer semelhante ao    indicador de adesão, mas na cobertura vacinal é considerada a vacinação em    períodos anteriores. Para 2021, ano de introdução da vacina contra a    Covid-19, ambos indicadores podem ser utilizados sem distinção. </li>
+	      </ul></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Sempre que possível, os dados devem ser coletados e avaliados    separadamente, ou seja, <strong>desagregados de acordo com diferentes variáveis</strong> como vacina utilizada, sexo, faixa etária, ocupação, contexto (instituições de    longa permanência, prisões, escolas, etc), geografia (bairro, comunidade,    etc), fatores de risco (grávidas e pessoas com comorbidades), e outras    dimensões como etnia, religião, condição socioeconômica, entre outros (OMS,    2020c). Além disso, outros indicadores podem ser utilizados como <strong>indicadores    de eficácia, homogeneidade, eficiência e oportunidade</strong> (OPAS, 2020a).</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">É interessante que se tenha três categorias de indicadores, para um    monitoramento mais interno, são eles: <strong>indicadores de estrutura, indicadores    de processo e indicadores de resultado</strong>. Isso é importante, porque muitas    vezes você pode estar percebendo uma diminuição da cobertura vacinal    (indicador de resultado), mas precisa explicar qual o motivo disso, que pode    ser um identificador por um indicador de estrutura ou mesmo de processo. Por    exemplo, nesse caso de baixa cobertura vacinal, você pode estar se    perguntando, o que está levando a essa situação? É possível que esteja com    estoque insuficiente de vacina (indicador de estrutura)? É possível que não    tenha sido desenhado um fluxo de trabalho e que os vacinadores estão    aplicando vacinas erroneamente (indicador de processo)? Tudo isso pode estar    resultando na baixa cobertura vacinal, por isso a importância de se    acompanhar também esses indicadores.</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Em relação a avaliação da introdução da vacina no território, o    primeiro passo que deverá ser dado no município para entender os impactos    causados pela vacinação será ajustar a própria vigilância municipal da    Covid-19. A ideia é aproveitar os sistemas de vigilância da Covid-19, já em    vigor, para compreender os impactos da vacina. Além disso, lembre-se que    todas as fases envolvidas no planejamento e na execução da campanha também    deverão ser avaliadas, para que alterações assertivas sejam realizadas ao longo    da campanha (OMS, 2020c).</p></td>
+      </tr>
+	  <tr class="anime" >
+	    <td width="794" valign="top" style="width:595.3pt;background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+	      <p class="P1Ttulonumerado"><a name="_Toc65681075"><span style="color:black; ">Conclusão</span></a><span style="line-height:150%; font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+	      </div></td>
+      </tr>
+	  <tr class="anime"  style="height:82.8pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:82.8pt;"><p class="Ppargrafo">Nesta aula você viu a importância de ter dados para monitorar a    campanha vacinal, e não só ela, mas também os efeitos adversos pós-vacinação.    Para isso, é preciso organizar o sistema de informação que vai receber esses    dados.<span style="color:black; "> </span></p></td>
+      </tr>
+	  <tr class="anime"  style="height:82.8pt;">
+	    <td width="794" valign="top" style="width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;height:82.8pt;"><p class="PpargrafoCxSpFirst">Vimos mais alguns passos em nosso planejamento:    sistemas de informação e monitoramento e análise desses dados que são etapas    importantíssimas que devem ser consideradas no planejamento. Quer saber os    outros passos? </p>
+	      <p class="PpargrafoCxSpLast">Vem com a gente!</p></td>
+      </tr>
+    </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>	
+		
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    
+    
+// Adiciona a classe .js ao elemento HTML. Assim eu garanto que os elementos só serão escondidos caso o JavaScript esteja habilitado
+var root = document.documentElement;
+root.className += ' js';
+
+// Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
+function boxTop(idBox) {
+	var boxOffset = $(idBox).offset().top;
+	return boxOffset;
+}
+
+// Verifica se o documento está pronto
+$(document).ready(function() {
+	
+			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
+	var $target = $('.anime'),
+			
+			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
+			animationClass = 'anime-init',
+			
+			// windowHeight pega a altura total da janela do browser
+			windowHeight = $(window).height(),
+			
+			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
+			offset = windowHeight - (windowHeight / 4);
+
+	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
+	function animeScroll() {
+		
+		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
+		var documentTop = $(document).scrollTop();
+		
+		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
+		$target.each(function() {
+			
+			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
+			if (documentTop > boxTop(this) - offset) {
+				
+				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
+				$(this).addClass(animationClass);
+			} else {
+				
+				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+	
+	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
+	animeScroll();
+	
+	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
+	$(document).scroll(function() {
+		
+		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
+		setTimeout(function() {
+			animeScroll()
+		}, 150);
+	});
+});
+
+ 
+    
+//tree menu
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("SN_active");
+  });
+}
+
+      
+    
+</script> 
+</section>   
+</body>
+    
+    
+</html>
