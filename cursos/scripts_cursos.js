@@ -48,8 +48,8 @@ loadGRID(URL)
 function loadSCRIPTmodal(url) {
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
-  
-  document.body.appendChild(lnk);
+  x.appendChild(lnk);
+  document.body.appendChild(x);
   
 }
 loadSCRIPTmodal(URL)
