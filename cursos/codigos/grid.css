@@ -6,6 +6,7 @@ body{
   background-color: #e6e6e6;
 }
 section .proepi {
+
   width: 100% !important;
 }
 
@@ -56,7 +57,7 @@ p.TtuloAula {
 
 @media screen and (min-width: 992px) {
 	section .proepi {
-	  
+	  width: 992px !important;
 	  margin: auto;
 	}
 }
