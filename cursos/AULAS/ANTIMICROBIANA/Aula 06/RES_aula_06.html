@@ -1,0 +1,1018 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<link href="../grid.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+	
+	table.MsoTableGrid {
+    border: solid windowtext 1.0pt;
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+    width: 100%;
+}
+p.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+	color: #ffffff;
+	}
+p.Fonte {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    text-align: center;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+    color: gray;
+}
+p.txtrec {
+    margin-top: 12.0pt;
+    margin-right: 5.65pt;
+    margin-bottom: 6.0pt;
+    margin-left: 5.65pt;
+	padding: 10px 20px;
+	line-height:150%;
+    text-align: justify;
+    font-size: 14.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.MsoNormal {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 175% !important;
+    padding: 15px 28px;
+    text-align: justify;
+    font-size: 12pt;
+    font-family: "Arial", sans-serif;
+}
+table.Tabela01 {
+    border: solid white 2.25pt;
+    text-align: center;
+    font-size: 9.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+td li {
+    margin-left: 55px;
+}
+p.txttabela8 {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.txttabela {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+body {
+    width: 997px !important;
+    margin: auto;
+}
+section {
+    margin-top: 0px !important;
+    padding-bottom: 30px;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+h1 {
+    margin-top: 30px
+}
+td li {
+    line-height: 150%;
+    list-style: disc;
+    font-size: 16.0pt !important;
+    font-family: "Arial", sans-serif;
+}
+	td li span{
+    font-size: 16.0pt !important;
+    
+}
+-->
+.SN_sumario {
+    position: fixed;
+    z-index: 1;
+    font-family: "Arial", sans-serif;
+    margin: 2;
+}
+.vertical-menu li {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+table.tabelaneuro {
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+.progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+}
+.Fonte {
+    overflow: hidden;
+}
+.Fonte img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Fonte:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.txtChar {
+    font-family: "Calibri", sans-serif;
+    color: windowtext;
+}
+span.FonteChar {
+    font-family: "Calibri", sans-serif;
+    color: gray;
+}
+
+ul, #SN_menu {
+    list-style-type: none;
+}
+#SN_menu {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-decoration: none;
+    padding-inline-start: 0px !important;
+}
+.caret {    
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+.nested {
+    display: none;
+    transition: 1s;
+}
+.SN_active {
+    display: block;
+    transition: 1s;
+}
+.SN_main {
+    background-color: #FFFfFF;
+    border: solid 1px #ffffff;
+    color: black;    
+}
+    
+a.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+    text-decoration-color: black;
+}  
+
+h1 {
+    padding-top: 50px
+    }
+    
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.MsoTableGridLight {
+border:solid #BFBFBF 1.0pt;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+p.Pimagem {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:center;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+p.MsoCaption {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:18.0pt;
+margin-left:0cm;
+text-align:center;
+font-size:8.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpFirst {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpLast {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptexto {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.Ppargrafo {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.P1Ttulonumerado {
+margin-top:20.0pt;
+margin-right:0cm;
+list-style-type: decimal;
+margin-bottom:18.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:18.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+	td div{
+		    margin-left: -100px;
+
+	}
+	
+	p.P11Ttulonumerado {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:20.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+table.TableNormal {
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.txtrecChar {
+font-family:"Arial",sans-serif;
+}
+	
+	td div.sabimais{
+	border-radius: 70px;
+    background-color: lightgoldenrodyellow;
+    padding: 15px 0px;
+	}
+	td div.ficaafica{
+	border-radius: 70px;
+    background-color: lightcyan;
+    padding: 15px 0px;
+	}
+	td div.curiosidade{
+	border-radius: 70px;
+    background-color: lightblue;
+    padding: 15px 0px;
+	}
+	
+-->
+</style>
+<style type="text/css">
+<!--
+p.Pdestaque {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+line-height:107%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.MZtabela {
+border:solid white 2.25pt;
+text-align:center;
+font-size:11.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptextotabela {
+margin:0cm;
+text-align:center;
+line-height:115%;
+font-size:9.0pt;
+font-family:"Calibri",sans-serif;
+}
+	
+
+-->
+</style>
+<style type="text/css">
+<!--
+table.Ptabela {
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+</head>
+
+	
+<body>
+
+
+<table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border:none;">
+	  <tr class="anime"   style="">
+	    <td valign="top" style="background:#2A7138;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#2A7138"><p class="TtuloAula">Aula 5 - Introdução ao Planejamento para Vacinação do Covid-19</p></td>
+  </tr>
+	  <tr class="anime"   style="">
+	    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pimagem"><img height="316" src="img/Vacinação_aula_05_clip_image002.jpg"></p>
+	      <p class="MsoCaption">Figura 1    - Garoto recebendo vacina para caxumba sarampo e rubéola, vacina MMR Por    twenty20photos</p></td>
+  </tr>
+	  <tr class="anime"    style="">
+	    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="PpargrafoCxSpFirst">Olá!<span style="font-family:'Times New Roman',serif; "> </span></p>
+	      <p class="PpargrafoCxSpLast">Nesta aula você vai aprender sobre o Plano    Nacional de Imunização contra a Covid-19 do Brasil, falando um pouco a    respeito das vacinas, o que é preciso saber, sobre a população-alvo e as    fases da campanha.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+	  <tr class="anime"   style="">
+	    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:<span style="font-family:'Times New Roman',serif; "> </span></p>
+	      <ul>
+	        <li>Identificar os requisitos mínimos para    elaboração de campanha de vacinação em seu país;</li>
+	        <li>Definir as competências da esfera municipal de    gestão;</li>
+	        <li>Identificar a população-alvo e as fases da    campanha de vacinação para o seu país.</li>
+          </ul></td>
+  </tr>
+</table>
+
+	
+	
+<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;">
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc65684863">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Como temos visto, o planejamento da campanha de vacinação ocorre por <strong>passos de organização</strong>. Porém, esses    passos não precisam acontecer  de forma    sequencial, mas é importante que todos ocorram. Agora veremos algumas    instruções específicas para o Brasil.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc65684864"><span style="color:black; ">Brasil - Plano Nacional    de Imunização contra a Covid-19</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">O <strong><em>Plano Nacional de Operacionalização da Vacinação contra a Covid-19</em></strong> (BRASIL, 2020a), divulgado pelo Ministério da Saúde, prevê a aquisição de    cerca de <strong>350 milhões de doses</strong> de    vacinas de <strong>diferentes fabricantes</strong> e disponibilizadas às esferas estaduais e municipais para vacinação, de    acordo com grupos prioritários distribuídos em diferentes fases.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Devido a <strong>descentralização dos    serviços de saúde</strong> a partir da Lei 8.080/1990, os serviços de imunização    no Brasil são orientados pelo Ministério da Saúde, porém, <strong>cada um dos municípios brasileiros têm  a responsabilidade</strong> pelo planejamento,    manutenção, organização e suprimento de insumos das respectivas unidades    responsáveis pela vacinação.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Dessa forma, para realizar o planejamento em nível local para a    campanha de vacinação contra a Covid-19, é fundamental que os gestores    municipais atente-se às atribuições previstas no <em>Plano Nacional de Operacionalização da Vacinação contra a Covid-19</em> (BRASIL, 2020a) para a esfera municipal.  </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">As competências municipais previstas no Plano Nacional, são: </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li>Coordenar e executar as ações de vacinação que    compõem o <strong>Plano Nacional de Imunização</strong> (PNI), incluindo as diversas <strong>estratégias    de vacinação, notificação, investigação de Eventos Adversos Pós-Vacinação</strong> (EAPV) e de óbitos temporalmente associados à vacinação;</li>
+      <li><strong>Gerenciar    o estoque municipal de vacinas e outros insumos</strong>,    incluindo o armazenamento e o transporte para seus locais de uso, de acordo    com as normas vigentes;</li>
+      <li><strong>Garantir o    descarte e a destinação final</strong> de frascos, seringas e agulhas    utilizadas, conforme as normas técnicas vigentes;  </li>
+      <li>Realizar a <strong>gestão    do sistema de informação do PNI</strong>, o que inclui a coleta, processamento,    consolidação e avaliação da qualidade dos dados das unidades notificadoras,    obedecendo ao fluxo de envio às bases nacional e estadual, e garantindo a    retroalimentação das informações às unidades notificadoras, de acordo com os    prazos definidos.</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Além das atribuições previstas no Plano Nacional é necessário, que a    gestão municipal também considere:</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li>A <strong>manutenção    da qualidade e segurança das vacinas</strong>, atentando-se ao monitoramento da    temperatura e garantindo condições adequadas de conservação, armazenamento e    transporte até as salas de vacinação e atividades extramuros definidas, de    acordo com as estratégias de vacinação adotadas pelo município; </li>
+      <li>A <strong>Notificação,    investigação e encerramento de todos os Eventos Adversos Pós-Vacinação</strong> (EAPV) relacionados à vacinação contra a Covid-19;   </li>
+      <li>A <strong>elaboração    de um Plano de Operacionalização Municipal para vacinação contra a Covid-19</strong>,    de acordo com as características encontradas no nível local.</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A partir do conhecimento de suas atribuições para a operacionalização    da campanha de vacinação contra a Covid-19, os municípios brasileiros devem    iniciar seu <strong>planejamento no nível    local</strong>. No entanto, é também necessário que a gestão municipal busque a    conformidade de seu planejamento com as orientações propostas nos planos de    seus respectivos estados.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc65684865"><span style="color:black; ">Vacinas contra Covid-19:    o que é preciso saber?</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Conhecer as vacinas que possivelmente serão incorporadas ao Sistema    Único de Saúde (SUS) e que farão parte da campanha de vacinação contra a    Covid-19 é fundamental para o planejamento, uma vez que <strong>diferentes imunizantes</strong> têm sido desenvolvidos utilizando diferentes    plataformas tecnológicas.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">As características que compõem cada uma das vacinas candidatas    impactam etapas importantes para o planejamento da campanha, principalmente    do ponto de vista do <strong>transporte e    armazenamento</strong>. De acordo com o panorama da Organização Mundial da Saúde    (OMS, 2021e), até o dia 8 de janeiro de 2020, existiam <strong>172 vacinas contra a Covid-19 em fase pré-clínica de pesquisa e 63    vacinas em fase de pesquisa clínica</strong>.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">De acordo com o <em>Plano Nacional    de Operacionalização da Vacinação contra a Covid-19</em> (BRASIL, 2020a),    através do PNI possivelmente serão incorporadas ao Sistema Único de Saúde    (SUS) as vacinas: AstraZeneca, Coronavac, Pfizer e Covax Facility (consórcio    mundial para aquisição de vacinas). Através do consórcio Covax Facility, que    prevê a aquisição de vacinas de outros laboratórios além dos já citados,    poderão ser adquiridas e incorporadas vacinas de outros fabricantes.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">O quadro abaixo traz um resumo das vacinas candidatas na fase III,    última fase de pesquisa clínica antes da aprovação e administração do    imunizante na população, com esquema vacinal, via de aplicação e conservação    indicada pelo fabricante. Dentre estas, a Agência de Vigilância Sanitária    (ANVISA) já aprovou o uso emergencial das vacinas AstraZeneca e Coronavac no    país.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pdestaque">Quadro 1:    Descrição das vacinas na fase III.</p>
+      <div align="center">
+        <table class="MZtabela" border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border:none;">
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">VACINA </span></strong></p></td>
+            <td style="border:solid white 2.25pt;border-left:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">ESQUEMA VACINAL </span></strong></p></td>
+            <td style="border:solid white 2.25pt;border-left:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">VIA DE APLICAÇÃO </span></strong></p></td>
+            <td style="border:solid white 2.25pt;border-left:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">CONSERVAÇÃO </span></strong></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">AstraZeneca</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">1 ou 2 doses </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 28 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 4-12 semanas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Coronavac</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 14 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pfizer</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 21 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">-70ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC (até 5 dias) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Wuhan Institute of Biological</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 21 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Beijing Institute of      Biological Products</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 21 dias  </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Novavax</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 21 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">CanSino Biological Inc.</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">1 dose </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC  </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Janssen</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">1 ou 2 doses </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 56 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC (3 meses) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Gamaleya Research Institute</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 21 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">-18ºC (uma formulação) </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC (liofilizada) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">NIAID/Moderna</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 29 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">-20ºC (até 6 meses) </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8°C (até 30 dias) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">CureVac</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 28 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">5ºC (até 3 meses) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Anhui Zhifei Longcom Biopharmaceutical</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 ou 3 doses </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 28 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">3 doses, intervalo de 28 e 56 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">- </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Bharat Biotech</span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses, intervalo de 14 dias </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2ºC a 8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+        </table>
+      </div>
+      <p class="MsoCaption">Fonte: OMS. Organização Mundial da Saúde, 2021. </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A campanha no Brasil foi iniciada com um total de 6 milhões de doses    da vacina Coronavac. Produzida pelo laboratório Sinovac/Butantan, a Coronavac    deve ser administrada por via intramuscular em esquema de duas doses, o    intervalo entre as doses deve ser de 2 a 4 semanas. Entretanto, mesmo que o    indivíduo não compareça no prazo determinado para receber a segunda dose do    imunizante, será possível ele tomar a segunda dose para completar o esquema    vacinal (BRASIL, 2021). Confira abaixo as especificações detalhadas das    vacinas com uso iminente no país, Coronavac e AstraZeneca.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pdestaque">Quadro 2:    Especificações da vacina Coronavac.</p>
+      <div align="center">
+        <table class="MZtabela" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;border:none;margin-left:4.8pt;margin-right:4.8pt;">
+          <tr class="anime" >
+            <td colspan="2" style="border:solid white 2.25pt;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">CORONAVAC</span></strong></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Plataforma </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Vírus inativado </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Indicação de uso </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Indivíduos com idade maior ou igual a 18 anos </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Forma Farmacêutica </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Suspensão injetável  </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Apresentação </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Frascos-ampola com 0,5mL (frasco monodose) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Via de administração </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Esquema vacinal / Intervalos </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">2 doses de 0,5 mL, cada com intervalo de 2-4 semanas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Composição por dose </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">0,5mL contém 600 SU de antígeno do vírus inativado SARS-CoV-2 </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Prazo de validade de      conservação </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">24 meses a partir da data de fabricação se conservado na      temperatura recomendada de +2ºC a +8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="MsoCaption"><strong><span style="color:white; ">Validade após abertura do frasco </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="MsoCaption"><span style="color:black; ">Imediatamente após abertura do frasco </span></p></td>
+          </tr>
+        </table>
+      </div>
+      <p class="MsoCaption">Fonte: BRASIL. Ministério da Saúde, 2021.<span style="font-size:12.0pt; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pdestaque">Quadro 3:    Especificações da vacina AstraZeneca.</p>
+      <div align="center">
+        <table class="MZtabela" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;border:none;margin-left:4.8pt;margin-right:4.8pt;">
+          <tr class="anime" >
+            <td colspan="2" style="border:solid white 2.25pt;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:white; ">ASTRAZENECA<strong> </strong></span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Plataforma </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Vetor viral não replicante de adenovírus </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Indicação de uso </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Indivíduos com idade maior ou igual a 18 anos </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Forma Farmacêutica </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Solução injetável  </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Apresentação </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Frascos-ampola com 5 mL (frasco multidose) </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Via de administração </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Intramuscular </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Esquema vacinal/ Intervalos </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">1 ou 2 doses de 0,5 mL, cada com intervalo mínimo de 4 semanas      e máximo de 12 semanas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Composição por dose </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">0,5 mL contém <span style="background:white; ">vacina      (ChAdOx1-S* recombinant) 5 × 10^10 partículas virais</span></span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Prazo de validade de      conservação </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Até a data de validade indicada no frasco, se conservado na      temperatura recomendada de +2ºC a +8ºC </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Validade após abertura do      frasco </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Até 6 horas após abertura do frasco </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+        </table>
+      </div>
+      <p class="MsoCaption">Fonte: BRASIL. Ministério da Saúde, 2021.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc65684866"><span style="color:black; ">População-alvo e fases    da campanha</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">A vacinação no Brasil deve ocorrer, inicialmente, de forma prioritária    para os grupos de maior risco e/ou em situação de vulnerabilidade para a    Covid-19. A definição dos grupos prioritários e da população-alvo para a    vacinação fundamenta-se na avaliação dos grupos de risco, no cronograma    proposto pelo próprio Ministério da Saúde e no quantitativo de vacinas    possivelmente disponíveis.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><div class="ficaafica" align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="">
+        <tr class="anime" >
+          <td style="padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><a name="_Hlk65449023"><span style="color:black; "><img height="127" src="img/Vacinação_aula_05_clip_image002_0000.png"></span><span style="color:black; "> </span></a></p></td>
+          <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Fica a Dica!</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Na aula 1 conversamos sobre os grupos prioritários. Se      você não lembra, volte à aula anterior que você irá achar.</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ppargrafo"> </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Confira abaixo os grupos prioritários para recebimento da vacina    contra a Covid-19, definidos pelo Ministério da Saúde.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pdestaque">Quadro 4:    Descrição da população prioritária para a vacinação contra a Covid-19.</p>
+      <div align="center">
+        <table class="MZtabela" border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border:none;">
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">POPULAÇÃO-ALVO </span></strong></p></td>
+            <td style="border:solid white 2.25pt;border-left:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">DEFINIÇÃO </span></strong></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores de Saúde </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Trabalhadores do serviço de saúde são      todos aqueles que atuam em espaços e estabelecimentos de assistência e      vigilância à saúde, sejam eles hospitais, clínicas, ambulatórios,      laboratórios e outros locais. Desta maneira, compreende tanto os      profissionais da saúde – como médicos, enfermeiros, nutricionistas,      fisioterapeutas, terapeutas ocupacionais, biólogos, biomédicos,      farmacêuticos, odontologistas, fonoaudiólogos, psicólogos, serviços      sociais, profissionais de educação física, médicos veterinários e seus      respectivos técnicos e auxiliares – quando os trabalhadores de apoio, como      recepcionistas, seguranças, pessoal da limpeza, cozinheiros e auxiliares,      motoristas de ambulâncias, e outros, ou seja, aqueles que trabalham nos      serviços de saúde, mas que não estão prestando serviços direto de      assistência à saúde das pessoas. Inclui-se, ainda, aqueles profissionais      que atuam em cuidados domiciliares como os cuidadores de idosos e      doulas/parteiras, bem como funcionários do sistema funerário que tenham      contato com cadáveres potencialmente contaminados. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pessoas de 60 anos e mais      institucionalizadas </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas com 60 anos ou mais que      residem em instituições de longa permanência para idosos, como casa de      repouso, asilo e abrigo. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pessoas com deficiência      institucionalizadas </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas com deficiência que vivem em      residência inclusiva. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pessoas de 60 anos e mais </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Deverão receber a vacina COVID-19 em      conformidade com as fases pré-definidas. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Indígenas que vivem em terras      indígenas  </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Indígenas vivendo em terras indígenas      com 18 anos ou mais atendidos pelo Subsistema de Atenção à Saúde Indígena. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Povos e comunidades      tradicionais ribeirinhas e quilombolas </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Povos habitando em comunidades      tradicionais ribeirinhas e quilombolas. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Grupo com comorbidades </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; "><span style="font-family:'Arial Unicode MS',serif; ">Para       indivíduos com comorbidades já descritas, de acordo com a faixa etária       indicada pela ANVISA (Diabetes mellitus; hipertensão arterial sistêmica       grave de difícil controle e/ou com lesão de órgão-alvo); doença pulmonar       obstrutiva crônica; doença renal; doenças cardiovasculares e       cerebrovasculares; indivíduos transplantados de órgão sólido; anemia       falciforme; obesidade grave (IMC≥40). </span></span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores da educação </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Todos os professores e funcionários      das escolas públicas e privadas. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pessoas com deficiência      permanente severa </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Para fins de inclusão na      população-alvo para vacinação, serão considerados indivíduos com      deficiência permanente severa aqueles que apresentem um ou mais das      seguintes limitações: </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">1 – Limitação motora que cause grande      dificuldade ou incapacidade para andar ou subir escadas; </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">2 – Indivíduos com grande dificuldade      ou incapacidade de ouvir (se utiliza aparelho auditivo esta avaliação      deverá ser feita em uso do aparelho); </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">3 – Indivíduo com grande dificuldade      ou incapacidade de enxergar (se utiliza óculos ou lentes de contato, esta      avaliação deverá ser feita com o uso dos óculos ou lentes); </span><span style="font-family:'Arial',sans-serif; "> </span></p>
+              <p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">4 – Indivíduos com alguma deficiência      intelectual permanente que limite as suas atividades habituais, como      trabalhar, ir à escola, brincar, etc. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Forças de Segurança e      Salvamento </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Policiais federais, militares e      civis; bombeiros militares e civis e, membros ativos das Forças Armadas      (Marinha, Exército e Aeronáutica). </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Forças Armadas </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Todos os membros ativos das forças      armadas do Brasil (Marinha, Exército e Aeronáutica). </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Funcionários do sistema de      privação de liberdade </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Policiais penais e demais funcionários. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">População privada de      liberdade </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">População acima de 18 anos em      estabelecimentos de privação de liberdade. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Pessoas em situação de rua  </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Considera-se população em situação de      rua o grupo populacional heterogêneo que possui em comum a pobreza extrema,      os vínculos familiares interrompidos ou fragilizados e a inexistência de      moradia convencional regular, e que utiliza os logradouros públicos e as      áreas degradadas como espaço de moradia e de sustento, de forma temporária      ou permanente, bem como as unidades de acolhimento para pernoite temporário      ou como moradia provisória, definido no art. 1º do decreto nº 7.053, de 23      de dezembro 2009. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Caminhoneiros </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Motorista de transporte rodoviário de      cargas definido no art. 1º, II da Lei nº 13.103, de 2 de março de 2015, que      trata da regulamentação da profissão de motorista. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores de Transporte      Coletivo Rodoviário de Passageiros Urbano e de Longo Curso </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Motoristas e cobradores de transporte      coletivo rodoviário de passageiros urbano e de longo curso. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores Portuários  </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Qualquer trabalhador portuário,      incluindo os funcionários da área administrativa. </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores de Transporte      Aéreo </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Funcionários das companhias aéreas      nacionais, definidos pelo Decreto nº 1.232/1962 e pela Lei nº 13.475/2017.</span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores de Transporte      Metroviário e Ferroviário </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Funcionários das empresas      metroferroviárias de passageiros e de cargas.</span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">Trabalhadores de Transporte      Aquaviário  </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela" style="text-align:justify;"><span style="font-family:'Arial',sans-serif; color:black; ">Funcionários das empresas brasileiras      de navegação.</span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+        </table>
+      </div>
+      <p class="MsoCaption">Fonte: Brasil. Ministério da Saúde, 2021. </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Até o momento, são previstas pelo Ministério da Saúde <strong>três fases iniciais</strong> para a vacinação    da população prioritária (BRASIL, 2020). Contudo, devido à escassez inicial    de doses disponíveis de vacina, essas fases estão sujeitas a mudanças.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pdestaque">Quadro 5:    Descrição da população prioritária para cada fase da vacinação contra a    Covid-19.</p>
+      <div align="center">
+        <table class="MZtabela" border="1" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border:none;">
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">FASE </span></strong></p></td>
+            <td style="border:solid white 2.25pt;border-left:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">POPULAÇÃO-ALVO </span></strong></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td rowspan="5" style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">1ª </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Trabalhadores de      Saúde </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas acima de      75 anos </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas de 60 anos      ou mais institucionalizadas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">População indígena      que vivem em terras indígenas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime"  style="">
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Povos e      comunidades tradicionais ribeirinhas </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">2ª </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#FBE4D5;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#FBE4D5"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas de 60 a 74      anos </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+          <tr class="anime" >
+            <td style="border:solid white 2.25pt;border-top:none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#1F4E79"><p class="Ptextotabela"><strong><span style="font-family:'Arial',sans-serif; color:white; ">3ª </span></strong></p></td>
+            <td style="border-top:none;border-left:none;border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;background:#DEEAF6;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#DEEAF6"><p class="Ptextotabela"><span style="font-family:'Arial',sans-serif; color:black; ">Pessoas que      apresentam comorbidades </span><span style="font-family:'Arial',sans-serif; "> </span></p></td>
+          </tr>
+        </table>
+      </div>
+      <p class="MsoCaption">Fonte: Brasil.Ministério da Saúde, 2020.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Inicialmente, na primeira fase é prevista a vacinação de <strong>trabalhadores da saúde, pessoas acima de    75 anos, pessoas de 60 anos ou mais institucionalizadas, ou seja, em    instituições de longa permanência, a população indígena e os povos e    comunidades tradicionais ribeirinhas</strong>. Entretanto, devido à baixa    disponibilidade inicial das doses de vacina, esta fase irá priorizar, pelo    menos inicialmente, trabalhadores da saúde, idosos institucionalizados,    pessoas com deficiência institucionalizadas e a população indígena. Para a    vacinação dos <strong>trabalhadores da saúde    será necessária uma ordem de priorização</strong>, o Ministério da Saúde recomenda    a seguinte priorização, mas cabe ao município se adequar e priorizar setores    desse grupo conforme a realidade local (BRASIL, 2021): </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li>Equipes que estarão envolvidas na vacinação.</li>
+      <li>Trabalhadores de instituições de longa    permanência para idosos e residências inclusivas para pessoas com    deficiência.</li>
+      <li>Trabalhadores dos serviços de saúde públicos e    privados, envolvidos diretamente na atenção para os casos suspeitos e    confirmados de Covid-19.</li>
+      <li>Demais trabalhadores de saúde.</li>
+    </ul></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Quanto mais doses de vacinas estiverem disponíveis, é possível que a    campanha seja expandida para os grupos inicialmente previstos para compor a    primeira fase, como os povos e comunidades tradicionais ribeirinhas. O    Ministério da Saúde prevê que a vacinação da população indígena seja    realizada de acordo com a organização dos Distritos Sanitários Especiais    Indígenas (DSEI), já a vacinação de povos e comunidades tradicionais    ribeirinhas contará com o apoio da Operação Gota em algumas regiões.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><div class="sabimais" align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="">
+        <tr class="anime" >
+          <td style="padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img height="127" src="img/Vacinação_aula_05_clip_image004_0000.png"></span><span style="color:black; "> </span></p></td>
+          <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Saiba Mais!</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Você sabe o que é Operação Gota?      É uma operação que foi inspirada pela vacinação utilizando o formato de      gota contra a poliomielite.  Essa      iniciativa do Ministério da Saúde promove a imunização da população      brasileira em regiões de difícil acesso.</span></p>
+            <p class="txtrec"><span style="color:black; ">Para mais informações: </span></p>
+            <p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img border="0" width="160" height="46" src="img/Vacinação_aula_05_clip_image005_0000.png" usemap="#MicrosoftOfficeMap0" alt="Retângulo: Cantos Arredondados: Clique aqui!"></span><span style="color:black; "> </span></p>
+            <p class="MsoCaption"><span style="color:black; ">https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/01/operacao-gota-mais-de-20-mil-serao-imunizados-na-regiao-norte</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ppargrafo"> </p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Na segunda fase serão vacinadas as pessoas com idade entre 60 e 74    anos. E, por fim, na terceira fase as pessoas que apresentam alguma    comorbidade, ou seja, todas aquelas que fazem parte dos grupos de risco para    o agravamento da doença causada pelo novo coronavírus.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Após a fase três são previstas fases subsequentes que darão    continuidade à vacinação. Nessas fases, que ainda poderão ser redefinidas    pelo Ministério da Saúde, acontecerá a vacinação dos demais grupos    populacionais prioritários, como os trabalhadores dos demais serviços    essenciais; trabalhadores da educação; populações quilombolas; população    privada de liberdade; pessoas em situação de rua, dentre outros.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Diferentes grupos populacionais heterogêneos formam as diversas fases    descritas no plano nacional de vacinação brasileiro. Dessa forma, é    importante que a gestão municipal compreenda que serão necessárias estratégias    variadas para se alcançar o sucesso da vacinação nestes grupos. A <strong>meta estabelecida é de vacinar ao menos    90% da população-alvo</strong> de cada grupo prioritário. Para se alcançar esse    objetivo, o Ministério da Saúde recomenda realizar na primeira fase <strong>a vacinação móvel</strong>, com equipes    volantes que devem otimizar a vacinação simultânea da população-alvo e    trabalhadores da saúde nas instituições visitadas.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Devido à ausência de estudos de coadministração de vacinas contra a    Covid-19 com outras vacinas, <strong>não é    recomendada a administração simultânea de nenhum imunizante junto a vacina    contra a Covid-19</strong>. Os vacinadores devem ser instruídos a aguardar um    intervalo mínimo de 14 dias após a administração da vacina contra Covid-19,    para administração de outras vacinas do Calendário Nacional de Vacinação.</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc65684867"><span style="color:black; ">Conclusão</span></a><span style="line- font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Na aula de hoje você viu que as especificidades da campanha nacional.    É importante lembrar que para cada país existem guias específicas, que são    baseadas em informações de instituições como a Organização Mundial de Saúde.    Entretanto, é importante que seu planejamento esteja de acordo com o    nacional, para que a estratégia final seja alcançada.<span style="font-family:'Times New Roman',serif; color:black; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Na aula passada finalizamos os passos recomendados para a campanha de    vacinação. Esses passos são padrões para todos os locais, porém devem ser    adaptados para a realidade de um local. Hoje estamos vendo especificidades    nacionais que podem estar influenciando diretamente na sua campanha. Vale a    pena ficar ligado.</p></td>
+  </tr>
+</table>
+	
+		
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>	
+	
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    
+    
+// Adiciona a classe .js ao elemento HTML. Assim eu garanto que os elementos só serão escondidos caso o JavaScript esteja habilitado
+var root = document.documentElement;
+root.className += ' js';
+
+// Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
+function boxTop(idBox) {
+	var boxOffset = $(idBox).offset().top;
+	return boxOffset;
+}
+
+// Verifica se o documento está pronto
+$(document).ready(function() {
+	
+			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
+	var $target = $('.anime'),
+			
+			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
+			animationClass = 'anime-init',
+			
+			// windowHeight pega a altura total da janela do browser
+			windowHeight = $(window).height(),
+			
+			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
+			offset = windowHeight - (windowHeight / 4);
+
+	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
+	function animeScroll() {
+		
+		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
+		var documentTop = $(document).scrollTop();
+		
+		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
+		$target.each(function() {
+			
+			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
+			if (documentTop > boxTop(this) - offset) {
+				
+				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
+				$(this).addClass(animationClass);
+			} else {
+				
+				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+	
+	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
+	animeScroll();
+	
+	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
+	$(document).scroll(function() {
+		
+		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
+		setTimeout(function() {
+			animeScroll()
+		}, 150);
+	});
+});
+
+ 
+    
+//tree menu
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("SN_active");
+  });
+}
+
+      
+    
+</script> 
+  
+</body>
+    
+    
+</html>
