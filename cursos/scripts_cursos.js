@@ -51,7 +51,7 @@ function loadSCRIPTmodal(url) {
 	
 	document.getElementsByTagName("head").item(0).appendChild(lnk);
 }	
-loadSCRIPTmodal(URL)
+//loadSCRIPTmodal(URL)
 
 
 function loadSCRIPTnav(url) {
