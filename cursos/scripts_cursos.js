@@ -46,11 +46,20 @@ loadGRID(URL)
 
 
 function loadSCRIPTmodal(url) {
+<<<<<<< HEAD
 	var lnk = document.createElement('script');
 	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
 	
 	document.getElementsByTagName("head").item(0).appendChild(lnk);
 	
+=======
+  var lnk = document.createElement('script');
+  lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
+  
+  document.getElementsByTagName("body").item(0).appendChild(lnk);
+  
+}
+>>>>>>> parent of 807053e (Update scripts_cursos.js)
 loadSCRIPTmodal(URL)
 
 
@@ -60,7 +69,7 @@ function loadSCRIPTnav(url) {
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js" );
   
-  document.getElementsByTagName("head").item(0).appendChild(lnk);
+  document.getElementsByTagName("body").item(0).appendChild(lnk);
   
 }
 loadSCRIPTnav(URL)
@@ -70,7 +79,7 @@ function loadSCRIPTanime(url) {
 	var lnk = document.createElement('script');
 	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js" );
 	
-	document.getElementsByTagName("head").item(0).appendChild(lnk);
+	document.getElementsByTagName("body").item(0).appendChild(lnk);
 	
   }
   loadSCRIPTanime(URL)
