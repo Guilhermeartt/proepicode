@@ -49,8 +49,8 @@ function loadSCRIPTmodal(url) {
 	
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
-  x.appendChild(lnk);
-  document.body.appendChild(x);
+  
+  document.getElementsByTagName("head").appendChild(lnk);
   
 }
 loadSCRIPTmodal(URL)
@@ -60,7 +60,7 @@ function loadSCRIPTnav(url) {
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js" );
   
-  document.getElementsByTagName("body").appendChild(lnk);
+  document.getElementsByTagName("head").appendChild(lnk);
   
 }
 loadSCRIPTnav(URL)
