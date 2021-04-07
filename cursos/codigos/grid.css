@@ -3,11 +3,12 @@
 }
 
 body{
+  margin: auto;
   background-color: #e6e6e6;
   width: 992px !important;
 }
-section .proepi {
-
+section.proepi {
+  
   width: 100% !important;
 }
 
@@ -57,7 +58,7 @@ p.TtuloAula {
 }
 
 @media screen and (min-width: 992px) {
-	section .proepi {
+	section.proepi {
 	  width: 992px !important;
 	  margin: auto;
 	}
