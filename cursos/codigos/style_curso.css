@@ -126,7 +126,7 @@
 	  width: 0%;
 	}
 	.Fonte {
-	  overflow: hidden;
+	  overflow: visible;
 	}
 	.Fonte img {
 	  /*max-width: 100%;*/
