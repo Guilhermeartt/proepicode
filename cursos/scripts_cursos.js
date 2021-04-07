@@ -56,7 +56,7 @@ loadSCRIPTmodal(URL)
 
 function loadSCRIPTnav(url) {
 	var lnk = document.createElement('script');
-	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js");
+	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js");
 	
 	document.getElementsByTagName("head").item(0).appendChild(lnk);
 	
