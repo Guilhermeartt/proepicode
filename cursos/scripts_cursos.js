@@ -46,6 +46,7 @@ loadGRID(URL)
 
 
 function loadSCRIPTmodal(url) {
+	
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
   x.appendChild(lnk);
@@ -59,7 +60,7 @@ function loadSCRIPTnav(url) {
   var lnk = document.createElement('script');
   lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js" );
   
-  document.getElementsByTagName("head").item(0).appendChild(lnk);
+  document.getElementsByTagName("body").appendChild(lnk);
   
 }
 loadSCRIPTnav(URL)
