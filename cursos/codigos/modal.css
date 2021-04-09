@@ -40,7 +40,7 @@
   animation-duration: 0.6s;
 }
 
-.close {
+.close-modal {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -49,8 +49,8 @@
   font-weight: bold;
   transition: 0.3s;
 }
-.close:hover,
-.close:focus {
+.close-modal:hover,
+.close-modal:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;

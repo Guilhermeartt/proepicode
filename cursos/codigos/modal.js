@@ -1,16 +1,12 @@
 // Modal behavior
 // @alvesitalo
-let modal = document.getElementById('modal');
-let modalImg = document.getElementById('img-modal');
-let captionText = document.getElementById('caption');
-let span = document.getElementsByClassName('close')[0];
 
 $('.Pimagem img').click(function() {
-  modal.style.display = 'block';
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;    
+  $('#img-modal').attr('src', this.src);
+  $('#caption').html(this.alt);
+  $('.modal').show();
 });
 
-$('.close').click(function() {
-  modal.style.display = 'none';  
+$('.modal, .close-modal').click(function() {
+  $('.modal').hide();
 });
