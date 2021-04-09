@@ -2,22 +2,24 @@
   box-sizing: border-box;
 }
 
-body{
-  margin: auto;
-  background-color: #e6e6e6;
- width: 992px !important;
-}
-section.proepi {
-  
-  width: 100% !important;
+body {
+  margin: 0;
 }
 
-table {
+section.proepi {
+  background-color: #e6e6e6;
+}
+
+section.proepi > table {
   background-color: #ffffff;
+  width: 100% !important;
+  scroll-margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
- /* max-width: 100%;*/
+  max-width: 100%;
   height: auto;
 }
 
@@ -58,10 +60,9 @@ p.TtuloAula {
 }
 
 @media screen and (min-width: 992px) {
-	section.proepi {
-	 width: 992px !important;
-	  margin: auto;
-	}
+  section.proepi > table {
+    width: 992px !important;
+  }
 }
 
 @media screen and (min-width: 1200px) {
