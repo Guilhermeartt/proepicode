@@ -1,13 +1,15 @@
 section .sidenav {
-  z-index: 1;
+  position: fixed;
+  margin-top: 15%;
+  margin-left: 2%;
+  z-index: 10;
 }
-
 div.sticky {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
   background-color: green;
-  border: 2px solid #4CAF50;
+  border: 2px solid #4caf50;
 }
 section .sidenav button {
   background-color: #2a7138;

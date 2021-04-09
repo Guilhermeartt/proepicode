@@ -13,9 +13,7 @@ $('.toggle-side').click(function() {
 // Create titles for nav
 const titles = [
   ...$('.TtuloAula'),
-  ...$('.P1Ttulonumerado').first(),
-  ...$('.P11Ttulonumerado'),
-  ...$('.P1Ttulonumerado').last(),
+  ...$('.P1Ttulonumerado, .P11Ttulonumerado'),
 ];
 
 let title;
