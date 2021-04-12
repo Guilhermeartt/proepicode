@@ -1,3 +1,4 @@
+// Script precisa ser inserido antes do fechamento da tag </body>
 
 function loadCSS(url) {
   var lnk = document.createElement('link');
