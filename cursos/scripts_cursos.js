@@ -46,7 +46,7 @@ function loadSCRIPTmodal(url) {
 	var lnk = document.createElement('script');
 	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
 	
-document.getElementById("loadScript").innerHTML = lnk;
+document.body.appendChild(lnk);
 }	
 loadSCRIPTmodal(URL)
 
