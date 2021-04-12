@@ -42,22 +42,6 @@ function loadGRID(url) {
 loadGRID(URL)
 
 
-function loadSCRIPTmodal(url) {
-    var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js'></script>";
+var x = ["<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js'></script><script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js'></script><script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js'></script>"];
+    
     document.getElementById("loadScript").innerHTML = x;
-  }
-loadSCRIPTmodal(URL)
-
-
-function loadSCRIPTnav(url) {
-  var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js'></script>";
-  document.getElementById("loadScript").innerHTML = x;
-}
-loadSCRIPTnav(URL)
-
-
-function loadSCRIPTanime(url) {
-  var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js'></script>";
-  document.getElementById("loadScript").innerHTML = x;
-}
-loadSCRIPTanime(URL)
