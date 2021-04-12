@@ -57,7 +57,7 @@ function loadSCRIPTnav(url) {
 	
 	document.getElementsByTagName("body").item(0).appendChild(lnk);
 }
-loadSCRIPTnav(URL)
+//loadSCRIPTnav(URL)
 
 
 function loadSCRIPTanime(url) {
@@ -66,4 +66,8 @@ function loadSCRIPTanime(url) {
 	
 	document.getElementsByTagName("head").item(0).appendChild(lnk);
 }
-loadSCRIPTanime(URL)
+//loadSCRIPTanime(URL)
+
+
+var element = document.body;
+element.innerHTML = '<b>Hello World!</b>'
