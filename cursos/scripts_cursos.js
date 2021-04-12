@@ -1,4 +1,3 @@
-// Script precisa ser inserido antes do fechamento da tag </body>
 
 function loadCSS(url) {
   var lnk = document.createElement('link');
@@ -7,6 +6,7 @@ function loadCSS(url) {
   lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/cursos/codigos/style_curso.css" );
   
   document.getElementsByTagName("head").item(0).appendChild(lnk);
+  
 }
 loadCSS(URL) 
 
@@ -17,6 +17,7 @@ function loadNAV(url) {
   lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.css" );
   
   document.getElementsByTagName("head").item(0).appendChild(lnk);
+  
 }
 loadNAV(URL)
 
@@ -28,6 +29,7 @@ function loadMODAL(url) {
   lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.css" );
   
   document.getElementsByTagName("head").item(0).appendChild(lnk);
+  
 }
 loadMODAL(URL)
 
@@ -38,10 +40,35 @@ function loadGRID(url) {
   lnk.setAttribute('href', "https://guilhermeartt.github.io/proepicode/cursos/codigos/grid.css" );
   
   document.getElementsByTagName("head").item(0).appendChild(lnk);
+  
 }
 loadGRID(URL)
 
 
-var x = ["<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js'></script><script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js'></script><script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js'></script>"];
-    
-    document.getElementById("loadScript").innerHTML = x;
+function loadSCRIPTmodal(url) {
+	var lnk = document.createElement('script');
+	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
+	
+	document.getElementsByTagName("head").item(0).appendChild(lnk);
+}	
+window.onload =  loadSCRIPTmodal(URL)
+
+
+function loadSCRIPTnav(url) {
+	var lnk = document.createElement('script');
+	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js");
+	
+	document.getElementsByTagName("head").item(0).appendChild(lnk);
+	
+  }
+  window.onload =  loadSCRIPTnav(URL)
+
+
+function loadSCRIPTanime(url) {
+	var lnk = document.createElement('script');
+	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js");
+	
+	document.getElementsByTagName("head").item(0).appendChild(lnk);
+	
+  }
+  window.onload =  loadSCRIPTanime(URL)
