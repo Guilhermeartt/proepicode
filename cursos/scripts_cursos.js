@@ -43,27 +43,21 @@ loadGRID(URL)
 
 
 function loadSCRIPTmodal(url) {
-	var lnk = document.createElement('script');
-	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js" );
-	
-document.getElementById("loadScript").appendChild(lnk);
-}	
+    var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/modal.js'></script>";
+    document.getElementById("loadScript").innerHTML = x;
+  }
 loadSCRIPTmodal(URL)
 
 
 function loadSCRIPTnav(url) {
-	var lnk = document.createElement('script');
-	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js");
-	
-	document.getElementsByTagName("body").item(0).appendChild(lnk);
+  var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/nav.js'></script>";
+  document.getElementById("loadScript").innerHTML = x;
 }
-//loadSCRIPTnav(URL)
+loadSCRIPTnav(URL)
 
 
 function loadSCRIPTanime(url) {
-	var lnk = document.createElement('script');
-	lnk.setAttribute('src', "https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js");
-	
-	document.getElementsByTagName("head").item(0).appendChild(lnk);
+  var x = "<script src='https://guilhermeartt.github.io/proepicode/cursos/codigos/anime.js'></script>";
+  document.getElementById("loadScript").innerHTML = x;
 }
-//loadSCRIPTanime(URL)
+loadSCRIPTanime(URL)
