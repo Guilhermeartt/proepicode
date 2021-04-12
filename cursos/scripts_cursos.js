@@ -68,6 +68,7 @@ function loadSCRIPTanime(url) {
 }
 //loadSCRIPTanime(URL)
 
-
-var element = document.body;
-element.innerHTML = '<b>Hello World!</b>'
+function loadSCRIPTmodal(url) {
+  document.body.innerHTML = "Some new HTML content";
+}
+loadSCRIPTmodal(URL)
