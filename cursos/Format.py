@@ -21,7 +21,10 @@ eventos, valores = janela.read(close=True)
 
 name_file = (valores['arquivo'])
 
-data_file = open(name_file, 'r')
+data_file = open(name_file, 'r' ,encoding="utf-8")
+
+ler = data_file.readable()
+print (ler)
 
 lines = data_file.readlines()
 
@@ -42,7 +45,7 @@ x.reverse()
 #print (x)
 
 
-data_file = open("RES_" + x[0], 'w+')
+data_file = open("RES_" + x[0], 'w+',encoding="utf-8")
 for line in lines:
     # Passo 1
     if 'td' in line:
