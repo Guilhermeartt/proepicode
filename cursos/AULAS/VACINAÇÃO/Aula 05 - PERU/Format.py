@@ -67,6 +67,10 @@ for line in lines:
         line = re.sub('<!--', '', line)
     if '>' in line:
         line = re.sub('-->', '', line)
+    if 'table' in line:
+        line = re.sub('width="115%" ', 'width="100%"', line)
+
+
 
     data_file.write(line)
 
