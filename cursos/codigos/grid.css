@@ -59,7 +59,7 @@ p.TtuloAula {
   }
   */
   table.tabelaneuro td {
-    width: inherit !important;
+    width: 100% !important;
   }
 }
 
