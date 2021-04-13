@@ -1,21 +1,21 @@
-# Criado por Ítalo Alves - 2021
+# Criado por Italo Alves - 2021
 import re
 import PySimpleGUI as sg 
 import os
 
 z = os.getcwd()
-#print (z)
+# print (z)
 
-#Layout
+# Layout
 layout = [
     [sg.Text('Filename')], 
     [sg.Input(key='arquivo'), sg.FileBrowse()], 
     [sg.OK(), sg.Cancel()]
 ]
-#Janela
+# Janela
 janela = sg.Window('Buscar arquivo', layout)
 
-#Dados
+# Dados
 eventos, valores = janela.read(close=True)
 
 
@@ -30,19 +30,19 @@ lines = data_file.readlines()
 
 data_file.close()
 
-#Separa o endereço do arquvio para remover no "NOME" do aquivo, depois uni o endereço novamente.
+# Separa o endereco do arquivo para remover no "NOME" do arquivo, depois uni o endereco novamente
 q = name_file.split('/')
 q.pop()
 p ="/".join(q)
 #print (p)
 
-#Coloca o endereço do arquivo como diretorio destino
+# Coloca o endereco do arquivo como diretorio destino
 os.chdir( p )
 
-#Separa o endeço do arquivo para adicionar o prefixo "RES_"
+# Separa o endeco do arquivo para adicionar o prefixo "RES_"
 x = name_file.split('/')
 x.reverse()
-#print (x)
+# print (x)
 
 
 data_file = open("RES_" + x[0], 'w+',encoding="utf-8")
