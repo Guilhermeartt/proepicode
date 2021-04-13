@@ -21,8 +21,8 @@ for line in lines:
     if 'style=' in line:
         line = re.sub('height:([a-z0-9\.%]*;)', '', line)
     # Passo 4
-    if '<title>' in line:
-        line += '<link href="../grid.css" rel="stylesheet">' + '\n'
+    if 'class=' in line:
+        line = re.sub('CxSpFirst', '', line)
     # Passo 5
     if '<' in line:
         line = re.sub('<!--', '', line)
@@ -34,3 +34,4 @@ for line in lines:
 data_file.close()
 
 print('\n' + 'Arquivo alterado com sucesso!' + '\n')
+

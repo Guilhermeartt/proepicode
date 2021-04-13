@@ -1,0 +1,673 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+	
+	table.MsoTableGrid {
+    border: solid windowtext 1.0pt;
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+    width: 100%;
+}
+p.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+	color: #ffffff;
+	}
+p.Fonte {
+    margin-top: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 8.0pt;
+    margin-left: 0cm;
+    text-align: center;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+    color: gray;
+}
+p.txtrec {
+    margin-top: 12.0pt;
+    margin-right: 5.65pt;
+    margin-bottom: 6.0pt;
+    margin-left: 5.65pt;
+	padding: 10px 20px;
+	line-height:150%;
+    text-align: justify;
+    font-size: 14.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.MsoNormal {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 175% !important;
+    padding: 15px 28px;
+    text-align: justify;
+    font-size: 12pt;
+    font-family: "Arial", sans-serif;
+}
+table.Tabela01 {
+    border: solid white 2.25pt;
+    text-align: center;
+    font-size: 9.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+td li {
+    margin-left: 55px;
+}
+p.txttabela8 {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+p.txttabela {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 8.0pt;
+    font-family: "Arial", sans-serif;
+}
+body {
+    width: 997px !important;
+    margin: auto;
+}
+section {
+    margin-top: 0px !important;
+    padding-bottom: 30px;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
+}
+html {
+    scroll-behavior: smooth;
+}
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+h1 {
+    margin-top: 30px
+}
+td li {
+    line-height: 150%;
+    list-style: disc;
+    font-size: 16.0pt !important;
+    font-family: "Arial", sans-serif;
+}
+	td li span{
+    font-size: 16.0pt !important;
+    
+}
+
+.SN_sumario {
+    position: fixed;
+    z-index: 1;
+    font-family: "Arial", sans-serif;
+    margin: 2;
+}
+.vertical-menu li {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+table.tabelaneuro {
+    font-size: 12.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+.progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+}
+.Fonte {
+    overflow: hidden;
+}
+.Fonte img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.Fonte:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+</style>
+<style type="text/css">
+
+span.txtChar {
+    font-family: "Calibri", sans-serif;
+    color: windowtext;
+}
+span.FonteChar {
+    font-family: "Calibri", sans-serif;
+    color: gray;
+}
+
+ul, #SN_menu {
+    list-style-type: none;
+}
+#SN_menu {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-decoration: none;
+    padding-inline-start: 0px !important;
+}
+.caret {    
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+.nested {
+    display: none;
+    transition: 1s;
+}
+.SN_active {
+    display: block;
+    transition: 1s;
+}
+.SN_main {
+    background-color: #FFFfFF;
+    border: solid 1px #ffffff;
+    color: black;    
+}
+    
+a.TtuloAula {
+    margin-top: 18.0pt;
+    margin-right: 0cm;
+    margin-bottom: 24.0pt;
+    margin-left: 0cm;
+    text-align: justify;
+    font-size: 16.0pt;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+    text-decoration-color: black;
+}  
+
+h1 {
+    padding-top: 50px
+    }
+    
+
+
+</style>
+<style type="text/css">
+
+table.MsoTableGridLight {
+border:solid #BFBFBF 1.0pt;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+p.Pimagem {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:center;
+line-height:150%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+}
+p.MsoCaption {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:18.0pt;
+margin-left:0cm;
+text-align:center;
+font-size:8.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpFirst {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.PpargrafoCxSpLast {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptexto {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+
+</style>
+<style type="text/css">
+
+p.Ppargrafo {
+margin-top:12.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+text-align:justify;
+text-indent:35.45pt;
+line-height:150%;
+font-size:16.0pt;
+font-family:"Arial",sans-serif;
+}
+
+</style>
+<style type="text/css">
+
+p.P1Ttulonumerado {
+margin-top:20.0pt;
+margin-right:0cm;
+list-style-type: decimal;
+margin-bottom:18.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:18.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+
+</style>
+<style type="text/css">
+
+	td div{
+		    margin-left: -100px;
+
+	}
+	
+	p.P11Ttulonumerado {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:6.0pt;
+margin-left:0cm;
+line-height:150%;
+border:none;
+padding:0cm;
+font-size:20.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+
+</style>
+<style type="text/css">
+
+table.TableNormal {
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.txtrecChar {
+font-family:"Arial",sans-serif;
+}
+	
+	td div.sabimais{
+	border-radius: 70px;
+    background-color: lightgoldenrodyellow;
+    padding: 15px 0px;
+	}
+	td div.ficaafica{
+	border-radius: 70px;
+    background-color: lightcyan;
+    padding: 15px 0px;
+	}
+	td div.curiosidade{
+	border-radius: 70px;
+    background-color: lightblue;
+    padding: 15px 0px;
+	}
+	
+
+</style>
+<style type="text/css">
+
+p.Pdestaque {
+margin-top:6.0pt;
+margin-right:0cm;
+margin-bottom:0cm;
+margin-left:0cm;
+line-height:107%;
+font-size:12.0pt;
+font-family:"Arial",sans-serif;
+font-weight:bold;
+}
+table.MZtabela {
+border:solid white 2.25pt;
+text-align:center;
+font-size:11.0pt;
+font-family:"Arial",sans-serif;
+}
+p.Ptextotabela {
+margin:0cm;
+text-align:center;
+line-height:115%;
+font-size:9.0pt;
+font-family:"Calibri",sans-serif;
+}
+	
+
+
+</style>
+<style type="text/css">
+
+table.Ptabela {
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+
+</style>
+</head>
+
+	
+<body>
+
+<table class="MsoTableGridLight" border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border:none;">
+  <tr class="anime"  style="">
+    <td valign="top" style="background:#2A7138;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#2A7138"><p class="TtuloAula">Aula 2 - Introdução ao Planejamento para Vacinação do Covid-19     – Passos 4 e 5</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pimagem" style="page-break-after:avoid;"><img height="302" src="img/Vacinação_aula_02_clip_image002.jpg"></p>
+      <p class="MsoCaption">Figure 1    - Campanha de vacinação contra a febre amarela. Fonte https://www.fiocruzimagens.fiocruz.br/media.details.php?mediaID=4883</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Olá!</p>
+      <p class="Ppargrafo">Nesta aula você vai aprender sobre a adequação dos    serviços de vacinação e preparação da rede de frio.<span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Ao final desta aula, você será capaz de:</p>
+      <ul>
+        <li>Entender quais são os requisitos básicos para    a adequação dos serviços de vacinação;</li>
+        <li>Identificar as necessidades da cadeia de frio.</li>
+      </ul></td>
+  </tr>
+</table>
+	
+	
+<table class="TableNormal" border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;">
+  <tr class="anime" >
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc65681105">Introdução</a><span style="font-family:'Times New Roman',serif; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Como temos visto, o planejamento da campanha de    vacinação </span>ocorre por meio de <span style="color:black; "> <strong>passos    de organização</strong>. Porém, esses passos não precisam ocorrer de forma    sequencial, mas é importante que todos ocorram. Nesse sentido, já vimos que    devemos identificar a população-alvo, ou seja, aqueles que primeiro deverão    se vacinar, e com isso listar os insumos e recursos necessários para atingir    o objetivo final. Não podemos nos esquecer de elaborar </span>as <span style="color:black; ">estratégias q</span>ue <span style="color:black; ">serão    utilizadas para a vacinação, considerando todos os grupos prioritários. A    seguir, vamos tratar de mais dois passos para um bom planejamento, agora pensando    nos serviços de vacinação e na rede frio.</span><span style="font-family:'Times New Roman',serif; "> </span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc65681106"><span style="line- color:black; ">Passo    4. Adequação dos serviços de vacinação</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">É importante pensar que os serviços de vacinação    já têm sua <strong>rotina estabelecida</strong> e    que a entrada de uma nova campanha <strong>não    pode impactar nesses serviços</strong>, ou deveria impactar o menos possível.    Entretanto, precisamos pensar também que essa é uma situação de urgência e    que a vacinação para </span>a<span style="color:black; "> Covid-19 deve ser    realizada o quanto antes, pois isso tem impacto direto no número e gravidade    dos casos, podendo até salvar muitas vidas.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Sendo assim, os serviços de vacinação deverão ser    reorganizados e adequados de acordo com o <strong>cenário de transmissão</strong> local da Covid-19. Essa reorganização deve    ocorrer através da adoção de <strong>boas    práticas</strong> que visem, principalmente, a prevenção e controle de infecções    (OMS, 2020c).</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">O<span style="color:black; "> primeir</span>o<span style="color:black; "> </span>fato<span style="color:black; "> para pensar na organização do serviço </span>para <span style="color:black; ">atender esse público é garantir que se tenha o <strong>mínimo de risco de transmissão</strong>. É    recomendado, que aquelas pessoas que estão apresentando <strong>sintomas não devem ser vacinadas</strong>. Entretanto, é possível que    algumas delas, na expectativa da vacinação, </span>procurem<span style="color:black; "> o serviço de vacinação. Dessa forma, é recomendado que a    população passe por <strong>triagem para    Covid-19</strong> antes da entrada nos locais de vacinação. Essa triagem deve    incluir uma <strong>avaliação de risco de    exposição à Covid-19</strong>, ou seja, o profissional encarregado pela triagem    deverá investigar se o indivíduo que deseja entrar no local de vacinação teve    contato com um caso suspeito ou confirmado de Covid-19, além de avaliar a    presença de sintomas de síndrome gripal. A vacinação deve prosseguir somente    se a triagem for negativa, caso a triagem seja positiva a vacinação não    deverá prosseguir e a equipe deve oferecer uma máscara médica ao paciente,    além de encaminhá-lo ao serviço de avaliação da Covid-19 de um    estabelecimento de saúde próximo.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pimagem" style="page-break-after:avoid;"><img height="321" src="img/Vacinação_aula_02_clip_image002_0000.jpg"></p>
+      <p class="MsoCaption">Figure 2 - Triagem ambulatorial para averiguação de sintomas    respiratórios relacionados à covid-19. Instituto Nacional de Infectologia,    INI. Fonte: https://www.fiocruzimagens.fiocruz.br/media.details.php?mediaID=6847</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Nos centros de vacinação as <strong>principais    recomendações</strong> quanto a organização das atividades são (OPAS, 2020b):</p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li>Realizar as atividades de vacinação em <strong>locais bem ventilados</strong>, caso não seja    possível realizar em locais abertos, é recomendado que as portas e janelas    estejam abertas para maior circulação do ar.</li>
+      <li><strong>Desinfetar</strong> com    frequência a sala de vacina. É imprescindível que o serviço de vacinação    tenha um protocolo de desinfecção atualizado em uso. </li>
+      <li>Disponibilizar para a população-alvo da campanha    e seus acompanhantes, um lavatório para <strong>higienização    das mãos</strong> com água e sabão ou preparação alcoólica a 60-80% na entrada das    instalações. </li>
+      <li><strong>Limitar    apenas um acompanhante</strong> para cada pessoa que será vacinada.</li>
+      <li>Orientar o <strong>distanciamento    social</strong> de 1 metro entre os participantes e acompanhantes.</li>
+      <li>Adotar estratégias para <strong>evitar aglomerações</strong>, como utilizar espaços ao ar livre e adotar o    distanciamento social dentro do estabelecimento de saúde, marcações no chão e    bloqueio de cadeiras.</li>
+      <li>Separar, sempre que possível, o centro de    vacinação dos serviços terapêuticos da unidade de saúde. </li>
+    </ul></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Os <strong>vacinadores</strong> também deverão seguir recomendações durante os procedimentos na sala de    vacina, que incluem (OPAS, 2020b; UNICEF, 2020):</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Identificada a população-alvo para a vacinação dentro do município, o    próximo passo para o planejamento será estimar quantas pessoas,    separadamente, formam essas populações. Avaliar esses números é    imprescindível para (OMS, 2020c):</p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li><strong>Higienizar    as mãos </strong>após cada aplicação de vacina, utilizando água e sabão ou preparação    alcoólica a 60-80%.</li>
+      <li>Manter suas <strong>mãos    longe do rosto e do EPI</strong> que está utilizando, além de evitar tocar    desnecessariamente superfícies e materiais.</li>
+      <li><strong>Evitar    falar</strong> durante todo o procedimento na sala de vacinação e orientar que o    usuário também evite falar durante o procedimento.</li>
+    </ul></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">O uso de luvas não é necessário, a menos que o    vacinador ou o paciente apresente lesões, cortes ou erupções cutâneas. Nesses    casos, o vacinador deve trocar de luvas entre cada paciente, descartando-as    em um recipiente com tampa e higienizando as mãos a cada troca.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Em territórios onde não há a obrigatoriedade do    uso de máscaras, o vacinador deve considerar seu uso de acordo com a situação    da transmissão comunitária de Covid-19 na área. Em áreas com ampla    transmissão comunitária o vacinador deve considerar o uso de máscara    cirúrgica durante todo o turno de vacinação. Em áreas sem ampla transmissão    comunitária da doença, o uso de máscaras não é considerado necessário. Já em    áreas onde a transmissão não é bem conhecida, o uso de máscaras deve ser    considerado pelos vacinadores.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Caso o vacinador apresente qualquer sintoma de    doença respiratória, este não poderá aplicar vacinas, devendo buscar    atendimento médico de acordo com as recomendações locais.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 10.0pt;">
+      <p class="P11Ttulonumerado"><a name="_Toc65681107"><span style="color:black; ">Passo    5. Preparação da cadeia de frio</span></a></p>
+    </div></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pimagem" style="page-break-after:avoid;"><img height="285" src="img/Vacinação_aula_02_clip_image004.jpg"></p>
+      <p class="MsoCaption">Figure 3 - Seringas    para vacinação.    https://www.fiocruzimagens.fiocruz.br/media.details.php?mediaID=5690</p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">A cadeia de abastecimento é a chave para que as    vacinas contra a Covid-19 sejam distribuídas para a população-alvo de acordo    com as estratégias de vacinação que serão adotadas (OMS, 2020c). O <strong>acondicionamento das vacinas</strong> é uma    etapa crítica, erros e falhas na rede de frio podem comprometer a eficácia    das vacinas e resultar na redução ou ausência do efeito esperado de    imunização contra a Covid-19 (OMS, 2014).</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><div class="sabimais" align="center">
+      <table class="tabelaneuro" border="0" cellspacing="11" cellpadding="0" width="115%" style="">
+        <tr class="anime" >
+          <td style="padding:0cm 5.4pt 0cm 5.4pt;"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img height="127" src="img/Vacinação_aula_02_clip_image006.png"></span><span style="color:black; "> </span></p></td>
+          <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt;" bgcolor="#F1F9F1"><p class="txtrec"><strong><span style="color:black; ">Saiba Mais!</span></strong></p>
+            <p class="txtrec"><span style="color:black; ">Você gostaria de ter mais      informações sobre a produção das vacinas? Vale a pena conferir o link do      Ministério da Saúde do Brasil que traz um resumo de como vem sendo      realizado.</span></p>
+            <a href="https://www.gov.br/inpi/pt-br/servicos/patentes/tecnologias-para-covid-19/Vacinas" target="_blank"><p class="txtrec" align="center" style="text-align:center;"><span style="color:black; "><img border="0" width="161" height="47" src="img/Vacinação_aula_02_clip_image007.png" usemap="#MicrosoftOfficeMap0" alt="Retângulo: Cantos Arredondados: Clique aqui!"></span><span style="color:black; "> </span></p></a>
+            <p class="MsoCaption"><span style="color:black; ">https://www.gov.br/inpi/pt-br/servicos/patentes/tecnologias-para-covid-19/Vacinas</span></p></td>
+        </tr>
+      </table>
+    </div>
+      <p class="Ppargrafo"> </p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Para que uma vacina possa criar defesas ou    anticorpos, é preciso que a atividade de vacinação seja cercada de cuidados.    A manutenção da qualidade das vacinas depende de importantes procedimentos    adotados antes da administração desses produtos na população. Dessa forma,    para garantir a <strong>manutenção da    qualidade das vacinas</strong>, os municípios devem </span>reunir <span style="color:black; ">informações    sobre a capacidade de sua rede de frio e mobilizar os recursos necessários    para manutenção da qualidade dos imunizantes durante a distribuição e transporte    até as salas de vacinação ou atividades de vacinação extramuros (OMS, 2020c;    OPAS, 2020a).</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Pimagem" style="page-break-after:avoid;"><img height="305" src="img/Vacinação_aula_02_clip_image009.jpg"></p>
+      <p class="MsoCaption">Figure 4 - Sala de    Vacinação - Fonte: https://www.fiocruzimagens.fiocruz.br/media.details.php?mediaID=5128</p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">A análise da capacidade da rede frio municipal    deve ser realizada com a quantificação dos <strong>insumos necessários</strong> e da capacidade de armazenamento da central    de frio do município. Os insumos que compreendem a rede de frio do município    também deverão ser <strong>mapeados e    quantificados</strong>, lembre-se que estes vão além de refrigeradores e freezers,    insumos básicos da sala de vacinação, como caixas térmicas, bobinas    reutilizáveis e instrumentos de medição de temperatura também compreendem a    rede de frio (BRASIL, 2017). Esses insumos devem ser quantificados e    previstos tanto para uso diário na sala de vacinação como para as estratégias    de <strong>vacinação extramuros</strong>.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">A <strong>capacidade    de armazenamento</strong> da rede de frio do município deve ser preparada para    garantir a manutenção da qualidade das vacinas que irão compor o rol de    imunizantes disponíveis na campanha. A maioria das vacinas contra a Covid-19    são armazenadas em temperaturas de geladeira comum, entre +2ºC e +8ºC.    Entretanto, algumas vacinas poderão necessitar de armazenamento a temperatura    ultrabaixa de -70ºC, onde ao invés de bobinas reutilizáveis necessitarão de    gelo seco para manutenção da temperatura fora dos ultracongeladores (OMS,    2020c).</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Confira abaixo os principais <strong>pré-requisitos</strong> para a implantação adequada de estratégias para a    cadeia de abastecimento (OMS, 2020c):</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><ul>
+      <li>Estimar as necessidades tanto de doses de vacinas    como de <strong>logística</strong>;</li>
+      <li>Avaliar a <strong>capacidade    de armazenamento</strong> disponível: inclua nesse levantamento as três faixas    diferentes de temperatura, ex. +2ºC a +8ºC, -20ºC e -70ºC;</li>
+      <li>Identificar a <strong>capacidade máxima</strong> de armazenamento: nesse levantamento devem ser    incluídos todos os equipamentos que poderão ser deslocados para a campanha de    vacinação, como aqueles da divisão farmacêutica, laboratórios, entre outros;</li>
+      <li>Elaborar um <strong>plano    de distribuição</strong> de acordo com a população alvo, o número de vacinadores e    equipes de monitoramento; </li>
+      <li>Estabelecer um <strong>sistema para rastreio das vacinas</strong>: o rastreio evitará o risco de    desvio e falsificação das vacinas; </li>
+      <li>Planejar a <strong>segurança    das vacinas</strong> e da equipe envolvida: devido à alta demanda por vacinas    contra a Covid-19 a segurança deve ser realizada em todas as etapas    envolvidas, inclusive durante o trânsito das vacinas. </li>
+    </ul></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Os municípios que não tiverem condições de    garantir o armazenamento, distribuição, monitoramento de temperatura e    rastreio de estoque das vacinas, podem <strong>terceirizar    essas etapas</strong> com a contratação de empresas especialistas nesse tipo de    gerenciamento. Contudo, essas empresas do setor privado deverão participar    ativamente da fase de planejamento para a implementação da vacina (OMS,    2020c).</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo"><span style="color:black; ">Por fim, o município e/ou a empresa terceirizada    devem planejar a <strong>logística reversa</strong> envolvendo as vacinas contra a Covid-19. A logística reversa será importante    para realocação de doses, devolver <strong>frascos    não utilizados</strong>, e dar a destinação correta para doses descartadas.</span></p></td>
+  </tr>
+  <tr class="anime" >
+    <td valign="top" style="background:#F1F9F1;padding:0cm 2.0cm 0cm 3.0cm;" bgcolor="#F1F9F1"><div style="border:none;border-left:solid #2A7138 6.0pt;padding:0cm 0cm 0cm 15.0pt;">
+      <p class="P1Ttulonumerado"><a name="_Toc65681108"><span style="color:black; ">Conclusão</span></a><span style="line- font-family:'Times New Roman',serif; font-size:12.0pt; color:black; "> </span></p>
+    </div></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Na aula de hoje você viu a importância de se preparar para a campanha    de vacinação, considerando os serviços de vacinação e a rede de frio onde    essas vacinas serão armazenadas. Pensar que esses serviços já desenvolvem    atividades de rotina e que precisaram se adequar às novas demandas, sem    prejudicar as antigas. Estamos evidenciando um momento de emergência, porém    não devemos nos descuidar das outras doenças para que a situação, que já é    difícil, não piore.<span style="color:black; "> </span></p></td>
+  </tr>
+  <tr class="anime"  style="">
+    <td valign="top" style="padding:0cm 2.0cm 0cm 3.0cm;"><p class="Ppargrafo">Para a campanha de vacinação contra a Covid-19 é importante que    sigamos os 10 passos. Já tratamos de identificar a população alvo, os insumos    e recursos necessários, as estratégias de vacinação e a organização dos    serviços de vacinação e rede de frio. Vamos descobrir quais serão os próximos    passos? Vem com a gente! </p></td>
+  </tr>
+</table>
+	
+	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>	
+	
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    
+    
+// Adiciona a classe .js ao elemento HTML. Assim eu garanto que os elementos só serão escondidos caso o JavaScript esteja habilitado
+var root = document.documentElement;
+root.className += ' js';
+
+// Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
+function boxTop(idBox) {
+	var boxOffset = $(idBox).offset().top;
+	return boxOffset;
+}
+
+// Verifica se o documento está pronto
+$(document).ready(function() {
+	
+			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
+	var $target = $('.anime'),
+			
+			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
+			animationClass = 'anime-init',
+			
+			// windowHeight pega a altura total da janela do browser
+			windowHeight = $(window).height(),
+			
+			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
+			offset = windowHeight - (windowHeight / 4);
+
+	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
+	function animeScroll() {
+		
+		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
+		var documentTop = $(document).scrollTop();
+		
+		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
+		$target.each(function() {
+			
+			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
+			if (documentTop > boxTop(this) - offset) {
+				
+				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
+				$(this).addClass(animationClass);
+			} else {
+				
+				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+	
+	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
+	animeScroll();
+	
+	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
+	$(document).scroll(function() {
+		
+		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
+		setTimeout(function() {
+			animeScroll()
+		}, 150);
+	});
+});
+
+ 
+    
+//tree menu
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("SN_active");
+  });
+}
+
+      
+    
+</script> 
+</section>
+</body>
+</html>
