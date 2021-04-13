@@ -1,15 +1,48 @@
 # Criado por Ítalo Alves - 2021
 import re
+import PySimpleGUI as sg 
+import os
 
-name_file = input('Caminho para o arquivo: ')
+z = os.getcwd()
+#print (z)
+
+#Layout
+layout = [
+    [sg.Text('Filename')], 
+    [sg.Input(key='arquivo'), sg.FileBrowse()], 
+    [sg.OK(), sg.Cancel()]
+]
+#Janela
+janela = sg.Window('Buscar arquivo', layout)
+
+#Dados
+eventos, valores = janela.read(close=True)
+
+
+name_file = (valores['arquivo'])
+
 data_file = open(name_file, 'r')
 
 lines = data_file.readlines()
 
 data_file.close()
 
-data_file = open("RES_" + name_file.split('/')[1], 'w+')
+#Separa o endereço do arquvio para remover no "NOME" do aquivo, depois uni o endereço novamente.
+q = name_file.split('/')
+q.pop()
+p ="/".join(q)
+#print (p)
 
+#Coloca o endereço do arquivo como diretorio destino
+os.chdir( p )
+
+#Separa o endeço do arquivo para adicionar o prefixo "RES_"
+x = name_file.split('/')
+x.reverse()
+#print (x)
+
+
+data_file = open("RES_" + x[0], 'w+')
 for line in lines:
     # Passo 1
     if 'td' in line:
@@ -24,6 +57,12 @@ for line in lines:
     if 'class=' in line:
         line = re.sub('CxSpFirst', '', line)
     # Passo 5
+    if 'class=' in line:
+        line = re.sub('CxSpLast', '', line)
+    # Passo 6
+    if 'class=' in line:
+        line = re.sub('CxSpMiddle', '', line)
+    # Passo 7
     if '<' in line:
         line = re.sub('<!--', '', line)
     if '>' in line:
