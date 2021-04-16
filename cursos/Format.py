@@ -20,6 +20,7 @@ eventos, valores = janela.read(close=True)
 
 name_file = (valores['arquivo'])
 
+# Validacao de possiveis erros do programa
 while True:
     if eventos == 'Cancelar':
         print ('\n' + 'programa encerrado' + '\n')
@@ -53,16 +54,18 @@ while True:
         x = name_file.split('/')
         x.reverse()
         #
-        print (x[0])
-
         name_file = x[0]
+
+        print (name_file)
 
         f = name_file.split('.')
         # print (f)
+
+        # Validacao da exetencao do arquivo selecionado, se nao for "html" encerra o programa.
         if f[1] == 'html':
             print ('\n' + 'extenção valida!' + '\n')
 
-            data_file = open("RES_" + x[0], 'w+',encoding="utf-8")
+            data_file = open("RES_" + name_file, 'w+',encoding="utf-8")
             for line in lines:
                 # Passo 1
                 if 'td' in line:
