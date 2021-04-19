@@ -53,7 +53,30 @@ while True:
         #encotrar o titulo da aula e insere no titulo da pagina
         title_aula = soup.find('p' ,'TtuloAula').get_text()
         [x.replace_with(title_aula) for x in soup.title]
+        
+        
+        #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
+        
 
+        #x = [tag_li.replace_with(text_li) for tag_li in soup.select(".PBulletsCxSpFirst")]
+
+        
+
+
+        #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
+        
+        #new_tag = soup.new_tag('li')
+        #new_tag.string = text_li
+        #print (x)
+        #print (text_li)
+        #[x.replace_with(new_tag) for x in soup.find_all(tag_li)]
+        
+        #bullets = soup.find("p", "PBulletsCxSpFirst")
+        #bullets = soup.find_all(['p','span','span'])
+        #bullets = soup.findAll(re.compile("=(.*?)CxSpFirst"))
+        #bullets = soup.find_all("PBulletsCxSpFirst")
+
+       
         #organiza o codigo pra melhor leitura
         v = soup.prettify()
 
@@ -98,27 +121,27 @@ while True:
                     line = re.sub('width="([0-9%]*)" ', '', line)
                 # Passo 2
                 if 'style=' in line:
-                    line = re.sub('width:([a-z0-9\.%]*;)', '', line)
+                    line = re.sub('width:([a-z0-9\.%]*)', '', line)
                 # Passo 3
                 if 'style=' in line:
-                    line = re.sub('height:([a-z0-9\.%]*;)', '', line)
+                    line = re.sub('height:([a-z0-9\.%]*)', '', line)
                 # Passo 4
                 if 'class=' in line:
                     line = re.sub('CxSpFirst', '', line)
-                # Passo 5
-                if 'class=' in line:
                     line = re.sub('CxSpLast', '', line)
-                # Passo 6
-                if 'class=' in line:
                     line = re.sub('CxSpMiddle', '', line)
-                # Passo 7
+                # Passo 5
                 if '<' in line:
                     line = re.sub('<!--', '', line)
                 if '>' in line:
                     line = re.sub('-->', '', line)
-                # Passo 8   
+                # Passo 6   
                 if 'table' in line:
                     line = re.sub('width="115%"', 'width="100%"', line)
+                    line = re.sub('width:115.0%', 'width="100%"', line)
+                # Passo 7 
+                if 'tr' in line:
+                    line = re.sub('<tr', '<tr class="anime"', line)
                 # Passo 9 
                 if '</head>' in line:
                     line = re.sub('</head>', """
@@ -160,7 +183,7 @@ while True:
             </body>
                     """, line)   
                     
-                data_file.write(line)
+                data_file.write(line)            
 
             data_file.close()
 

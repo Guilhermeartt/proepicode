@@ -1,7 +1,7 @@
 section .sidenav {
   position: fixed;
-  margin-top: 15%;
-  margin-left: 2%;
+  margin-top: 0%;
+  margin-left: 0%;
   z-index: 10;
 }
 div.sticky {
