@@ -2,6 +2,8 @@
 import re
 import PySimpleGUI as sg 
 import os
+from bs4 import BeautifulSoup as bs
+
 
 z = os.getcwd()
 # print (z)
@@ -35,9 +37,30 @@ while True:
 
 
         ler = data_file.readable()
-        # print (ler)
+        print (ler)
 
-        lines = data_file.readlines()
+        
+        html = data_file
+        # lines = data_file.readlines()
+       
+        #usar a biblioteca BeautifulSoup para encontar e manipular elementos no codigo
+        soup = bs(html , 'html.parser')
+
+        #encotrar e extrai os estilos e os scritps da pagina
+        [x.extract() for x in soup.find_all('style')]
+        [x.extract() for x in soup.find_all('script')]
+
+        #encotrar o titulo da aula e insere no titulo da pagina
+        title_aula = soup.find('p' ,'TtuloAula').get_text()
+        [x.replace_with(title_aula) for x in soup.title]
+
+        #organiza o codigo pra melhor leitura
+        v = soup.prettify()
+
+        #separa o codigo em linhas para leitura pela biblioteca re
+        b = v.splitlines(True)
+
+        lines = b
 
         data_file.close()
 
@@ -53,19 +76,22 @@ while True:
         # Separa o endeco do arquivo para adicionar o prefixo "RES_"
         x = name_file.split('/')
         x.reverse()
-        #
+        #'
         name_file = x[0]
 
         print (name_file)
 
         f = name_file.split('.')
         # print (f)
+        
+
 
         # Validacao da exetencao do arquivo selecionado, se nao for "html" encerra o programa.
         if f[1] == 'html':
             print ('\n' + 'extenção valida!' + '\n')
 
             data_file = open("RES_" + name_file, 'w+',encoding="utf-8")
+
             for line in lines:
                 # Passo 1
                 if 'td' in line:
@@ -90,7 +116,50 @@ while True:
                     line = re.sub('<!--', '', line)
                 if '>' in line:
                     line = re.sub('-->', '', line)
-
+                # Passo 8   
+                if 'table' in line:
+                    line = re.sub('width="115%"', 'width="100%"', line)
+                # Passo 9 
+                if '</head>' in line:
+                    line = re.sub('</head>', """
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+</head>
+                    """, line)
+                # Passo 9 
+                if '<body>' in line:
+                    line = re.sub('<body>', """
+            <body>
+                <section class="proepi">
+                    <div class="sidenav">
+                        <button class="toggle-side">&#9776;</button>
+                        <div id="nav" class="nav"></div>
+                    </div>
+                    <div class="modal">
+                        <span class="close-modal">&times;</span>
+                        <img class="modal-content" id="img-modal">
+                        <div id="caption"></div>
+                    </div>
+                    """, line)
+                # Passo 10
+                if '</body>' in line:
+                    line = re.sub('</body>', """
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>	
+            </section>
+            </body>
+                    """, line)   
+                    
                 data_file.write(line)
 
             data_file.close()
