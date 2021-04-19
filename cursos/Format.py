@@ -56,21 +56,13 @@ while True:
         
         
         #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
-        
-
         #x = [tag_li.replace_with(text_li) for tag_li in soup.select(".PBulletsCxSpFirst")]
-
-        
-
-
-        #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
-        
+           
         #new_tag = soup.new_tag('li')
         #new_tag.string = text_li
         #print (x)
         #print (text_li)
         #[x.replace_with(new_tag) for x in soup.find_all(tag_li)]
-        
         #bullets = soup.find("p", "PBulletsCxSpFirst")
         #bullets = soup.find_all(['p','span','span'])
         #bullets = soup.findAll(re.compile("=(.*?)CxSpFirst"))
