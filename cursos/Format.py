@@ -55,8 +55,8 @@ while True:
         [x.replace_with(title_aula) for x in soup.title]
         
         
-        #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
-        #x = [tag_li.replace_with(text_li) for tag_li in soup.select(".PBulletsCxSpFirst")]
+        text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
+        x = [tag_li.replace_with(text_li) for tag_li in soup.select(".PBulletsCxSpFirst")]
            
         #new_tag = soup.new_tag('li')
         #new_tag.string = text_li
