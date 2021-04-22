@@ -38,7 +38,7 @@ while True:
         print('Arquivo: ' + file_name)
 
         # Le o arquivo
-        data_file = open(file_path, 'r' , encoding="utf-8")
+        data_file = open(file_path, 'r' , encoding='utf-8', errors='ignore')
         readable = data_file.readable()
         print ('Legível: ' + str(readable))
 
@@ -47,7 +47,7 @@ while True:
 
         # Validacao da extencao do arquivo selecionado, se nao for "html" encerra o programa
         if extension == 'html':
-            print ('Extenção válida!' + '\n')
+            print ('Extensão válida' + '\n')
 
             # METODO 1
             # usa a biblioteca BeautifulSoup para encontar e manipular elementos no codigo
@@ -60,19 +60,17 @@ while True:
             # encontra o titulo da aula e insere no titulo da pagina
             title_aula = soup.find('p' ,'TtuloAula').get_text()
             [x.replace_with(title_aula) for x in soup.title]
-            
-            #text_li = soup.find("p", "PBulletsCxSpFirst").get_text()
-            #x = [tag_li.replace_with(text_li) for tag_li in soup.select(".PBulletsCxSpFirst")]
-            
-            #new_tag = soup.new_tag('li')
-            #new_tag.string = text_li
-            #print (x)
-            #print (text_li)
-            #[x.replace_with(new_tag) for x in soup.find_all(tag_li)]
-            #bullets = soup.find("p", "PBulletsCxSpFirst")
-            #bullets = soup.find_all(['p','span','span'])
-            #bullets = soup.findAll(re.compile("=(.*?)CxSpFirst"))
-            #bullets = soup.find_all("PBulletsCxSpFirst")
+
+            first_li = soup.select('p.PBulletsCxSpFirst')
+            middle_li = soup.select('p.PBulletsCxSpMiddle')
+            last_li = soup.select('p.PBulletsCxSpLast')
+            # print(first_li)
+
+            list_li = first_li + middle_li + last_li
+
+            for p in list_li:
+                p.name = 'li'
+                p.span.extract()
 
             data_file.close()
             lines = soup.prettify()
@@ -89,7 +87,7 @@ while True:
                     line = re.sub('width:([a-z0-9\.%]*);', '', line)
                 # Passo 3
                 if 'style=' in line:
-                    line = re.sub('height:([a-z0-9\.%]*);', '', line)
+                    line = re.sub('height:([a-z0-9\.%]*)', '', line)
                 # Passo 4
                 if 'class=' in line:
                     line = re.sub('CxSpFirst', '', line)
@@ -110,8 +108,9 @@ while True:
                 # Passo 9 
                 if '</head>' in line:
                     line = re.sub('</head>', '''
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-                        <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>
                         </head>
                     ''', line)
                 # Passo 9 
@@ -154,7 +153,7 @@ while True:
             html = soup.prettify()
 
             # Salva o arquivo finalizado
-            data_file = open(path + '/' + "RES_" + file_name, 'w+', encoding="utf-8")
+            data_file = open(path + '/' + "RES_" + file_name, 'w+', encoding='utf-8', errors='ignore')
             data_file.write(html)            
             data_file.close()
 
