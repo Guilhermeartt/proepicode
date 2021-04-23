@@ -61,12 +61,13 @@ while True:
             title_aula = soup.find('p' ,'TtuloAula').get_text()
             [x.replace_with(title_aula) for x in soup.title]
 
+            master_li = soup.select('p.PBullets')
             first_li = soup.select('p.PBulletsCxSpFirst')
             middle_li = soup.select('p.PBulletsCxSpMiddle')
             last_li = soup.select('p.PBulletsCxSpLast')
             # print(first_li)
 
-            list_li = first_li + middle_li + last_li
+            list_li = master_li + first_li + middle_li + last_li
 
             for p in list_li:
                 p.name = 'li'
