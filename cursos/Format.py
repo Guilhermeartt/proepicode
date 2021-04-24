@@ -61,6 +61,7 @@ while True:
             title_aula = soup.find('p' ,'TtuloAula').get_text()
             [x.replace_with(title_aula) for x in soup.title]
 
+            # substitui p por li
             master_li = soup.select('p.PBullets')
             first_li = soup.select('p.PBulletsCxSpFirst')
             middle_li = soup.select('p.PBulletsCxSpMiddle')
@@ -72,6 +73,23 @@ while True:
             for p in list_li:
                 p.name = 'li'
                 p.span.extract()
+
+            # substitui imagem por botao
+            button_img = soup.select('.txtrec img')
+            button_caption = soup.select('.txtrec')
+
+            for img in button_img:
+                parent = img.find_parent("p")
+                caption = parent.find_next("p")
+                link = caption.get_text()
+                new_a = soup.new_tag('a', href=link)
+                img.name = 'button'
+                img.append(new_a)
+                new_a.append(img['alt'])
+                del img['alt']
+                del img['height']
+                del img['width']
+                del img['src']
 
             data_file.close()
             lines = soup.prettify()
