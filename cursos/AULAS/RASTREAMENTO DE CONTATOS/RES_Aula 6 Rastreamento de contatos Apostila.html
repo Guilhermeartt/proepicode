@@ -1,0 +1,4227 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   SN_AULA_01
+  </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  </script>
+  <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js">
+  </script>
+ </head>
+ <body>
+  <section class="proepi">
+   <div class="sidenav">
+    <button class="toggle-side">
+     ☰
+    </button>
+    <div class="nav" id="nav">
+    </div>
+   </div>
+   <div class="modal">
+    <span class="close-modal">
+     ×
+    </span>
+    <img class="modal-content" id="img-modal"/>
+    <div id="caption">
+    </div>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+    <tr class="anime" style="">
+     <td style="background:#BF8F00;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt" valign="top" width="794">
+      <p class="TtuloAula">
+       Aula 1 - Instalação do Go.Data
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img height="131" id="Imagem 6" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image003.png" width="577">
+       </img>
+      </p>
+      <p class="MsoCaption">
+       Figura 1 – Logo Go.Data Por goarn
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Olá!
+      </p>
+      <p class="Ppargrafo">
+       <span style="color:black">
+        Nest
+       </span>
+       a aula você
+  aprenderá a instalar o Go.Data no sistema operacional Windows e Linux,
+  incluir configurações adicionais, interpretar indicadores de avaliação,
+  gerenciar a investigação de casos e rastreamento de contatos e conhecer as
+  medidas processuais programáticas e por resultados.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ao final desta aula, você será capaz de:
+      </p>
+      <li class="PBullets">
+       Instalar o Go.Data segundo o sistema operacional disponível;
+      </li>
+      <li class="PBullets">
+       Compreender a importância dos indicadores de avaliação;
+      </li>
+      <li class="PBullets">
+       Gerenciar investigação de casos e rastreamento de contatos com
+  a ferramenta Go.Data.
+      </li>
+     </td>
+    </tr>
+   </table>
+   <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+       <p class="P1Ttulonumerado">
+        <a name="_Toc70320186">
+         Instalação Go.data
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Há dois tipos de instalação: a instalação local (autônoma)
+  e a instalação em servidor.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320187">
+         Instalação local
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A instalação local é realizada em um computador onde
+  armazena todos os dados do Go.Data nesse local. Recomenda-se essa instalação
+  na investigação de surtos em que  uma pessoa administra a entrada e saída de
+  dados no sistema.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320188">
+         Instalação
+        </a>
+        em servidor
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A instalação em servidor também é realizada em um
+  computador, porém como um servidor após configurações de perfil de usuários
+  (computadores e celulares) conectados com os dados desse servidor.
+  Recomenda-se a instalação em servidor na investigação de surtos de grande
+  extensão que exigem trabalho em equipe.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table 100%""="" border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width=" width="100%">
+        <tr class="anime">
+         <td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+          <p class="Pimagem">
+           <span style="color:black">
+            <img height="127" id="Imagem 9" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image004.png" width="127"/>
+           </span>
+          </p>
+         </td>
+         <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+          <p class="txtrec">
+           <b>
+            <span style="color:black">
+             Fica a Dica!
+            </span>
+           </b>
+          </p>
+          <p class="txtrec">
+           <span style="color:black">
+            É fundamental a leitura dos
+    Termos de Uso e Licença do Software, encontrados na
+            <a href="https://community-godata.who.int/">
+             <span style="color:#1155CC">
+              comunidade
+    oficial do Go.Data
+             </span>
+            </a>
+            . Nessa comunidade, há documentos sobre o
+    software e guias de apoio.
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320189">
+         Recursos necessários
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os recursos necessários em disco para cada tipo de
+  instalação dependem do volume de dados que serão processados no sistema.
+  Esses recursos variam conforme o tamanho do surto, a quantidade de pessoas
+  que terão acesso ao sistema, a região onde o surto será monitorado (Uma
+  cidade? Um estado? Um país?) e a quantidade de variáveis que estarão
+  presentes em cada caso, contato e monitoramento.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O espaço mínimo necessário em disco para funcionar o
+  Go.Data é de 3GB (Gigabytes - unidade de medida de informação) em ambos os
+  sistemas operacionais (Windows e Linux). Ressalta-se que esse espaço  é
+  considerado o mínimo necessário na instalação do Go.Data com os arquivos
+  básicos de funcionamento do software, como usuário administrador e templates
+  de surto.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O espaço livre reservado no desktop  deve ser maior ao já
+  ocupado na instalação do software (3 GB), como exemplo uma base de dados que
+  ocupa memória de 150MB (Megabytes), equivalente à 0.15GB:
+       <b>
+        Cerca de 1.000
+  casos, 200 contatos, 2.000 monitoramentos diários, 30 usuários, 70
+  localizações e questionários com 20 variáveis.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Recomenda-se reservar memória superior do desktop para
+  aumentar a capacidade de uso do Go.Data.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os requisitos mínimos de cada sistema operacional são
+  essenciais no bom funcionamento do software..
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320190">
+        Windows
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Sistema operacional 64 bits.
+      </li>
+      <li class="PBullets">
+       Windows 7 ou superior.
+      </li>
+      <li class="PBullets">
+       Processador: 2GHz (frequência de clock do processador em
+  GigaHertz).
+      </li>
+      <li class="PBullets">
+       Memória RAM: 8GB.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320191">
+        Linux (32 ou 64 bits)
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Sistema operacional 32 ou 64 bits.
+      </li>
+      <li class="PBullets">
+       Sistemas operacionais: Ubuntu 12.04, Fedora 21, Debian 8 ou
+  superiores.
+      </li>
+      <li class="PBullets">
+       Processador: 2GHz (frequência de clock do processador em
+  GigaHertz).
+      </li>
+      <li class="PBullets">
+       Memória RAM: 4GB.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320192">
+        Instalação no Windows 10
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O primeiro passo de instalação do Go.Data no Windows 10 é 
+  acessar o link de download, fornecido pela Organização Mundial de Saúde (OMS)
+  ou pela equipe de suporte do Go.Data, mediante contato.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os arquivos para download são encontrados diretamente na
+  opção “Go.Data Setup 2.35.0.exe”. O número
+       <b>
+        2.35.0
+       </b>
+       corresponde à versão
+  do Go.Data. Selecione o arquivo com a extensão
+       <b>
+        .exe
+       </b>
+       para iniciar o
+  processo de instalação.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table 100%""="" border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width=" width="100%">
+        <tr class="anime">
+         <td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+          <p class="Pimagem">
+           <span style="color:black">
+            <img border="0" height="127" id="Imagem 10" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image005.png" width="127"/>
+           </span>
+          </p>
+         </td>
+         <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+          <p class="txtrec">
+           <b>
+            <span style="color:black">
+             Fica a Dica!
+            </span>
+           </b>
+          </p>
+          <p class="txtrec">
+           <span style="color:black">
+            Uma das limitações do Go.Data na
+    instalação é o idioma do sistema operacional diferente do idioma do teclado
+    em inglês. Isso se deve ao problema com a aplicação do software, a ser
+    corrigido nas futuras versões (WHO, 2020).
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p align="right" class="MsoNormal" style="margin-bottom:0cm;text-align:right;
+  line-height:150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Após concluir o download do arquivo .exe, execute-o, com
+  duplo clique do mouse no seu computador. Em seguida, abre uma janela de
+  instalação do Go.Data. Leia os Termos de Uso e clique no botão “Eu Concordo”
+  (Figura-1).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 1. Captura de tela sobre “Termos de Uso e Acordo
+  de Licença” da janela Instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Texto, Aplicativo, Email
+
+Descrição gerada automaticamente" border="0" height="393" id="image6.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image006.png" width="503"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Selecione o tipo de acesso do usuário do Go.Data
+  (Figura-2).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 2. Captura de tela sobre “Opção de acesso do
+  usuário” da janela Instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Texto, Aplicativo, Email
+
+Descrição gerada automaticamente" border="0" height="395" id="image2.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image007.png" width="505"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Selecione o local de instalação onde os arquivos do
+  Go.Data estarão armazenados no computador (Figura-3).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 3. Captura de tela sobre “Local da Instalação”
+  da janela Instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <span class="PnmerosChar">
+        <img alt="Interface gráfica do usuário, Aplicativo
+
+Descrição gerada automaticamente" border="0" height="406" id="image9.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image008.jpg" width="522"/>
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table 100%""="" border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width=" width="100%">
+        <tr class="anime">
+         <td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+          <p class="Pimagem">
+           <span style="color:black">
+            <img border="0" height="127" id="Imagem 13" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image009.png" width="127"/>
+           </span>
+          </p>
+         </td>
+         <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+          <p class="txtrec">
+           <b>
+            <span style="color:black">
+             Fica a Dica!
+            </span>
+           </b>
+          </p>
+          <p class="txtrec">
+           <span style="color:black">
+            Caso deseje alterar o local para
+    uma pasta diferente do padrão, clique em “Procurar”, navegue até o local
+    desejado, depois clique em “Ok”.
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p align="right" class="MsoNormal" style="margin-bottom:10.0pt;text-align:right;
+  line-height:normal">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Nas
+       <span class="PpargrafoChar">
+        configurações
+       </span>
+       de
+  aplicação do software, marque a opções:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       “Application and services (recommended for server
+  installations)” - Para instalação em servidor.
+      </li>
+      <li class="PBullets">
+       “Application without services (recommended for local
+  stand-alone installations)” - Para instalação local.
+      </li>
+      <li class="PBullets">
+       “Allow config rewrite (system will try to determine domain and
+  other settings)”.
+      </li>
+      <li class="PBullets">
+       “Enable Cross-Origin Resource Sharing”.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Posteriormente, clique no botão “Instalar”. Ao finalizar a
+  instalação do software, um ícone do Go.Data será criado na área de trabalho
+  do desktop. Para executá-lo como administrador, clique na opção “Run as
+  administrator” com o botão direito do mouse (Figura-4).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 4. Captura de tela sobre “Configurações de
+  aplicação” da janela Instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Texto, Aplicativo, Email
+
+Descrição gerada automaticamente" border="0" height="394" id="image10.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image010.png" width="512"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;line-
+  150%">
+       <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif'>
+        Clique
+  no botão “Launch Go.Data” para manter ou alterar as portas do MongoDB e do
+  Go.Data (Figura-5).
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Figura 5. Captura de tela de configuração Launch Go.Data.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Tela de celular com texto preto sobre fundo branco
+
+Descrição gerada automaticamente" border="0" height="424" id="image21.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image011.png" width="287"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O serviço de banco de dados e as configurações iniciais da
+  aplicação do Go.Data estão disponíveis. Abra o Go.Data no endereço do
+  localhost na porta selecionada, como “
+       <a href="http://localhost:3000/">
+        <span style="color:#1155CC">
+         http://localhost:3000/
+        </span>
+       </a>
+       ” no navegador.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320193">
+         Instalação no Linux
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A sequência de passos é válida para instalação no Ubuntu
+  16.04. Recomenda-se instalar o Node Version Manager e o MongoDB para melhorar
+  o desempenho do Go.Data no Linux.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320194">
+         Complementos de instalação
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320195">
+        Node Version Manager
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Inicia-se a instalação do Node Version Manager (NVM),
+  versão 8.17.0 ,(NVM), gerenciador de versões do Node. Posteriormente, o
+  pacote build-essential é instalado (Figura-6). Abra o terminal, digite os
+  comandos “Update” e “Y”, depois pressione ”
+       <i>
+        Enter
+       </i>
+       ” para finalizar cada
+  um dos complementos.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="Ptabelacod" style="border-collapse:collapse" width="100%">
+        <tr class="anime" style="">
+         <td style="background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt;
+    height:1.0pt" width="602">
+          <p class="Pcodigo">
+           sudo apt-get update
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 6. Captura de tela do Node Version Manager e
+  Build-essential.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="Ptabelacod" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt" width="602">
+          <p class="Pcodigo">
+           sudo apt-get install build-essential -y
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="Pimagem">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Comandos que se iniciam com “sudo”, solicitam a senha,
+  pois permite privilégios de super usuários para usuários comuns da máquina.
+  Então, digite a senha e pressione “
+       <i>
+        Enter”.
+       </i>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A instalação do NVM ocorre a partir do comando digitado em
+  v0.36.0 (Figura-7).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 7. Captura de tela do comando Node Version
+  Manager.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           curl -o-
+    https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A versão do NVM pode ser alterada por outra mais recente,
+  disponível no
+       <a href="https://github.com/nvm-sh/nvm">
+        <span style="color:
+  #1155CC">
+         repositório do NVM
+        </span>
+       </a>
+       . Após instalar o NVM, reinicie o
+  terminal para que as aplicações tenham efeito.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para checar se a instalação foi concluída com sucesso, use
+  o comando que retorna a versão do NVM (Figura-8). Caso esteja tudo ok,
+  visualiza-se o modo remoto do NVM (Figura-9). Esse comando retorna todas as
+  versões disponíveis para instalação do node.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 8. Captura de tela do modo versão do Node
+  Version Manager.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="Ptabelacod" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt" width="602">
+          <p class="Pcodigo">
+           <span style="color:#F8F8F2">
+            nvm
+           </span>
+           --version
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Após instalado o NVM, iremos buscar as versões disponíveis
+  do node:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 9. Captura de tela do modo remoto do Node
+  Version Manager.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           nvm ls-remote
+           <b>
+            <span style="color:#8BE9FD">
+             node
+            </span>
+           </b>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="Pcodigo">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para instalar o NVM, certifique-se de utilizar a versão
+  8.x) (Figura-10):
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 10. Captura de tela do comando instalação do
+  Node Version Manager versão 8.x.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           nvm install v8.17.0
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para verificar se a instalação foi realizada corretamente,
+  utilize o comando
+       <b>
+        version
+       </b>
+       , que retorna a versão instalada do node
+  (Figura-11))
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 11. Captura de tela do modo versão do Node
+  Version Manager.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           <span style="color:#8BE9FD">
+            node
+           </span>
+           <span style="color:#F8F8F2">
+           </span>
+           --version
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:0cm;line-">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320196">
+        MongoDB
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Inicialmente deve-se importar a chave pública GPC do
+  MongoDB no comando (Figura-12).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 12. Captura de tela da chave pública GPC do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80
+    --recv 7F0CEB10
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Posteriormente, crie o arquivo mongodb-org-3.4.list
+  (Figura-13).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 13. Captura de tela do arquivo de instalação do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           <span style="color:#F8F8F2">
+            echo
+           </span>
+           "deb
+    http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse"
+           <span style="color:#F8F8F2">
+            | sudo tee /etc/apt/sources.
+           </span>
+           <b>
+            list
+           </b>
+           <span style="color:#F8F8F2">
+            .d/mongodb-org-3.4.
+           </span>
+           <b>
+            list
+           </b>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Atualize o pacote do repositório local com o
+       <b>
+        apt-get
+  update
+       </b>
+       (Figura-14).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 14. Captura de tela do comando de atualização do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo apt-get
+           <b>
+            <span style="color:#8BE9FD">
+             update
+            </span>
+           </b>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A partir deste passo, instale a versão 3.4 do MongoDB.
+  Caso deseje instalar uma versão diferente, substitua a versão desejada no
+  lugar do “3.4” (Figura-15).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 15. Captura de tela do modo versão do MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           <span style="color:#F8F8F2">
+            sudo apt-get install -y
+           </span>
+           mongodb-org=
+           <span style="color:yellow">
+            3.4
+           </span>
+           mongodb-org-server=
+           <span style="color:yellow">
+            3.4
+           </span>
+           mongodb-org-shell=
+           <span style="color:yellow">
+            3.4
+           </span>
+           mongodb-org-mongos=
+           <span style="color:yellow">
+            3.4
+           </span>
+           mongodb-org-tools=
+           <span style="color:yellow">
+            3.4
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para rodar o serviço MongoDB, necessita-se criar o arquivo
+  de serviço no diretório “/etc/systemd/system/” (Figura-16). Utilize o editor,
+  de preferência neste comando. Neste exemplo, utilizou-se o Nano:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 16. Captura de tela do arquivo de serviços no
+  diretório MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo nano /etc/systemd/system/mongodb.service
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Nesta etapa, o editor de texto está aberto.  Adicione o
+  código no arquivo
+       <b>
+        mongodb.service
+       </b>
+       (Figura-17).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 17. Captura de tela do arquivo mongodb.service
+  do MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'>
+            #Unit contains the dependencies to be
+    satisfied before the service is started.
+           </span>
+           <span style='font-size:12.0pt;
+    line-height:150%;font-family:"Arial",sans-serif;color:#F8F8F2;background:
+    #282A36'>
+            <br/>
+           </span>
+           <b>
+            <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'>
+             <br/>
+             [Unit]
+            </span>
+           </b>
+           <span style='font-size:12.0pt;line-;font-family:
+    "Arial",sans-serif;color:#F8F8F2;background:#282A36'>
+            <br/>
+            Description=MongoDB Database
+            <br/>
+            After=network.target
+            <br/>
+            Documentation=https://docs.mongodb.org/manual
+            <br/>
+            <br/>
+           </span>
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'>
+            # Service tells systemd, how the service
+    should be started.
+           </span>
+           <span style='font-size:12.0pt;line-;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'>
+            <br/>
+           </span>
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'>
+            # Key `User` specifies that the server
+    will run under the mongodb user and
+           </span>
+           <span style='font-size:12.0pt;
+    line-height:150%;font-family:"Arial",sans-serif;color:#F8F8F2;background:
+    #282A36'>
+            <br/>
+           </span>
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'>
+            # `ExecStart` defines the startup command
+    for MongoDB server.
+           </span>
+           <span style='font-size:12.0pt;line-;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'>
+            <br/>
+           </span>
+           <b>
+            <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'>
+             <br/>
+             [Service]
+            </span>
+           </b>
+           <span style='font-size:12.0pt;line-;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'>
+            <br/>
+            User=mongodb
+            <br/>
+            Group=mongodb
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+            ExecStart=/usr/bin/mongod --quiet
+    --config /etc/mongod.conf
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+            # Install tells systemd when the service
+    should be automatically started.
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+            # `multi-user.target` means the server
+    will be automatically started during boot.
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <b>
+            <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'>
+             [Install]
+            </span>
+           </b>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+            WantedBy=multi-user.target
+           </span>
+          </p>
+          <p class="MsoNormal" style="text-align:justify;line-">
+           <span style='font-size:12.0pt;line-;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Reitera-se que qualquer caractere copiado errado pode
+  comprometer o funcionamento do serviço de banco de dados.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Após copiar o código do arquivo, pressione as teclas “CTRL
+  + X” para sair. Em seguida, pressione a tecla “Y” para salvar o arquivo.
+  Então, aperte “Enter” para confirmar.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       De volta ao terminal comum, o serviço do systemd é
+  atualizado para que o novo serviço do MongoDB criado seja efetivado
+  (Figura-18).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 18. Captura de tela do arquivo systemd do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           systemctl daemon-reload
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Reinicie o serviço do MongoDB com o systemctl, executando
+  o comando “start” (Figura-19).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 19. Captura de tela do arquivo systemdclt start
+  do MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl
+           <b>
+            <span style="color:#8BE9FD">
+             start
+            </span>
+           </b>
+           mongodb
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Verifique se o serviço do banco de dados foi iniciado
+  corretamente na porta 27017(Figura-20).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 20. Captura de tela do arquivo netstat-plnt do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           netstat -plnt
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Verifique também se o serviço foi iniciado com sucesso por
+  meio do comando status (Figura-21).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 21. Captura de tela do arquivo status do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl status mongodb
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Verifique se o retorno desse comando mostra o nome do
+  serviço (mongodb), “loaded” e “active”.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ative o modo de início automático do serviço, com o “systemctl
+  enable” e o nome do serviço (mongodb), (Figura-22)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 22. Captura de tela do arquivo systemctl enable
+  do MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl enable mongodb
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Utilize o Shell do MongoDB, que é a interface para acesso
+  de serviços e funcionalidades do MongoDB. Para abrir o shell digite “mongo”:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 23. Captura de tela do comando mongo do MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           mongo
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Aplique o modo  “use” para selecionar o database a ser
+  usado, no caso o “admin” para usuário administrador (Figura-24).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 24. Captura de tela do modo use admin do
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           use admin
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O usuário root foi criado. Digite a senha desejada entre
+  aspas no atributo “pwd”, substituindo a palavra “password”. Lembre-se que a
+  senha será usada nos arquivos de configuração de banco de dados do Go.Data. O
+  nome do usuário também pode ser alterado para o de sua preferência.
+  (Figura-25).:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 25. Captura de tela do usuário criado no
+  MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           db.createUser({user:"
+           <span style="color:yellow">
+            admin
+           </span>
+           ",
+    pwd:"
+           <span style="color:yellow">
+            password
+           </span>
+           ",
+    roles:[{role:"root", db:"admin"}]})
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Feche a janela Shell do MongoDB, pressionando as teclas
+  “CTRL+C”. Reinicie o serviço, com o comando “restart” do “systemctl”
+  (Figura-26).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 26. Captura de tela do modo restart no MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl restart mongodb
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ao conectar o usuário criado, certifique-se de substituir
+  o nome do seu usuário e senha definidos no comando de criação de usuário pelo
+  “admin” e “password” (Figura-27)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 27. Captura de tela de autenticação no MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           mongo -u
+           <span style="color:yellow">
+            admin
+           </span>
+           -p
+           <span style="color:yellow">
+            password
+           </span>
+           --authenticationDatabase admin
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Após executar esse comando, verifique se o mongo está
+  conectado. Ao finalizar a autenticação, a instalação do MongoDB está
+  concluída. Os bancos de dados (databases) são abertos e executados no shell
+  do mongo (Figura-28).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 28. Captura de tela do modo demonstração do
+  banco de dados no MongoDB.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           show dbs
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="P111Ttulonumerado">
+       <a name="_Toc70320197">
+        Execução do Go.Data no
+  Linux
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ao finalizar a instalação dos complementos NVM e MongoDB,
+  inicia-se a instalação do Go.Data por meio da criação do diretório, como
+  /godata/go-data-linux-x64 2.35.0.tar.gz. Recomenda-se criar a pasta raiz  no
+  diretório inicial do sistema operacional “/”. Para visitá-lo, utiliza-se “cd
+  /godata”. O comando de super usuário “sudo” será aplicado sempre que executar
+  qualquer comando na pasta raiz.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Denomine a pasta criada , por exemplo “godata”, “v2.35.0”
+  na pasta raiz (Figura-29)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 29. Captura de tela do comando de criação do
+  diretório do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo mkdir /godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Mova o arquivo de instalação para a pasta criada pelo
+  usuário, com substituição do local onde o arquivo de instalação está salvo
+  (formato .tar.gz) (Figura-30).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 30. Captura de tela do comando de localização do
+  arquivo de instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo mv
+           <span style="color:yellow">
+            local-do-arquivo/de-instalação
+           </span>
+           /go-data-linux-x64
+    2.35.0.tar.gz /godata/
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Acesse a pasta raiz com o comando “cd” (Figura-31) e
+  atribua permissões ao usuário no diretório go-data-linux-x64 2.35.0.tar.gz e
+  substitua “seuusuário” pelo nome do usuário da máquina (Figura-32).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 31. Captura de tela do comando “cd” do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           cd /
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 32. Captura de tela do comando de alteração do usuário
+  do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo chown
+           <span style="color:yellow">
+            seuusuário:seuusuário
+           </span>
+           -R godata/
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Acesse o diretório do arquivo de instalação por meio do
+  comando “cd” (Figura-33) e extraia o arquivo go-data-linux-x64 2.35.0.tar.gz
+  (Figura-34).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 33. Captura de tela do diretório do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           cd
+           <span style="color:#F8F8F2">
+           </span>
+           /godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 34. Captura de tela do comando de extração dos
+  arquivos Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           tar -xpvf  go-data-linux-x64
+           <span style="color:#F8F8F2">
+            \
+    2.35.0.tar.gz
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       A estrutura da pasta “/godata” é visualizada (Figura-35)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 35. Captura da tela da estrutura da pasta
+  “/godata”.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Texto, Aplicativo
+
+Descrição gerada automaticamente" border="0" height="91" id="image8.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image012.png" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Acesse a pasta “build”, no diretório “go-data” para
+  realizar a instalação do software (Figura-36)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 36. Captura de tela do comando build do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           cd go-data/build/
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Na pasta “build/”, visualiza-se a estrutura da pasta
+  (Figura-37).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 37 - Captura de tela da estrutura da pasta build
+  do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="108" id="image5.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image013.png" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Aplique o usuário “root” nos comandos de instalação. O
+  comando solicitará a inserção da senha. Posteriormente, pressione a tecla
+  “Enter” (Figura-38).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 38. Captura de tela do comando de criação do
+  diretório do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo su
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       É necessário instalar a aplicação com o “npm install”
+  (Figura-39) . Recomenda-se executar o NPM diretamente do diretório, com
+  substituição da versão v8.17.0 pela versão do node (em ciano) e o nome do seu
+  usuário da máquina por “seu-usuário” (Figura-40).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 39. Captura de tela do usuário do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           /home/
+           <span style="color:yellow">
+            seu-usuário
+           </span>
+           /.nvm/versions/node/
+           <span style="color:aqua">
+            v8.17.0
+           </span>
+           /bin/npm install
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 40 – Captura de tela de instalação do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="115" id="image11.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image014.jpg" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Após essa etapa de instalação, configure o banco de dados
+  no arquivo “datasources.json” na pasta “server/”, localizada em “/godata/go-data/build/server”
+  (Figura-41), e configure o servidor no arquivo “config.json”, também na pasta
+  “server/” (Figura-42).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 41. Captura de tela do comando executor do banco
+  de dados do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           nano server/datasources.json
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Altere o “password” (1) e “user” (2) para o usuário e
+  senha do banco de dados do MongoDB, mantidas entre aspas (Figura-42).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 42 - Captura de tela do arquivo
+  datasources.json.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="376" id="image7.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image015.jpg" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para salvar o arquivo e sair do Nano,  pressione as teclas
+  “CTRL + X”, clique na tecla “Y”, depois pressione   “Enter” para confirmar.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       As configurações de host público do Go.Data no arquivo
+  “config.json” “condicionam” ao Go.Data em qual endereço ele deve rodar
+  (Figura-43).Caso haja um domínio configurado, adicione a linha “host” no “public”
+  (1) (Figura-44). Ao rodar o Go.Data localmente, não é necessário realizar
+  esse procedimento, pois funcionará por meio do acesso “localhost:3000” na
+  máquina.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 43 - Captura de tela do arquivo config.json.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           nano server/config.json
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 44 - Captura de tela do arquivo config.json.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="227" id="image22.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image016.png" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       No diretório build, inicialize as configurações do banco
+  de dados, para criar os dados básicos do Go.Data. Substitua a versão v8.17.0
+  pela versão do seu node (em ciano) e o nome do seu usuário da máquina por
+  “seu-usuário” (Figura-45):
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 45 - Captura de tela do comando de configuração
+  da base de dados do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           /home/
+           <span style="color:yellow">
+            seu-usuário
+           </span>
+           /.nvm/versions/node/
+           <span style="color:aqua">
+            v8.17.0
+           </span>
+           /bin/npm run init-database
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Atenção! Essa operação pode levar alguns minutos
+  (Figura-46).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 46 - Captura de tela de configuração do banco de
+  dados modo de inicialização.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="112" id="image24.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image017.jpg" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ao finalizar o processo de instalação e configuração, rode
+  o Go.Data com o comando “start”. Substitua a versão v8.17.0 pela versão do
+  seu node (em ciano) e o nome do seu usuário da máquina por “seu-usuário”
+  (Figura-47).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 47 - Captura de tela do comando de usuário para
+  iniciar o Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           <span style="color:#F8F8F2">
+            /home/
+           </span>
+           <span style="color:yellow">
+            seu-usuário
+           </span>
+           <span style="color:#F8F8F2">
+            /.nvm/version
+           </span>
+           s/node/
+           <span style="color:aqua">
+            v8.17.0
+           </span>
+           /bin/npm start
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 48 - Captura de tela do comando  aplicação do
+  Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente" border="0" height="76" id="image19.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image018.jpg" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Essa aplicação deve estar disponível no endereço local
+  padrão (localhost:3000) e/ou no endereço público definido. Acesse esse
+  endereço pelo navegador. Caso esteja usando o sistema operacional Server, sem
+  interface gráfica, é necessário criar um serviço para o Go.Data rodar em
+  segundo plano. Libere o terminal para outros fins. Ressalta-se que essa etapa
+  é útil nos sistemas operacionais Desktop, com interface gráfica.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para parar de rodar o Go.Data no terminal, pressione as
+  teclas “CTRL + C”.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Crie o arquivo de serviço (service) no diretório
+  “/etc/systemd/system/”, mesmo diretório para rodar o MongoDB (Figuras-49 e
+  50).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 49 - Captura de tela do comando do sistema operacional.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           cd /etc/systemd/system/
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 50 - Captura de tela do arquivo service no
+  diretório do sistema operacional.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table align="left" border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo nano godata.service
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ao abrir o editor de texto Nano, copie o código no arquivo
+  godata.service (Figura-51).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 51 - Captura de tela do arquivo godata.service.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           [Unit]
+           <br/>
+           Description=GoData Server
+           <br/>
+           After=network.target
+           <br/>
+           <br/>
+           [Service]
+           <br/>
+           User=root
+           <br/>
+           Group=root
+           <br/>
+           ExecStart=/usr/bin/node /
+           <span style="color:yellow">
+            godata
+           </span>
+           /go-data/build/.
+           <br/>
+           <br/>
+           [Install]
+           <br/>
+           WantedBy=multi-user.target
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Substitua o código “godata” pelo nome do diretório criado
+  no primeiro comando desta aula.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para sair do Nano e salvar o arquivo, pressione as teclas
+  “CTRL + X”, em seguida pressione a tecla “Y” para salvar o arquivo. Por fim,
+  confirme com a tecla “ENTER”.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Retorne ao terminal comum e atualize o serviço do systemd
+  para que o novo serviço do Go.Data criado seja efetivado no sistema
+  operacional (Figura-52).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 52 - Captura de tela do arquivo systemctl
+  daemon-reload.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           systemctl daemon-reload
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Inicie o serviço do Go.Data com o systemctl, executando o
+  “start” com o nome do serviço (Figura-53).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 53 - Captura de tela do comando start.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl
+           <b>
+            <span style="color:#8BE9FD">
+             start
+            </span>
+           </b>
+           godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Verifique se o serviço foi iniciado com sucesso
+  (Figura-54)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 54 - Captura de tela do status Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl status godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Verifique se o retorno desse comando demonstra o nome do
+  serviço (mongodb), “loaded” e “active”.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ative o iniciamento automático do serviço quando o sistema
+  operacional iniciar com o “systemctl enable” e, então, o nome do serviço
+  (godata) (Figura-55).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 55 - Captura de tela do status systemctl enable
+  godata.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl enable godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Se identificar erro, reinicie o serviço com o “restart” do
+  “systemctl” (Figura-56).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 56 - Captura de tela do systemctl restart
+  godata.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl restart godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para parar o serviço do Go.Data, use o comando “stop” do
+  “systemctl” (Figura-57).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 57 - Captura de tela do systemctl stop godata.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse:collapse" width="100%">
+        <tr class="anime">
+         <td style="background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt" valign="top" width="602">
+          <p class="Pcodigo">
+           sudo systemctl stop godata
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320198">
+         Configurações adicionais
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Com o Go.Data funcionando em ambiente Linux, seguem os
+  passos  das configurações adicionais e acesso a Backups, Logs e Documentação
+  adicional tanto no Linux quanto no Windows.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Acesse o Go.Data com duplo clique do mouse no ícone do
+  software no desktop (Figura-58).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 58 - Captura da tela inicial do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário
+
+Descrição gerada automaticamente" border="0" height="400" id="image17.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image019.jpg" width="602"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       É possível alterar o idioma do Go.Data no canto superior
+  direito da tela, no botão“Language”, para se familiarizar melhor com o
+  software.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O primeiro acesso do Go.Data disponibiliza o usuário
+  administrador. A partir desse usuário, é possível criar outros usuários com
+  diferentes tipos de permissões no software. Realize o login com o usuário
+  administrador. Em seguida, altere a senha do usuário administrador para uma
+  senha de sua preferência.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       <b>
+        E-mail:
+       </b>
+       admin@who.int
+      </li>
+      <li class="PBullets">
+       <b>
+        Senha:
+       </b>
+       admin
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Acesse o menu lateral da tela e arraste o mouse  em
+       <b>
+        Administrador,
+       </b>
+       depois clique em
+       <b>
+        Usuários
+       </b>
+       (Figura-59).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 59 - Captura de tela do Menu -Administrador -
+  Usuários do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Aplicativo
+
+Descrição gerada automaticamente" border="0" height="522" id="image27.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image020.png" width="349"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Na aba Usuários, clique no botão “Adicionar” e adicione os
+  dados do usuário que deseja incluir no sistema. Caso o novo usuário também
+  seja administrador, certifique-se de incluir todas as permissões de acesso ao
+  software.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       O Backup é um recurso de segurança, caso haja perdas
+  inesperadas de dados no computador. Esse recurso consegue recuperar esses
+  dados total ou parcialmente. Por isso, recomendamos que os Backups dos dados
+  sejam realizados com frequência e inclusive salvos em outro computador ou HD
+  externo ou nuvem.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para configurar o Backup, acesse a aba
+       <b>
+        Configuração do
+  sistema
+       </b>
+       e clique no botão
+       <b>
+        Copia de seguridade
+       </b>
+       no menu lateral do
+  Go.Data (Figura-60).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 60 - Captura de tela Menu de Configuração do
+  Sistema do Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Interface gráfica do usuário, Aplicativo
+
+Descrição gerada automaticamente" border="0" height="335" id="image26.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image021.png" width="341"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Nessa tela, o histórico dos Backups fica registrado no
+  sistema. Para configurar o Backup Automático, clique no botão
+       <b>
+        Ações
+  Rápidas
+       </b>
+       . Selecione a primeira opção
+       <b>
+        Copia de seguridad restaurada
+       </b>
+       (Figura-61)
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 61 - Captura de tela de Ações rápidas de Backup
+  no Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Tela de celular com texto preto sobre fundo branco
+
+Descrição gerada automaticamente" border="0" height="172" id="image25.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image022.png" width="277"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Uma janela é aberta com informações do diretório onde
+  serão salvos os backups, a frequência na qual eles foram realizados e o tempo
+  que o Go.Data os mantém salvos no computador. Para salvar os backups
+  automáticos, preencha os campos abaixo de acordo com suas necessidades. Não
+  esqueça de manter ou alterar a pasta destino dos backups no campo
+       <b>
+        Local
+       </b>
+       .
+  Em caso de dúvidas, acesse o diretório de instalação do Go.Data no computador
+       <b>
+        /go-data/build/backups
+       </b>
+       , diretório padrão (Figura-62).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Figura 62 - Captura de tela das Configurações de backup
+  automático no Go.Data.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Pimagem">
+       <img alt="Texto
+
+Descrição gerada automaticamente com confiança média" border="0" height="405" id="image20.png" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image023.jpg" width="601"/>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Ocasionalmente, quando o Go.Data demonstra algum erro 
+  relacionado à conexão, inconsistência do banco de dados ou do próprio
+  sistema, uma mensagem de erro aparecerá na tela do computador. Porém, essa
+  mensagem não decorre de informações completas. Por isso, é fundamental o
+  acesso aos Logs do Administrador.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Em ambiente Windows, encontre os logs conforme cada módulo
+  e tipo de instalação nas seguintes pastas:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets" style="margin-left:42.55pt;text-indent:0cm">
+       Se você
+  instalou apenas para seu usuário:
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo" style="text-indent:0cm">
+       1.1. Logs da aplicação:
+  {sua\pasta\de\instalação}\Go.Data\logs\app
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Users\YourUser\AppData\Roaming\Go.Data\logs\app
+      </p>
+      <p class="Ppargrafo" style="text-indent:0cm">
+       1.2. Logs de serviços:
+  {sua\pasta\de\instalação}\Go.Data\resources\go-data\build\logs
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Users\YourUser\AppData\Local\Programs\Go.Data\resources\go-data\build\logs
+      </p>
+      <p class="Ppargrafo" style="text-indent:0cm">
+       1.3. Logs de banco de
+  dados: {sua\pasta\de\instalação}\Go.Data\db
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Users\YourUser\AppData\Roaming\Go.Data\db
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Se você selecionou a instalação para todos os usuários:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo" style="text-indent:0cm">
+       2.1. Logs da aplicação:
+  {sua\pasta\de\instalação}\Go.Data\data\logs\app
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Go.Data\data\logs\app
+      </p>
+      <p class="Ppargrafo" style="text-indent:0cm">
+       2.2. Logs de serviços:
+  {sua\pasta\de\instalação}\Go.Data\bin\resources\go-data\build\logs
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Go.Data\bin\resources\go-data\build\logs
+      </p>
+      <p class="Ppargrafo" style="text-indent:0cm">
+       2.3. Logs de banco de
+  dados: {sua\pasta\de\instalação}\Go.Data\data\logs\db
+      </p>
+      <p class="Ppargrafo" style="margin-left:35.4pt;text-indent:0cm">
+       Exemplo:
+  C:\Go.Data\data\logs\db
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Em ambiente Linux, encontre os logs conforme cada módulo e
+  tipo de instalação no seguinte diretório:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo" style="text-indent:0cm">
+       1. Logs gerais:
+  {sua/pasta/de/instalação}/go-data/build/logs/
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Nesse diretório há um arquivo denominado README e
+       <b>
+        application.log
+       </b>
+       .
+  Para visualizar os Logs, abra um editor de texto. Os logs mais recentes se
+  encontram no fim do arquivo.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Para finalizar esta aula, segue abaixo documentos oficiais
+  (em inglês) e onde pode encontrá-los (Quadro-1).
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       <b>
+        Quadro 1. Lista de documentos do Go.Data, segundo
+  descrição e loca lde acesso.
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <table border="1" cellpadding="0" cellspacing="0" class="TableNormal" style="background:#F2F2F2;border-collapse:collapse;
+   border:none" width="602">
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;padding:0cm 0cm 0cm 0cm" width="187">
+         <p class="Ptextotabela" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt">
+          <b>
+           <span style="color:black">
+            Nome do documento
+           </span>
+          </b>
+         </p>
+        </td>
+        <td style="border:solid white 1.5pt;border-left:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p class="Ptextotabela" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt">
+          <b>
+           <span style="color:black">
+            Descrição
+           </span>
+          </b>
+         </p>
+        </td>
+        <td style="border:solid white 1.5pt;border-left:
+    none;padding:0cm 0cm 0cm 0cm" width="183">
+         <p class="Ptextotabela" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt">
+          <b>
+           <span style="color:black">
+            Localizado
+           </span>
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           User Guide
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Guia de usuário do Go.Data, com instruções de uso.
+          </span>
+         </p>
+        </td>
+        <td rowspan="5" style="border-top:none;border-left:
+    none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+    padding:0cm 0cm 0cm 0cm" width="183">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Comunidade do Go.Data
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Go.Data Implementation Guide
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Guia de implementação de plano de uso, hosteamento e
+    configurações do Go.Data.
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Go.Data IT Administrator Guide
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Guia de Administrador de Infraestrutura, com
+    informações sobre instalação, hospedagem, segurança, API, entre outros.
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Syncing the Go.Data Mobile app
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Guia de sincronização do Go.Data versão Mobile com os
+    dados de uma instância do Go.Data em computador.
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Terms of use and Software License Agreement
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Termos de uso, licença e direitos autorais.
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Frequently Asked Questions (FAQ)
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Documento com perguntas frequentes do Go.Data.
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="183">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Referências
+          </span>
+         </p>
+        </td>
+       </tr>
+       <tr class="anime">
+        <td style="border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           README
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="187">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Informações do Go.Data, requisitos necessários e passo
+    a passo de sua instalação.
+          </span>
+         </p>
+        </td>
+        <td style="border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm" width="183">
+         <p align="left" class="Ptextotabela" style="margin-left:8.5pt;text-align:left">
+          <span style="color:black">
+           Arquivo no formato .md (markdown) no diretório do
+    Go.Data
+          </span>
+         </p>
+        </td>
+       </tr>
+      </table>
+      <p class="MsoNormal" style="margin-bottom:10.0pt;text-align:justify;line-
+  normal">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320199">
+         Indicadores de avaliação
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os indicadores são importantes ferramentas de avaliação e
+  monitoramento de resultados e nos permitem priorizar esforços no alcance das
+  metas. A avaliação periódica dos indicadores previne a falsa impressão de que
+  os esforços estão ou não satisfatórios, já que o processo de entrevistas e
+  identificação é demorado.
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320200">
+         Gerenciamento da
+  investigação de caso e rastreamento de contatos
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os relatórios de avaliação podem ser produzidos a cada
+  duas semanas e monitorados no Go.Data. Os indicadores podem ser incluídos
+  nesses relatórios para registrar resultados da eficácia das operações de
+  rastreamento de contatos no quadro de monitoramento e avaliação, inclusive
+  nas atividades de resposta à Covid-19, como:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Uso de software de rastreamento de contato especializado, como
+  o Go.Data, para facilitar o processo de identificação, rastreamento e
+  acompanhamento dos contatos (ECDC, 2020).
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Disponibilidade de aplicativos móveis na coleta de dados, como
+  o Guardiões da Saúde, para apoiar no rastreamento de contatos, já que o
+  rastreamento manual contribui em maior adesão e cobertura da população (ECDC,
+  2020).
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de investigações de casos atribuídos no período de
+  transmissibilidade,- disponível na lista de casos.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de indivíduos entrevistados no período de
+  transmissibilidade.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de investigações de casos encerradas no período (
+  período de tempo longo), ou seja, o desfecho e o panorama geral do surto, com
+  a quantidade de recuperados e óbitos.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número e percentual de investigações de casos em que pelo menos
+  um contato próximo foi obtido no período. A lista de contatos permite
+  rastrear o caso de onde surgiu o contato.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número total de contatos provenientes do caso e investigações
+  no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width:521.6pt" width="695">
+        <tr class="anime">
+         <td style="padding:0cm 5.4pt 0cm 5.4pt" width="22%">
+          <p class="Pimagem">
+           <span style="color:black">
+            <img border="0" height="127" id="Imagem 19" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image024.png" width="127"/>
+           </span>
+          </p>
+         </td>
+         <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="72%">
+          <p class="txtrec">
+           <b>
+            <span style="color:black">
+             Fica a Dica!
+            </span>
+           </b>
+          </p>
+          <p class="txtrec">
+           <span style="color:black">
+            É possível observar os contatos
+    na tela
+            <b>
+             Contatos
+            </b>
+            no
+            <b>
+             Go.Data
+            </b>
+            , inclusive as cadeias de
+    transmissão.
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:0cm;line-;border:none">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de contatos que concluíram a quarentena / número total
+  de contatos a realizar a quarentena no período. No Go.Data é possível obter
+  esse número por meio da lista de contatos ao filtrar o campo “Situação final
+  do acompanhamento” com o valor “Acompanhamento concluído”.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de encaminhamentos para apoio social. Os contatos
+  cadastrados devem ser orientados sobre o acesso ao apoio social.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div align="center">
+       <table 100%""="" border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width=" width="100%">
+        <tr class="anime">
+         <td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+          <p class="Pimagem">
+           <span style="color:black">
+            <img border="0" height="127" id="Imagem 20" src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image025.png" width="127"/>
+           </span>
+          </p>
+         </td>
+         <td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+          <p class="txtrec">
+           <b>
+            <span style="color:black">
+             Saiba Mais!
+            </span>
+           </b>
+          </p>
+          <p class="txtrec">
+           <span style="color:black">
+            Conheça os indicadores associados
+    à melhoria contínua da qualidade do rastreamento de contatos, baseado em
+    porcentagem de casos clique aqui.
+           </span>
+          </p>
+          <p align="center" class="txtrec" style="text-align:center">
+           <span style="color:black">
+            <button border="0">
+             <a href="https://www.cdc.gov/coronavirus/2019-ncov/global-covid-19/operational-considerations-contact-tracing.html">
+              Clique aqui!
+             </a>
+            </button>
+           </span>
+          </p>
+          <p class="MsoCaption">
+           <span style="color:black">
+            https://www.cdc.gov/coronavirus/2019-ncov/global-covid-19/operational-considerations-contact-tracing.html
+           </span>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </div>
+      <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;line-
+  150%">
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt">
+       <p class="P11Ttulonumerado">
+        <a name="_Toc70320201">
+         Medições processuais
+  programáticas e dos resultados
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Os dados analisados pela equipe de investigação de casos e
+  rastreamento de contatos ajudarão a definir ações estratégicas de contenção
+  do surto, seja na necessidade de capacitação técnica dos recursos humanos,
+  seja na priorização de ações de controle nas áreas de risco onde há maior
+  ocorrência da doença. Os relatórios podem ser produzidos regularmente e
+  entregues a médio prazo (quinzenalmente ou mensalmente).  Essas medidas
+  processuais programáticas incluem:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de investigações de casos atribuídos no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de casos entrevistados no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número e percentual de casos entrevistados menor ou igual a 24
+  horas do relatório à autoridade de saúde no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de investigações de casos encerradas no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número e percentual de casos que informaram pelo menos um
+  contato próximo no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Mediana em dias, desde o recebimento do relatório até a
+  entrevista no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número total de contatos rastreados nas investigações de casos
+  no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número total de contatos entrevistados/número total de contatos
+  informado por casos no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Média de contatos informados por entrevista dos casos no
+  período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de casos que concluíram o período de isolamento/número
+  total de casos indicados a se isolar no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de contatos que concluíram a quarentena/número total de
+  contatos indicados a realizar a quarentena no período.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de encaminhamentos realizados ao suporte social.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de encaminhamentos realizados para consulta clínica.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       As medições programáticas dos resultados incluem:
+      </p>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de casos entrevistados/número de investigações de casos.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de contatos testados para SARS-COV-2/Número de contatos
+  entrevistados.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número e percentual de novos casos confirmados decorrentes de
+  contatos em quarentena.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de contatos que estiveram em quarentena como resultado
+  do rastreamento de contatos.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número e percentual de casos que concluíram o período de
+  auto-isolamento.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <li class="PBullets">
+       Número de contatos que concluíram 14 dias de quarentena/
+  contatos notificados.
+      </li>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <div style="border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+       <p class="P1Ttulonumerado">
+        <a name="_Toc70320202">
+         Conclusão
+        </a>
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr class="anime" style="">
+     <td style="padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt" valign="top" width="794">
+      <p class="Ppargrafo">
+       Nesta aula você aprendeu a instalar o Go.Data tanto em
+  nível local, como no servidor. Também aprendeu o passo a passo das
+  configurações básicas para o melhor desempenho da ferramenta, assim como as
+  configurações adicionais que devem ser executadas no programa e os
+  indicadores que os softwares nos fornecem na investigação do surto.
+      </p>
+     </td>
+    </tr>
+   </table>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+  </section>
+ </body>
+</html>

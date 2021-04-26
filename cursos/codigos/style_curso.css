@@ -381,3 +381,17 @@
 	  footer {
 		position: absolute;
 	  }
+
+	p.Pcodigo, li.Pcodigo, div.Pcodigo {
+		mso-style-name:P_codigo;
+	  mso-style-link:"P_codigo Char";
+	  margin-top:6.0pt;
+	  margin-right:0cm;
+	  margin-bottom:0cm;
+	  margin-left:0cm;
+	  line-height:150%;
+	  font-size:12.0pt;
+	  font-family:"Arial",sans-serif;
+	  color:white;
+	  background:#282A36;
+	}

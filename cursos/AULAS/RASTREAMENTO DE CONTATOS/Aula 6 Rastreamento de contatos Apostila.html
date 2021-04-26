@@ -1,0 +1,3926 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 1 - Instalação do Go.Data</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Título 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Título 2 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h3
+	{mso-style-link:"Título 3 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#1F3763;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Título 4 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;
+	font-style:italic;}
+h5
+	{mso-style-link:"Título 5 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#666666;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Título 6 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#666666;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Texto de comentário Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Título Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:26.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtítulo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:16.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:15.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#666666;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Assunto do comentário Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+span.MsoPlaceholderText
+	{color:gray;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.Ptexto, li.Ptexto, div.Ptexto
+	{mso-style-name:P_texto;
+	mso-style-link:"P_texto Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PtextoChar
+	{mso-style-name:"P_texto Char";
+	mso-style-link:P_texto;
+	font-family:"Arial",sans-serif;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.Ttulo1Char
+	{mso-style-name:"Título 1 Char";
+	mso-style-link:"Título 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.Pnmeros, li.Pnmeros, div.Pnmeros
+	{mso-style-name:P_números;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpFirst, li.PnmerosCxSpFirst, div.PnmerosCxSpFirst
+	{mso-style-name:P_númerosCxSpFirst;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpMiddle, li.PnmerosCxSpMiddle, div.PnmerosCxSpMiddle
+	{mso-style-name:P_númerosCxSpMiddle;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpLast, li.PnmerosCxSpLast, div.PnmerosCxSpLast
+	{mso-style-name:P_númerosCxSpLast;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-36.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PnmerosChar
+	{mso-style-name:"P_números Char";
+	mso-style-link:P_números;
+	font-family:"Arial",sans-serif;}
+p.Ptextotabela, li.Ptextotabela, div.Ptextotabela
+	{mso-style-name:P_texto_tabela;
+	mso-style-link:"P_texto_tabela Char";
+	margin:0cm;
+	text-align:center;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+span.PtextotabelaChar
+	{mso-style-name:"P_texto_tabela Char";
+	mso-style-link:P_texto_tabela;
+	font-family:"Arial",sans-serif;}
+p.Pdestaque, li.Pdestaque, div.Pdestaque
+	{mso-style-name:P_destaque;
+	mso-style-link:"P_destaque Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.PdestaqueChar
+	{mso-style-name:"P_destaque Char";
+	mso-style-link:P_destaque;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Palfabeto, li.Palfabeto, div.Palfabeto
+	{mso-style-name:P_alfabeto;
+	mso-style-link:"P_alfabeto Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PalfabetoCxSpFirst, li.PalfabetoCxSpFirst, div.PalfabetoCxSpFirst
+	{mso-style-name:P_alfabetoCxSpFirst;
+	mso-style-link:"P_alfabeto Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PalfabetoCxSpMiddle, li.PalfabetoCxSpMiddle, div.PalfabetoCxSpMiddle
+	{mso-style-name:P_alfabetoCxSpMiddle;
+	mso-style-link:"P_alfabeto Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PalfabetoCxSpLast, li.PalfabetoCxSpLast, div.PalfabetoCxSpLast
+	{mso-style-name:P_alfabetoCxSpLast;
+	mso-style-link:"P_alfabeto Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PalfabetoChar
+	{mso-style-name:"P_alfabeto Char";
+	mso-style-link:P_alfabeto;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P111TtulonumeradoChar
+	{mso-style-name:"P_1\.1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.Ttulo3Char
+	{mso-style-name:"Título 3 Char";
+	mso-style-link:"Título 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#1F3763;}
+span.Ttulo2Char
+	{mso-style-name:"Título 2 Char";
+	mso-style-link:"Título 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.Ttulo4Char
+	{mso-style-name:"Título 4 Char";
+	mso-style-link:"Título 4";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-style:italic;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+span.TextodecomentrioChar
+	{mso-style-name:"Texto de comentário Char";
+	mso-style-link:"Texto de comentário";}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+span.AssuntodocomentrioChar
+	{mso-style-name:"Assunto do comentário Char";
+	mso-style-link:"Assunto do comentário";
+	font-weight:bold;}
+p.arttIMG, li.arttIMG, div.arttIMG
+	{mso-style-name:artt_IMG;
+	mso-style-link:"artt_IMG Char";
+	margin:0cm;
+	text-align:center;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.arttIMGChar
+	{mso-style-name:"artt_IMG Char";
+	mso-style-link:artt_IMG;}
+span.SubttuloChar
+	{mso-style-name:"Subtítulo Char";
+	mso-style-link:Subtítulo;
+	color:#666666;}
+span.TtuloChar
+	{mso-style-name:"Título Char";
+	mso-style-link:Título;}
+span.Ttulo5Char
+	{mso-style-name:"Título 5 Char";
+	mso-style-link:"Título 5";
+	color:#666666;}
+span.Ttulo6Char
+	{mso-style-name:"Título 6 Char";
+	mso-style-link:"Título 6";
+	color:#666666;
+	font-style:italic;}
+p.Pcodigo, li.Pcodigo, div.Pcodigo
+	{mso-style-name:P_codigo;
+	mso-style-link:"P_codigo Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	background:#282A36;}
+span.PcodigoChar
+	{mso-style-name:"P_codigo Char";
+	mso-style-link:P_codigo;
+	font-family:"Arial",sans-serif;
+	color:white;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251630080;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image001.png"
+alt="Aula 1 - Instalação do Go.Data"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895825408'><span
+style='position:absolute;left:175px;top:-522px;width:216px;height:90px'><img
+width=216 height=90
+src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image002.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Marcela<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Execução</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>ProEpi</span></p>
+  <p class=arttficha><span style='color:black'>SDS – Sala de situação –
+  Universidade de Brasília</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Parceiros</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>Project HOPE</span></p>
+  <p class=arttficha><span style='color:black'>Project ECHO</span></p>
+  <p class=arttficha><span style='color:black'>NIA TERO</span></p>
+  <p class=arttficha><span style='color:black'>Brasil Fundation</span></p>
+  <p class=arttficha><span style='color:black'>EXO plataforma</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Apoio</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>SKOLL FUNDATION</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=TableNormal border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:208.25pt'>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:208.25pt'>
+  <p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+  <p class=MsoToc1><a
+  href="#_Toc70320186">Instalação Go.data<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320187">Instalação local<span
+  style='color:windowtext;display:none;text-decoration:none'> </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320188">Instalação em servidor<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320189">Recursos necessários<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320190">Windows<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320191">Linux (32 ou 64 bits)<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320192">Instalação no Windows 10<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320193">Instalação no Linux<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320194">Complementos de instalação<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320195">Node Version Manager<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320196">MongoDB<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70320197">Execução do Go.Data no Linux<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320198">Configurações adicionais<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>28</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320199">Indicadores de avaliação<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320200">Gerenciamento da investigação de
+  caso e rastreamento de contatos<span style='color:windowtext;display:none;
+  text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70320201">Medições processuais programáticas e
+  dos resultados<span style='color:windowtext;display:none;text-decoration:
+  none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>36</span></a></p>
+  <p class=MsoToc1><a href="#_Toc70320202">Conclusão<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span style='color:black'><br>
+<br>
+</span></p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#BF8F00;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 1 - Instalação do Go.Data</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=577 height=131 id="Imagem 6"
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image003.png"></p>
+  <p class=MsoCaption>Figura 1 – Logo Go.Data Por goarn</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá!</p>
+  <p class=PpargrafoCxSpLast><span style='color:black'>Nest</span>a aula você
+  aprenderá a instalar o Go.Data no sistema operacional Windows e Linux,
+  incluir configurações adicionais, interpretar indicadores de avaliação,
+  gerenciar a investigação de casos e rastreamento de contatos e conhecer as
+  medidas processuais programáticas e por resultados.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao final desta aula, você será capaz de:</p>
+  <p class=PBulletsCxSpFirst>Instalar o Go.Data segundo o sistema operacional disponível;</p>
+  <p class=PBulletsCxSpMiddle>Compreender a importância dos indicadores de avaliação;</p>
+  <p class=PBulletsCxSpLast>Gerenciar investigação de casos e rastreamento de contatos com
+  a ferramenta Go.Data.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+color:black'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc70320186">Instalação Go.data</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Há dois tipos de instalação: a instalação local (autônoma)
+  e a instalação em servidor.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320187">Instalação local</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A instalação local é realizada em um computador onde
+  armazena todos os dados do Go.Data nesse local. Recomenda-se essa instalação
+  na investigação de surtos em que  uma pessoa administra a entrada e saída de
+  dados no sistema.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320188">Instalação</a> em servidor</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A instalação em servidor também é realizada em um
+  computador, porém como um servidor após configurações de perfil de usuários
+  (computadores e celulares) conectados com os dados desse servidor.
+  Recomenda-se a instalação em servidor na investigação de surtos de grande
+  extensão que exigem trabalho em equipe.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 9"
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image004.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>É fundamental a leitura dos
+    Termos de Uso e Licença do Software, encontrados na <a
+    href="https://community-godata.who.int/"><span style='color:#1155CC'>comunidade
+    oficial do Go.Data</span></a>. Nessa comunidade, há documentos sobre o
+    software e guias de apoio.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320189">Recursos necessários</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os recursos necessários em disco para cada tipo de
+  instalação dependem do volume de dados que serão processados no sistema.
+  Esses recursos variam conforme o tamanho do surto, a quantidade de pessoas
+  que terão acesso ao sistema, a região onde o surto será monitorado (Uma
+  cidade? Um estado? Um país?) e a quantidade de variáveis que estarão
+  presentes em cada caso, contato e monitoramento.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O espaço mínimo necessário em disco para funcionar o
+  Go.Data é de 3GB (Gigabytes - unidade de medida de informação) em ambos os
+  sistemas operacionais (Windows e Linux). Ressalta-se que esse espaço  é
+  considerado o mínimo necessário na instalação do Go.Data com os arquivos
+  básicos de funcionamento do software, como usuário administrador e templates
+  de surto.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo> O espaço livre reservado no desktop  deve ser maior ao já
+  ocupado na instalação do software (3 GB), como exemplo uma base de dados que
+  ocupa memória de 150MB (Megabytes), equivalente à 0.15GB:<b>Cerca de 1.000
+  casos, 200 contatos, 2.000 monitoramentos diários, 30 usuários, 70
+  localizações e questionários com 20 variáveis.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Recomenda-se reservar memória superior do desktop para
+  aumentar a capacidade de uso do Go.Data.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os requisitos mínimos de cada sistema operacional são
+  essenciais no bom funcionamento do software..</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320190">Windows</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst>Sistema operacional 64 bits.</p>
+  <p class=PBulletsCxSpMiddle>Windows 7 ou superior.</p>
+  <p class=PBulletsCxSpMiddle>Processador: 2GHz (frequência de clock do processador em
+  GigaHertz).</p>
+  <p class=PBulletsCxSpLast>Memória RAM: 8GB.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320191">Linux (32 ou 64 bits)</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst>Sistema operacional 32 ou 64 bits.</p>
+  <p class=PBulletsCxSpMiddle>Sistemas operacionais: Ubuntu 12.04, Fedora 21, Debian 8 ou
+  superiores.</p>
+  <p class=PBulletsCxSpMiddle>Processador: 2GHz (frequência de clock do processador em
+  GigaHertz).</p>
+  <p class=PBulletsCxSpLast>Memória RAM: 4GB.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320192">Instalação no Windows 10</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O primeiro passo de instalação do Go.Data no Windows 10 é 
+  acessar o link de download, fornecido pela Organização Mundial de Saúde (OMS)
+  ou pela equipe de suporte do Go.Data, mediante contato.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os arquivos para download são encontrados diretamente na
+  opção “Go.Data Setup 2.35.0.exe”. O número <b>2.35.0</b> corresponde à versão
+  do Go.Data. Selecione o arquivo com a extensão <b>.exe</b> para iniciar o
+  processo de instalação.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 10"
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image005.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>Uma das limitações do Go.Data na
+    instalação é o idioma do sistema operacional diferente do idioma do teclado
+    em inglês. Isso se deve ao problema com a aplicação do software, a ser
+    corrigido nas futuras versões (WHO, 2020).</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;
+  line-height:150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após concluir o download do arquivo .exe, execute-o, com
+  duplo clique do mouse no seu computador. Em seguida, abre uma janela de
+  instalação do Go.Data. Leia os Termos de Uso e clique no botão “Eu Concordo”
+  (Figura-1).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 1. Captura de tela sobre “Termos de Uso e Acordo
+  de Licença” da janela Instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=503 height=393 id=image6.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image006.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Selecione o tipo de acesso do usuário do Go.Data
+  (Figura-2).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 2. Captura de tela sobre “Opção de acesso do
+  usuário” da janela Instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=505 height=395 id=image2.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image007.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Selecione o local de instalação onde os arquivos do
+  Go.Data estarão armazenados no computador (Figura-3).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 3. Captura de tela sobre “Local da Instalação”
+  da janela Instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span class=PnmerosChar><img border=0 width=522 height=406
+  id=image9.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image008.jpg"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 13"
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image009.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>Caso deseje alterar o local para
+    uma pasta diferente do padrão, clique em “Procurar”, navegue até o local
+    desejado, depois clique em “Ok”.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=right style='margin-bottom:10.0pt;text-align:right;
+  line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nas <span class=PpargrafoChar>configurações</span> de
+  aplicação do software, marque a opções:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst>“Application and services (recommended for server
+  installations)” - Para instalação em servidor.</p>
+  <p class=PBulletsCxSpMiddle>“Application without services (recommended for local
+  stand-alone installations)” - Para instalação local.</p>
+  <p class=PBulletsCxSpMiddle>“Allow config rewrite (system will try to determine domain and
+  other settings)”.</p>
+  <p class=PBulletsCxSpLast>“Enable Cross-Origin Resource Sharing”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Posteriormente, clique no botão “Instalar”. Ao finalizar a
+  instalação do software, um ícone do Go.Data será criado na área de trabalho
+  do desktop. Para executá-lo como administrador, clique na opção “Run as
+  administrator” com o botão direito do mouse (Figura-4).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 4. Captura de tela sobre “Configurações de
+  aplicação” da janela Instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=512 height=394 id=image10.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image010.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+  150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'> Clique
+  no botão “Launch Go.Data” para manter ou alterar as portas do MongoDB e do
+  Go.Data (Figura-5).</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Figura 5. Captura de tela de configuração Launch Go.Data.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=287 height=424 id=image21.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image011.png"
+  alt="Tela de celular com texto preto sobre fundo branco&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O serviço de banco de dados e as configurações iniciais da
+  aplicação do Go.Data estão disponíveis. Abra o Go.Data no endereço do
+  localhost na porta selecionada, como “<a href="http://localhost:3000/"><span
+  style='color:#1155CC'>http://localhost:3000/</span></a>” no navegador.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320193">Instalação no Linux</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A sequência de passos é válida para instalação no Ubuntu
+  16.04. Recomenda-se instalar o Node Version Manager e o MongoDB para melhorar
+  o desempenho do Go.Data no Linux.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320194">Complementos de instalação</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320195">Node Version Manager</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Inicia-se a instalação do Node Version Manager (NVM),
+  versão 8.17.0 ,(NVM), gerenciador de versões do Node. Posteriormente, o
+  pacote build-essential é instalado (Figura-6). Abra o terminal, digite os
+  comandos “Update” e “Y”, depois pressione ”<i>Enter</i>” para finalizar cada
+  um dos complementos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=Ptabelacod border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr style='height:1.0pt'>
+    <td width=602 style='width:451.45pt;background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt;
+    height:1.0pt'>
+    <p class=Pcodigo>sudo apt-get update</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 6. Captura de tela do Node Version Manager e
+  Build-essential.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=Ptabelacod border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 style='width:451.45pt;background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt'>
+    <p class=Pcodigo>sudo apt-get install build-essential -y</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=Pimagem></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Comandos que se iniciam com “sudo”, solicitam a senha,
+  pois permite privilégios de super usuários para usuários comuns da máquina.
+  Então, digite a senha e pressione “<i>Enter”.</i></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A instalação do NVM ocorre a partir do comando digitado em
+  v0.36.0 (Figura-7). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 7. Captura de tela do comando Node Version
+  Manager.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>curl -o-
+    https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A versão do NVM pode ser alterada por outra mais recente,
+  disponível no <a href="https://github.com/nvm-sh/nvm"><span style='color:
+  #1155CC'>repositório do NVM</span></a>. Após instalar o NVM, reinicie o
+  terminal para que as aplicações tenham efeito.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para checar se a instalação foi concluída com sucesso, use
+  o comando que retorna a versão do NVM (Figura-8). Caso esteja tudo ok,
+  visualiza-se o modo remoto do NVM (Figura-9). Esse comando retorna todas as
+  versões disponíveis para instalação do node.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 8. Captura de tela do modo versão do Node
+  Version Manager.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=Ptabelacod border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 style='width:451.45pt;background:#262626;padding:4.25pt 5.4pt 4.25pt 5.4pt'>
+    <p class=Pcodigo><span style='color:#F8F8F2'>nvm </span>--version</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após instalado o NVM, iremos buscar as versões disponíveis
+  do node:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 9. Captura de tela do modo remoto do Node
+  Version Manager.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>nvm ls-remote <b><span style='color:#8BE9FD'>node</span></b></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=Pcodigo></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para instalar o NVM, certifique-se de utilizar a versão
+  8.x) (Figura-10):</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 10. Captura de tela do comando instalação do
+  Node Version Manager versão 8.x.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>nvm install v8.17.0</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para verificar se a instalação foi realizada corretamente,
+  utilize o comando <b>version</b>, que retorna a versão instalada do node
+  (Figura-11))</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 11. Captura de tela do modo versão do Node
+  Version Manager.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo><span style='color:#8BE9FD'>node</span><span
+    style='color:#F8F8F2'> </span>--version</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320196">MongoDB</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Inicialmente deve-se importar a chave pública GPC do
+  MongoDB no comando (Figura-12).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 12. Captura de tela da chave pública GPC do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80
+    --recv 7F0CEB10</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Posteriormente, crie o arquivo mongodb-org-3.4.list
+  (Figura-13).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 13. Captura de tela do arquivo de instalação do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo><span style='color:#F8F8F2'>echo </span>&quot;deb
+    http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse&quot;<span
+    style='color:#F8F8F2'> | sudo tee /etc/apt/sources.</span><b>list</b><span
+    style='color:#F8F8F2'>.d/mongodb-org-3.4.</span><b>list</b></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Atualize o pacote do repositório local com o <b>apt-get
+  update</b> (Figura-14).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 14. Captura de tela do comando de atualização do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo apt-get <b><span style='color:#8BE9FD'>update</span></b></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A partir deste passo, instale a versão 3.4 do MongoDB.
+  Caso deseje instalar uma versão diferente, substitua a versão desejada no
+  lugar do “3.4” (Figura-15).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 15. Captura de tela do modo versão do MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo><span style='color:#F8F8F2'>sudo apt-get install -y </span>mongodb-org=<span
+    style='color:yellow'>3.4</span> mongodb-org-server=<span style='color:yellow'>3.4</span>
+    mongodb-org-shell=<span style='color:yellow'>3.4</span> mongodb-org-mongos=<span
+    style='color:yellow'>3.4</span> mongodb-org-tools=<span style='color:yellow'>3.4</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para rodar o serviço MongoDB, necessita-se criar o arquivo
+  de serviço no diretório “/etc/systemd/system/” (Figura-16). Utilize o editor,
+  de preferência neste comando. Neste exemplo, utilizou-se o Nano:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 16. Captura de tela do arquivo de serviços no
+  diretório MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo nano /etc/systemd/system/mongodb.service</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nesta etapa, o editor de texto está aberto.  Adicione o
+  código no arquivo <b>mongodb.service</b> (Figura-17).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 17. Captura de tela do arquivo mongodb.service
+  do MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'>#Unit contains the dependencies to be
+    satisfied before the service is started.</span><span style='font-size:12.0pt;
+    line-height:150%;font-family:"Arial",sans-serif;color:#F8F8F2;background:
+    #282A36'><br>
+    </span><b><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'><br>
+    [Unit]</span></b><span style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:#F8F8F2;background:#282A36'><br>
+    Description=MongoDB Database<br>
+    After=network.target<br>
+    Documentation=https://docs.mongodb.org/manual<br>
+    <br>
+    </span><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'># Service tells systemd, how the service
+    should be started.</span><span style='font-size:12.0pt;line-height:150%;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'><br>
+    </span><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'># Key `User` specifies that the server
+    will run under the mongodb user and</span><span style='font-size:12.0pt;
+    line-height:150%;font-family:"Arial",sans-serif;color:#F8F8F2;background:
+    #282A36'><br>
+    </span><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#6272A4;background:#282A36'># `ExecStart` defines the startup command
+    for MongoDB server.</span><span style='font-size:12.0pt;line-height:150%;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'><br>
+    </span><b><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'><br>
+    [Service]</span></b><span style='font-size:12.0pt;line-height:150%;
+    font-family:"Arial",sans-serif;color:#F8F8F2;background:#282A36'><br>
+    User=mongodb<br>
+    Group=mongodb</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>ExecStart=/usr/bin/mongod --quiet
+    --config /etc/mongod.conf</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>&nbsp;</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'># Install tells systemd when the service
+    should be automatically started.</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'># `multi-user.target` means the server
+    will be automatically started during boot.</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><b><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#8BE9FD;background:#282A36'>[Install]</span></b></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>WantedBy=multi-user.target</span></p>
+    <p class=MsoNormal style='text-align:justify;line-height:150%'><span
+    style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+    color:#F8F8F2;background:#282A36'>&nbsp;</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Reitera-se que qualquer caractere copiado errado pode
+  comprometer o funcionamento do serviço de banco de dados.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após copiar o código do arquivo, pressione as teclas “CTRL
+  + X” para sair. Em seguida, pressione a tecla “Y” para salvar o arquivo.
+  Então, aperte “Enter” para confirmar.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>De volta ao terminal comum, o serviço do systemd é
+  atualizado para que o novo serviço do MongoDB criado seja efetivado
+  (Figura-18).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 18. Captura de tela do arquivo systemd do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>systemctl daemon-reload</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Reinicie o serviço do MongoDB com o systemctl, executando
+  o comando “start” (Figura-19).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 19. Captura de tela do arquivo systemdclt start
+  do MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl <b><span style='color:#8BE9FD'>start</span></b>
+    mongodb</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Verifique se o serviço do banco de dados foi iniciado
+  corretamente na porta 27017(Figura-20).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 20. Captura de tela do arquivo netstat-plnt do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>netstat -plnt</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Verifique também se o serviço foi iniciado com sucesso por
+  meio do comando status (Figura-21).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 21. Captura de tela do arquivo status do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl status mongodb</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Verifique se o retorno desse comando mostra o nome do
+  serviço (mongodb), “loaded” e “active”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ative o modo de início automático do serviço, com o “systemctl
+  enable” e o nome do serviço (mongodb), (Figura-22)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 22. Captura de tela do arquivo systemctl enable
+  do MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl enable mongodb</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Utilize o Shell do MongoDB, que é a interface para acesso
+  de serviços e funcionalidades do MongoDB. Para abrir o shell digite “mongo”:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 23. Captura de tela do comando mongo do MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>mongo</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Aplique o modo  “use” para selecionar o database a ser
+  usado, no caso o “admin” para usuário administrador (Figura-24).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 24. Captura de tela do modo use admin do
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>use admin</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O usuário root foi criado. Digite a senha desejada entre
+  aspas no atributo “pwd”, substituindo a palavra “password”. Lembre-se que a
+  senha será usada nos arquivos de configuração de banco de dados do Go.Data. O
+  nome do usuário também pode ser alterado para o de sua preferência.
+  (Figura-25).: </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 25. Captura de tela do usuário criado no
+  MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>db.createUser({user:&quot;<span style='color:yellow'>admin</span>&quot;,
+    pwd:&quot;<span style='color:yellow'>password</span>&quot;,
+    roles:[{role:&quot;root&quot;, db:&quot;admin&quot;}]})</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Feche a janela Shell do MongoDB, pressionando as teclas
+  “CTRL+C”. Reinicie o serviço, com o comando “restart” do “systemctl”
+  (Figura-26).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 26. Captura de tela do modo restart no MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl restart mongodb</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao conectar o usuário criado, certifique-se de substituir
+  o nome do seu usuário e senha definidos no comando de criação de usuário pelo
+  “admin” e “password” (Figura-27)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 27. Captura de tela de autenticação no MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>mongo -u <span style='color:yellow'>admin</span> -p <span
+    style='color:yellow'>password</span> --authenticationDatabase admin</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após executar esse comando, verifique se o mongo está
+  conectado. Ao finalizar a autenticação, a instalação do MongoDB está
+  concluída. Os bancos de dados (databases) são abertos e executados no shell
+  do mongo (Figura-28).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 28. Captura de tela do modo demonstração do
+  banco de dados no MongoDB.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>show dbs</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70320197">Execução do Go.Data no
+  Linux</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao finalizar a instalação dos complementos NVM e MongoDB,
+  inicia-se a instalação do Go.Data por meio da criação do diretório, como
+  /godata/go-data-linux-x64 2.35.0.tar.gz. Recomenda-se criar a pasta raiz  no
+  diretório inicial do sistema operacional “/”. Para visitá-lo, utiliza-se “cd
+  /godata”. O comando de super usuário “sudo” será aplicado sempre que executar
+  qualquer comando na pasta raiz.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Denomine a pasta criada , por exemplo “godata”, “v2.35.0”
+  na pasta raiz (Figura-29)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 29. Captura de tela do comando de criação do
+  diretório do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo mkdir /godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Mova o arquivo de instalação para a pasta criada pelo
+  usuário, com substituição do local onde o arquivo de instalação está salvo
+  (formato .tar.gz) (Figura-30).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 30. Captura de tela do comando de localização do
+  arquivo de instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo mv <span style='color:yellow'>local-do-arquivo/de-instalação</span>/go-data-linux-x64
+    2.35.0.tar.gz /godata/</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Acesse a pasta raiz com o comando “cd” (Figura-31) e
+  atribua permissões ao usuário no diretório go-data-linux-x64 2.35.0.tar.gz e
+  substitua “seuusuário” pelo nome do usuário da máquina (Figura-32).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 31. Captura de tela do comando “cd” do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>cd /</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 32. Captura de tela do comando de alteração do usuário
+  do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo chown <span style='color:yellow'>seuusuário:seuusuário</span>
+    -R godata/</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Acesse o diretório do arquivo de instalação por meio do
+  comando “cd” (Figura-33) e extraia o arquivo go-data-linux-x64 2.35.0.tar.gz
+  (Figura-34).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 33. Captura de tela do diretório do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>cd<span style='color:#F8F8F2'> </span>/godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 34. Captura de tela do comando de extração dos
+  arquivos Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>tar -xpvf  go-data-linux-x64<span style='color:#F8F8F2'>\
+    2.35.0.tar.gz</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A estrutura da pasta “/godata” é visualizada (Figura-35)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 35. Captura da tela da estrutura da pasta
+  “/godata”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=91 id=image8.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image012.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Acesse a pasta “build”, no diretório “go-data” para
+  realizar a instalação do software (Figura-36)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 36. Captura de tela do comando build do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>cd go-data/build/</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Na pasta “build/”, visualiza-se a estrutura da pasta
+  (Figura-37).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 37 - Captura de tela da estrutura da pasta build
+  do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=108 id=image5.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image013.png"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Aplique o usuário “root” nos comandos de instalação. O
+  comando solicitará a inserção da senha. Posteriormente, pressione a tecla
+  “Enter” (Figura-38).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 38. Captura de tela do comando de criação do
+  diretório do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo su</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>É necessário instalar a aplicação com o “npm install”
+  (Figura-39) . Recomenda-se executar o NPM diretamente do diretório, com
+  substituição da versão v8.17.0 pela versão do node (em ciano) e o nome do seu
+  usuário da máquina por “seu-usuário” (Figura-40).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 39. Captura de tela do usuário do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>/home/<span style='color:yellow'>seu-usuário</span>/.nvm/versions/node/<span
+    style='color:aqua'>v8.17.0</span>/bin/npm install</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 40 – Captura de tela de instalação do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=115 id=image11.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image014.jpg"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após essa etapa de instalação, configure o banco de dados
+  no arquivo “datasources.json” na pasta “server/”, localizada em “/godata/go-data/build/server”
+  (Figura-41), e configure o servidor no arquivo “config.json”, também na pasta
+  “server/” (Figura-42).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 41. Captura de tela do comando executor do banco
+  de dados do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>nano server/datasources.json</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Altere o “password” (1) e “user” (2) para o usuário e
+  senha do banco de dados do MongoDB, mantidas entre aspas (Figura-42). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 42 - Captura de tela do arquivo
+  datasources.json.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=376 id=image7.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image015.jpg"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para salvar o arquivo e sair do Nano,  pressione as teclas
+  “CTRL + X”, clique na tecla “Y”, depois pressione   “Enter” para confirmar.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As configurações de host público do Go.Data no arquivo
+  “config.json” “condicionam” ao Go.Data em qual endereço ele deve rodar
+  (Figura-43).Caso haja um domínio configurado, adicione a linha “host” no “public”
+  (1) (Figura-44). Ao rodar o Go.Data localmente, não é necessário realizar
+  esse procedimento, pois funcionará por meio do acesso “localhost:3000” na
+  máquina.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 43 - Captura de tela do arquivo config.json.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>nano server/config.json</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 44 - Captura de tela do arquivo config.json. </b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=227 id=image22.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image016.png"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>No diretório build, inicialize as configurações do banco
+  de dados, para criar os dados básicos do Go.Data. Substitua a versão v8.17.0
+  pela versão do seu node (em ciano) e o nome do seu usuário da máquina por
+  “seu-usuário” (Figura-45):</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 45 - Captura de tela do comando de configuração
+  da base de dados do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>/home/<span style='color:yellow'>seu-usuário</span>/.nvm/versions/node/<span
+    style='color:aqua'>v8.17.0</span>/bin/npm run init-database</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Atenção! Essa operação pode levar alguns minutos
+  (Figura-46). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 46 - Captura de tela de configuração do banco de
+  dados modo de inicialização.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=112 id=image24.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image017.jpg"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao finalizar o processo de instalação e configuração, rode
+  o Go.Data com o comando “start”. Substitua a versão v8.17.0 pela versão do
+  seu node (em ciano) e o nome do seu usuário da máquina por “seu-usuário”
+  (Figura-47).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 47 - Captura de tela do comando de usuário para
+  iniciar o Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo><span style='color:#F8F8F2'>/home/</span><span
+    style='color:yellow'>seu-usuário</span><span style='color:#F8F8F2'>/.nvm/version</span>s/node/<span
+    style='color:aqua'>v8.17.0</span>/bin/npm start</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 48 - Captura de tela do comando  aplicação do
+  Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=76 id=image19.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image018.jpg"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Essa aplicação deve estar disponível no endereço local
+  padrão (localhost:3000) e/ou no endereço público definido. Acesse esse
+  endereço pelo navegador. Caso esteja usando o sistema operacional Server, sem
+  interface gráfica, é necessário criar um serviço para o Go.Data rodar em
+  segundo plano. Libere o terminal para outros fins. Ressalta-se que essa etapa
+  é útil nos sistemas operacionais Desktop, com interface gráfica.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para parar de rodar o Go.Data no terminal, pressione as
+  teclas “CTRL + C”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Crie o arquivo de serviço (service) no diretório
+  “/etc/systemd/system/”, mesmo diretório para rodar o MongoDB (Figuras-49 e
+  50).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 49 - Captura de tela do comando do sistema operacional.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>cd /etc/systemd/system/</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 50 - Captura de tela do arquivo service no
+  diretório do sistema operacional.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+   width="100%" style='width:100.0%;border-collapse:collapse;margin-left:4.8pt;
+   margin-right:4.8pt'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo nano godata.service</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao abrir o editor de texto Nano, copie o código no arquivo
+  godata.service (Figura-51).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 51 - Captura de tela do arquivo godata.service.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>[Unit]<br>
+    Description=GoData Server<br>
+    After=network.target<br>
+    <br>
+    [Service]<br>
+    User=root<br>
+    Group=root<br>
+    ExecStart=/usr/bin/node /<span style='color:yellow'>godata</span>/go-data/build/.<br>
+    <br>
+    [Install]<br>
+    WantedBy=multi-user.target</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Substitua o código “godata” pelo nome do diretório criado
+  no primeiro comando desta aula.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para sair do Nano e salvar o arquivo, pressione as teclas
+  “CTRL + X”, em seguida pressione a tecla “Y” para salvar o arquivo. Por fim,
+  confirme com a tecla “ENTER”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Retorne ao terminal comum e atualize o serviço do systemd
+  para que o novo serviço do Go.Data criado seja efetivado no sistema
+  operacional (Figura-52).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 52 - Captura de tela do arquivo systemctl
+  daemon-reload.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>systemctl daemon-reload</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Inicie o serviço do Go.Data com o systemctl, executando o
+  “start” com o nome do serviço (Figura-53).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 53 - Captura de tela do comando start.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl <b><span style='color:#8BE9FD'>start</span></b>
+    godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Verifique se o serviço foi iniciado com sucesso
+  (Figura-54)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 54 - Captura de tela do status Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl status godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Verifique se o retorno desse comando demonstra o nome do
+  serviço (mongodb), “loaded” e “active”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ative o iniciamento automático do serviço quando o sistema
+  operacional iniciar com o “systemctl enable” e, então, o nome do serviço
+  (godata) (Figura-55).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 55 - Captura de tela do status systemctl enable
+  godata.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl enable godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Se identificar erro, reinicie o serviço com o “restart” do
+  “systemctl” (Figura-56).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 56 - Captura de tela do systemctl restart
+  godata.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl restart godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para parar o serviço do Go.Data, use o comando “stop” do
+  “systemctl” (Figura-57).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 57 - Captura de tela do systemctl stop godata.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+   style='width:100.0%;border-collapse:collapse'>
+   <tr>
+    <td width=602 valign=top style='width:451.45pt;background:#282A36;
+    padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+    <p class=Pcodigo>sudo systemctl stop godata</p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320198">Configurações adicionais</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Com o Go.Data funcionando em ambiente Linux, seguem os
+  passos  das configurações adicionais e acesso a Backups, Logs e Documentação
+  adicional tanto no Linux quanto no Windows.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Acesse o Go.Data com duplo clique do mouse no ícone do
+  software no desktop (Figura-58). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 58 - Captura da tela inicial do Go.Data. </b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=400 id=image17.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image019.jpg"
+  alt="Interface gráfica do usuário&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>É possível alterar o idioma do Go.Data no canto superior
+  direito da tela, no botão“Language”, para se familiarizar melhor com o
+  software. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O primeiro acesso do Go.Data disponibiliza o usuário
+  administrador. A partir desse usuário, é possível criar outros usuários com
+  diferentes tipos de permissões no software. Realize o login com o usuário
+  administrador. Em seguida, altere a senha do usuário administrador para uma
+  senha de sua preferência.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><b>E-mail:</b> admin@who.int</p>
+  <p class=PBulletsCxSpLast><b>Senha:</b> admin</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Acesse o menu lateral da tela e arraste o mouse  em <b>Administrador,</b>
+  depois clique em <b>Usuários</b> (Figura-59).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 59 - Captura de tela do Menu -Administrador -
+  Usuários do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=349 height=522 id=image27.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image020.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Na aba Usuários, clique no botão “Adicionar” e adicione os
+  dados do usuário que deseja incluir no sistema. Caso o novo usuário também
+  seja administrador, certifique-se de incluir todas as permissões de acesso ao
+  software. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Backup é um recurso de segurança, caso haja perdas
+  inesperadas de dados no computador. Esse recurso consegue recuperar esses
+  dados total ou parcialmente. Por isso, recomendamos que os Backups dos dados
+  sejam realizados com frequência e inclusive salvos em outro computador ou HD
+  externo ou nuvem.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para configurar o Backup, acesse a aba <b>Configuração do
+  sistema</b> e clique no botão <b>Copia de seguridade </b>no menu lateral do
+  Go.Data (Figura-60).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 60 - Captura de tela Menu de Configuração do
+  Sistema do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=341 height=335 id=image26.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image021.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nessa tela, o histórico dos Backups fica registrado no
+  sistema. Para configurar o Backup Automático, clique no botão <b>Ações
+  Rápidas</b>. Selecione a primeira opção <b>Copia de seguridad restaurada</b>
+  (Figura-61)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 61 - Captura de tela de Ações rápidas de Backup
+  no Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=277 height=172 id=image25.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image022.png"
+  alt="Tela de celular com texto preto sobre fundo branco&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Uma janela é aberta com informações do diretório onde
+  serão salvos os backups, a frequência na qual eles foram realizados e o tempo
+  que o Go.Data os mantém salvos no computador. Para salvar os backups
+  automáticos, preencha os campos abaixo de acordo com suas necessidades. Não
+  esqueça de manter ou alterar a pasta destino dos backups no campo <b>Local</b>.
+  Em caso de dúvidas, acesse o diretório de instalação do Go.Data no computador
+  <b>/go-data/build/backups</b>, diretório padrão (Figura-62).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 62 - Captura de tela das Configurações de backup
+  automático no Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=601 height=405 id=image20.png
+  src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image023.jpg"
+  alt="Texto&#10;&#10;Descrição gerada automaticamente com confiança média"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ocasionalmente, quando o Go.Data demonstra algum erro 
+  relacionado à conexão, inconsistência do banco de dados ou do próprio
+  sistema, uma mensagem de erro aparecerá na tela do computador. Porém, essa
+  mensagem não decorre de informações completas. Por isso, é fundamental o
+  acesso aos Logs do Administrador.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Em ambiente Windows, encontre os logs conforme cada módulo
+  e tipo de instalação nas seguintes pastas:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets style='margin-left:42.55pt;text-indent:0cm'>Se você
+  instalou apenas para seu usuário:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst style='text-indent:0cm'>1.1. Logs da aplicação:
+  {sua\pasta\de\instalação}\Go.Data\logs\app</p>
+  <p class=PpargrafoCxSpMiddle style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Users\YourUser\AppData\Roaming\Go.Data\logs\app</p>
+  <p class=PpargrafoCxSpMiddle style='text-indent:0cm'>1.2. Logs de serviços:
+  {sua\pasta\de\instalação}\Go.Data\resources\go-data\build\logs</p>
+  <p class=PpargrafoCxSpMiddle style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Users\YourUser\AppData\Local\Programs\Go.Data\resources\go-data\build\logs</p>
+  <p class=PpargrafoCxSpMiddle style='text-indent:0cm'>1.3. Logs de banco de
+  dados: {sua\pasta\de\instalação}\Go.Data\db</p>
+  <p class=PpargrafoCxSpLast style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Users\YourUser\AppData\Roaming\Go.Data\db</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Se você selecionou a instalação para todos os usuários:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst style='text-indent:0cm'>2.1. Logs da aplicação:
+  {sua\pasta\de\instalação}\Go.Data\data\logs\app</p>
+  <p class=PpargrafoCxSpMiddle style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Go.Data\data\logs\app</p>
+  <p class=PpargrafoCxSpMiddle style='text-indent:0cm'>2.2. Logs de serviços:
+  {sua\pasta\de\instalação}\Go.Data\bin\resources\go-data\build\logs</p>
+  <p class=PpargrafoCxSpMiddle style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Go.Data\bin\resources\go-data\build\logs</p>
+  <p class=PpargrafoCxSpMiddle style='text-indent:0cm'>2.3. Logs de banco de
+  dados: {sua\pasta\de\instalação}\Go.Data\data\logs\db</p>
+  <p class=PpargrafoCxSpLast style='margin-left:35.4pt;text-indent:0cm'>Exemplo:
+  C:\Go.Data\data\logs\db</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Em ambiente Linux, encontre os logs conforme cada módulo e
+  tipo de instalação no seguinte diretório:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo style='text-indent:0cm'>1. Logs gerais:
+  {sua/pasta/de/instalação}/go-data/build/logs/</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nesse diretório há um arquivo denominado README e <b>application.log</b>.
+  Para visualizar os Logs, abra um editor de texto. Os logs mais recentes se
+  encontram no fim do arquivo.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para finalizar esta aula, segue abaixo documentos oficiais
+  (em inglês) e onde pode encontrá-los (Quadro-1).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Quadro 1. Lista de documentos do Go.Data, segundo
+  descrição e loca lde acesso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <table class=TableNormal border=1 cellspacing=0 cellpadding=0 width=602
+   style='width:451.45pt;background:#F2F2F2;border-collapse:collapse;
+   border:none'>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt'><b><span style='color:black'>Nome do documento</span></b></p>
+    </td>
+    <td width=187 style='width:139.95pt;border:solid white 1.5pt;border-left:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt'><b><span style='color:black'>Descrição</span></b></p>
+    </td>
+    <td width=183 style='width:137.5pt;border:solid white 1.5pt;border-left:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+    6.0pt;margin-left:8.5pt'><b><span style='color:black'>Localizado</span></b></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>User Guide</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Guia de usuário do Go.Data, com instruções de uso.</span></p>
+    </td>
+    <td width=183 rowspan=5 style='width:137.5pt;border-top:none;border-left:
+    none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+    padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Comunidade do Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Go.Data Implementation Guide</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Guia de implementação de plano de uso, hosteamento e
+    configurações do Go.Data.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Go.Data IT Administrator Guide</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Guia de Administrador de Infraestrutura, com
+    informações sobre instalação, hospedagem, segurança, API, entre outros.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Syncing the Go.Data Mobile app</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Guia de sincronização do Go.Data versão Mobile com os
+    dados de uma instância do Go.Data em computador.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Terms of use and Software License Agreement</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Termos de uso, licença e direitos autorais.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Frequently Asked Questions (FAQ)</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Documento com perguntas frequentes do Go.Data.</span></p>
+    </td>
+    <td width=183 style='width:137.5pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Referências</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=187 style='width:140.0pt;border:solid white 1.5pt;border-top:
+    none;padding:0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>README</span></p>
+    </td>
+    <td width=187 style='width:139.95pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Informações do Go.Data, requisitos necessários e passo
+    a passo de sua instalação.</span></p>
+    </td>
+    <td width=183 style='width:137.5pt;border-top:none;border-left:none;
+    border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;padding:
+    0cm 0cm 0cm 0cm'>
+    <p class=Ptextotabela align=left style='margin-left:8.5pt;text-align:left'><span
+    style='color:black'>Arquivo no formato .md (markdown) no diretório do
+    Go.Data</span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320199">Indicadores de avaliação</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os indicadores são importantes ferramentas de avaliação e
+  monitoramento de resultados e nos permitem priorizar esforços no alcance das
+  metas. A avaliação periódica dos indicadores previne a falsa impressão de que
+  os esforços estão ou não satisfatórios, já que o processo de entrevistas e
+  identificação é demorado.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320200">Gerenciamento da
+  investigação de caso e rastreamento de contatos</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os relatórios de avaliação podem ser produzidos a cada
+  duas semanas e monitorados no Go.Data. Os indicadores podem ser incluídos
+  nesses relatórios para registrar resultados da eficácia das operações de
+  rastreamento de contatos no quadro de monitoramento e avaliação, inclusive
+  nas atividades de resposta à Covid-19, como:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Uso de software de rastreamento de contato especializado, como
+  o Go.Data, para facilitar o processo de identificação, rastreamento e
+  acompanhamento dos contatos (ECDC, 2020).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Disponibilidade de aplicativos móveis na coleta de dados, como
+  o Guardiões da Saúde, para apoiar no rastreamento de contatos, já que o
+  rastreamento manual contribui em maior adesão e cobertura da população (ECDC,
+  2020).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de investigações de casos atribuídos no período de
+  transmissibilidade,- disponível na lista de casos. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de indivíduos entrevistados no período de
+  transmissibilidade.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de investigações de casos encerradas no período (
+  período de tempo longo), ou seja, o desfecho e o panorama geral do surto, com
+  a quantidade de recuperados e óbitos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número e percentual de investigações de casos em que pelo menos
+  um contato próximo foi obtido no período. A lista de contatos permite
+  rastrear o caso de onde surgiu o contato.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número total de contatos provenientes do caso e investigações
+  no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width=695
+   style='width:521.6pt'>
+   <tr>
+    <td width="22%" style='width:22.5%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 19"
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image024.png"></span></p>
+    </td>
+    <td width="72%" style='width:72.62%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>É possível observar os contatos
+    na tela <b>Contatos</b> no <b>Go.Data</b>, inclusive as cadeias de
+    transmissão.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:150%;border:none'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de contatos que concluíram a quarentena / número total
+  de contatos a realizar a quarentena no período. No Go.Data é possível obter
+  esse número por meio da lista de contatos ao filtrar o campo “Situação final
+  do acompanhamento” com o valor “Acompanhamento concluído”.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de encaminhamentos para apoio social. Os contatos
+  cadastrados devem ser orientados sobre o acesso ao apoio social.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 20"
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image025.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Saiba Mais!</span></b></p>
+    <p class=txtrec><span style='color:black'>Conheça os indicadores associados
+    à melhoria contínua da qualidade do rastreamento de contatos, baseado em
+    porcentagem de casos clique aqui.</span></p>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img border=0 width=156 height=42
+    src="Aula%206%20Rastreamento%20de%20contatos%20Apostila_arquivos/image026.png"
+    alt="Clique aqui!"></span></p>
+    <p class=MsoCaption><span style='color:black'>https://www.cdc.gov/coronavirus/2019-ncov/global-covid-19/operational-considerations-contact-tracing.html</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+  150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70320201">Medições processuais
+  programáticas e dos resultados</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os dados analisados pela equipe de investigação de casos e
+  rastreamento de contatos ajudarão a definir ações estratégicas de contenção
+  do surto, seja na necessidade de capacitação técnica dos recursos humanos,
+  seja na priorização de ações de controle nas áreas de risco onde há maior
+  ocorrência da doença. Os relatórios podem ser produzidos regularmente e
+  entregues a médio prazo (quinzenalmente ou mensalmente).&nbsp; Essas medidas
+  processuais programáticas incluem:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de investigações de casos atribuídos no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de casos entrevistados no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número e percentual de casos entrevistados menor ou igual a 24
+  horas do relatório à autoridade de saúde no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de investigações de casos encerradas no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número e percentual de casos que informaram pelo menos um
+  contato próximo no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Mediana em dias, desde o recebimento do relatório até a
+  entrevista no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número total de contatos rastreados nas investigações de casos
+  no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número total de contatos entrevistados/número total de contatos
+  informado por casos no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Média de contatos informados por entrevista dos casos no
+  período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de casos que concluíram o período de isolamento/número
+  total de casos indicados a se isolar no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de contatos que concluíram a quarentena/número total de
+  contatos indicados a realizar a quarentena no período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de encaminhamentos realizados ao suporte social.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de encaminhamentos realizados para consulta clínica.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As medições programáticas dos resultados incluem:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de casos entrevistados/número de investigações de casos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de contatos testados para SARS-COV-2/Número de contatos
+  entrevistados.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número e percentual de novos casos confirmados decorrentes de
+  contatos em quarentena.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de contatos que estiveram em quarentena como resultado
+  do rastreamento de contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número e percentual de casos que concluíram o período de
+  auto-isolamento.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets>Número de contatos que concluíram 14 dias de quarentena/
+  contatos notificados.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc70320202">Conclusão</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nesta aula você aprendeu a instalar o Go.Data tanto em
+  nível local, como no servidor. Também aprendeu o passo a passo das
+  configurações básicas para o melhor desempenho da ferramenta, assim como as
+  configurações adicionais que devem ser executadas no programa e os
+  indicadores que os softwares nos fornecem na investigação do surto.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

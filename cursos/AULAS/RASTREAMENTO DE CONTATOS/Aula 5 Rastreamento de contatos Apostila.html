@@ -1,0 +1,2745 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 5 - Investigação de caso</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P111TtulonumeradoChar
+	{mso-style-name:"P_1\.1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251630080;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image001.png"
+alt="Aula 5 - Investigação de caso"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895825408'><span
+style='position:absolute;left:175px;top:-522px;width:216px;height:90px'><img
+width=216 height=90
+src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image002.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Marcela<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Execução</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>ProEpi</span></p>
+  <p class=arttficha><span style='color:black'>SDS – Sala de situação –
+  Universidade de Brasília</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Parceiros</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>Project HOPE</span></p>
+  <p class=arttficha><span style='color:black'>Project ECHO</span></p>
+  <p class=arttficha><span style='color:black'>NIA TERO</span></p>
+  <p class=arttficha><span style='color:black'>Brasil Fundation</span></p>
+  <p class=arttficha><span style='color:black'>EXO plataforma</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Apoio</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>SKOLL FUNDATION</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=TableNormal border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:208.25pt'>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:208.25pt'>
+  <p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+  <p class=MsoToc1><a
+  href="#_Toc70302214">Aula 1 – Go.Data<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302215">Bancos de dados do Go.Data<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302216">Go.Data - módulo caso<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc1><a href="#_Toc70302217">Go.Data - módulo contato<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302218">Identificar um Contato<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302219">Converter um Contato em Caso<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>18</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302220">Listas de Contatos<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302221">Dados laboratoriais<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>24</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302222">Criação de evento<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+  <p class=MsoToc2><a href="#_Toc70302223">Gráficos resumos<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302224">Cadeias de Transmissão<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>35</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302225">Curva Epidemiológica<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>36</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302226">Relatório de Acompanhamento de
+  contatos<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>36</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302227">Casos baseados no módulo de status
+  do contato<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302228">Indicadores de casos<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+  <p class=MsoToc3><a href="#_Toc70302229">Indicadores de Contatos<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+  <p class=MsoToc1><a href="#_Toc70302230">Conclusão<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>39</span></a></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><br>
+<br>
+</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#BF8F00;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 5 - Investigação de caso</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=423 height=105 id="Imagem 2"
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image003.jpg"></p>
+  <p class=MsoCaption>Figura 1 – Go.data aplicado para o monitoramento de
+  sarampo  Por ProEpi</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá!</p>
+  <p class=PpargrafoCxSpLast><span style='color:black'>Nesta aula </span>o
+  programa Go.Data  será  apresentado, segundo menu geral, painel de controle,
+  criação de caso e de contato, listagem de contatos e acompanhamento diário,
+  visualização de resultados e criação de eventos, de grupos e de localização,
+  assim como uso do programa nos dispositivos móveis.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao final desta aula, você será capaz de:</p>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Conhecer indicadores dos casos e de contatos e visualizar
+  gráficos no painel de controle;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Conhecer botões do menu geral;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Criar um caso e um contato, bem como preencher as variáveis
+  obrigatórias;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Conhecer o relacionamento de um caso com contato, assim como
+  gerar lista de contatos;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Visualizar e realizar um acompanhamento diário no painel;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Conhecer as variáveis de laboratório, criar um resultado do
+  caso e gerenciar os resultados laboratoriais;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Criar um evento e incluir exposições no Go.Data;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Criar e modificar dados de referência do Go.Data;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Criar um grupo e inserir localizações;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Configurar aplicação do cliente;</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Visualizar os dados do Go.Data em dispositivos móveis.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc70302214">Aula 1 – Go.Data</a> </p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='color:black'>O Go.Data é um software que
+  permite </span>investigar<span style='color:black'> surtos de maneira rápida
+  e precisa </span>nas <span style='color:black'>emergências de saúde pública. </span>Esse
+  programa foi desenvolvido pela Organização Mundial de Saúde (OMS) em parceria
+  com a Rede Global de Alerta e Resposta a Surtos (GOARN). O papel da GOARN é
+  apoiar os países no controle de surtos e emergências de saúde pública
+  mundialmente.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Esse software apresenta múltiplas funcionalidades, como
+  investigação de casos, acompanhamento de contatos, mensuração dos indicadores
+  de avaliação e acompanhamento do surto por meio da visualização da cadeia de
+  transmissão. O Go.Data pode ser facilmente adaptado e aplicado, conforme o
+  fluxo de trabalho na resposta ao surto. Também é uma ferramenta multilíngue,
+  com recursos de importação e exportação de dados. Há compatibilidade com
+  vários tipos de arquivos, como: csv, xls, xlsx, xml, entre outros, de fácil
+  importação de casos no software.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O software apresenta configurações editáveis para melhorar
+  seu desempenho, conforme a demanda da investigação. Os dados de referências
+  estão disponíveis desde a instalação do software, no entanto, é possível
+  adicionar, modificar ou excluir, ajustar dados de referência e elaborar
+  questionários na investigação de casos, acompanhamento de contatos e inserção
+  de dados laboratoriais a partir das necessidades existentes de cada surto. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Go.Data apresenta três etapas no rastreamento de
+  contatos: identificação, listagem e monitoramento dos contatos. No
+  preenchimento das variáveis, pode verificar a situação do surto por meio de
+  gráficos gerados automaticamente. O objetivo desse software é apoiar e
+  facilitar a investigação de surtos, na coleta de dados de campo, rastreamento
+  de contatos e acompanhamento da cadeia de transmissão da doença.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O software é uma ferramenta flexível na coleta de dados de
+  campo. Os usuários incluem gerentes de dados e de resposta, epidemiologistas
+  de campo  e rastreadores de contato. Há modelos de permissão de acesso para
+  restringir funções e localizações específicas, como permitir aos usuários
+  acessar apenas a importação de casos, monitoramento de casos ou
+  acompanhamentos de contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Go.Data está disponível gratuitamente e pode ser
+  instalado tanto no desktop, quanto no servidor. O programa possui aplicativos
+  opcionais para smartphones nos sistemas operacionais Android ou iOS. Após a
+  conexão do aplicativo móvel à instância, os dados inseridos na coleta de 
+  campo ficam disponíveis no aplicativo móvel Go.Data no telefone ou tablet.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O programa ainda pode ser usado em diversos níveis de
+  gestão (federal, regional, estadual, municipal e local) . A formação de
+  equipes locais é considerada adequada quando descentraliza os esforços na
+  realização dos trabalhos conduzidos por equipes especializadas na respectiva
+  região. O Go.Data permite estimar casos sintomáticos, pré-sintomáticos e
+  assintomáticos em clusters de Covid-19, mapeando as cadeias de transmissão e
+  os sintomas mais comuns nas segmentações demográficas. Reitera-se a
+  importância de capacitar os profissionais de saúde na formação de
+  rastreadores de contato e uso desse software.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302215">Bancos de dados do Go.Data</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Go.Data dispõe diferentes tipos de bancos de dados em
+  seu programa como o de casos, contatos, resultados laboratoriais e eventos. O
+  preenchimento completo das variáveis no software é essencial na obtenção dos
+  resultados reais do evento e geração dos gráficos, como curvas epidêmicas,
+  geradas automáticas no painel de controle.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302216">Go.Data - módulo caso</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para criar um caso, siga os seguintes passos. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>1.</b> Após validação das suas credenciais no Go.Data,
+  clique no botão &quot;Menu&quot; no canto superior à esquerda (Figura-1).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span class=PpargrafoChar><b>Figura 1. Captura de tela aba
+  ”Menu” do Go.Data</b></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span class=PimagemChar><img width=549 height=157
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image004.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>2.</b> Em seguida, clique no botão &quot;+ Casos&quot;
+  (Figura-2).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 2. Captura de tela aba ”Menu” do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=173 height=377
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image005.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>2.</b> Após acessar o banco de casos no software,
+  clique no botão &quot;Adicionar&quot; (Figura-3).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 3. Captura de tela aba de “Casos” do Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=648 height=112 id=image47.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image006.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Abre-se uma nova janela a fim de iniciar a inserção de um
+  novo caso no programa. A criação do caso no Go.Data é dividida em três
+  etapas, como preenchimento de campos de pessoal, de endereço e de
+  epidemiologia.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>3.</b> A primeira etapa de criação do caso é o preenchimento
+  da aba “Pessoal” (Figura-4).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Primeiro Nome, Nome do Meio e Sobrenome:</b> informar o nome
+  completo do usuário.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Identificador do Caso:</b> registro numérico de
+  identificação do caso no Go.Data.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Sexo:</b> informar o sexo do caso. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Gravidez</b>: informar se o caso do sexo feminino está ,
+  segundo o trimestre de gestação.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Ocupação:</b> informar a ocupação/profissional atual do
+  caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data de Notificação:</b> informar a data de notificação do
+  caso. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Idade/Data de nascimento:</b> informar a idade ou data de
+  nascimento do caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Nível de Risco:</b> informar o nível de risco de saúde,
+  segundo o quadro clínico atual do caso. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Razão do Risco:</b> Selecionar o nível de risco segundo o
+  quadro clínico do caso. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Vacina Recebida:</b> informar se o caso foi vacinado
+  anteriormente.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Documentos:</b> informar documentos, como CPF, Carteira de
+  Motorista, RG, entre outros.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Importante:</b> Nem sempre todas as informações de um
+  caso são acessíveis na investigação. Recomenda-se preencher a maioria dos
+  campos presentes na máscara do Go.Data para obter melhor precisão e
+  monitoramento da ocorrência do surto.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 4. Captura de tela aba ”Pessoal” de criação de
+  um caso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=437 height=181 id=image21.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image007.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 24"
+    src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image008.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>As variáveis obrigatórias são de
+    preenchimento obrigatório! Sem os dados preenchidos nessas variáveis,não há
+    como concluir a criação do caso no Go.Data!</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;line-height:150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As variáveis de preenchimento obrigatório pessoal são:
+  Primeiro Nome e Data de Notificação.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>4.</b> A segunda etapa da criação do caso é o
+  preenchimento da aba<b> “Endereço</b>” (Figura-5): </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As variáveis da aba ”Endereço” são:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Local:</b> informar localização pré-estabelecida no surto.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Endereço: </b>informar o endereço completo do caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Cidade e Código Postal: </b>informar o nome da cidade e do
+  CEP do caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Latitude e Longitude: </b>informar a latitude e longitude do
+  local do caso.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Número do Telefone: </b>informar o número do telefone de
+  contato do caso.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 5. Captura de tela aba “Endereço” de criação de
+  um caso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=507 height=163 id=image1.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image009.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Go.Data permite informar mais de um endereço do mesmo
+  caso ao clicar no botão “adicionar outro endereço”.  </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>5.</b> A terceira parte de criação do caso é a o
+  preenchimento da aba <b>”Epidemiologia</b>” (Figura-6).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Classificação: </b>informar o<b> </b> status de
+  classificação do caso, como suspeito, confirmado ou provável.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data de Início: </b>informar a data de início dos sintomas
+  do caso. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Resultado: </b>informar o desfecho do caso como, recuperado
+  ou falecido.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data do Resultado: </b>informar data de encerramento do caso
+  no Go.Data.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data em que se tornou um caso: </b>informar data de
+  confirmação do caso.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data de infecção: </b>informar a data em que o caso
+  apresentou a infecção.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 6. Captura de tela da aba “Epidemiologia” de
+  criação de um caso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=520 height=153 id=image33.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image010.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 6"
+    src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image011.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>Na aba “Epidemiologia”, os campos
+    de preenchimento obrigatório são a data de início e classificação.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=right style='margin-bottom:10.0pt;text-align:right;
+  line-height:150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Na terceira etapa, pode-se incluir o campo “Adicionar
+  outro intervalo de data e localização” para registrar informações da
+  hospitalização ou do isolamento (Figura-7). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 7. Campos de hospitalização e isolamento na
+  criação de caso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=99 id=image51.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image012.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As três etapas de criação de um caso podem ser adaptadas
+  no questionário de acordo com o surto, com criação de variáveis conforme a
+  emergência em saúde.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao preencher todos os campos obrigatórios e essenciais
+  disponíveis, clique no botão  &quot;Criar caso&quot; (Figura-8).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 8. Captura de tela aba “Feito” de criação de um
+  caso.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=75 id=image45.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image013.png"
+  alt="Uma imagem contendo Padrão do plano de fundo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 9"
+    src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image014.png"></span><a
+    name="_heading=h.1fob9te"></a></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>Sabia que é possível criar o
+    questionário conforme a situação de saúde  do seu município e aplicá-lo em
+    diferentes doenças? Mais de 45 países possuem questionário específico de
+    investigação de casos de acordo com surtos elucidados na sua região.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=right style='margin-bottom:10.0pt;text-align:right;
+  line-height:150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>6.</b><a name="_heading=h.3znysh7"></a> Para alterar os
+  dados preenchidos no questionário, clique novamente no botão em Menu, em
+  seguida, clique no botão&quot;+ Casos&quot; (Figura-9).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 9. Captura de tela aba “Menu” do Go.Data.</b><a
+  name="_heading=h.2et92p0"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=209 height=456
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image015.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Em seguida, o banco de casos abre automaticamente.
+  Selecione o caso desejado para modificá-lo e clique no botão &quot;Modificar
+  Caso&quot; (ícone da engrenagem)<img width=25 height=22 id=image48.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image016.png"
+  alt="Ícone&#10;&#10;Descrição gerada automaticamente">, (Figura-10).  </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 10. Captura de tela da aba “Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=141 id=image50.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image017.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Word&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O questionário preenchido do caso é aberto e, nessa
+  página, a alteração pode ser realizada como, por exemp<a
+  name="_heading=h.tyjcwt"></a>lo, a data de notificação. Posteriormente,
+  clique no botão ”Salvar” (Figura-11). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 11. Captura de tela aba casos, função “modificar
+  caso”.<a name="_heading=h.3dy6vkm"></a></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=173 id=image49.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image018.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Go.Data<a name="_heading=h.1t3h5sf"></a> não foi
+  desenvolvido para investigar uma doença específica e pode adaptar os
+  questionários conforme a situação de saúde local, regional ou nacional.  </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>7.</b><a name="_heading=h.4d34og8"></a> Ao executar os
+  passos representados nas figuras 8, 9 e 10, visualizam-se as informações do
+  caso ao clicar no botão ”Questionário” (Figura-12).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 12. Captura de tela aba ”Casos”, função
+  “Questionário”.</b><a name="_heading=h.17dp8vu"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=476 height=202 id=image61.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image019.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Posteriormente, observa-se o questionário e o modo de
+  registrar informações, quando necessário. O questionário ainda é usado para
+  seguimento de c<a name="_heading=h.3rdcrjn"></a>asos ou conforme o trabalho
+  específico. As informações do questionário podem ser atualizadas, delimitando
+  a data referente ao seguimento de casos, selecionando os sintomas e
+  registrando uma observação (Figura-13).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 13. Captura de tela aba ”Casos”, f<a
+  name="_heading=h.lnxbz9"></a>unção “Questionário”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=523 height=114 id=image60.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image020.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, chat ou mensagem de texto&#10;&#10;Descrição gerada automaticamente"><a
+  name="_heading=h.35nkun2"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc70302217">Go.Data - módulo contato</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O gerenciamento de contatos ocorre por meio da lista de
+  contatos criada a partir da entrevista dos casos. Os contatos são indivíduos
+  potenciais no desenvolvimento e disseminação de uma doença em investigação.
+  Monitorar o status de saúde desses contatos é essencial. O banco de contatos
+  do Go.Data contempla  etapas de rastreamento de contatos como, identificar,
+  listar e monitorar os contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302218">Identificar um Contato</a> </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O primeiro passo a ser realizado é identificar a origem
+  desse contato a partir do caso. No Go.Data, visualiza-se o caso referente e
+  clique no ícone três pontinhos empilhados (Figura-14).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 14. Captura de tela da função “três bolinhas” na
+  aba casos.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=510 height=118
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image021.png"
+  alt="Interface gráfica do usuário, Aplicativo, Teams&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Em seguida, clique no botão “Adicionar contato” para
+  iniciar o cadastro do contato no sistema (Figura-15).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 15. Captura de tela da função “Adicionar
+  contato” na aba ”Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PimagemCxSpFirst>&nbsp;</p>
+  <p class=PimagemCxSpLast><img width=228 height=348 id=image62.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image022.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Há três etapas de criação de um contato no Go.Data:
+  pessoal, endereço e relacionamento. As duas primeiras etapas são iguais à
+  criação de um caso. Dessa forma, pulamos para a terceira etapa, a de <b>relacionamento</b>
+  (Figura-16).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 16. Captura de tela da função “Relacionamento”
+  na aba ”Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=177 id=image58.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image023.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data do Primeiro Contato e Último Contato</b>:  informar a
+  data do primeiro e do último contato que o contato próximo esteve com o caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Tipo de exposição</b>: informar o tipo de exposição do
+  contato com o caso (Ex: contato direto, contato indireto, exposição sexual,
+  entre outros).</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Frequência de Exposição</b>: informar o número de vezes que
+  ocorreu a exposição.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Grupo</b>: informar a vinculação com um grupo existente no
+  programa.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Duração da exposição</b>: informar a duração de cada
+  exposição (Ex: Curta ou Longa).</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Contexto da exposição</b>: informar o contexto da exposição
+  do caso com o contato (Ex: trabalho, familiar, entre outros).</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Comente: </b>informar as observações complementares.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 10"
+    src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image024.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>Todas as informações de um
+    contato podem não terem sido obtidas. Recomenda-se o preenchimento da
+    maioria das variáveis para obter melhores resultados no surto. A variável
+    obrigatória do contato é a Data do Último Contato.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=right style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:right;line-height:150%'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Posteriormente, clique em ”Criar contato” para finalizar o
+  preenchimento dos dados do contato (Figura-17).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 17. Captura de tela da função “Criar contato” na
+  aba ’Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem> <img width=519 height=99 id=image65.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image025.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302219">Converter um Contato em Caso</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>No rastreamento de contatos, pode ocorrer de um contato
+  com sintomas ou resultado laboratorial positivo ser convertido para caso
+  suspeito ou confirmado.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Clique no botão Menu, arraste o mouse e clique no botão
+  ”Contatos”, em seguida, clique novamente em ”Contatos” para acessar o banco
+  de dados referente aos contatos (Figura-18).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 18. Captura de tela da função “Contatos” na aba
+  ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PimagemCxSpFirst>&nbsp;</p>
+  <p class=PimagemCxSpLast><img width=252 height=384 id=image57.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image026.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>No banco de contatos, é necessário identificar o contato a
+  ser convertido. Clique nos três pontinhos empilhados, logo após clicar em “<b>Converter
+  em caso”</b> (Figura-19).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 19. Captura de tela da função “Converter em
+  contato” na aba ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=517 height=212 id=image59.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image027.png"
+  alt="Interface gráfica do usuário, Aplicativo, Tabela&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após finalizar essa conversão, o contato constará no banco
+  de casos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302220">Listas de Contatos</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo> Ao identificar e criar um contato no Go.Data, a lista de
+  contatos pode ser visualizada no acompanhamento diário dos contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Clique no botão “Menu” no canto superior esquerdo.<b> </b>Em
+  seguida,  clique no botão “Contatos” e em “Contatos” (Figura-20).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 20. Captura de tela aba ”Menu” Go.Data”,
+  (Figura-21).</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=163
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image028.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 21. Captura de tela da função “Contatos” na aba
+  ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PimagemCxSpFirst>&nbsp;</p>
+  <p class=PimagemCxSpLast><img width=210 height=341 id=image37.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image029.jpg"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Dessa forma, a lista de contatos referente ao surto é
+  visualizada, bem como, a exposição, o contexto e o acompanhamento diário dos
+  contatos. Os filtros podem ser aplicados ou criados para facilitar a
+  visualização do banco de contatos, assim como um questionário específico para
+  os contatos pode ser criado no software (Figura-22). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 22. Captura de tela da função “Contatos” na aba
+  ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=155 id=image53.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image030.jpg"
+  alt="Interface gráfica do usuário, Aplicativo, Word&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Há três ações possíveis para auxiliar a pesquisa no banco
+  de dados. A lupa <img width=27 height=29 id=image41.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image031.png"> permite
+  pesquisar dados e a tela principal dos contatos e o filtro das variáveis.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Pesquise o contato referente no banco de dados e clique no
+  ícone três pontinhos empilhados que disponibilizará  a opção “Adicionar
+  acompanhamento” (Figuras-23 e 24).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 23. Captura de tela da função “Adicionar
+  acompanhamento” na aba “Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=144 id=image36.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image032.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Word&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 24. Captura de tela da função “Adicionar
+  acompanhamento” na aba ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=488 height=196 id=image39.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image033.jpg"
+  alt="Interface gráfica do usuário, Aplicativo, Word&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Há duas variáveis de acompanhamento diário dos contatos
+  para preenchimento, como a data e a situação desse contato. Após esse
+  preenchimento, deve sinalizar o preenchimento no questionário
+  pré-estabelecido relacionado a esse contato (Figura-25).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 25. Captura de tela da função “Criar 
+  acompanhamento” na aba “Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=109 id=image38.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image034.jpg"
+  alt="Interface gráfica do usuário, Aplicativo, Teams&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Clique no questionário para marcar as respostas conforme
+  as informações obtidas do contato. Lembre-se que o questionário foi
+  pré-estabelecido para ser usado no surto (Figura-26). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 26. Captura de tela da função “Questionário” na
+  aba ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=528 height=127 id=image35.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image035.jpg"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Ao visualizar a lista de contatos e como realizar um
+  acompanhamento diário, os próximos passos são os registros diários.Clique no
+  botão “Menu” no canto superior à esquerda,<b> </b>em seguida<b> </b>clique em
+  ”Contatos” e “Acompanhamentos diários”. Selecione uma data para visualizar
+  quantos contatos foram visualizados no dia, em seguida consultar o seu
+  status, com acesso ao questionário (Figura-27).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 27. Captura de tela da função “Acompanhamento
+  para contactos relacionados” na aba ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=535 height=129 id=image43.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image036.jpg"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O acompanhamento diário dos contatos pode ser visualizado
+  no formato de painel. Assim, deve-se clicar no botão “Menu” à esquerda,<b> </b>arrastar
+  o mouse para o   botão  “Contatos”, em seguida “Painel de monitoramento”.
+  Abre-se uma janela para acessar  os casos conforme os dias selecionados
+  (Figura-28).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 28. Captura de tela da função “Painel de
+  acompanhamento de contatos” na aba ”Contatos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=531 height=191 id=image42.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image037.jpg"
+  alt="Uma imagem contendo Gráfico&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302221">Dados laboratoriais</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Diante de um surto, todos os dados devem estar
+  disponíveis. O Go.Data permite visualizar os resultados laboratoriais para
+  acompanhar a cadeia de transmissão da doença, inclusive importá-los no
+  software.  Clique no botão “<b>Menu”</b> (Figura-29).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 29. Captura de tela aba ”Menu” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=502 height=144
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image038.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>E em seguida, clique no botão “<b>+ Casos</b>”
+  (Figura-30).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 30. Captura de tela aba “Menu” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=215 height=333 id=image2.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image039.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Clique no ícone três potinhos empilhados<img width=28
+  height=23
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image040.png">
+  no caso selecionado (Figura-31), depois clique no botão “<b>Resultados de
+  laboratório</b>” (Figura-32).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 31. Captura de tela da função “Três potinhos
+  empilhados” na aba ”Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=131 id=image4.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image041.png"
+  alt="Interface gráfica do usuário, Aplicativo, Teams&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 32. Captura de tela da função “Resultados de
+  laboratório” na aba “Caso”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=542 height=241 id=image15.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image042.jpg"
+  alt="Interface gráfica do usuário, Aplicativo, Word&#10;&#10;Descrição gerada automaticamente"> </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Logo, a tela do Go.Data será redirecionada para a criação
+  de um resultado de laboratório. Clique no botão <b>Adicionar (+)</b> na parte
+  superior da tela (Figura-33). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 33. Captura de tela da função “Adicionar&quot;
+  na aba ”Resultado de laboratório”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=142 id=image7.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image043.jpg"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A criação de resultados de laboratório no Go.Data ocorre
+  com o preenchimento de variáveis previamente habilitadas e detalhadas no
+  questionário (Figura-34). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 34. Captura de tela da função “Detalhes&quot; na
+  criação de um ”Resultado de laboratório”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=147 id=image34.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image044.jpg"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>ID da Amostra: </b>informar o número de Identificação do
+  Laboratório.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data do Resultado: </b>informar a data do resultado do exame
+  laboratorial.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Resultado: </b>informar o resultado do exame laboratorial.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Amostra Colhida: </b>informar a data em que a amostra foi coletada.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Amostra entregue ao laboratório: </b>informar a data em que
+  a amostra foi entregue ao laboratório. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Amostra Testada:  </b>informar a data em que a amostra foi
+  testada pelo laboratório. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Nome do Laboratório: </b>informar o nome do laboratório.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Tipo de Amostra: </b>informar o tipo de amostra utilizada
+  para as análises. </p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Tipo de Prova: </b>informar o tipo de teste realizado.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Analisado por: </b>informar o nome da pessoa que analisou o
+  teste.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Estado: </b>informar o estado do teste.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Notas:  </b>informar observações adicionais do resultado
+  laboratorial.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para concluir a inserção de um resultado laboratorial,
+  clique em <b>Criar resultados de laboratório</b> (Figura-35). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 35. Captura de tela da função “Criar resultado
+  de laboratório&quot; na aba ”Resultado de laboratório”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=441 height=163 id=image17.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image045.jpg"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após inserção do exame laboratorial no Go. Data, clique no
+  botão <b>Menu</b> localizado no canto superior esquerdo da tela. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 36. Captura de tela aba “Menu” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=163
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image046.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Clique em <b>Resultados de laboratório</b> e, novamente,
+  em <b>Resultados de laboratório</b> (Figura-37)<b>.</b> Dessa forma,
+  visualiza e gerencia os resultados laboratoriais criados no software
+  (Figura-38).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 37. Captura de tela aba ”Menu” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=206 height=571 id=image26.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image047.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 38. Captura de tela da função “Resultados de
+  laboratório&quot;.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=141 id=image11.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image048.jpg"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302222">Criação de evento</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Para iniciar um evento, devemos acessar o banco de casos.
+  Clique no botão <b>Menu</b>, em seguida, no botão <b>Eventos</b> (Figura-39).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 39. Captura de tela aba ”Menu” Go.Data
+  (Figura-40).</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=163 id=image6.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image046.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 40. Captura de tela aba ”Menu” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=191 height=437 id=image10.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image049.jpg"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A tela do software será redirecionada para a aba <b>Eventos</b>.
+  Clique em <b>Adicionar + </b>para criar um evento (Figura-41)).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 41. Captura de tela aba ”Eventos” Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=129 id=image29.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image050.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A primeira etapa de criação de evento  é a inserção de
+  dados na aba <b>“Detalhes”</b> (Figura-42)):</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Nome: </b>informar  nome do evento.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data: </b>informar a data em que o evento foi realizado.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Data de Notificação: </b>informar a data de notificação do
+  evento.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Descrição: </b>informar<b> </b>a descrição do Evento.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimagem><span style='color:black'><img width=127 height=127
+    id="Imagem 11"
+    src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image051.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica!</span></b></p>
+    <p class=txtrec><span style='color:black'>As variáveis obrigatórias da criação
+    de um evento são Nome, Data e Data de Notificação.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 41. Captura de tela da função “Criar novo
+  evento&quot; na criação de um evento.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=125 id=image5.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image052.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A segunda etapa consiste em preencher a aba “Endereço do
+  evento” (Figura-42)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Local:</b> informar a localização pré- estabelecida no
+  surto.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Endereço: </b>informar o<b> </b>endereço do caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Cidade e Código Postal: </b>informar nome da cidade e
+  inserir o CEP do caso.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Latitude e Longitude: </b>informar a latitude e longitude de
+  um local.</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>Número do Telefone: </b>informar o número de telefone do
+  caso.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 42. Captura de tela da função “Endereço&quot; na
+  criação de um evento.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=141 id=image13.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image053.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após o preenchimento das variáveis, habilita-se a opção <b>Criar
+  evento</b>. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 43. Captura de tela da função “Criar novo
+  evento&quot; na criação de um evento.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  <p class=Pimagem><img width=427 height=213 id=image8.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image054.jpg"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Assim, um caso ou contato pode ser vinculado a esse evento
+  recém-criado.Consulte o banco de casos ou de contatos e clique no ícone de
+  três potinhos empilhados<img width=28 height=23 id=image9.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image040.png">
+  no caso/contato selecionado. Em seguida, clique no botão <b>Ver exposições</b>
+  (Figura-44)<b>. </b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 44. Captura de tela da função “Ver
+  exposições&quot; na aba de ”Casos”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=568 height=241 id=image14.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image055.jpg"
+  alt="Interface gráfica do usuário, Aplicativo, Tabela&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Selecione o evento correspondente (Figura-45) e clique no
+  botão <b>Adicionar</b> para relacionar o caso/contato com o evento
+  (Figura-46).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 45. Captura de tela da função “Vinculação de um
+  caso com evento&quot; na aba de “Exposições”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=132 id=image3.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image056.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 46. Captura de tela da função
+  “Relacionamento&quot; na aba “Exposições”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=176 id=image22.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image057.png"
+  alt="Interface gráfica do usuário, Texto, Aplicativo, Email&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Por fim, clique no botão “Criar relacionamento”
+  (Figura-47).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 47. Captura de tela da função “Criar
+  relacionamento&quot; na aba “Exposições”.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=481 height=165 id=image28.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image058.png"
+  alt="Interface gráfica do usuário, Aplicativo&#10;&#10;Descrição gerada automaticamente"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><a name="_Toc70302223">Gráficos resumos</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os gráficos resumos apresentam três tipologias: resumo de
+  casos, casos por local geográfico e resumo de internações (Figura-48).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 48. Tipos de Gráficos Resumos no Go.Data.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=158 id=image19.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image059.jpg"
+  alt="https://lh3.googleusercontent.com/Mes1ce1yBDEIPLO1Q0dDhzPk5t-y04uBu_B3-V6gb5N4Z5R_pVPbSfsr7aseWE_21CsJ7DlYN7OMB2s5rwTmCJ2EcHCL5jOVHls3tJPrZ3tlyeGoNkiuVsb6BJHK4aRgLl2IB-oMblA"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O <b>Gráfico Resumo de Casos</b> <b>por Classificação</b>
+  resume os casos registrados na aba epidemiologia, como suspeito, confirmado
+  ou provável.  (Figura 49).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Figura 49. Gráfico resumo de casos por classificação.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=400 height=291 id=image30.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image060.jpg"
+  alt="https://lh6.googleusercontent.com/STD0EoNV155iLCr0XdAWDfOGPGBCbzHoFQIMWX05y7c5N1SWA0LNUuiKoqXw7vN9iNMh_hUpayFjG6ZDmUHBFY2V6g6smnxh4q523M72tUT3cjrm5C8XACCq2zdI5LkYtuVhh5iPKL4"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O <b>Gráfico Resumo de Casos por Local Geográfico </b>resume
+  os casos do surto ativo por área em que foram registrados (Figura-50).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 50. Gráfico resumo de casos por local
+  geográfico.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=425 height=253 id=image32.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image061.jpg"
+  alt="https://lh4.googleusercontent.com/hTF6VU-dnU6kU2wWyM8oB8FJ9mgZKpn7trGU06EaTTvqi-cM2o9guQcAKYBPUDewCSKdlbvpPLKwiiOM3H37XhhJd0D7tjBy5ALh6CoE3fc93VfnZmNu63qrYcJFb8K5QbIXnVxgNJY"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O <b>Gráfico Resumo de Internações</b> resume os casos
+  para o surto ativo pelo tipo de hospitalização/isolamento, definido na aba
+  “Epidemiologia”. Ao mover o cursor em cima do gráfico, visualiza a quantidade
+  numérica de casos hospitalizados. Ao clicar em cima com o mouse, a tela do
+  software demonstra aos casos conforme a respectiva hospitalização
+  (Figura-51).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 51. Gráfico resumo de internações.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=447 height=270 id=image16.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image062.jpg"
+  alt="https://lh3.googleusercontent.com/VbQOhwDJxRrqQg6nIA5MDYVzW_ffldSpo17mwRUB95axHDNQTXAY6VMPlZi7lUHKettgn6hy7VjPCcG6DszLiAaOCC8jLg0M07ASQ82AnP8FgAGZeQEUN9gEmJBvktLex_pmn2AHTI4"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302224">Cadeias de Transmissão</a> </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O módulo ”Transmissão” exibe um gráfico para demonstrar o
+  número de cadeias de transmissão no surto ativo, por tamanho , bem como as
+  cadeias com dois ou mais registros com contagem de registros dentro dessas
+  cadeias.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A definição de cadeia de transmissão no software é quando
+  um caso se relaciona com o contato e, este contato, também se torna um caso
+  formando, assim, uma cadeia.Ao clicar na cadeia de transmissão, o Go.Data a
+  redireciona por rede de bolha (Figura-52).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 52. Gráfico do tamanho e número das cadeias de
+  transmissão.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=71 id=image31.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image063.jpg"
+  alt="https://lh3.googleusercontent.com/7LZvV7PLOxV1odNehwIDi0jdBIEXHkCevqdPEcOm6mrm6NVzlnCPRZRK3S18clmvX8ozjBwChuRXwbVJj8nK8k9G1FRxih2R7znZKG7wTbHMS6clh-gJws4pppRti8LLFpfwrbYCTEo"><a
+  name="_heading=h.44sinio"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302225">Curva Epidemiológica</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A curva epidêmica exibe a contagem de casos ao longo do
+  tempo. É possível  visualizar a contagem de casos ao longo do tempo, segundo
+  resultado ou data do relatório ou classificação.Ao clicar nas opções, o
+  software gera um gráfico diferente . Dessa forma, visualiza os casos
+  ingressados por classificação (Figura-53) ou resultado (Figura-54) em um
+  intervalo de tempo no programa.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 53. Gráfico da contagem de casos ao longo do
+  tempo desagregados por classificação.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span class=PimagemChar><img width=567 height=158
+  id=image18.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image064.jpg"
+  alt="https://lh3.googleusercontent.com/SIDCXNRptguWnHLgTojVvgdpErDiDPA2n_YydhFOGErq1MuEayMV9NYIDIsYXGhA4_zQNTG1Y3WiamzHVHtmjP2PBp1QSriOqEz-3VIgPbkVgvXf5_VV1IFilGL-DwwynPse3wFyaUs"></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 54. Gráfico da contagem de casos ao longo do
+  tempo desagregados por resultado.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=153 id=image24.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image065.jpg"
+  alt="https://lh5.googleusercontent.com/w0FPLT3dmT6g8ffN_A2rLcK89rBACtHPBn9YKfmWprfksGVl0VSAhQq-icj0WdodV2jxH-cvzqPfK4fN-sQh9tg7DLoUYb72yJ0oP2guovthr76RjfLiz0wcScXZDI26Ozk6L_kuuig"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302226">Relatório de Acompanhamento
+  de contatos</a><a name="_heading=h.2jxsxqh"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+  150%'><span style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif'>O
+  módulo relatório de acompanhamento de contatos é exibido um gráfico para
+  visualizar o número de contatos em acompanhamento ou não e a porcentagem
+  relativa por dia (Figura-55). </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 55. Gráfico com o relatório de acompanhamento
+  dos contatos.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=124 id=image46.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image066.jpg"
+  alt="https://lh3.googleusercontent.com/ylB_wYYmgj3pxjvOYNqRv-rTbLQJxeiJJQsNDKzWvZT4-ZdNREjVrQufY83mjRd2aQPsBQIpBuKIAPdBauYlPrkXxnpd3h2N7PHLZpm839Cy-a-euylo_i4-LSk8WXqgU5fOG_V7H8Y"><a
+  name="_heading=h.z337ya"></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302227">Casos baseados no módulo de
+  status do contato</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O gráfico de casos baseados no módulo de status do contato
+  exibe os novos casos gerados a partir de um contato, novos casos de um
+  contato com acompanhamento completo, novos casos de um contato que foram
+  perdidos no acompanhamento e a porcentagem de casos da lista de contatos.Esse
+  gráfico pode indicar se os casos se originam de contatos conhecidos
+  (Figura-56).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 56. Gráfico de casos segundo o estado dos
+  contatos.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=128 id=image23.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image067.jpg"
+  alt="https://lh6.googleusercontent.com/0lgGgkKUNPftSjWNRpJIUVLvg2yuU15sG6hidg7zaRsuT2pCaAMsL5eCBVsk9uOmP6Myfrd6l51XmV3fZ8nHhoXpguloKQJLZf8GLNhxnaqWAuDSmBnYakBsFBzASgecWfDaprzdbLk"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302228">Indicadores de casos</a> </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Existem indicadores com informações dos casos, como
+  (Figura-57)<a name="_heading=h.3j2qqm3"></a>:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos que morreram;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos atualmente hospitalizados;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos com menos de X contatos: o número de casos com menos
+  contatos que o número selecionado;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Novos casos X dias anteriores à cadeias de transmissão: o
+  número de casos relatados no número de dias selecionado numa determinada
+  cadeia de transmissão;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos que recusam ser transferidos para uma unidade de
+  tratamento.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos com resultados de laboratório pendentes;</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Casos não identificados por meio de contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 57. Indicadores de casos.<a
+  name="_heading=h.1y810tw"></a></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=208 id=image25.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image068.jpg"
+  alt="https://lh3.googleusercontent.com/zaBf0KR1njEmwdh1M1AiOz3J7A3qcV2LCt7BmW-Zza7VS2K-jW5wW4am9-X_Gr3YxG3EjljrvFrLkfaJOobrfiRKGQ9ZhY1bgnu1ifZT4eT3a_WklmNZ1vwKRCMOf9rdcwIE4GAUotU"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc70302229">Indicadores de Contatos</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Existem indicadores de contatos, como (Figura-58):</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos por caso (média): o número médio de contatos de um
+  caso ativo;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos por caso (mediana): o número mediano de contatos para
+  um caso ativo;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos na lista de acompanhamento (data): o número de
+  contatos na lista de acompanhamento para o dia atual;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos perdidos no acompanhamento: o número de contatos
+  perdidos durante o acompanhamento;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos não visualizados em X dias: o número de contatos que
+  não foram visualizados no número de dias selecionado;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos que se tornam casos: o número de contatos do número
+  total de contatos que se tornaram casos;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos visualizados (data): o número de contatos que foram
+  acompanhados no dia atual;</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Contatos com acompanhamento completo (data): o número de
+  contatos que foram acompanhados no dia atual e o número de contatos com
+  acompanhamento agendado para o mesmo dia.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 58. Indicadores de contatos.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=148 id=image20.png
+  src="Aula%205%20Rastreamento%20de%20contatos%20Apostila_arquivos/image069.jpg"
+  alt="https://lh5.googleusercontent.com/Xd5Y8avzfWAWzct4wYRSlgC5WMHAQMtNfpP3DnWJJk8bTOGjwpIEMJ2b85k5j9p-_UF_v69yJxgpSDyzM2uPxFZ0veREbG7s7v_y1FDyPddjkVIuI_AZxUyxGlrCDYYI1Rv_P7LvLGM"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #BF8F00 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc70302230">Conclusão</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nesta aula, você compreendeu a estrutura do programa
+  Go.Data, segundo menu geral, painel de controle, criação de caso e de
+  contato, listagem de contatos e acompanhamento diário, visualização de
+  resultados e criação de eventos, de grupos e de localização. Os gráficos e
+  painéis de controle são ferramentas que auxiliam na análise do surto. As
+  capturas de telas de todos os módulos do software foram exibidas passo a
+  passo, assim como informados campos de preenchimento obrigatório dos dados do
+  surto. </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

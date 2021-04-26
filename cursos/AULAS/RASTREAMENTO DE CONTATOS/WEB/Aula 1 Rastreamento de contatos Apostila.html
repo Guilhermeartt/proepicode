@@ -1,557 +1,16 @@
+<!doctype html>
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<title>Aula 1 - Compreendendo o rastreamento de contatos</title>
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"Noto Sans Symbols";}
-@font-face
-	{font-family:"Segoe UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:0cm;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoToc1, li.MsoToc1, div.MsoToc1
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:5.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.MsoToc2, li.MsoToc2, div.MsoToc2
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:5.0pt;
-	margin-left:11.0pt;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-link:"Cabeçalho Char";
-	margin:0cm;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-link:"Rodapé Char";
-	margin:0cm;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoCaption, li.MsoCaption, div.MsoCaption
-	{mso-style-name:"Legenda\,P_Legenda";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:18.0pt;
-	margin-left:0cm;
-	text-align:center;
-	page-break-after:avoid;
-	font-size:8.0pt;
-	font-family:"Arial",sans-serif;}
-a:link, span.MsoHyperlink
-	{color:#0563C1;
-	text-decoration:underline;}
-p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
-	{margin-top:18.0pt;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:4.95pt;
-	font-size:16.0pt;
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-span.CabealhoChar
-	{mso-style-name:"Cabeçalho Char";
-	mso-style-link:Cabeçalho;}
-span.RodapChar
-	{mso-style-name:"Rodapé Char";
-	mso-style-link:Rodapé;}
-p.arttficha, li.arttficha, div.arttficha
-	{mso-style-name:artt_ficha;
-	mso-style-link:"artt_ficha Char";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:1.0cm;
-	text-align:justify;
-	font-size:8.0pt;
-	font-family:"Arial",sans-serif;}
-span.arttfichaChar
-	{mso-style-name:"artt_ficha Char";
-	mso-style-link:artt_ficha;
-	font-family:"Arial",sans-serif;}
-p.TtuloAula, li.TtuloAula, div.TtuloAula
-	{mso-style-name:"Título Aula";
-	mso-style-link:"Título Aula Char";
-	margin-top:18.0pt;
-	margin-right:0cm;
-	margin-bottom:24.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:20.0pt;
-	font-family:"Arial",sans-serif;
-	color:white;
-	font-weight:bold;}
-span.TtuloAulaChar
-	{mso-style-name:"Título Aula Char";
-	mso-style-link:"Título Aula";
-	font-family:"Arial",sans-serif;
-	color:white;
-	font-weight:bold;}
-p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
-	{mso-style-name:P_parágrafo;
-	mso-style-link:"P_parágrafo Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	text-indent:35.45pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
-	{mso-style-name:P_parágrafoCxSpFirst;
-	mso-style-link:"P_parágrafo Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	text-indent:35.45pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
-	{mso-style-name:P_parágrafoCxSpMiddle;
-	mso-style-link:"P_parágrafo Char";
-	margin:0cm;
-	text-align:justify;
-	text-indent:35.45pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
-	{mso-style-name:P_parágrafoCxSpLast;
-	mso-style-link:"P_parágrafo Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	text-indent:35.45pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-span.PpargrafoChar
-	{mso-style-name:"P_parágrafo Char";
-	mso-style-link:P_parágrafo;
-	font-family:"Arial",sans-serif;}
-p.PBullets, li.PBullets, div.PBullets
-	{mso-style-name:P_Bullets;
-	mso-style-link:"P_Bullets Char";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:105.0pt;
-	text-align:justify;
-	text-indent:-18.0pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
-	{mso-style-name:P_BulletsCxSpFirst;
-	mso-style-link:"P_Bullets Char";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:105.0pt;
-	text-align:justify;
-	text-indent:-18.0pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
-	{mso-style-name:P_BulletsCxSpMiddle;
-	mso-style-link:"P_Bullets Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:105.0pt;
-	text-align:justify;
-	text-indent:-18.0pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
-	{mso-style-name:P_BulletsCxSpLast;
-	mso-style-link:"P_Bullets Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:105.0pt;
-	text-align:justify;
-	text-indent:-18.0pt;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-span.PBulletsChar
-	{mso-style-name:"P_Bullets Char";
-	mso-style-link:P_Bullets;
-	font-family:"Arial",sans-serif;}
-p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
-	{mso-style-name:"P_1\.1 Título_numerado";
-	mso-style-link:"P_1\.1 Título_numerado Char";
-	margin-top:36.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	line-height:150%;
-	page-break-after:avoid;
-	border:none;
-	padding:0cm;
-	font-size:14.0pt;
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
-	{mso-style-name:"P_1\. Título_numerado";
-	mso-style-link:"P_1\. Título_numerado Char";
-	margin-top:30.0pt;
-	margin-right:0cm;
-	margin-bottom:18.0pt;
-	margin-left:0cm;
-	line-height:150%;
-	page-break-after:avoid;
-	border:none;
-	padding:0cm;
-	font-size:14.0pt;
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-span.P11TtulonumeradoChar
-	{mso-style-name:"P_1\.1 Título_numerado Char";
-	mso-style-link:"P_1\.1 Título_numerado";
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-span.P1TtulonumeradoChar
-	{mso-style-name:"P_1\. Título_numerado Char";
-	mso-style-link:"P_1\. Título_numerado";
-	font-family:"Arial",sans-serif;
-	font-weight:bold;}
-p.Pimagem, li.Pimagem, div.Pimagem
-	{mso-style-name:P_imagem;
-	mso-style-link:"P_imagem Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:center;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
-	{mso-style-name:P_imagemCxSpFirst;
-	mso-style-link:"P_imagem Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:center;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
-	{mso-style-name:P_imagemCxSpMiddle;
-	mso-style-link:"P_imagem Char";
-	margin:0cm;
-	text-align:center;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
-	{mso-style-name:P_imagemCxSpLast;
-	mso-style-link:"P_imagem Char";
-	margin:0cm;
-	text-align:center;
-	line-height:150%;
-	font-size:12.0pt;
-	font-family:"Arial",sans-serif;}
-span.PimagemChar
-	{mso-style-name:"P_imagem Char";
-	mso-style-link:P_imagem;
-	font-family:"Arial",sans-serif;}
-p.txtrec, li.txtrec, div.txtrec
-	{mso-style-name:txt_rec;
-	mso-style-link:"txt_rec Char";
-	margin-top:12.0pt;
-	margin-right:5.65pt;
-	margin-bottom:6.0pt;
-	margin-left:5.65pt;
-	text-align:justify;
-	font-size:10.0pt;
-	font-family:"Arial",sans-serif;}
-span.txtrecChar
-	{mso-style-name:"txt_rec Char";
-	mso-style-link:txt_rec;
-	font-family:"Arial",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
-div.WordSection1
-	{page:WordSection1;}
-@page WordSection2
-	{size:595.3pt 841.9pt;
-	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
-div.WordSection2
-	{page:WordSection2;}
-@page WordSection3
-	{size:595.3pt 841.9pt;
-	margin:3.0cm 0cm 2.0cm 0cm;}
-div.WordSection3
-	{page:WordSection3;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
-
+<meta charset="utf-8">
+<title>SN_AULA_01</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
 </head>
 
-<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
 
-<div class=WordSection1>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><span style='position:relative;z-index:251630080;left:-46px;
-top:555px;width:331px;height:669px'><img width=331 height=114
-src="Aula%201%20Rastreamento%20de%20contatos%20Apostila_arquivos/image001.png"
-alt="Aula 1 - Compreendendo o rastreamento de contatos"></span></p>
-
-</div>
-
-<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span><br clear=ALL>
-
-<div class=WordSection2>
-
-<p class=MsoNormal><span style='position:relative;z-index:-1895825408'><span
-style='position:absolute;left:175px;top:-522px;width:216px;height:90px'><img
-width=216 height=90
-src="Aula%201%20Rastreamento%20de%20contatos%20Apostila_arquivos/image002.png"></span></span><br
-clear=all style='page-break-before:always'>
-</p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
-  color:black'>Ficha Técnica</span></b></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha><b><span style='color:black'>Supervisão - </span></b><span
-  style='color:black'>Sarah Mendes</span></p>
-  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
-  style='color:black'>Hirla Arruda</span></p>
-  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
-  style='color:black'>Marcela<b> </b></span></p>
-  <p class=arttficha><b><span style='color:black'>Revisão técnica - </span></b><span
-  style='color:black'>Sarah Mendes</span></p>
-  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
-  style='color:black'>Yorrana Martins</span></p>
-  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
-  style='color:black'> – Guilherme Duarte</span></p>
-  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
-  style='color:black'>Guilherme Duarte</span></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
-  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
-  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
-  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
-  – Universidade de Brasília </span></b></p>
-  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
-  color:black'>Execução</span></b></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha><span style='color:black'>ProEpi</span></p>
-  <p class=arttficha><span style='color:black'>SDS – Sala de situação –
-  Universidade de Brasília</span></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
-  color:black'>Parceiros</span></b></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha><span style='color:black'>Project HOPE</span></p>
-  <p class=arttficha><span style='color:black'>Project ECHO</span></p>
-  <p class=arttficha><span style='color:black'>NIA TERO</span></p>
-  <p class=arttficha><span style='color:black'>Brasil Fundation</span></p>
-  <p class=arttficha><span style='color:black'>EXO plataforma</span></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
-  color:black'>Apoio</span></b></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=arttficha><span style='color:black'>SKOLL FUNDATION</span></p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
-
-<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
-font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
-Profissionais de Epidemiologia de Campo.</span></p>
-
-<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
-font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
-
-<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
-font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
-expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
-propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
-Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
-parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
-
-</div>
-
-<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span>
-
-<div class=WordSection3>
-
-<div align=center>
-
-<table class=TableNormal border=0 cellspacing=0 cellpadding=0 width="100%"
- style='width:100.0%;border-collapse:collapse'>
- <tr style='height:208.25pt'>
-  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm;
-  height:208.25pt'>
-  <p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
-  <p class=MsoToc1><a
-  href="#_Toc70058039">Contexto histórico<span style='color:windowtext;
-  display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
-  <p class=MsoToc1><a href="#_Toc70058040">Notoriedade crescente na pandemia da
-  Covid-19<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
-  <p class=MsoToc1><a href="#_Toc70058041">Conceitos-chave no rastreamento de
-  contatos<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058042">Agente etiológico<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058043">Período de incubação<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058044">Período de transmissibilidade<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058045">Caso<span style='color:windowtext;
-  display:none;text-decoration:none'>   </span><span
-  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058046">Contato<span style='color:windowtext;
-  display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
-  <p class=MsoToc1><a href="#_Toc70058047">Isolamento ou distanciamento físico<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058048">Quarentena<span style='color:windowtext;
-  display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058049">Situação de alto risco<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058050">Tipos de situações de alto risco<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
-  <p class=MsoToc2><a href="#_Toc70058051">Como agir em situações de alto risco<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
-  <p class=MsoToc1><a href="#_Toc70058052">Formas de rastreamento de contato<span
-  style='color:windowtext;display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
-  <p class=MsoToc1><a href="#_Toc70058053">Conclusão<span style='color:windowtext;
-  display:none;text-decoration:none'>. </span><span
-  style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
-  <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoNormal>&nbsp;</p>
-  </td>
- </tr>
-</table>
-
-</div>
-
-<p class=MsoNormal><br>
-<br>
-</p>
-
-<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<div align=center>
+	
+<body>
 
 <table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
  style='width:100.0%;border-collapse:collapse'>
@@ -605,15 +64,6 @@ clear=all style='page-break-before:always'>
  </tr>
 </table>
 
-</div>
-
-<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
-clear=all style='page-break-before:always'>
-</span>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<div align=center>
 
 <table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
  style='width:100.0%;border-collapse:collapse'>
@@ -777,11 +227,11 @@ clear=all style='page-break-before:always'>
   <p class=Ppargrafo>O agente etiológico, também conhecido como agente
   infeccioso, é o causador de uma doença que [1] pode ou não ser transmissível
   para outros seres vivos. Os agentes etiológicos são classificados em
-  bactérias, vírus ou fungos[2] . Destacam-se a meningite meningocócica (bactéria
-  <i><span style='color:#202124;background:white'>Neisseria meningitidis</span></i>),
-  a pessoa vivendo com HIV (vírus da imunodeficiência humana) e a esporotricose
-  (fungo do gênero <i>Sporothrix </i>sp) como doenças que possuem agente
-  etiológico definido na literatura científica.</p>
+  bactérias, vírus ou fungos[2] . Destacam-se a meningite meningocócica
+  (bactéria <i><span style='color:#202124;background:white'>Neisseria
+  meningitidis</span></i>), a pessoa vivendo com HIV (vírus da imunodeficiência
+  humana) e a esporotricose (fungo do gênero <i>Sporothrix </i>sp) como doenças
+  que possuem agente etiológico definido na literatura científica.</p>
   </td>
  </tr>
  <tr style='height:1.0pt'>
@@ -864,11 +314,11 @@ clear=all style='page-break-before:always'>
   sinais e sintomas: febre (mesmo que referida), calafrios, dor de garganta,
   dor de cabeça, tosse, coriza, distúrbios olfativos ou distúrbios gustativos</span>
   (WHO, 2020a). Já o caso confirmado, quando o indivíduo com confirmação
-  laboratorial de infecção por Covid-19, independentemente dos sinais e
-  sintomas clínicos. O caso descartado é o indivíduo que atende à definição de
-  caso suspeito, porém obteve diagnóstico laboratorial negativo. Ressalta-se
-  que o resultado laboratorial negativo isoladamente não descarta um caso de
-  Covid-19 (BRASIL, 2020a).</p>
+  laboratorial de infecção por Covid-19, independentemente dos sinais e sintomas
+  clínicos. O caso descartado é o indivíduo que atende à definição de caso
+  suspeito, porém obteve diagnóstico laboratorial negativo. Ressalta-se que o
+  resultado laboratorial negativo isoladamente não descarta um caso de Covid-19
+  (BRASIL, 2020a).</p>
   </td>
  </tr>
  <tr style='height:1.0pt'>
@@ -996,8 +446,8 @@ clear=all style='page-break-before:always'>
    style='width:115.0%'>
    <tr>
     <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=txtrec align=center style='text-align:center'><span
-    style='color:black'><img border=0 width=127 height=127 id="Imagem 22"
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 22"
     src="Aula%201%20Rastreamento%20de%20contatos%20Apostila_arquivos/image007.png"></span></p>
     </td>
     <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -1075,8 +525,8 @@ clear=all style='page-break-before:always'>
    style='width:115.0%'>
    <tr>
     <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=txtrec align=center style='text-align:center'><span
-    style='color:black'><img border=0 width=127 height=127 id="Imagem 21"
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 21"
     src="Aula%201%20Rastreamento%20de%20contatos%20Apostila_arquivos/image009.png"></span></p>
     </td>
     <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -1219,8 +669,8 @@ clear=all style='page-break-before:always'>
    style='width:115.0%'>
    <tr>
     <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=txtrec align=center style='text-align:center'><span
-    style='color:black'><img border=0 width=127 height=127 id="Imagem 19"
+    <p class=Pimagem><span style='color:black'><img border=0 width=127
+    height=127 id="Imagem 19"
     src="Aula%201%20Rastreamento%20de%20contatos%20Apostila_arquivos/image011.png"></span></p>
     </td>
     <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -1362,12 +812,6 @@ clear=all style='page-break-before:always'>
  </tr>
 </table>
 
-</div>
-
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
-"Arial",sans-serif'>&nbsp;</span></p>
-
-</div>
 
 </body>
 

@@ -36,9 +36,11 @@ while True:
         # print(path)
         # print(file_name)
         print('Arquivo: ' + file_name)
-
+        print('Caminho do arquivo: ' + file_path)
         # Le o arquivo
-        data_file = open(file_path, 'r' , encoding='utf-8', errors='ignore')
+        data_file = open(file_path, 'r' 
+        #, encoding='utf-8', errors='ignore'
+        )
         readable = data_file.readable()
         print ('Legível: ' + str(readable))
 
