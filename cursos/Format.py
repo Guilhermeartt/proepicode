@@ -59,6 +59,14 @@ while True:
             [x.extract() for x in soup.find_all('style')]
             [x.extract() for x in soup.find_all('script')]
 
+            # remove todo o body e mantem apenas as tabelas
+            content = soup.select('table.Ptabela')
+            soup.body.extract()
+            new_body = soup.new_tag('body')
+            soup.html.append(new_body)
+
+            [new_body.append(table) for table in content]
+
             # encontra o titulo da aula e insere no titulo da pagina
             title_aula = soup.find('p' ,'TtuloAula').get_text()
             [x.replace_with(title_aula) for x in soup.title]
