@@ -58,12 +58,12 @@ while True:
             [x.extract() for x in soup.find_all('script')]
 
             # remove todo o body e mantem apenas as tabelas
-            content = soup.select('table.Ptabela')
-            soup.body.extract()
-            new_body = soup.new_tag('body')
-            soup.html.append(new_body)
+            #content = soup.select('table.Ptabela')
+            #oup.body.extract()
+            #new_body = soup.new_tag('body')
+            #soup.html.append(new_body)
 
-            [new_body.append(table) for table in content]
+            #[new_body.append(table) for table in content]
 
             # encontra o titulo da aula e insere no titulo da pagina
             title_aula = soup.find('p' ,'TtuloAula').get_text()
@@ -83,14 +83,16 @@ while True:
                 p.span.extract()
 
             # substitui imagem por botao
-            button_img = soup.select('.txtrec img')
+            button_img = soup.select('.Pbutton img')
             button_caption = soup.select('.txtrec')
+            
+
 
             for img in button_img:
                 parent = img.find_parent("p")
                 caption = parent.find_next("p")
                 link = caption.get_text()
-                new_a = soup.new_tag('a', href=link)
+                new_a = soup.new_tag('a', href=link, target="_blank")
                 img.name = 'button'
                 img.append(new_a)
                 new_a.append(img['alt'])
@@ -99,16 +101,14 @@ while True:
                 del img['width']
                 del img['src']
 
+            #body
+            Ptabelas = soup.find_all('table','Ptabela')
+            add_body = soup.new_tag('body')
 
-# substitui imagem por botao
-            #Ptabelas = soup.find_all('table','Ptabela')
-            #add_body = soup.new_tag('body')
+            for Ptabela in Ptabelas:
+                add_body.append(Ptabela)
 
-            #for Ptabela in Ptabelas:
-            #    add_body.append(Ptabela)
-
-            #soup = add_body
-
+            soup = add_body
 
             data_file.close()
             lines = soup.prettify()
@@ -125,6 +125,9 @@ while True:
                     line = re.sub('width:([a-z0-9\.%]*);', '', line)
                 # Passo 3
                 if 'style=' in line:
+                    line = re.sub('height:([a-z0-9\.%]*)', '', line)
+                # Passo 3
+                if 'height:' in line:
                     line = re.sub('height:([a-z0-9\.%]*)', '', line)
                 # Passo 4
                 if 'class=' in line:
@@ -144,16 +147,17 @@ while True:
                 if 'tr' in line:
                     line = re.sub('<tr', '<tr class="anime"', line)
                 # Passo 9 
-                if '</head>' in line:
-                    line = re.sub('</head>', '''
-                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>
-                        </head>
-                    ''', line)
-                # Passo 9 
                 if '<body>' in line:
                     line = re.sub('<body>', '''
+                        <!doctype html>
+                        <html>
+
+                        <head>
+                        <meta charset="utf-8">
+                        <title>SN_AULA_01</title>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                        <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
                         <body>
                             <section class="proepi">
                                 <div class="sidenav">
@@ -189,6 +193,8 @@ while True:
             # Indenta o código final
             soup = bs(html, 'html.parser')
             html = soup.prettify()
+
+            
 
             # Salva o arquivo finalizado
             data_file = open(path + '/' + "RES_" + file_name, 'w+', encoding='utf-8', errors='ignore')

@@ -53,11 +53,11 @@ p.TtuloAula {
   td div {
     margin-left: -100px !important;
   }
-  /*
+  
   table.tabelaneuro tr {
    display: table-row;
   }
-  */
+  
   table.tabelaneuro td {
     width: 100% !important;
   }
