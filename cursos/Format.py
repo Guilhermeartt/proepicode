@@ -7,26 +7,23 @@ import re
 layout = [
     [sg.Text('Endereço do arquivo')], 
     [sg.Input(key='arquivo'), sg.FileBrowse()], 
-    [sg.OK(), sg.Cancel('Cancelar')]
+    [sg.OK(), sg.Cancel('Cancelar')],
+    [sg.Output(size=(60, 20))]
 ]
 # Janela
 janela = sg.Window('Buscar arquivo', layout)
 
-# Dados
-eventos, valores = janela.read(close=True)
-file_path = (valores['arquivo'])
-
-print (' ')
-
-# Validacao de possiveis erros do programa
+# Loop e validacao de possiveis erros do programa
 while True:
+    eventos, valores = janela.read()
+    file_path = (valores['arquivo'])
+
     if eventos == 'Cancelar':
         print ('Programa encerrado' + '\n')
         break
 
     elif len(file_path) == 0:
         print ('Nenhum arquivo selecionado' + '\n')
-        break
 
     else:
         # Separa o endereco do arquivo para remover o "NOME" do arquivo, depois uni o endereco novamente
@@ -37,6 +34,7 @@ while True:
         # print(file_name)
         print('Arquivo: ' + file_name)
         print('Caminho do arquivo: ' + file_path)
+
         # Le o arquivo
         data_file = open(file_path, 'r' 
         #, encoding='utf-8', errors='ignore'
@@ -58,6 +56,14 @@ while True:
             # encontra e extrai os estilos e os scritps da pagina
             [x.extract() for x in soup.find_all('style')]
             [x.extract() for x in soup.find_all('script')]
+
+            # remove todo o body e mantem apenas as tabelas
+            content = soup.select('table.Ptabela')
+            soup.body.extract()
+            new_body = soup.new_tag('body')
+            soup.html.append(new_body)
+
+            [new_body.append(table) for table in content]
 
             # encontra o titulo da aula e insere no titulo da pagina
             title_aula = soup.find('p' ,'TtuloAula').get_text()
@@ -193,4 +199,3 @@ while True:
         else:
             print ('Extensão inválida, selecione um arquivo "html"!' + '\n')
             break
-        break
