@@ -93,6 +93,17 @@ while True:
                 del img['width']
                 del img['src']
 
+
+# substitui imagem por botao
+            #Ptabelas = soup.find_all('table','Ptabela')
+            #add_body = soup.new_tag('body')
+
+            #for Ptabela in Ptabelas:
+            #    add_body.append(Ptabela)
+
+            #soup = add_body
+
+
             data_file.close()
             lines = soup.prettify()
             lines = lines.splitlines(True)
