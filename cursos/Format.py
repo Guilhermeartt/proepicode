@@ -1,9 +1,11 @@
 # Criado por Italo Alves - 2021
 import PySimpleGUI as sg
-import os.path
-import comtypes.client
+import os
 from bs4 import BeautifulSoup as bs
 import re
+
+if os.name == 'nt':
+    import comtypes.client
 
 # Layout
 layout = [
@@ -42,7 +44,7 @@ while True:
         extension = file_name.split('.')[1]
 
         # Validacao da extencao do arquivo selecionado
-        if extension == 'docx' or extension == 'doc':
+        if (extension == 'docx' or extension == 'doc') and os.name == 'nt':
             wdFormatFilteredHTML = 10
 
             # Cria instancia de um objeto COM para manipular Documentos Word
@@ -227,6 +229,7 @@ while True:
             data_file.close()
 
             print ('Aula formatada com sucesso!' + '\n')
+            janela['arquivo'].Update('')
         else:
-            print ('Extensão inválida, selecione um arquivo "html"!' + '\n')
-            break
+            print ('Extensão inválida ou seu sistema não suporta docx, selecione um arquivo html!' + '\n')
+            janela['arquivo'].Update('')
