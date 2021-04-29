@@ -1,5 +1,6 @@
 # Criado por Italo Alves - 2021
-import PySimpleGUI as sg 
+import PySimpleGUI as sg
+import os.path
 import comtypes.client
 from bs4 import BeautifulSoup as bs
 import re
@@ -13,6 +14,8 @@ layout = [
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
+
+path_normalize = os.path.abspath
 
 # Loop e validacao de possiveis erros do programa
 while True:
@@ -30,11 +33,9 @@ while True:
         # Separa o endereco do arquivo para remover o "NOME" do arquivo, depois uni o endereco novamente
         path = file_path.split('/')
         file_name = path.pop()
-        path = "\\".join(path)
-        # print(path)
-        # print(file_name)
+        path = '/'.join(path) + '/'
         print('Arquivo: ' + file_name)
-        print('Caminho do arquivo: ' + file_path)
+        print('Caminho: ' + file_path)
 
         # Pega a extensao e da o novo nome ao arquivo
         new_file_name = file_name.split('.')[0] + '.html'
@@ -48,10 +49,10 @@ while True:
             word = comtypes.client.CreateObject('Word.Application')
 
             # Carrega Arquivo de entrada (.docx ou .doc)
-            doc = word.Documents.Open(path + '\\' + file_name)
+            doc = word.Documents.Open(path_normalize(path + file_name))
 
             # Salva arquivo de saida em formato html
-            doc.SaveAs(path + new_file_name, FileFormat=wdFormatFilteredHTML)
+            doc.SaveAs(path_normalize(path + new_file_name), FileFormat=wdFormatFilteredHTML)
 
             # Fecha arquivo de Entrada
             doc.Close()
@@ -64,7 +65,7 @@ while True:
             extension = 'html'
 
         # Le o arquivo html
-        data_file = open(path + file_name, 'r' 
+        data_file = open(path_normalize(path + file_name), 'r' 
         #, encoding='utf-8', errors='ignore'
         )
         readable = data_file.readable()
@@ -221,7 +222,7 @@ while True:
             
 
             # Salva o arquivo finalizado
-            data_file = open(path + '/' + "RES_" + file_name, 'w+', encoding='utf-8', errors='ignore')
+            data_file = open(path_normalize(path + "RES_" + file_name), 'w+', encoding='utf-8', errors='ignore')
             data_file.write(html)            
             data_file.close()
 
