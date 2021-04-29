@@ -1,17 +1,18 @@
 # Criado por Italo Alves - 2021
 import PySimpleGUI as sg 
+import comtypes.client
 from bs4 import BeautifulSoup as bs
 import re
 
 # Layout
 layout = [
-    [sg.Text('Endereço do arquivo')], 
-    [sg.Input(key='arquivo'), sg.FileBrowse()], 
+    [sg.Text('Buscar arquivo (docx ou html):')],
+    [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    [sg.Output(size=(60, 20))]
+    [sg.Output(size=(60, 20))],
 ]
 # Janela
-janela = sg.Window('Buscar arquivo', layout)
+janela = sg.Window('Formatar aula', layout)
 
 # Loop e validacao de possiveis erros do programa
 while True:
@@ -29,23 +30,46 @@ while True:
         # Separa o endereco do arquivo para remover o "NOME" do arquivo, depois uni o endereco novamente
         path = file_path.split('/')
         file_name = path.pop()
-        path = "/".join(path)
+        path = "\\".join(path)
         # print(path)
         # print(file_name)
         print('Arquivo: ' + file_name)
         print('Caminho do arquivo: ' + file_path)
 
-        # Le o arquivo
-        data_file = open(file_path, 'r' 
+        # Pega a extensao e da o novo nome ao arquivo
+        new_file_name = file_name.split('.')[0] + '.html'
+        extension = file_name.split('.')[1]
+
+        # Validacao da extencao do arquivo selecionado
+        if extension == 'docx' or extension == 'doc':
+            wdFormatFilteredHTML = 10
+
+            # Cria instancia de um objeto COM para manipular Documentos Word
+            word = comtypes.client.CreateObject('Word.Application')
+
+            # Carrega Arquivo de entrada (.docx ou .doc)
+            doc = word.Documents.Open(path + '\\' + file_name)
+
+            # Salva arquivo de saida em formato html
+            doc.SaveAs(path + new_file_name, FileFormat=wdFormatFilteredHTML)
+
+            # Fecha arquivo de Entrada
+            doc.Close()
+
+            # Finaliza instancia do Objeto criado
+            word.Quit()
+
+            # Atualiza variaveis com o novo arquivo html convertido do word
+            file_name = new_file_name
+            extension = 'html'
+
+        # Le o arquivo html
+        data_file = open(path + file_name, 'r' 
         #, encoding='utf-8', errors='ignore'
         )
         readable = data_file.readable()
         print ('Legível: ' + str(readable))
 
-        # Pega a extensao do arquivo
-        extension = file_name.split('.')[1]
-
-        # Validacao da extencao do arquivo selecionado, se nao for "html" encerra o programa
         if extension == 'html':
             print ('Extensão válida' + '\n')
 
@@ -201,7 +225,7 @@ while True:
             data_file.write(html)            
             data_file.close()
 
-            print ('Arquivo alterado com sucesso!' + '\n')
+            print ('Aula formatada com sucesso!' + '\n')
         else:
             print ('Extensão inválida, selecione um arquivo "html"!' + '\n')
             break
