@@ -67,8 +67,8 @@ while True:
             extension = 'html'
 
         # Le o arquivo html
-        data_file = open(path_normalize(path + file_name), 'r' 
-        #, encoding='utf-8', errors='ignore'
+        data_file = open(path_normalize(path + file_name), 'r'
+        #, errors='ignore', encoding='utf-8'
         )
         readable = data_file.readable()
         print ('Legível: ' + str(readable))
@@ -94,6 +94,11 @@ while True:
 
             # encontra o titulo da aula e insere no titulo da pagina
             title_aula = soup.find('p' ,'TtuloAula').get_text()
+
+            if len(title_aula) == 0:
+                print('Essa aula não possui um título')
+                break
+
             [x.replace_with(title_aula) for x in soup.title]
 
             # substitui p por li
@@ -112,8 +117,10 @@ while True:
             # substitui imagem por botao
             button_img = soup.select('.Pbutton img')
             button_caption = soup.select('.txtrec')
-            
 
+            if len(button_img) == 0:
+                print('Essa aula não possui botões de "Saiba mais"')
+                break
 
             for img in button_img:
                 parent = img.find_parent("p")
@@ -131,6 +138,10 @@ while True:
             #body
             Ptabelas = soup.find_all('table','Ptabela')
             add_body = soup.new_tag('body')
+
+            if len(Ptabelas) == 0:
+                print('Essa aula não possui uma tabela principal')
+                break
 
             for Ptabela in Ptabelas:
                 add_body.append(Ptabela)
