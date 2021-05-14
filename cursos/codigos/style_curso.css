@@ -396,7 +396,7 @@
 	  background:#282A36;
 	}
 
-	.Pbutton button {
+	.Pbutton button a {
 		background-color:#ffcc00;
 		border-radius:14px;
 		border:1px solid #fff766;
@@ -408,11 +408,11 @@
 		padding:16px 31px;
 		text-decoration:none;
 	}
-	.Pbutton button:hover {
+	.Pbutton button a:hover {
 		background-color:#f57f00;
 		color:#ffffff;
 	}
-	.Pbutton button:active {
+	.Pbutton button a:active {
 		position:relative;
 		top:1px;
 	}
