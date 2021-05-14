@@ -207,6 +207,9 @@ while True:
                                     <img class="modal-content" id="img-modal">
                                     <div id="caption"></div>
                                 </div>
+                                <div class="more-button">
+                                    <button>Saiba Mais</button>
+                                </div>
                     ''', line)
                 # Passo 10
                 if '</body>' in line:
