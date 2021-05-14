@@ -383,7 +383,7 @@
 	  }
 
 	p.Pcodigo, li.Pcodigo, div.Pcodigo {
-		mso-style-name:P_codigo;
+	  mso-style-name:P_codigo;
 	  mso-style-link:"P_codigo Char";
 	  margin-top:6.0pt;
 	  margin-right:0cm;
@@ -394,4 +394,25 @@
 	  font-family:"Arial",sans-serif;
 	  color:white;
 	  background:#282A36;
+	}
+
+	.Pbutton {
+		background-color:#ffcc00;
+		border-radius:14px;
+		border:1px solid #fff766;
+		display:inline-block;
+		cursor:pointer;
+		color:#4d350c;
+		font-family:Arial;
+		font-size:17px;
+		padding:16px 31px;
+		text-decoration:none;
+	}
+	.Pbutton:hover {
+		background-color:#f57f00;
+		color:#ffffff;
+	}
+	.Pbutton:active {
+		position:relative;
+		top:1px;
 	}
