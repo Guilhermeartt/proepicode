@@ -416,4 +416,9 @@
 		position:relative;
 		top:1px;
 	}
+
+	button{
+		background-color:transparent;
+		border: none;
+	}
 	
