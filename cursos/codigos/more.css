@@ -1,0 +1,12 @@
+.more-button {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+}
+
+.more-button button {
+  background-color: #2a7138;
+  border: 0;
+  color: #ffffff;
+  padding: 15px;
+}
