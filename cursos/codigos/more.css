@@ -1,7 +1,5 @@
 .more-button {
-  position: fixed;
-  bottom: 5%;
-  right: 2%;
+  position: relative;
 }
 
 .more-button button {
@@ -9,4 +7,5 @@
   border: 0;
   color: #ffffff;
   padding: 15px;
+  cursor: pointer;
 }

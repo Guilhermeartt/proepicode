@@ -1,39 +1,17 @@
-// Button to Saiba Mais
-// @alvesitalos
-const tables = []
-const heights = []
+// Saiba Mais buttons
+// @alvesitalo
 
-$('.tabelaneuro').each(function(index, element) {
-  tables.push(element)
-  heights.push($(element).offset().top)
-  $(element).hide()
-});
+// Hide all
+$('.sabimais').hide();
+$('.tabelaneuro tbody').hide();
 
-$('.more-button').click(function() {
-  const scroll = $(window).scrollTop()
-  let selected = false
+// Button behavior
+$('.toggle-more').click(function() {
+  const table_id = '#' + $(this).attr('target') + ' tbody'
 
-  for (i = 0; i < tables.length; i++) {
-    const elementBottom = heights[i] + $(tables[i]).outerHeight()
-
-    if (i == heights.length-1 && !selected) {
-      const last = heights.length-1
-
-      $('html, body').animate({
-        scrollTop: heights[last]
-      }, 400);
-
-      $(tables[i]).show()
-      selected = true
-    } else if (scroll <= elementBottom && !selected) {
-      $('html, body').animate({
-        scrollTop: heights[i]
-      }, 400);
-
-      $(tables[i]).show()
-      selected = true
-    } else {
-      $(tables[i]).hide()
-    }
+  if ($(table_id).is(':hidden')) {
+    $(table_id).show(800);
+  } else {
+    $(table_id).hide(800);
   }
 });
