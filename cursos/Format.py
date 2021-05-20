@@ -114,6 +114,23 @@ while True:
                 p.name = 'li'
                 p.span.extract()
 
+            # insere botão para ocultar ou mostrar a tabela saiba mais
+            table_more = soup.select('.tabelaneuro')
+            i = 0
+
+            for table in table_more:
+                table_id = 'saiba-mais-' + str(i)
+                table['id'] = table_id
+
+                new_div = soup.new_tag('div', attrs={"class": "more-button"})
+                new_button = soup.new_tag('button', attrs={"class": "toggle-more", "target": table_id})
+                new_button.append('Saiba Mais')
+                new_div.append(new_button)
+
+                parent_div = table.parent
+                parent_div.insert(0, new_div)
+                i += 1
+
             # substitui imagem por botao
             button_img = soup.select('.Pbutton img')
             button_caption = soup.select('.txtrec')
@@ -189,12 +206,11 @@ while True:
                     line = re.sub('<body>', '''
                         <!doctype html>
                         <html>
-
                         <head>
-                        <meta charset="utf-8">
-                        <title>SN_AULA_01</title>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-                        <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                            <meta charset="utf-8">
+                            <title>SN_AULA_01</title>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
                         </head>
                         <body>
                             <section class="proepi">
@@ -206,9 +222,6 @@ while True:
                                     <span class="close-modal">&times;</span>
                                     <img class="modal-content" id="img-modal">
                                     <div id="caption"></div>
-                                </div>
-                                <div class="more-button">
-                                    <button>Saiba Mais</button>
                                 </div>
                     ''', line)
                 # Passo 10
