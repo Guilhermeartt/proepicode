@@ -154,15 +154,13 @@ while True:
                 del img['height']
                 del img['width']
                 del img['src']
+            # Remove style dos span's
+            #for span in soup.find_all('span'):
+            #    if 'style' in span.attrs:
+            #        del span.attrs['style']
+             #       print(span)
 
-            for span in soup.find_all('span'):
-
-                print(span)
-
-                if 'style' in span.attrs:
-                    del span.attrs['style']
-
-               #body
+            #body
             Ptabelas = soup.find_all('table','Ptabela')
             add_body = soup.new_tag('body')
 
