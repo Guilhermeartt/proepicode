@@ -12,7 +12,7 @@ layout = [
     [sg.Text('Buscar arquivo (docx ou html):')],
     [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    [sg.Output(size=(60, 20))],
+    #[sg.Output(size=(60, 20))],
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
@@ -83,7 +83,7 @@ while True:
             # encontra e extrai os estilos e os scritps da pagina
             [x.extract() for x in soup.find_all('style')]
             [x.extract() for x in soup.find_all('script')]
-
+            
             # remove todo o body e mantem apenas as tabelas
             #content = soup.select('table.Ptabela')
             #oup.body.extract()
@@ -114,7 +114,10 @@ while True:
                 p.name = 'li'
                 p.span.extract()
 
+            
+
             # insere botão para ocultar ou mostrar a tabela saiba mais
+            
             table_more = soup.select('.tabelaneuro')
             i = 0
 
@@ -152,7 +155,14 @@ while True:
                 del img['width']
                 del img['src']
 
-            #body
+            for span in soup.find_all('span'):
+
+                print(span)
+
+                if 'style' in span.attrs:
+                    del span.attrs['style']
+
+               #body
             Ptabelas = soup.find_all('table','Ptabela')
             add_body = soup.new_tag('body')
 
@@ -160,6 +170,8 @@ while True:
                 print('Essa aula não possui uma tabela principal')
                 break
 
+
+                    
             for Ptabela in Ptabelas:
                 add_body.append(Ptabela)
 

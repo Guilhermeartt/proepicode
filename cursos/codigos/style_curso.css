@@ -357,7 +357,7 @@
 	  margin: 0cm;
 	  text-align: center;
 	  line-height: 115%;
-	  font-size: 9.0pt;
+	  font-size: 10.0pt !important;
 	  font-family: "Calibri", sans-serif;
 	}
 	table.Ptabela {
