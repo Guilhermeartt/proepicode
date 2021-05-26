@@ -12,7 +12,7 @@ layout = [
     [sg.Text('Buscar arquivo (docx ou html):')],
     [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    #[sg.Output(size=(60, 20))],
+    [sg.Output(size=(60, 20))],
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
@@ -93,12 +93,13 @@ while True:
             #[new_body.append(table) for table in content]
 
             # encontra o titulo da aula e insere no titulo da pagina
-            title_aula = soup.find('p' ,'TtuloAula').get_text()
+            title_aula = soup.find('p' ,'TtuloAula')
 
             if len(title_aula) == 0:
                 print('Essa aula não possui um título')
                 break
 
+            title_aula = title_aula.get_text()
             [x.replace_with(title_aula) for x in soup.title]
 
             # substitui p por li
@@ -223,10 +224,17 @@ while True:
                             <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
                         </head>
                         <body>
-                            <section class="proepi">
-                                <div class="sidenav">
-                                    <button class="toggle-side">&#9776;</button>
-                                    <div id="nav" class="nav"></div>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <button id="open-nav" class="nav-button nav-teal">&#9776;</button>
+                                    <div class="nav-container">
+                                        <h1>''' + title_aula + '''</h1>
+                                    </div>
                                 </div>
                                 <div class="modal">
                                     <span class="close-modal">&times;</span>
