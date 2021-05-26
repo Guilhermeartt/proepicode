@@ -1,42 +1,93 @@
-section .sidenav {
-  position: fixed;
-  margin-top: 0%;
-  margin-left: 0%;
-  z-index: 10;
+.nav-sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #fff;
+  display: none;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto;
 }
-div.sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: green;
-  border: 2px solid #4caf50;
+.nav-card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-section .sidenav button {
-  background-color: #2a7138;
-  border: 2px solid #e6e6e6;
-  border-radius: 4px;
-  color: #fff;
+.nav-bar-block .nav-bar-item {
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0;
+}
+button.nav-button {
+  font-weight: bold;
+}
+.nav-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
   cursor: pointer;
-  padding: 2px 8px;
-  font-size: 20px;
+  white-space: nowrap;
+}
+.nav-button:hover {
+  color: #000 !important;
+  background-color: #ccc !important;
 }
 
-section .sidenav .nav {
-  width: 250px;
-  background-color: #2a7138;
-  border-radius: 2px;
-  padding: 20px 0;
+.proepi#main {
+  transition: margin-left 0.4s;
 }
-section .sidenav .nav a {
+
+.nav-container {
+  padding: 0.01em 16px;
+}
+.nav-container:after,
+.nav-container:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.nav-container h1 {
   font-family: "Arial", sans-serif;
-  font-size: 16px;
-  color: #fff;
-  display: block;
-  margin: 10px 0 10px 0;
-  padding: 0 20px 0 30px;
-  transition: 0.3s;
-}
-section .sidenav .nav a#featured {
   font-weight: bold;
-  margin-bottom: 20px;
+  padding: 0;
+}
+
+.nav-animate-left {
+  position: relative;
+  animation: animateleft 0.4s;
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.nav-teal {
+  font-size: 20px;
+  background-color: #009688 !important;
+  color: #fff !important;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+p.P1Ttulonumerado,
+.P11Ttulonumerado,
+.TtuloAula {
+  scroll-margin-top: 100px;
 }

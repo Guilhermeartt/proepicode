@@ -2,12 +2,17 @@
 // @alvesitalo
 
 // Nav button behavior
-$('.toggle-side').click(function() {
-  if ($('.nav').is(':hidden')) {
-    $('.nav').slideDown();
-  } else {
-    $('.nav').slideUp();
-  }
+$('#open-nav').click(function() {
+  $('.proepi#main').css('margin-left', '25%');
+  $('#sidebar-nav').css('width', '25%');
+  $('#sidebar-nav').css('display', 'block');
+  $('#open-nav').css('display', 'none');
+});
+
+$('#close-nav').click(function() {
+  $('.proepi#main').css('margin-left', '0%');
+  $('#sidebar-nav').css('display', 'none');
+  $('#open-nav').css('display', 'inline-block');
 });
 
 // Create titles for nav
@@ -26,13 +31,14 @@ for (i = 0; i < titles.length; i++) {
 
   if (i == 0) {
     title.attr('id', 'featured');
-    title.html(titles[i].innerText);
   } else {
-    title.html(titles[i].innerText);
     index++;
   }
+  
+  title.html(titles[i].innerText);
+  title.addClass('nav-bar-item nav-button');
 
-  title.appendTo('.nav');
+  title.appendTo('#sidebar-nav');
   titles[i].setAttribute('id', id);
 }
 
