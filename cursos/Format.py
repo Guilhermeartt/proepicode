@@ -12,7 +12,7 @@ layout = [
     [sg.Text('Buscar arquivo (docx ou html):')],
     [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    [sg.Output(size=(60, 20))],
+    #[sg.Output(size=(60, 20))],
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
@@ -231,7 +231,8 @@ while True:
                             </div>
                             <section id="main" class="proepi">
                                 <div class="nav-teal">
-                                    <button id="open-nav" class="nav-button nav-teal">&#9776;</button>
+                                    <div class="nav-button>
+                                    <button class="nav-button nav-teal"  id="open-nav" >&#9776;</button></div>
                                     <div class="nav-container">
                                         <h1>''' + title_aula + '''</h1>
                                     </div>
@@ -243,6 +244,8 @@ while True:
                                 </div>
                     ''', line)
                 # Passo 10
+
+                    print (line)
                 if '</body>' in line:
                     line = re.sub('</body>', '''
                             <br>

@@ -7,12 +7,14 @@ $('#open-nav').click(function() {
   $('#sidebar-nav').css('width', '25%');
   $('#sidebar-nav').css('display', 'block');
   $('#open-nav').css('display', 'none');
+  console.log ("botão assionado")
 });
 
 $('#close-nav').click(function() {
   $('.proepi#main').css('margin-left', '0%');
   $('#sidebar-nav').css('display', 'none');
   $('#open-nav').css('display', 'inline-block');
+  console.log ("botão fechado")
 });
 
 // Create titles for nav
