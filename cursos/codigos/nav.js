@@ -62,14 +62,34 @@ console.log(length)
 
 
 
+
+function ocultar() {
 for(var i = 0; i <= length; i++){
-  console.log('conta ' + i)
+  //console.log('conta ' + i)
     tbody = x[i].children;
-    td = tbody[0].children;
-    tr = td[0].children;
-    text = tr[1]
-    //.classList.add("hide");
-
-console.log(text)
-
+    tr = tbody[0].children;
+    td = tr[0].children;
+    text = td[1];  
+    text.classList.add("hide");
+  }  
 }
+
+function mostrar() {
+  for(var i = 0; i <= length; i++){
+   // console.log('conta ' + i)
+      tbody = x[i].children;
+      tr = tbody[0].children;
+      td = tr[0].children;
+      text = td[1];
+      text.classList.remove("hide");
+  }      
+}
+
+
+$('.txtrec img').click(function() {
+  function mostrar()
+});
+
+$('.txtrec img').click(function() {
+  function ocultar()
+});

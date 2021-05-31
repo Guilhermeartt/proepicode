@@ -133,14 +133,25 @@ button#close-nav:hover {
 /*Scrolbar out*/
 
 
-/*botão quadro
-tr {
+/*botão quadro*/
+td {
   overflow:hidden;
   max-height: 200px;
   transition: max-height 1s ease-in-out;
 }
 
-tr.hide {
+td.hide {
   max-height: 0;
   pointer-events: none;
-}*/
+}
+
+
+.txtrec img{
+  cursor: pointer;
+}
+
+
+.txtrec img:hover{
+  background-color: #0f6da3;
+  border-radius: 0px 0px 0px 45px;
+}
