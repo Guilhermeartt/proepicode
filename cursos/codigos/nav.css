@@ -16,6 +16,8 @@
   display: block;
   padding: 8px 16px;
   text-align: left;
+  font-weight: bold;
+  color: #3d3d3d;
   border: none;
   white-space: normal;
   float: none;

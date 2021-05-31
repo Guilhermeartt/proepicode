@@ -44,4 +44,5 @@ for (i = 0; i < titles.length; i++) {
   titles[i].setAttribute('id', id);
 }
 
-
+var x = document.getElementById("aula-titulo-0");
+x.style.display = "none";
