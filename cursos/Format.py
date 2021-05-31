@@ -231,15 +231,9 @@ while True:
                             </div>
                             <section id="main" class="proepi">
                                 <div class="nav-teal">
-                                    <div class="nav-button>
-                                        <button id="open-nav" <!--teste--> class="nav-button nav-teal"> 
-                                            <span>
-                                                &#9776;
-                                            </span>
-                                        </button>
-                                    </div>
+                                    
                                     <div class="nav-container">
-                                        <h1>''' + title_aula + '''</h1>
+                                        <h3>''' + title_aula + '''</h3>
                                     </div>
                                 </div>
                                 <div class="modal">
@@ -248,9 +242,20 @@ while True:
                                     <div id="caption"></div>
                                 </div>
                     ''', line)
+
+                    # Passo 9 
+                if '<div class="nav-teal">' in line:
+                    line = re.sub('<div class="nav-teal">', '''
+                    <div class="nav-teal">
+                        <div class="nav-button>
+                               <button  class="nav-button nav-teal" id="open-nav">
+                                    ☰ 
+                            </button>
+                        </div>
+                    ''', line)
                 # Passo 10
 
-                    print (line)
+                
                 if '</body>' in line:
                     line = re.sub('</body>', '''
                             <br>
