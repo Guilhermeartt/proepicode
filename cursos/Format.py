@@ -119,21 +119,21 @@ while True:
 
             # insere botão para ocultar ou mostrar a tabela saiba mais
             
-            table_more = soup.select('.tabelaneuro')
-            i = 0
+            #table_more = soup.select('.tabelaneuro')
+            #i = 0
 
-            for table in table_more:
-                table_id = 'saiba-mais-' + str(i)
-                table['id'] = table_id
+            #for table in table_more:
+            #    table_id = 'saiba-mais-' + str(i)
+            #    table['id'] = table_id
+#
+             #   new_div = soup.new_tag('div', attrs={"class": "more-button"})
+             #   new_button = soup.new_tag('button', attrs={"class": "toggle-more", "target": table_id})
+            #    new_button.append('Saiba Mais')
+            #    new_div.append(new_button)
 
-                new_div = soup.new_tag('div', attrs={"class": "more-button"})
-                new_button = soup.new_tag('button', attrs={"class": "toggle-more", "target": table_id})
-                new_button.append('Saiba Mais')
-                new_div.append(new_button)
-
-                parent_div = table.parent
-                parent_div.insert(0, new_div)
-                i += 1
+            #    parent_div = table.parent
+            #    parent_div.insert(0, new_div)
+            #    i += 1
 
             # substitui imagem por botao
             button_img = soup.select('.Pbutton img')
