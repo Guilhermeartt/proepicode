@@ -27,7 +27,7 @@ button.nav-button {
 .nav-button {
   border: none;
   display: inline-block;
-  padding: 24px 20px;
+  padding: 24px 20px ;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
@@ -41,7 +41,7 @@ button.nav-button {
 .nav-button:hover {
   color: #fff !important;
   background-color: #0077b6 !important;
-  /*padding: 24px 20px;*/
+  padding: 24px 20px;
 
 }
 .nav-bar-item:hover {
