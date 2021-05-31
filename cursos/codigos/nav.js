@@ -85,11 +85,21 @@ function mostrar() {
   }      
 }
 
+//Criar o botão 
+for(var i = 0; i <= length; i++){
+  console.log('conta ' + i)
+    tbody = x[i].children;
+    tr = tbody[0].children;
+    td = tr[0].children;
+    p = td[0].children;
+    span = p[0].children;
+    img = span[0];
+console.log(img)
+    img.onclick = function(){
+      console.log("deucerto")
+      mostrar()
 
-$('.txtrec img').click(function() {
-  function mostrar()
-});
+    }
 
-$('.txtrec img').click(function() {
-  function ocultar()
-});
+ ocultar()   
+}
