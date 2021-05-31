@@ -108,6 +108,7 @@ p.P1Ttulonumerado,
 button#close-nav{
   padding: 24px 17px !important;
   background-color: #185f99 !important;
+  color:#fff;
 }
 button#close-nav:hover {
   background-color: #0077b6 !important;
