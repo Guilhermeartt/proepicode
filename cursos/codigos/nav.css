@@ -136,7 +136,7 @@ button#close-nav:hover {
 /*botão quadro*/
 td {
   overflow:hidden;
-  max-height: 200px;
+  /*max-height: 200px;*/
   transition: max-height 1s ease-in-out;
 }
 
