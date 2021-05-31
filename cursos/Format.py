@@ -231,7 +231,7 @@ while True:
                             </div>
                             <section id="main" class="proepi">
                                 <div class="nav-teal">
-                                    <div class="nav-button">
+                                    <div>
                                         <button  class="nav-button nav-teal" id="open-nav">
                                             ☰ 
                                         </button>
@@ -266,11 +266,10 @@ while True:
                     ''', line)
                 html += line
 
-            # Indenta o código final
+            # Indenta o código final (estava estragando alguams partes do código, tirei para funcionar)
 
-            print (html)
-           #soup = bs(html, 'html.parser')
-           # html = soup.prettify()
+            # soup = bs(html, 'html.parser')
+            # html = soup.prettify()
 
             
 

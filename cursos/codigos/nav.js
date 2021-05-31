@@ -46,3 +46,24 @@ for (i = 0; i < titles.length; i++) {
 
 var x = document.getElementById("aula-titulo-0");
 x.style.display = "none";
+
+
+
+var x = document.getElementsByClassName("tabelaneuro");
+var length = x.length;
+length++
+console.log(length)
+
+
+
+
+for(var i = 0; i <= length; i++){
+  console.log('conta ' + i)
+    tbody = x[i].children;
+    td = tbody[0].children;
+    tr = td[0].children;
+    text = tr[1].classList.add("hide");
+
+console.log(text)
+
+}
