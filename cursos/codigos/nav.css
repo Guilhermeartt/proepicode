@@ -105,17 +105,17 @@ p.P1Ttulonumerado,
 }
 
 
-.nav-teal button {
-  padding: 29px 17px !important;
+button#close-nav{
+  padding: 24px 17px !important;
   background-color: #185f99 !important;
 }
-.nav-teal button:hover {
+button#close-nav:hover {
   background-color: #0077b6 !important;
 }
 
-/*Menu artt - inicio */
 
 
+/*Scrolbar in*/
 
 #sidebar-nav::-webkit-scrollbar-track {
   background-color: #0f6da3;
@@ -126,6 +126,5 @@ p.P1Ttulonumerado,
 }
 #sidebar-nav::-webkit-scrollbar-thumb {
   background: #eff7ff;
-  
 }
-/*Menu artt - final */
+/*Scrolbar out*/
