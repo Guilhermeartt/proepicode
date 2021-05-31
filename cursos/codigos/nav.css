@@ -133,7 +133,7 @@ button#close-nav:hover {
 /*Scrolbar out*/
 
 
-/*botão quadro*/
+/*botão quadro
 tr {
   overflow:hidden;
   max-height: 200px;
@@ -143,3 +143,4 @@ tr {
 tr.hide {
   max-height: 0;
   pointer-events: none;
+}*/

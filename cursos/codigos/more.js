@@ -2,7 +2,7 @@
 // @alvesitalo
 
 // Hide all
-//$('.tabelaneuro tbody').hide();
+$('.tabelaneuro tbody').hide();
 
 // Button behavior
 $('.toggle-more').click(function() {

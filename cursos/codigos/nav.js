@@ -44,8 +44,13 @@ for (i = 0; i < titles.length; i++) {
   titles[i].setAttribute('id', id);
 }
 
+
+
+
 var x = document.getElementById("aula-titulo-0");
 x.style.display = "none";
+
+
 
 
 
@@ -62,7 +67,8 @@ for(var i = 0; i <= length; i++){
     tbody = x[i].children;
     td = tbody[0].children;
     tr = td[0].children;
-    text = tr[1].classList.add("hide");
+    text = tr[1]
+    //.classList.add("hide");
 
 console.log(text)
 
