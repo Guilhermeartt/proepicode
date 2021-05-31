@@ -231,7 +231,11 @@ while True:
                             </div>
                             <section id="main" class="proepi">
                                 <div class="nav-teal">
-                                    
+                                    <div class="nav-button">
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
                                     <div class="nav-container">
                                         <h3>''' + title_aula + '''</h3>
                                     </div>
@@ -242,20 +246,7 @@ while True:
                                     <div id="caption"></div>
                                 </div>
                     ''', line)
-
-                    # Passo 9 
-                if '<div class="nav-teal">' in line:
-                    line = re.sub('<div class="nav-teal">', '''
-                    <div class="nav-teal">
-                        <div class="nav-button>
-                               <button  class="nav-button nav-teal" id="open-nav">
-                                    ☰ 
-                            </button>
-                        </div>
-                    ''', line)
                 # Passo 10
-
-                
                 if '</body>' in line:
                     line = re.sub('</body>', '''
                             <br>
@@ -276,8 +267,10 @@ while True:
                 html += line
 
             # Indenta o código final
-            soup = bs(html, 'html.parser')
-            html = soup.prettify()
+
+            print (html)
+           #soup = bs(html, 'html.parser')
+           # html = soup.prettify()
 
             
 
