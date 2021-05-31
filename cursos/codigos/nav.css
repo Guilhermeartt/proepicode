@@ -27,7 +27,7 @@ button.nav-button {
 .nav-button {
   border: none;
   display: inline-block;
-  padding: 8px 16px;
+  padding: 24px 20px;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
@@ -36,10 +36,18 @@ button.nav-button {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  border-right: #0f6da3 solid 3px;
 }
 .nav-button:hover {
-  color: #000 !important;
-  background-color: #ccc !important;
+  color: #fff !important;
+  background-color: #0077b6 !important;
+  padding: 24px 20px;
+
+}
+.nav-bar-item:hover {
+  color: #fff !important;
+  background-color: #7c7c7c !important;
+  padding: 8px 16px;
 }
 
 .proepi#main {
@@ -55,7 +63,7 @@ button.nav-button {
   display: table;
   clear: both;
 }
-.nav-container h1 {
+.nav-container h3 {
   font-family: "Arial", sans-serif;
   font-weight: bold;
   padding: 0;
@@ -82,7 +90,7 @@ button.nav-button {
   /* flex-wrap: nowrap; */
   align-items: center;
   font-size: 20px;
-  background-color: #009688 !important;
+  background-color: #185f99 !important;
   color: #fff !important;
   position: sticky;
   position: -webkit-sticky;
@@ -96,53 +104,28 @@ p.P1Ttulonumerado,
   scroll-margin-top: 100px;
 }
 
-/*Menu hamburger - inicio */
-#checkbox-menu{
-  position: absolute;
-  opacity: 0;
+
+.nav-teal button {
+  padding: 29px 17px !important;
+  background-color: #185f99 !important;
+}
+.nav-teal button:hover {
+  background-color: #0077b6 !important;
 }
 
-label{
-  cursor: pointer;
-  position: relative;
-  display: block;
-  height: 22px;
-  width: 30px;
-}
+/*Menu artt - inicio */
 
-label span{
-  position: absolute;
-  display: block;
-  height: 5px;
-  width: 100%;
-  border-radius: 30px;
-  background: #f16234;
-  transition: 0.25s ease-in-out;
-}
 
-label span:nth-child(1){
-  top: 0;
-}
 
-label span:nth-child(2){
-  top: 8px;
+#sidebar-nav::-webkit-scrollbar-track {
+  background-color: #0f6da3;
 }
-
-label span:nth-child(3){
-  top: 16px;
+#sidebar-nav::-webkit-scrollbar {
+  width: 10px;
+  background: #F4F4F4;
 }
-
-#checkbox-menu:checked + label span:nth-child(1){
-  transform: rotate(-45deg);
-  top: 8px;
+#sidebar-nav::-webkit-scrollbar-thumb {
+  background: #eff7ff;
+  
 }
-
-#checkbox-menu:checked + label span:nth-child(2){
-  opacity: 0;
-}
-
-#checkbox-menu:checked + label span:nth-child(3){
-  transform: rotate(45deg);
-  top:8px;
-}
-/*Menu hamburger - inicio */
+/*Menu artt - final */

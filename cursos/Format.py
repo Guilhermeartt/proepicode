@@ -232,7 +232,12 @@ while True:
                             <section id="main" class="proepi">
                                 <div class="nav-teal">
                                     <div class="nav-button>
-                                    <button class="nav-button nav-teal"  id="open-nav" >&#9776;</button></div>
+                                        <button id="open-nav" <!--teste--> class="nav-button nav-teal"> 
+                                            <span>
+                                                &#9776;
+                                            </span>
+                                        </button>
+                                    </div>
                                     <div class="nav-container">
                                         <h1>''' + title_aula + '''</h1>
                                     </div>
