@@ -47,7 +47,7 @@ for (i = 0; i < titles.length; i++) {
 
 
 
-var x = document.getElementById("aula-titulo-0").closest();
+var x = document.getElementById("aula-titulo-0")
 x.parentElement.style.visibility = "hidden";
 
 
