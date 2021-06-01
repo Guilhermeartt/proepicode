@@ -62,62 +62,28 @@ for( var i = 0; i < el.length; i++){
   z = i+1;
   addId.setAttribute('id', 'btnQuadro-' + z);
   addId.setAttribute('class', 'btnQuadro')
-  hideEl.setAttribute('id', 'hide');
+  hideEl.setAttribute('id', 'hide-');
+  hideEl.setAttribute('class', 'hide')
   console.log(addId)
 }
 
 var btn = document.getElementsByClassName('btnQuadro')
-
-console.log(btn)
+var hide = 0;
+console.log(btn[1])
 for( var i = 0; i < el.length; i++){
-  var hide = 1;
-  btn[i].addEventListener('click',  () => {
-    console.log("Click")
-    if(hide == 1){
-      document.querySelector('#hide').classList.add("hide");
-      console.log("ocultar") 
-    } else {
-      document.querySelector('#hide').classList.remove("hide");
-      console.log("mostrar")
-    }
-  })
+  btn[i].addEventListener('click', ocultar)
 }
 
-function ocultar() { 
-  console.log("ocultar")
-  if ( btn ==)
-  document.querySelector('#hide').classList.add("hide"); 
+function ocultar(e) {
+  console.log("Click");
+  if(hide == 1){
+    hide = 0
+    s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.add('hide');
+    console.log("ocultar");
+    
+  } else {
+    hide = 1
+    s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
+    console.log("mostrar");
+  }
 }
-
-function mostrar() {
-  console.log("mostrar")
-  document.querySelector('#hide').classList.remove("hide");     
-}
-
-function mais() { 
-      for(var i = 0; i <= length; i++){
-        //console.log('conta ' + i)
-          tbody = x[i].getElementsByTagName("img");
-
-          console.log(tbody)
-          //tr = tbody[0].children;
-          //td = tr[0].children;
-          //p = td[0].children;
-         // span = p[0].children;
-          //img = span[0];
-          
-        //console.log(img)
-          }
-        }
-
-//for(var c=0; c<mais().length;x++){
-//  mais[c].addEventListner('click', mais);
-//}
-
-//function tbButton(e){
- // document.getElementsByTagName(img)
-
-
-  //console.log(tbValor)
-//}
-console.log(mais())
