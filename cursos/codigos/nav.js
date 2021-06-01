@@ -77,7 +77,7 @@ for( var i = 0; i < el.length; i++){
 
 
 function ocultar(e) {
-  
+  hide = 0 
   console.log("Click");
   if(hide == 1){
     
