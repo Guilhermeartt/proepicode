@@ -1,4 +1,5 @@
-document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
+var v = document.getElementById("aula-titulo-0");
+v.parentElement.style.visibility = "hidden";
 
 var el = document.getElementsByClassName("tabelaneuro");
 
