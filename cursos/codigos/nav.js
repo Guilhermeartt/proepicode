@@ -53,17 +53,20 @@ x.parentElement.style.visibility = "hidden";
 
 
 
+var el = document.getElementsByClassName("tabelaneuro");
+console.log(el.length)
 
-var x = document.getElementsByClassName("tabelaneuro");
-var length = x.length;
+for( var i = 0; i < el.length; i++){
+  var addId = el[i].getElementsByTagName('td')[0];
+  z = i+1;
+  addId.setAttribute('id', 'btnQuadro');
+  console.log(addId)
+}
 
-var imgs = x.getElementsByTagName('td')[0].getElementsByTagName('span');
-
-for(var i = 0; i <= length; i++){
+var btn = document.getElementById('btnQuadro')
+console.lot(btn)
+for( var i = 0; i < el.length; i++){
   
-   //console.log(imgs) 
-    imgs[i].addEventListners('click', ocultar);
-    
 }
 
 function ocultar() { 
