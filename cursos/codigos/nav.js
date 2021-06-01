@@ -77,16 +77,10 @@ for( var i = 0; i < el.length; i++){
 
 
 function ocultar(e) {
-  hide = 0 
+  hide = 1 
   console.log("Click");
-  if(hide == 1){
-    
-    s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.add('hide');
-    console.log("ocultar");
-    hide = 0
-  } else {
+  if(hide == 0){
     s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
     console.log("mostrar");
-    hide = 1
   }
 }
