@@ -15,8 +15,7 @@
 //  }
 //});
 
-var x = document.getElementById("aula-titulo-0")
-x.parentElement.style.visibility = "hidden";
+var x = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
 
 
 
