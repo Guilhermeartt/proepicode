@@ -77,7 +77,7 @@ for( var i = 0; i < el.length; i++){
 
 
 function ocultar(e) {
-  hide = 1 
+  hide = 0 
   console.log("Click");
   if(hide == 0){
     s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
