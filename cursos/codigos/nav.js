@@ -57,11 +57,12 @@ x.parentElement.style.visibility = "hidden";
 var x = document.getElementsByClassName("tabelaneuro");
 var length = x.length;
 
+var imgs = x.getElementsByTagName('td')[0].getElementsByTagName('span');
 
 for(var i = 0; i <= length; i++){
-  var imgs = x[i].getElementsByTagName('td')[0].getElementsByTagName('img');
-   console.log(imgs) 
-  imgs[i].addEventListners('click', ocultar);
+  
+   //console.log(imgs) 
+    imgs[i].addEventListners('click', ocultar);
     
 }
 
