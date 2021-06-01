@@ -71,7 +71,7 @@ var btn = document.getElementsByClassName('btnQuadro')
 
 console.log(btn[1])
 for( var i = 0; i < el.length; i++){
-  btn[i].addEventListener('click', ocultar)
+  btn[i].addEventListener('click', window.onload = ocultar)
 }
 
 
