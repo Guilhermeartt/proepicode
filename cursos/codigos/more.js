@@ -17,11 +17,7 @@
 
 var x = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
 
-
-
-
 var el = document.getElementsByClassName("tabelaneuro");
-console.log(el.length)
 
 for( var i = 0; i < el.length; i++){
   var addId = el[i].getElementsByTagName('td')[0];
@@ -31,23 +27,28 @@ for( var i = 0; i < el.length; i++){
   addId.setAttribute('class', 'btnQuadro')
   hideEl.setAttribute('id', 'hide-');
   hideEl.setAttribute('class', 'hide')
-  console.log(addId)
 }
 
 var btn = document.getElementsByClassName('btnQuadro')
 
-console.log(btn[1])
 for( var i = 0; i < el.length; i++){
   btn[i].addEventListener('click', window.onload = ocultar)
 }
 
-
-
 function ocultar(e) {
   hide = 0 
-  console.log("Click");
-  if(hide == 0){
+    if(hide == 0){
     s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
-    console.log("mostrar");
   }
 }
+
+for(i = 0; i < el.length; i++){
+    var quadro = el[i];
+    quadro.setAttribute("id", "tabQuadro")
+console.log(quadro);
+}
+
+var g = document.getElementById('tabQuadro').parentElement.parentElement;
+g.setAttribute("class", "tabQuadro")
+
+console.log(g)

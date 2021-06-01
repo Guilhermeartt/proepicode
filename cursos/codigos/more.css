@@ -1,11 +1,4 @@
-.more-button {
-  position: relative;
-}
+.tabQuadro{
+  background-color: #e6e6e6;;
 
-.more-button button {
-  background-color: #2a7138;
-  border: 0;
-  color: #ffffff;
-  padding: 15px;
-  cursor: pointer;
 }
