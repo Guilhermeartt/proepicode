@@ -58,30 +58,40 @@ console.log(el.length)
 
 for( var i = 0; i < el.length; i++){
   var addId = el[i].getElementsByTagName('td')[0];
+  var hideEl = el[i].getElementsByTagName('td')[1];
   z = i+1;
   addId.setAttribute('id', 'btnQuadro-' + z);
   addId.setAttribute('class', 'btnQuadro')
+  hideEl.setAttribute('id', 'hide');
   console.log(addId)
 }
 
 var btn = document.getElementsByClassName('btnQuadro')
+
 console.log(btn)
 for( var i = 0; i < el.length; i++){
-  
+  var hide = 1;
+  btn[i].addEventListener('click',  () => {
+    console.log("Click")
+    if(hide == 1){
+      document.querySelector('#hide').classList.add("hide");
+      console.log("ocultar") 
+    } else {
+      document.querySelector('#hide').classList.remove("hide");
+      console.log("mostrar")
+    }
+  })
 }
 
 function ocultar() { 
   console.log("ocultar")
-  //text.classList.add("hide"); 
+  if ( btn ==)
+  document.querySelector('#hide').classList.add("hide"); 
 }
 
 function mostrar() {
-  //for(var i = 0; i <= length; i++){
-      text = x[i].getElementsByTagName("td")[1];
-      text.classList.remove("hide");
-
-      console.log("Mostar quadro")
- // }      
+  console.log("mostrar")
+  document.querySelector('#hide').classList.remove("hide");     
 }
 
 function mais() { 
