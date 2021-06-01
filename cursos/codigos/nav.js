@@ -48,7 +48,7 @@ for (i = 0; i < titles.length; i++) {
 
 
 var x = document.getElementById("aula-titulo-0");
-x.style.display = "none";
+x.parentElement.style.visibility = "hidden";
 
 
 
@@ -56,50 +56,53 @@ x.style.display = "none";
 
 var x = document.getElementsByClassName("tabelaneuro");
 var length = x.length;
-length++
-console.log(length)
 
 
-
-
-
-function ocultar() {
 for(var i = 0; i <= length; i++){
-  //console.log('conta ' + i)
-    tbody = x[i].children;
-    tr = tbody[0].children;
-    td = tr[0].children;
-    text = td[1];  
-    text.classList.add("hide");
-  }  
+  var imgs = x[i].getElementsByTagName('td')[0].getElementsByTagName('img');
+   console.log(imgs) 
+  imgs[i].addEventListners('click', ocultar);
+    
+}
+
+function ocultar() { 
+  console.log("ocultar")
+  //text.classList.add("hide"); 
 }
 
 function mostrar() {
-  for(var i = 0; i <= length; i++){
-   // console.log('conta ' + i)
-      tbody = x[i].children;
-      tr = tbody[0].children;
-      td = tr[0].children;
-      text = td[1];
+  //for(var i = 0; i <= length; i++){
+      text = x[i].getElementsByTagName("td")[1];
       text.classList.remove("hide");
-  }      
+
+      console.log("Mostar quadro")
+ // }      
 }
 
-//Criar o botão 
-for(var i = 0; i <= length; i++){
-  console.log('conta ' + i)
-    tbody = x[i].children;
-    tr = tbody[0].children;
-    td = tr[0].children;
-    p = td[0].children;
-    span = p[0].children;
-    img = span[0];
-console.log(img)
-    img.onclick = function(){
-      console.log("deucerto")
-      mostrar()
+function mais() { 
+      for(var i = 0; i <= length; i++){
+        //console.log('conta ' + i)
+          tbody = x[i].getElementsByTagName("img");
 
-    }
+          console.log(tbody)
+          //tr = tbody[0].children;
+          //td = tr[0].children;
+          //p = td[0].children;
+         // span = p[0].children;
+          //img = span[0];
+          
+        //console.log(img)
+          }
+        }
 
- ocultar()   
-}
+//for(var c=0; c<mais().length;x++){
+//  mais[c].addEventListner('click', mais);
+//}
+
+//function tbButton(e){
+ // document.getElementsByTagName(img)
+
+
+  //console.log(tbValor)
+//}
+console.log(mais())
