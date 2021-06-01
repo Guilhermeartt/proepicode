@@ -68,13 +68,14 @@ for( var i = 0; i < el.length; i++){
 }
 
 var btn = document.getElementsByClassName('btnQuadro')
-var hide = 0;
+
 console.log(btn[1])
 for( var i = 0; i < el.length; i++){
   btn[i].addEventListener('click', ocultar)
 }
 
 function ocultar(e) {
+  var hide = 0;
   console.log("Click");
   if(hide == 1){
     hide = 0
