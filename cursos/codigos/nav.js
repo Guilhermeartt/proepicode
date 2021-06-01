@@ -59,12 +59,13 @@ console.log(el.length)
 for( var i = 0; i < el.length; i++){
   var addId = el[i].getElementsByTagName('td')[0];
   z = i+1;
-  addId.setAttribute('id', 'btnQuadro');
+  addId.setAttribute('id', 'btnQuadro-' + z);
+  addId.setAttribute('class', 'btnQuadro')
   console.log(addId)
 }
 
-var btn = document.getElementById('btnQuadro')
-console.lot(btn)
+var btn = document.getElementsByClassName('btnQuadro')
+console.log(btn)
 for( var i = 0; i < el.length; i++){
   
 }
