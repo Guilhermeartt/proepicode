@@ -89,6 +89,7 @@
 	  margin-top: 30px
 	}
 	td li {
+	  text-align: justify;
 	  line-height: 150%;
 	  list-style: disc;
 	  font-size: 16.0pt !important;
