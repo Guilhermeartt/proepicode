@@ -74,17 +74,19 @@ for( var i = 0; i < el.length; i++){
   btn[i].addEventListener('click', ocultar)
 }
 
+
+
 function ocultar(e) {
-  var hide = 0;
+  
   console.log("Click");
-  if(hide == 0){
-    hide = 0
+  if(hide == 1){
+    
     s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.add('hide');
     console.log("ocultar");
-    
+    hide = 0
   } else {
-    hide = 1
     s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
     console.log("mostrar");
+    hide = 1
   }
 }
