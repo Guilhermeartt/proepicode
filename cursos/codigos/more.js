@@ -1,25 +1,29 @@
-window.onload = function esconteTitulo(){
+function esconteTitulo(){
 var v = document.getElementById("aula-titulo-0");
 v.parentElement.style.visibility = "hidden";
 }
 
-var el = document.getElementsByClassName("tabelaneuro");
 
-for( var i = 0; i < el.length; i++){
-  var addId = el[i].getElementsByTagName('td')[0];
-  var hideEl = el[i].getElementsByTagName('td')[1];
-  z = i+1;
-  addId.setAttribute('id', 'btnQuadro-' + z);
-  addId.setAttribute('class', 'btnQuadro')
-  hideEl.setAttribute('id', 'hide-');
-  hideEl.setAttribute('class', 'hide')
+function revelarQuadro(){
+  var el = document.getElementsByClassName("tabelaneuro");
+
+  for( var i = 0; i < el.length; i++){
+    var addId = el[i].getElementsByTagName('td')[0];
+    var hideEl = el[i].getElementsByTagName('td')[1];
+    z = i+1;
+    addId.setAttribute('id', 'btnQuadro-' + z);
+    addId.setAttribute('class', 'btnQuadro')
+    hideEl.setAttribute('id', 'hide-');
+    hideEl.setAttribute('class', 'hide')
+  }
+
+  var btn = document.getElementsByClassName('btnQuadro')
+
+  for( var i = 0; i < el.length; i++){
+    btn[i].addEventListener('click', window.onload = ocultar)
+  }
 }
 
-var btn = document.getElementsByClassName('btnQuadro')
-
-for( var i = 0; i < el.length; i++){
-  btn[i].addEventListener('click', window.onload = ocultar)
-}
 
 function ocultar(e) {
   hide = 0 
@@ -28,6 +32,8 @@ function ocultar(e) {
   }
 }
 
+
+function destaqueQuadro(){
 for(i = 0; i < el.length; i++){
     var quadro = el[i];
     quadro.setAttribute("id", "tabQuadro")
@@ -38,3 +44,8 @@ var g = document.getElementById('tabQuadro').parentElement.parentElement;
 g.setAttribute("class", "tabQuadro")
 
 console.log(g)
+
+}
+
+
+window.onload = esconteTitulo(), revelarQuadro(), ocultar(), destaqueQuadro();
