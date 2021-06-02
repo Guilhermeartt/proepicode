@@ -21,14 +21,14 @@ function revelarQuadro(){
   for( var i = 0; i < el.length; i++){
     btn[i].addEventListener('click', window.onload = ocultar)
   }
-}
+    function ocultar(event) {
+      hide = 0 
+        if(hide == 0){
+        s = document.getElementById(event.target.id).closest("tr").childNodes[3].classList.remove("hide");
+      }
+    }
 
 
-function ocultar(event) {
-  hide = 0 
-    if(hide == 0){
-    s = document.getElementById(event.target.id).closest("tr").childNodes[3].classList.remove("hide");
-  }
 }
 
 
@@ -52,8 +52,6 @@ window.onload = function init(){
   console.log("esconder título ativado")
   revelarQuadro();
   console.log("esconder revelar Quadro ativado") 
-  ocultar(); 
-  console.log("esconder ocultar ativado")
   destaqueQuadro();
   console.log("esconder destaque Quadro ativado")
 
