@@ -24,10 +24,10 @@ function revelarQuadro(){
 }
 
 
-function ocultar(e) {
+function ocultar(event) {
   hide = 0 
     if(hide == 0){
-    s = document.getElementById(e.target.id).closest("tr").childNodes[3].classList.remove("hide");
+    s = document.getElementById(event.target.id).closest("tr").childNodes[3].classList.remove("hide");
   }
 }
 
