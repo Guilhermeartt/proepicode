@@ -1,5 +1,7 @@
+window.onload = function esconteTitulo(){
 var v = document.getElementById("aula-titulo-0");
 v.parentElement.style.visibility = "hidden";
+}
 
 var el = document.getElementsByClassName("tabelaneuro");
 
