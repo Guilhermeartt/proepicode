@@ -364,9 +364,7 @@
 	table.Ptabela {
 	  font-size: 11.0pt;
 	  font-family: "Calibri", sans-serif;
-	  box-shadow: 5px 5px 0 #779fb6;
-      -webkit-box-shadow: 5px 5px 0 #779fb6;
-      -moz-box-shadow: 5px 5px 0 #779fb6;
+	  
 	}
 
     .video-js {
