@@ -56,7 +56,7 @@ function loadSCRIPTmore() {
 
 	document.getElementsByTagName("head").item(0).appendChild(lnk);
 }
-window.onload = loadSCRIPTmore()
+//window.onload = loadSCRIPTmore()
 
 function loadSCRIPTmodal() {
 	var lnk = document.createElement('script');
