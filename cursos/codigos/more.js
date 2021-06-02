@@ -33,14 +33,16 @@ function revelarQuadro(){
 
 
 function destaqueQuadro(){
-for(i = 0; i < el.length; i++){
-    var quadro = el[i];
-    quadro.setAttribute("id", "tabQuadro")
-console.log(quadro);
-}
+  var el = document.getElementsByClassName("tabelaneuro");
 
-var g = document.getElementById('tabQuadro').parentElement.parentElement;
-g.setAttribute("class", "tabQuadro")
+    for(i = 0; i < el.length; i++){
+        var quadro = el[i];
+        quadro.setAttribute("id", "tabQuadro")
+    console.log(quadro);
+    }
+
+    var g = document.getElementById('tabQuadro').parentElement.parentElement;
+    g.setAttribute("class", "tabQuadro")
 
 console.log(g)
 
