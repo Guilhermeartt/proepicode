@@ -45,23 +45,18 @@ function destaqueQuadro(){
         var g = document.getElementById('tabQuadro-' + i).parentElement.parentElement;
 
         g.setAttribute("class", "tabQuadro")
-    console.log(quadro);
+    
     }
-
-    
-    
-
-console.log(g)
 
 }
 
 
 window.onload = function init(){
   esconteTitulo();
-  console.log("esconder título ativado")
+  //console.log("esconder título ativado")
   revelarQuadro();
-  console.log("esconder revelar Quadro ativado") 
+  //console.log("esconder revelar Quadro ativado") 
   destaqueQuadro();
-  console.log("esconder destaque Quadro ativado")
+  //console.log("esconder destaque Quadro ativado")
 
 }
