@@ -49,10 +49,12 @@ console.log(g)
 
 window.onload = function init(){
   esconteTitulo();
-  revelarQuadro(); 
+  console.log("esconder título ativado")
+  revelarQuadro();
+  console.log("esconder revelar Quadro ativado") 
   ocultar(); 
+  console.log("esconder ocultar ativado")
   destaqueQuadro();
+  console.log("esconder destaque Quadro ativado")
 
 }
-
-init()
