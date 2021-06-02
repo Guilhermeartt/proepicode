@@ -1,6 +1,6 @@
 function esconteTitulo(){
-var v = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
-console.log(v)
+var v = document.getElementById("aula-titulo-0").style.margin = "0px";
+var c = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
 }
 
 
@@ -10,9 +10,11 @@ function revelarQuadro(){
   for( var i = 0; i < el.length; i++){
     var addId = el[i].getElementsByTagName('td')[0];
     var hideEl = el[i].getElementsByTagName('td')[1];
+    var centerLine = el[i].getElementsByTagName('td')[0].children;
+    centerLine[0].style.textAlign = 'center';
     z = i+1;
     addId.setAttribute('id', 'btnQuadro-' + z);
-    addId.setAttribute('class', 'btnQuadro')
+    addId.setAttribute('class', 'btnQuadro');
     hideEl.setAttribute('id', 'hide-');
     hideEl.setAttribute('class', 'hide')
   }
@@ -38,12 +40,16 @@ function destaqueQuadro(){
 
     for(i = 0; i < el.length; i++){
         var quadro = el[i];
-        quadro.setAttribute("id", "tabQuadro")
+        quadro.setAttribute("id", "tabQuadro-" + i)
+
+        var g = document.getElementById('tabQuadro-' + i).parentElement.parentElement;
+
+        g.setAttribute("class", "tabQuadro")
     console.log(quadro);
     }
 
-    var g = document.getElementById('tabQuadro').parentElement.parentElement;
-    g.setAttribute("class", "tabQuadro")
+    
+    
 
 console.log(g)
 
