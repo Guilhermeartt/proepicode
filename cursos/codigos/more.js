@@ -1,6 +1,5 @@
 function esconteTitulo(){
-var v = document.getElementById("aula-titulo-0");
-v.parentElement.style.visibility = "hidden";
+var v = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
 }
 
 
@@ -48,4 +47,12 @@ console.log(g)
 }
 
 
-window.onload = esconteTitulo(), revelarQuadro(), ocultar(), destaqueQuadro();
+window.onload = function init(){
+  esconteTitulo();
+  revelarQuadro(); 
+  ocultar(); 
+  destaqueQuadro();
+
+}
+
+init()
