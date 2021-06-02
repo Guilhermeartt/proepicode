@@ -1,5 +1,6 @@
 function esconteTitulo(){
 var v = document.getElementById("aula-titulo-0").parentElement.style.visibility = "hidden";
+console.log(v)
 }
 
 
