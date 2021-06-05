@@ -177,9 +177,10 @@ while True:
             soup = add_body
 
             data_file.close()
-            lines = soup.prettify()
-            lines = lines.splitlines(True)
-
+            soup.prettify()
+            soup.smooth()         
+            lines = str(soup).splitlines(True)
+            
             # METODO 2
             html = ''
             for line in lines:
