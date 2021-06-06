@@ -220,7 +220,7 @@ while True:
                         <html>
                         <head>
                             <meta charset="utf-8">
-                            <title>SN_AULA_01</title>
+                            <title>''' + title_aula + '''</title>
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
                             <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
                         </head>
