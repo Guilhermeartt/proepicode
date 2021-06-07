@@ -56,7 +56,7 @@
 	td li {
 	  margin-left: 80px;
 	}
-	td li ::marker {
+	td li::marker {
 		display: list-item;
 		color: #2e2e2e;
 	  }
