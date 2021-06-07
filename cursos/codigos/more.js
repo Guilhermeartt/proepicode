@@ -52,8 +52,8 @@ function destaqueQuadro(){
 
 
 function hideReferencia () {
-  u = document.getElementsByClassName("Ptabela")
-  u[3].style.display = "none"
+  var u = document.getElementsByClassName("Ptabela");
+  u[2].style.display = "none";
 }
 
 
