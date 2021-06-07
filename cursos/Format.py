@@ -12,7 +12,7 @@ layout = [
     [sg.Text('Buscar arquivo (docx ou html):')],
     [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    #[sg.Output(size=(60, 20))],
+    [sg.Output(size=(60, 20))],
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
@@ -45,6 +45,7 @@ while True:
 
         # Validacao da extencao do arquivo selecionado
         if (extension == 'docx' or extension == 'doc') and os.name == 'nt':
+            print('Aguarde enquanto o documento é convertido...')
             wdFormatFilteredHTML = 10
 
             # Cria instancia de um objeto COM para manipular Documentos Word
@@ -188,8 +189,8 @@ while True:
             html = ''
             for line in lines:
                 # Passo 1
-                if 'td' in line:
-                    line = re.sub('width="([0-9%]*)" ', '', line)
+                if not 'img' in line:
+                    line = re.sub(' width="([0-9]*)">', '>', line)
                 # Passo 2
                 if 'style=' in line:
                     line = re.sub('width:([a-z0-9\.%]*);', '', line)
@@ -222,8 +223,9 @@ while True:
                         <!doctype html>
                         <html>
                         <head>
-                            <meta charset="utf-8">
                             <title>''' + title_aula + '''</title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
                             <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
                         </head>
