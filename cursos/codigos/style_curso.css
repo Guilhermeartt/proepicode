@@ -58,6 +58,7 @@
 	}
 	td li ::marker {
 		display: list-item;
+		color: #2e2e2e;
 	  }
 	p.txttabela8 {
 	  margin: 0cm;
