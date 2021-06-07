@@ -115,7 +115,10 @@ while True:
                 p.name = 'li'
                 p.span.extract()
 
-            
+             
+            #ul = soup.select_one('td li')
+            #ul.warp(soup.new_tah("ul")
+        
 
             # insere botão para ocultar ou mostrar a tabela saiba mais
             

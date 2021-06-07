@@ -51,6 +51,12 @@ function destaqueQuadro(){
 }
 
 
+function hideReferencia () {
+  u = document.getElementsByClassName("Ptabela")
+  u[3].style.display = "none"
+}
+
+
 window.onload = function init(){
   esconteTitulo();
   //console.log("esconder título ativado")
@@ -58,5 +64,6 @@ window.onload = function init(){
   //console.log("esconder revelar Quadro ativado") 
   destaqueQuadro();
   //console.log("esconder destaque Quadro ativado")
+  hideReferencia ()
 
 }

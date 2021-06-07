@@ -54,11 +54,13 @@
 	  color: black;
 	}
 	td li {
-	  margin-left: 80px;
+		padding-top: 15px;
+		margin-left: 80px;
 	}
 	td li::marker {
 		display: list-item;
 		color: #2e2e2e;
+		padding-right: 10px;
 	  }
 	p.txttabela8 {
 	  margin: 0cm;
