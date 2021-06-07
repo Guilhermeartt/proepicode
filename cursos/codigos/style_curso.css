@@ -54,8 +54,11 @@
 	  color: black;
 	}
 	td li {
-	  margin-left: 55px;
+	  margin-left: 80px;
 	}
+	td li ::marker {
+		display: list-item;
+	  }
 	p.txttabela8 {
 	  margin: 0cm;
 	  margin-bottom: .0001pt;
