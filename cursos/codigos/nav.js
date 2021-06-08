@@ -44,6 +44,6 @@ for (i = 0; i < titles.length; i++) {
   titles[i].setAttribute('id', id);
 }
 
-
-
-
+// Hide page title
+$('#aula-titulo-0').css('margin', '0px');
+$('#aula-titulo-0').parent().css('visibility', 'hidden');
