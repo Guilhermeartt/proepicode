@@ -49,9 +49,7 @@ function hideReferencia() {
 }
 
 window.onload = function init() {
-  configQuadro();
-  //console.log("esconder revelar Quadro ativado") 
-  destaqueQuadro();
-  //console.log("esconder destaque Quadro ativado")
   hideReferencia();
+  destaqueQuadro();
+  configQuadro(); 
 }
