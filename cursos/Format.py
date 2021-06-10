@@ -116,10 +116,31 @@ while True:
                 p.name = 'li'
                 p.span.extract()
 
-             
+            # modifica imagem da tabela de saiba mais
+            imgs_more = soup.select('.tabelaneuro .Fonte')
+            i = 0
+
+            for img in imgs_more:
+                td = img.parent
+                tr = td.parent
+                text = tr.find("p", "txtrec").get_text()
+
+                new_div = soup.new_tag('div', attrs={"class": "more"})
+                new_wrapper = soup.new_tag('div', attrs={"class": "text"})
+                new_title = soup.new_tag('p')
+                new_subtitle = soup.new_tag('p')
+
+                new_title.append(text)
+                new_subtitle.append('Clique aqui')
+                new_wrapper.append(new_title)
+                new_wrapper.append(new_subtitle)
+
+                new_div.append(img)
+                new_div.append(new_wrapper)
+                td.append(new_div)
+            
             #ul = soup.select_one('td li')
             #ul.warp(soup.new_tah("ul")
-        
 
             # insere botão para ocultar ou mostrar a tabela saiba mais
             
@@ -129,9 +150,9 @@ while True:
             #for table in table_more:
             #    table_id = 'saiba-mais-' + str(i)
             #    table['id'] = table_id
-#
-             #   new_div = soup.new_tag('div', attrs={"class": "more-button"})
-             #   new_button = soup.new_tag('button', attrs={"class": "toggle-more", "target": table_id})
+
+            #   new_div = soup.new_tag('div', attrs={"class": "more-button"})
+            #   new_button = soup.new_tag('button', attrs={"class": "toggle-more", "target": table_id})
             #    new_button.append('Saiba Mais')
             #    new_div.append(new_button)
 
