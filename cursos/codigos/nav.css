@@ -29,7 +29,7 @@ button.nav-button {
 .nav-button {
   border: none;
   display: inline-block;
-  padding: 24px 20px ;
+  padding: 24px 20px;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
@@ -44,7 +44,6 @@ button.nav-button {
   color: #fff !important;
   background-color: #0077b6 !important;
   padding: 24px 20px;
-
 }
 .nav-bar-item:hover {
   color: #fff !important;
@@ -106,17 +105,14 @@ p.P1Ttulonumerado,
   scroll-margin-top: 100px;
 }
 
-
-button#close-nav{
+button#close-nav {
   padding: 29px 17px !important;
   background-color: #185f99 !important;
-  color:#fff;
+  color: #fff;
 }
 button#close-nav:hover {
   background-color: #0077b6 !important;
 }
-
-
 
 /*Scrolbar in*/
 
@@ -125,17 +121,16 @@ button#close-nav:hover {
 }
 #sidebar-nav::-webkit-scrollbar {
   width: 10px;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 #sidebar-nav::-webkit-scrollbar-thumb {
   background: #eff7ff;
 }
 /*Scrolbar out*/
 
-
 /*botão quadro*/
 td {
-  overflow:hidden;
+  overflow: hidden;
   max-height: 1000px;
   transition: max-height 1s ease-in-out;
 }
@@ -145,13 +140,11 @@ td.hide {
   pointer-events: none;
 }
 
-
-.txtrec img{
+.txtrec img {
   cursor: pointer;
 }
 
-
-.txtrec img:hover{
+.txtrec img:hover {
   background-color: #0f6da3;
   border-radius: 0px 0px 0px 45px;
 }
