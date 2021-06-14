@@ -12,7 +12,7 @@ layout = [
     [sg.Text('Buscar arquivo (docx ou html):')],
     [sg.Input(key='arquivo'), sg.FileBrowse()],
     [sg.OK(), sg.Cancel('Cancelar')],
-    [sg.Output(size=(60, 20))],
+    #[sg.Output(size=(60, 20))],
 ]
 # Janela
 janela = sg.Window('Formatar aula', layout)
@@ -117,7 +117,7 @@ while True:
                 p.span.extract()
 
             # modifica imagem da tabela de saiba mais
-            imgs_more = soup.select('.tabelaneuro .Fonte')
+            imgs_more = soup.select('.tabelaneuro')
             i = 0
 
             for img in imgs_more:
@@ -164,9 +164,9 @@ while True:
             button_img = soup.select('.Pbutton img')
             button_caption = soup.select('.txtrec')
 
-            if len(button_img) == 0:
-                print('Essa aula não possui botões de "Saiba mais"')
-                break
+            #if len(button_img) == 0:
+            #    print('Essa aula não possui botões de "Saiba mais"')
+            #    break
 
             for img in button_img:
                 parent = img.find_parent("p")

@@ -36,7 +36,7 @@ function destaqueQuadro() {
     var quadro = table[i];
     quadro.setAttribute("id", "tabQuadro-" + i)
 
-    var g = document.getElementById('tabQuadro-' + i).parentElement.parentElement;
+    var g = document.getElementById('tabQuadro-' + i).parentElement.parentElement.parentElement;
     g.setAttribute("class", "tabQuadro")
   }
 }
