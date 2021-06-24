@@ -121,11 +121,12 @@ while True:
             i = 0
 
             for img in imgs_more:
-                td = img.parent
-                tr = td.parent
-                text = tr.find("p", "txtrec").get_text()
+                div_center = img.parent
+                td = div_center.parent
+                quadro = img.find("td")
+                text = td.find("p", "txtrec").get_text()
 
-                new_div = soup.new_tag('div', attrs={"class": "more"})
+                div_more = soup.new_tag('div', attrs={"class": "more"})
                 new_wrapper = soup.new_tag('div', attrs={"class": "text"})
                 new_title = soup.new_tag('p')
                 new_subtitle = soup.new_tag('p')
@@ -135,9 +136,9 @@ while True:
                 new_wrapper.append(new_title)
                 new_wrapper.append(new_subtitle)
 
-                new_div.append(img)
-                new_div.append(new_wrapper)
-                td.append(new_div)
+                div_more.append(img)
+                quadro.append(new_wrapper)
+                div_center.append(div_more)
             
             #ul = soup.select_one('td li')
             #ul.warp(soup.new_tah("ul")
