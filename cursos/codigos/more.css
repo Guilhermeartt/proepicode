@@ -23,7 +23,6 @@ td.hide {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  cursor: pointer;
 }
 .more {
   display: flex;
@@ -33,9 +32,14 @@ td.hide {
 .more .more-button {
   display: flex;
 }
+.more p,
+.more div {
+  cursor: pointer;
+}
 .more .text {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
   text-align: center;
   margin-left: 0px;
 }
