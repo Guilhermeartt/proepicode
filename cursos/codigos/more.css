@@ -42,6 +42,8 @@ td.hide {
   font-weight: bold;
   text-align: center;
   margin-left: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 tr.hide-tr {
