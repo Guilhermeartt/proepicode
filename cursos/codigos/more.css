@@ -50,3 +50,18 @@ tr.hide-tr {
   display: none;
   visibility: hidden;
 }
+
+.PCliqueAqui {
+    padding: 6px 5px;
+    background-color: #185f99;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.PCliqueAqui:hover{
+  padding: 6px 5px;
+  background-color: #fff;
+  color: #185f99;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #454545;
+}

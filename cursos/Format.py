@@ -129,7 +129,7 @@ while True:
                 div_more = soup.new_tag('div', attrs={"class": "more"})
                 new_wrapper = soup.new_tag('div', attrs={"class": "text"})
                 new_title = soup.new_tag('p')
-                new_subtitle = soup.new_tag('p')
+                new_subtitle = soup.new_tag('p', attrs={"class": "PCliqueAqui"})
 
                 new_title.append(text)
                 new_subtitle.append('Clique aqui')
