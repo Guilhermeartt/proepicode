@@ -1,0 +1,1504 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Clase 4 - Gestión de Casos</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.Ptextotabela, li.Ptextotabela, div.Ptextotabela
+	{mso-style-name:P_texto_tabela;
+	mso-style-link:"P_texto_tabela Char";
+	margin:0cm;
+	text-align:center;
+	line-height:115%;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+span.PtextotabelaChar
+	{mso-style-name:"P_texto_tabela Char";
+	mso-style-link:P_texto_tabela;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:39.4pt;
+	text-indent:-21.55pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:17.85pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:61.2pt;
+	text-indent:-25.2pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='position:relative;z-index:251628031'><span
+style='position:absolute;left:-125px;top:-10px;width:721px;height:900px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=79></td>
+  <td width=185></td>
+  <td width=37></td>
+  <td width=244></td>
+  <td width=113></td>
+  <td width=29></td>
+  <td width=34></td>
+ </tr>
+ <tr>
+  <td height=82></td>
+  <td></td>
+  <td colspan=6 align=left valign=top><img width=642 height=82
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image001.png"
+  alt="ProEpi&#13;&#10;Associação Brasileira de Profissionais de Epidemiologia de Campo&#13;&#10;"></td>
+ </tr>
+ <tr>
+  <td height=103></td>
+ </tr>
+ <tr>
+  <td height=97></td>
+  <td colspan=2></td>
+  <td colspan=2 align=left valign=top><img width=281 height=97
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image002.png"
+  alt="Logotipo&#10;&#10;Descrição gerada automaticamente com confiança média"></td>
+ </tr>
+ <tr>
+  <td height=54></td>
+ </tr>
+ <tr>
+  <td height=116></td>
+  <td colspan=3></td>
+  <td colspan=2 align=left valign=top><img width=357 height=116
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image003.png"></td>
+ </tr>
+ <tr>
+  <td height=124></td>
+ </tr>
+ <tr>
+  <td height=324></td>
+  <td colspan=6 align=left valign=top><img width=687 height=324
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image004.png"
+  alt="Clase 4 - Gestión de Casos"></td>
+ </tr>
+</table>
+
+</span></span>&nbsp;</p>
+
+<p class=MsoNormal></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><a name="_Hlk76074048"><b><span
+  style='font-size:10.0pt;color:black'>Ficha Técnica</span></b></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación General – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación Pedagógica –</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> Hirla Arruda</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Contendista – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz, Felipe Lopes,
+  Luiz Bruno Gomes</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Diseño Instruccional</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> <b>- </b>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustración – </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Traducción – </span></b><span
+  style='color:black'>Yorrana Martins Ferreira<b>-</b></span><b><span
+  style='color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span lang=ES-CO style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Supervisión – Asociación
+  Brasileña de Profesionales de Epidemiología de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Socios</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>CDC - Centro de Control y Prevención de
+  Enfermedades</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>Tephnet - Training Programs in Epidemiology
+  and Public Health Interventions Network</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>UNB - Universidade de Brasília</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>GOARN - Global Outbreak Alert and Response
+  Network</span></p>
+  <p class=arttficha><span lang=ES-CO style='color:black'>OMS - Organización
+  Mundial de la Salud</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=ES-CO style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Copyright 2021,
+Asociación Brasileña de Profesionales de Epidemiología de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Todos los derechos
+reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>La copia total o
+parcial, sin autorización expresa del (de los) actor(es) o con el fin de lucro,
+constituye crimen contra la propiedad intelectual, conforme a lo estipulado en
+la Ley nº 9.610/1998 (Ley de Derechos de Autor), con sanciones previstas en el
+Código Penal, artículo 184, párrafos 1° al 3°, sin perjuicio de las sanciones
+aplicables a la especie. </span></p>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=Ptabelasum border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'><a
+  name="_Toc76078673"></a>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado style='margin-left:0cm;text-indent:0cm'>Sumário</p>
+  </div>
+  <p class=MsoToc1><a
+  href="#_Toc76078673"></a></p>
+  <p class=MsoToc1><a href="#_Toc76078674">1.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Contextualizando<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76078675">2.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Conclusión<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76078676">Referência bibliográfica<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Clase 4 - Gestión de Casos </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=562 height=325 id=image15.jpg
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image005.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Image</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> 1 – ilustra</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> de cone</span><span
+  lang=ES-CO>xiones</span><span lang=ES-CO style='color:black'> Por
+  twenty20photos</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst><span lang=ES-CO style='font-size:13.0pt;
+  line-height:150%;color:#202124;background:#F8F9FA'>¡</span><span lang=ES-CO>Hola!</span><span
+  lang=ES-CO style='color:black'>,</span></p>
+  <p class=PpargrafoCxSpLast><span lang=ES-CO>En esta clase, aprenderás a crear
+  un caso en el Go.Data y entender todas las variables que hacen parte de este
+  proceso.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En el final de la clase usted será capaz
+  de:</span></p>
+  <p class=PBulletsCxSpFirst><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Aprender a crear un caso;</span></p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Conocer las variables obligatorias de un caso;</span></p>
+  <p class=PBulletsCxSpLast><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Aprender a llenar  las informaciones de un
+  caso.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76078674">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Contextualizando</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>El</span><span lang=ES-CO
+  style='color:black'> Go.Data </span><span lang=ES-CO>presenta</span><span
+  lang=ES-CO style='color:black'> diferentes tipos de bancos de da</span><span
+  lang=ES-CO>t</span><span lang=ES-CO style='color:black'>os e</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> su programa como o
+  de casos, contactos, resultados de laborat</span><span lang=ES-CO>o</span><span
+  lang=ES-CO style='color:black'>rios </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> eventos. D</span><span lang=ES-CO>elante de
+  eso</span><span lang=ES-CO style='color:black'>, </span><span lang=ES-CO>es</span><span
+  lang=ES-CO style='color:black'> importante resaltar </span><span lang=ES-CO>el
+  relleno</span><span lang=ES-CO style='color:black'> completo d</span><span
+  lang=ES-CO>e las</span><span lang=ES-CO style='color:black'> vari</span><span
+  lang=ES-CO>ables</span><span lang=ES-CO style='color:black'> para obten</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>e los</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>mejores</span><span lang=ES-CO style='color:black'> resultados </span><span
+  lang=ES-CO>con el</span><span lang=ES-CO style='color:black'> software </span><span
+  lang=ES-CO>y</span><span lang=ES-CO style='color:black'> la constru</span><span
+  lang=ES-CO>cción</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>e los</span><span lang=ES-CO style='color:black'> gráficos </span><span
+  lang=ES-CO>y</span><span lang=ES-CO style='color:black'> curvas
+  epidemiológicas que s</span><span lang=ES-CO>e</span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>generan</span><span lang=ES-CO
+  style='color:black'> automática</span><span lang=ES-CO>mente</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>en el</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>panel</span><span
+  lang=ES-CO style='color:black'> de </span><span lang=ES-CO>control</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Por tanto, </span><span
+  lang=ES-CO>en esta clase</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>aprenderemos</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>y</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>comprenderemos</span><span lang=ES-CO style='color:black'> todas
+  las vari</span><span lang=ES-CO>ables</span><span lang=ES-CO
+  style='color:black'> que perten</span><span lang=ES-CO>ecen</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>al</span><span
+  lang=ES-CO style='color:black'> proceso de cr</span><span lang=ES-CO>eación</span><span
+  lang=ES-CO style='color:black'> de u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> caso </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> c</span><span lang=ES-CO>ó</span><span
+  lang=ES-CO style='color:black'>mo ellas, </span><span lang=ES-CO>cuando se</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>llenan</span><span
+  lang=ES-CO style='color:black'>, </span><span lang=ES-CO>influyen</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>en el curso del brote</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Para cr</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'>ar u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> caso </span><span
+  lang=ES-CO>tendrás que seguir algunos pasos</span><span lang=ES-CO
+  style='color:black'>,</span><span lang=ES-CO style='color:#202124;background:
+  #F8F9FA'>¡</span><span lang=ES-CO style='color:black'>vamos!</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>1.</span></b><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>Después de ingresar
+  sus credenciales</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>de</span><span lang=ES-CO style='color:black'> Go.Data, </span><span
+  lang=ES-CO>haga clic en el</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>botón</span><span lang=ES-CO style='color:black'> &quot;Men</span><span
+  lang=ES-CO>ú</span><span lang=ES-CO style='color:black'>&quot; ( </span><span
+  lang=ES-CO>en verde</span><span lang=ES-CO style='color:black'>) </span><span
+  lang=ES-CO>a la </span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>izquierda</span><span lang=ES-CO style='color:black'>. </span><span
+  style='color:black'>( Figura 1)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=163 id=image8.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image006.png"></p>
+  <p class=MsoCaption><span style='color:black'>Figura 1 - Ficha Captura de
+  pantalla  Go.Data.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>2.</span></b><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>Luego haga clic</span><span
+  lang=ES-CO style='color:black'>,</span><span lang=ES-CO> en</span><span
+  lang=ES-CO style='color:black'> &quot;+ Casos&quot;.( </span><span
+  style='color:black'>Figura 2)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=138 height=301 id=image11.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image007.png"></p>
+  <p class=MsoCaption><span style='color:black'>Figura 2 - </span>Pestaña de
+  menú Captura de pantalla<span style='color:black'> Go.Data.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>2.</span></b><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>Después de ingresar a
+  la base de datos de casos, haga clic en el botón “Agregar”</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=41 id=image2.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image008.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 3. Captura de
+  </span><span lang=ES-CO>pantalla de la pestaña de caso</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Se abrirá una nueva ventana y en ella
+  iniciaremos el proceso de creación de un caso en el programa</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=585 height=243 id=image18.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image009.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 4. Captura de
+  </span><span lang=ES-CO>pantalla de la pestaña personal de la creación de un
+  caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>3.</span></b><span
+  lang=ES-CO style='color:black'> Para </span><span lang=ES-CO>completar</span><span
+  lang=ES-CO style='color:black'> u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> caso </span><span lang=ES-CO>en el</span><span
+  lang=ES-CO style='color:black'> programa Go.Data </span><span lang=ES-CO>debe</span><span
+  lang=ES-CO style='color:black'> seguir algu</span><span lang=ES-CO>nos</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>pasos</span><span
+  lang=ES-CO style='color:black'>. A</span><span lang=ES-CO>h</span><span
+  lang=ES-CO style='color:black'>ora vamos entender las vari</span><span
+  lang=ES-CO>ables</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> prime</span><span
+  lang=ES-CO>r</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>paso,</span><span lang=ES-CO style='color:black'> que </span><span
+  lang=ES-CO>es</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> <b>pe</b></span><b><span
+  lang=ES-CO>rsonal</span></b><span lang=ES-CO style='color:black'>:</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div align=center>
+  <table class=arttRelatriodeGesto border=1 cellspacing=7 cellpadding=0
+   width="100%" style='width:100.0%;border:solid white 1.5pt'>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    lang=ES-CO style='color:white'>Primeir Nombre, Nombre del Medio y Apellido:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>Campos a rellenar según el nombre de
+    usuario.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Identificador de Caso:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO>Máscara numérica de identificación de caso.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Sexo:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>rellena el sexo según el caso.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Embarazo:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO>Marque si la paciente está embarazada según el trimestre.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Ocupación</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>rellenar de acuerdo a la
+    ocupación/profesional del caso.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Fecha de notificación:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO>la fecha de notificación del caso.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>edad/ fecha de nacimiento:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>escriba la edad o fecha de nacimiento del
+    usuario.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Nivel de riesgo:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO>És posible marcar el nivel de riesgo según el marco del caso.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Razón de riesgo:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>Seleccione el nivel de riesgo de acuerdo con
+    el cuadro de casos.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Vacuna recibida</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO>En este campo es posible agregar la vacuna adquirida en este
+    campo.</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=215 valign=top style='width:161.45pt;border:solid white 1.5pt;
+    background:#1F3864;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><b><span
+    style='color:white'>Documentos:</span></b></p>
+    </td>
+    <td width=365 valign=top style='width:273.8pt;border:solid white 1.5pt;
+    background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela align=left style='margin-top:6.0pt;margin-right:0cm;
+    margin-bottom:0cm;margin-left:5.65pt;margin-bottom:.0001pt;text-align:left'><span
+    lang=ES-CO style='color:black'>En esta variable es posible agregar como
+    documentos como CPF, licencia de conducir, RG y otros.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=Ppargrafo></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="100%"
+   style='width:100.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img width=128 height=109 id="Imagem 33"
+    src="Clase%204%20Sarampion%20Apostila_arquivos/image010.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>¡Tome Nota!</span></b></p>
+    <p class=txtrec><span style='color:black'>No siempre es posible obtener
+    toda la información de un caso, sin embargo, el número máximo de variables
+    llenas en el programa permite mejores estudios en el brote.</span></p>
+    <p class=txtrec><span style='color:black'>¡Nunca olvide completar las
+    variables requeridas!¡Sin ellos no hay forma de crear el caso!</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>La</span><span lang=ES-CO
+  style='color:black'>s vari</span><span lang=ES-CO>ables</span><span
+  lang=ES-CO style='color:black'> ob</span><span lang=ES-CO>ligatorias</span><span
+  lang=ES-CO style='color:black'> de </span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'>ste proceso son:  Nombre </span><span
+  lang=ES-CO>y</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>fecha</span><span lang=ES-CO style='color:black'> de Notifica</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>4.</span></b><span
+  lang=ES-CO style='color:black'> A</span><span lang=ES-CO>h</span><span
+  lang=ES-CO style='color:black'>ora vayamos </span><span lang=ES-CO>al segundo
+  paso para</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>crear</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> caso que </span><span
+  lang=ES-CO>sería</span><span lang=ES-CO style='color:black'> la </span><b><span
+  lang=ES-CO>pestaña</span></b><b><span lang=ES-CO style='color:black'> d</span></b><b><span
+  lang=ES-CO>e</span></b><b><span lang=ES-CO style='color:black'> </span></b><b><span
+  lang=ES-CO>dirección</span></b><span lang=ES-CO style='color:black'>: </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=183 id=image9.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image011.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 5 </span><span
+  lang=ES-CO>Dirección de creación de caso de pestaña de captura de pantalla</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Ubicación</span></b><b><span
+  lang=ES-CO style='color:black'>:</span></b><span lang=ES-CO style='color:
+  black'> Esta vari</span><span lang=ES-CO>able</span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>cambia</span><span lang=ES-CO
+  style='color:black'> de acu</span><span lang=ES-CO>e</span><span lang=ES-CO
+  style='color:black'>rdo co</span><span lang=ES-CO>n</span><span lang=ES-CO
+  style='color:black'> las </span><span lang=ES-CO>ubicaciones</span><span
+  lang=ES-CO style='color:black'> pr</span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'>estabelecidas </span><span lang=ES-CO>en el
+  brote.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Dirección</span></b><b><span
+  lang=ES-CO style='color:black'>: </span></b><span lang=ES-CO>completando la
+  dirección del</span><span lang=ES-CO style='color:black'> caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Ciudad </span></b><b><span
+  lang=ES-CO>y</span></b><b><span lang=ES-CO style='color:black'> Código
+  Postal: </span></b><span lang=ES-CO>Complete</span><span lang=ES-CO
+  style='color:black'> la ciudad </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> in</span><span lang=ES-CO>grese</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>código postal</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>del caso</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Latitud </span></b><b><span
+  lang=ES-CO>y</span></b><b><span lang=ES-CO style='color:black'> Longitud: </span></b><span
+  lang=ES-CO>Es</span><span lang=ES-CO style='color:black'> possível </span><span
+  lang=ES-CO>también marcar la latitud y la longitud de una ubicación.</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Número d</span></b><b><span
+  lang=ES-CO>el</span></b><b><span lang=ES-CO style='color:black'> Tel</span></b><b><span
+  lang=ES-CO>é</span></b><b><span lang=ES-CO style='color:black'>fon</span></b><b><span
+  lang=ES-CO>o</span></b><b><span lang=ES-CO style='color:black'>: </span></b><span
+  lang=ES-CO>Llenando el número</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'> tel</span><span
+  lang=ES-CO>é</span><span lang=ES-CO style='color:black'>fon</span><span
+  lang=ES-CO>o</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>El software le permite registrar más de
+  una dirección para el caso. Para realizar este proceso haga clic en “ agregar
+  otra dirección” y complete los campos con la información solicitada.</span><span
+  lang=ES-CO style='color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>5.</span></b><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>Después de este paso,
+  pasamos a la tercera parte, que es la</span><span lang=ES-CO
+  style='color:black'> </span><b><span lang=ES-CO>epidemiología</span></b><span
+  lang=ES-CO style='color:black'>: </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=167 id=image13.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image012.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 6 Captura de </span><span
+  lang=ES-CO>pantalla de la pestaña de epidemiología de la creación de un</span><span
+  lang=ES-CO style='color:black'> caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Clasificación: </span></b><span
+  lang=ES-CO>es el estado de clasificación del caso como:</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>s</span>ospechoso<span
+  style='color:black'>;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>confirmado;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>pro</span>bable<span
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Fecha</span></b><b><span lang=ES-CO
+  style='color:black'> de </span></b><b><span lang=ES-CO>Inicio:</span></b><b><span
+  lang=ES-CO style='color:black'> </span></b><span lang=ES-CO>esta</span><span
+  lang=ES-CO style='color:black'> vari</span><span lang=ES-CO>able</span><span
+  lang=ES-CO style='color:black'> de</span><span lang=ES-CO>b</span><span
+  lang=ES-CO style='color:black'>e </span><span lang=ES-CO>llenarse</span><span
+  lang=ES-CO style='color:black'> co</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> la </span><span lang=ES-CO>fecha</span><span
+  lang=ES-CO style='color:black'> de </span><span lang=ES-CO>inicio</span><span
+  lang=ES-CO style='color:black'> d</span><span lang=ES-CO>e los</span><span
+  lang=ES-CO style='color:black'> s</span><span lang=ES-CO>í</span><span
+  lang=ES-CO style='color:black'>ntomas d</span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> caso. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Resultado: </span></b><span
+  lang=ES-CO>es el resultado</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> caso </span><span
+  lang=ES-CO>en el</span><span lang=ES-CO style='color:black'> programa:</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>recuperado;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>fallecido.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Fecha del Resultado: </span></b><span
+  lang=ES-CO>fecha de este resultado.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Fecha en que se convirtió en un caso :
+  </span></b><span lang=ES-CO>fecha en que se confirmó el caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Fecha de infección: </span></b><span
+  lang=ES-CO>fecha en que el caso presentó la infección.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta pestaña de epidemiología, tenemos
+  la opción de “ agregar otro intervalo de fechas” donde es posible registrar
+  información relacionada con la hospitalización o el aislamiento</span><span
+  lang=ES-CO style='color:black'>. Puede agregar la fecha rela</span><span
+  lang=ES-CO>cionada, la ubicación, el nombre del hospital en este intervalo.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=99 id=image12.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image013.png"></p>
+  <p class=MsoCaption><span style='color:black'>Figura 7 - Captura </span>pantalla</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Estos son los pasos para crear un caso,
+  si embargo, puede ver que también tenemos el paso del cuestionario, pero las variables
+  del cuestionario se crearán de acuerdo con el brote.</span><span lang=ES-CO
+  style='color:black'> O sea, es posible crear tantas variables como sean
+  necesarias según la demanda de una emergencia sanitaria y colocarlas en el cu</span><span
+  lang=ES-CO>estionario.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de eso</span><span lang=ES-CO
+  style='color:black'>, </span><span lang=ES-CO>haga clic en </span><span
+  lang=ES-CO style='color:black'> &quot;</span><span lang=ES-CO>Crear</span><span
+  lang=ES-CO style='color:black'> caso&quot;.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=75 id=image14.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image014.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 8. Captura de
+  </span><span lang=ES-CO>pantalla de la pestaña creada para crear un </span><span
+  lang=ES-CO style='color:black'>caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Por</span><a
+  name="_heading=h.wjbggkv3nwkf"></a><span lang=ES-CO> lo tanto siguiendo estos
+  pasos mencionados anteriormente, pudimos crear un caso manualmente en el </span><i><span
+  lang=ES-CO style='color:black'>software</span></i><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Ahora aprendamos cómo modificar/cambiar
+  una información de un caso  existent<a name="_heading=h.jtubeebb3lqf"></a>e y
+  aprendamos la herramienta de cuestionario.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="100%"
+   style='width:100.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img width=128 height=109 id="Imagem 34"
+    src="Clase%204%20Sarampion%20Apostila_arquivos/image015.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>¡Tome Nota!</span></b></p>
+    <p class=txtrec><span style='color:black'>Você sabia que é possível criar o
+    questionário de acordo com as necessidades do seu município e ser utilizado
+    em agravos diferentes? Hoje, mais de 45 países possuem um questionário específico
+    de acordo com seu surto.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=Ppargrafo></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>6.</span></b><a
+  name="_heading=h.gp77y12acs1h"></a><a name="_heading=h.2kp8p077y702"></a><span
+  lang=ES-CO style='color:black'> De</span><span lang=ES-CO>spués de completar
+  el llenado de un caso, puede modificar o cambiar los datos para esto debe
+  hacer clic nuevamente en el botón Menú del lado izquierdo en verde.</span><span
+  lang=ES-CO style='color:black'> </span>Luego haga clic en<span
+  style='color:black'> &quot;+ Casos&quot;.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=138 height=302
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image016.png"><a
+  name="_heading=h.mu9tve5bxe5q"></a></p>
+  <p class=MsoCaption><span style='color:black'>Figura 9. Ficha Captura d</span>e
+  pantalla <span style='color:black'> men</span>ú<span style='color:black'>
+  Go.Data</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de eso, veamos la base de datos
+  de casos y seleccionemos lo que desea modificar o cambiar</span><span
+  lang=ES-CO style='color:black'>. </span>Haga clic<span style='color:black'>
+  &quot;Modificar Caso&quot; ( </span>icono<span style='color:black'> d</span>e<span
+  style='color:black'> </span>rueda dentada<span style='color:black'>)<img
+  width=25 height=22 id=image3.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image017.png"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=141 id=image16.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image018.png"></p>
+  <p class=MsoCaption><span style='color:black'>Figura 10. </span>Pestaña de
+  casos de captura de pantalla</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'> Se</span><a
+  name="_heading=h.ypyx34bjed0a"></a><span lang=ES-CO> abrirá la página donde
+  se presentará toda la información completada sobre el caso y en esta página
+  podemos hacer los cambios necesarios, es decir, cambiar la fecha de
+  notificación, por ejemplo, simplemente cámbiela en esta página y luego haga
+  clic en guardar.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=173 id=image1.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image019.png"><a
+  name="_heading=h.x0onkn8yqn4b"></a></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 11. Captura
+  de </span><span lang=ES-CO>pantalla </span><span lang=ES-CO style='color:
+  black'> </span><span lang=ES-CO>pestaña </span><span lang=ES-CO
+  style='color:black'> casos fun</span><span lang=ES-CO>ción</span><span
+  lang=ES-CO style='color:black'> “modificar caso”</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>U</span><a
+  name="_heading=h.oyxkaqrs96sc"></a><span lang=ES-CO>na</span><span
+  lang=ES-CO style='color:black'> d</span><span lang=ES-CO>e las principales
+  fortalezas</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'> Go.Data </span><span
+  lang=ES-CO>es la capacidad de crear cuestionarios</span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>de acuerdo con el brote </span><span
+  lang=ES-CO style='color:black'>existente o u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> flu</span><span lang=ES-CO>j</span><span
+  lang=ES-CO style='color:black'>o de traba</span><span lang=ES-CO>j</span><span
+  lang=ES-CO style='color:black'>o </span><span lang=ES-CO>propuesto</span><span
+  lang=ES-CO style='color:black'>. </span><span lang=ES-CO>Es</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>decir</span><span
+  lang=ES-CO style='color:black'>, </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> software n</span><span lang=ES-CO>o fue</span><span
+  lang=ES-CO style='color:black'> cr</span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'>ado para u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> agravio específico, </span><span lang=ES-CO>ya</span><span
+  lang=ES-CO style='color:black'> que, </span><span lang=ES-CO>es</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>posible</span><span
+  lang=ES-CO style='color:black'> adaptarse </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>adecuarse de la mejor
+  manera</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>7.</span></b><a
+  name="_heading=h.kwufu5lp3f8"></a><span lang=ES-CO style='color:black'> A</span><span
+  lang=ES-CO>hora aprendamos cómo ingresar al cuestionario.</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Seguiremos nuevamente los pasos
+  mencionados anteriormente en las figuras 8, 9  y 10. Post<a
+  name="_heading=h.vhyk4y7bmaxs"></a>eriormente, podremos visualizar la
+  información del caso y luego hacer clic en la opción de cuestionario.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=240 id=image17.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image020.png"><a
+  name="_heading=h.cy7pqvkmo1vp"></a></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 12. Captura
+  de </span><span lang=ES-CO>pantalla </span><span lang=ES-CO style='color:
+  black'> </span><span lang=ES-CO>pestaña</span><span lang=ES-CO
+  style='color:black'> casos fun</span><span lang=ES-CO>ción</span><span
+  lang=ES-CO style='color:black'> “</span><span lang=ES-CO>cuestionario</span><span
+  lang=ES-CO style='color:black'>”</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Más adelante veremos cómo funciona el
+  cuestionario y cómo registrar informació<a name="_heading=h.oo6612yegx3"></a>n
+  cuando sea necesario.</span><span lang=ES-CO style='color:black'> Es decir,
+  podemos utilizar el cuestionario para el seguimiento de ca</span><span
+  lang=ES-CO>sos o según una demanda de trabajo concreta propuesta.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Por tanto, podemos actualizar la
+  información del cuestionario marcando la fecha para el seguimiento de los c<a
+  name="_heading=h.fv3kti2r8fac"></a>asos seleccionando los síntomas y
+  escribiendo una observación</span><span lang=ES-CO style='color:black'>. </span><span
+  style='color:black'>(Figura 13)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=124 id=image20.png
+  src="Clase%204%20Sarampion%20Apostila_arquivos/image021.png"><a
+  name="_heading=h.jnfr5dghfkpb"></a></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 13. Captura
+  de </span><span lang=ES-CO>pantalla</span><span lang=ES-CO style='color:black'>
+  </span><span lang=ES-CO>pestaña de</span><span lang=ES-CO style='color:black'>
+  casos fun</span><span lang=ES-CO>ción</span><span lang=ES-CO
+  style='color:black'> “</span><span lang=ES-CO>cuestionario</span><span
+  lang=ES-CO style='color:black'>”</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>As</span><a
+  name="_heading=h.wxbxgateg2yi"></a><span lang=ES-CO>í, aprendimos cómo
+  funciona el cuestionario y cómo podemos actualizar su información</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76078675">2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Conclusión</a><a name="_heading=h.xzhyyvirttmi"></a><a
+  name="_heading=h.gcscfrx1em6m"></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase aprendió cómo </span><a
+  name="_heading=h.xyxl7n59nw2j"></a><span lang=ES-CO style='color:black'> cr</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'>ar u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> caso, </span><span
+  lang=ES-CO>conoció</span><span lang=ES-CO style='color:black'> todas las vari</span><span
+  lang=ES-CO>ables</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>obligatorias </span><span lang=ES-CO style='color:black'> para  cr</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'>ar u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> caso. T</span><span
+  lang=ES-CO>ambién aprendió a modificar cierta información y descubrió que
+  puede usar el cuestionario para registrar información importante sobre su
+  caso.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>En la siguiente clase, aprenderá cómo
+  crear un contacto y realizar seguimientos diarios</span><a
+  name="_heading=h.kbsartsv6c03"></a><span lang=ES-CO style='color:black'> en
+  Go.Data.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Hasta luego<a name="_heading=h.vdy89bxdq60q"></a><span
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width=792
+ style='width:593.8pt;border-collapse:collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76078676">3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Referencia</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>ORGANIZAÇÃO MUNDIAL DA SAÚDE (OMS). <span lang=EN-US>(2020-a).
+  <b>Go.Data Frequently asked questions. </b></span>Disponivel em https://www.who.int/godata/go.data-frequently-asked-question.acesso
+  em : 09/09/2020&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>ORGANIZAÇÃO MUNDIAL DA SAÚDE (OMS). (2020-b), <b>Go.Data
+  User Guide v 2.0.&nbsp;</b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=Ptextotabela align=left style='text-align:left'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

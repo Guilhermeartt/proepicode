@@ -1,0 +1,1252 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Clase 5 - Gestión de contactos</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.Pnmeros, li.Pnmeros, div.Pnmeros
+	{mso-style-name:P_números;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpFirst, li.PnmerosCxSpFirst, div.PnmerosCxSpFirst
+	{mso-style-name:P_númerosCxSpFirst;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpMiddle, li.PnmerosCxSpMiddle, div.PnmerosCxSpMiddle
+	{mso-style-name:P_númerosCxSpMiddle;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpLast, li.PnmerosCxSpLast, div.PnmerosCxSpLast
+	{mso-style-name:P_númerosCxSpLast;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:42.75pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PnmerosChar
+	{mso-style-name:"P_números Char";
+	mso-style-link:P_números;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:39.4pt;
+	text-indent:-21.55pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:17.85pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:61.2pt;
+	text-indent:-25.2pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='position:relative;z-index:251629056'><span
+style='position:absolute;left:-125px;top:-10px;width:721px;height:900px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=79></td>
+  <td width=172></td>
+  <td width=50></td>
+  <td width=238></td>
+  <td width=119></td>
+  <td width=29></td>
+  <td width=34></td>
+ </tr>
+ <tr>
+  <td height=82></td>
+  <td></td>
+  <td colspan=6 align=left valign=top><img width=642 height=82
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image001.png"
+  alt="ProEpi&#13;&#10;Associação Brasileira de Profissionais de Epidemiologia de Campo&#13;&#10;"></td>
+ </tr>
+ <tr>
+  <td height=112></td>
+ </tr>
+ <tr>
+  <td height=100></td>
+  <td colspan=2></td>
+  <td colspan=2 align=left valign=top><img width=288 height=100
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image002.png"
+  alt="Ícone&#10;&#10;Descrição gerada automaticamente com confiança média"></td>
+ </tr>
+ <tr>
+  <td height=42></td>
+ </tr>
+ <tr>
+  <td height=116></td>
+  <td colspan=3></td>
+  <td colspan=2 align=left valign=top><img width=357 height=116
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image003.png"></td>
+ </tr>
+ <tr>
+  <td height=124></td>
+ </tr>
+ <tr>
+  <td height=324></td>
+  <td colspan=6 align=left valign=top><img width=687 height=324
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image004.png"
+  alt="Clase 5 - Gestión de contactos"></td>
+ </tr>
+</table>
+
+</span></span>&nbsp;</p>
+
+<p class=MsoNormal></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><a name="_Hlk76074048"><b><span
+  style='font-size:10.0pt;color:black'>Ficha Técnica</span></b></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación General – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación Pedagógica –</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> Hirla Arruda</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Contendista – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz, Felipe Lopes,
+  Luiz Bruno Gomes</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Diseño Instruccional</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> <b>- </b>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustración – </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Traducción – </span></b><span
+  style='color:black'>Yorrana Martins Ferreira<b>-</b></span><b><span
+  style='color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span lang=ES-CO style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Supervisión – Asociación
+  Brasileña de Profesionales de Epidemiología de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Socios</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>CDC - Centro de Control y Prevención de
+  Enfermedades</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>Tephnet - Training Programs in Epidemiology
+  and Public Health Interventions Network</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>UNB - Universidade de Brasília</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>GOARN - Global Outbreak Alert and Response
+  Network</span></p>
+  <p class=arttficha><span lang=ES-CO style='color:black'>OMS - Organización
+  Mundial de la Salud</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=ES-CO style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Copyright 2021,
+Asociación Brasileña de Profesionales de Epidemiología de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Todos los derechos
+reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>La copia total o
+parcial, sin autorización expresa del (de los) actor(es) o con el fin de lucro,
+constituye crimen contra la propiedad intelectual, conforme a lo estipulado en
+la Ley nº 9.610/1998 (Ley de Derechos de Autor), con sanciones previstas en el
+Código Penal, artículo 184, párrafos 1° al 3°, sin perjuicio de las sanciones
+aplicables a la especie.</span></p>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=Ptabelasum border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'><a
+  name="_Toc76079781"></a>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado style='margin-left:0cm;text-indent:0cm'>Sumário</p>
+  </div>
+  <p class=MsoToc1><a
+  href="#_Toc76079781"></a></p>
+  <p class=MsoToc1><a href="#_Toc76079782">1.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Contextualizando<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76079783"><span lang=ES-CO>2.</span><span
+  style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+  text-decoration:none'>     </span>Crear<span lang=ES-CO> u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO> Contacto </span><span lang=ES-CO>en</span><span
+  lang=ES-CO> Go.Data</span><span style='color:windowtext;display:none;
+  text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76079784"><span lang=ES-CO>3.</span><span
+  style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+  text-decoration:none'>     </span>Convertir<span lang=ES-CO> u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO> Contacto e</span><span lang=ES-CO>n un</span><span
+  lang=ES-CO> Caso</span><span style='color:windowtext;display:none;text-decoration:
+  none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76079785"><span lang=ES-CO>4.</span><span
+  style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+  text-decoration:none'>     </span>Listas<span lang=ES-CO> de Contactos </span><span
+  lang=ES-CO>y</span><span lang=ES-CO> </span><span lang=ES-CO>Seguimiento</span><span
+  lang=ES-CO> Di</span><span lang=ES-CO>a</span><span lang=ES-CO>rio</span><span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76079786">5.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Conclusión<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76079787"><span lang=es>Referencia</span><span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Clase 5 - Gestión de contactos </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Arial",sans-serif;color:black'><img width=569
+  height=378 id=image13.jpg
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image005.jpg"></span></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Image</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> 1 –  Pe</span><span
+  lang=ES-CO>rson</span><span lang=ES-CO style='color:black'>a anali</span><span
+  lang=ES-CO>z</span><span lang=ES-CO style='color:black'>ando da</span><span
+  lang=ES-CO>t</span><span lang=ES-CO style='color:black'>os Por twenty20photos</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst><span lang=ES-CO style='color:#202124;background:
+  #F8F9FA'>¡</span><span lang=ES-CO>Hola</span><span lang=ES-CO
+  style='color:black'>!</span></p>
+  <p class=PpargrafoCxSpLast><span lang=ES-CO>En la última clase has aprendido
+  cómo crear un caso en</span><span lang=ES-CO style='color:black'> Go.Data. </span><span
+  lang=ES-CO>En esta clase aprenderás cómo crear un contacto, convertir un
+  contacto en un caso y cómo hacer un seguimiento diario</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Al final de la clase podrás:</span></p>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Crear lista de contactos</p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Aprenda a hacer un seguimiento diario</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Ver un seguimiento diario</p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Convertir un contacto en caso.</span></p>
+  <p class=PBulletsCxSpLast><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Conoce al panel de monitoreo</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76079782">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Contextualizando</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de aprender cómo funciona la base
+  de datos de casos en </span><span lang=ES-CO style='color:black'>Go.Data, a</span><span
+  lang=ES-CO>hora entendamos la administración de contactos, es decir, cómo
+  crear listas de aquellos contactos que son potencialmente dañinos y aprender
+  a monitorear y ver el estado de salud de estos contactos</span><span
+  lang=ES-CO style='color:black'>. </span><span lang=ES-CO>La base de datos de
+  contactos de</span><span lang=ES-CO style='color:black'> Go.Data se creó de
+  acu</span><span lang=ES-CO>erdo con los pasos del seguimiento de contactos,
+  que son identificar, enumerar y monitorear contactos.</span><span lang=ES-CO
+  style='color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76079783"><span lang=ES-CO>2.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+  lang=ES-CO>Crear</span></a><span lang=ES-CO> u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO> Contacto </span><span lang=ES-CO>en</span><span lang=ES-CO>
+  Go.Data</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>A</span><span
+  lang=ES-CO>ún en la base de datos de casos</span><span lang=ES-CO
+  style='color:black'>, el prime</span><span lang=ES-CO>r paso es identificar
+  el origen de este contacto, es decir</span><span lang=ES-CO style='color:
+  black'>, visuali</span><span lang=ES-CO>z</span><span lang=ES-CO
+  style='color:black'>ar </span><span lang=ES-CO>el</span><span lang=ES-CO
+  style='color:black'> caso referente </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> hacer clic </span><span lang=ES-CO>en las
+  tres bolas</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=131 id=image14.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image006.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 1. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ tres bolas” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> casos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='font-size:7.0pt;line-height:150%;
+  font-family:"Times New Roman",serif;color:black'>  </span><span lang=ES-CO
+  style='color:black'>Por </span><span lang=ES-CO>lo tanto</span><span
+  lang=ES-CO style='color:black'>, de</span><span lang=ES-CO>ben</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>hacer clic en agregar
+  contacto para empezar  el proceso de registro en el sistema</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=134 height=332 id=image4.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image007.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 2. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ agregar contacto” en la
+  pestaña de </span><span lang=ES-CO style='color:black'>casos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Entonces, vamos a presentar tres pasos
+  para crear un contacto: personal, dirección y relación</span><span
+  lang=ES-CO style='color:black'>. </span><span lang=ES-CO>En otras palabras,
+  estos dos primeros pasos son lo mismo que la creación de un caso, por lo que,
+  como se mencionó anteriormente iremos directamente al tercer paso, que es la </span><b><span
+  lang=ES-CO style='color:black'>relac</span></b><b><span lang=ES-CO>ión</span></b><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=177 id=image11.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image008.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 3. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ relación” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> casos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Fecha del Primer</span></b><b><span
+  lang=ES-CO style='color:black'> Contacto </span></b><b><span lang=ES-CO>y</span></b><b><span
+  lang=ES-CO style='color:black'> Último Contacto</span></b><span lang=ES-CO
+  style='color:black'>:  </span><span lang=ES-CO>Fecha</span><span lang=ES-CO
+  style='color:black'> d</span><span lang=ES-CO>el</span><span lang=ES-CO
+  style='color:black'> prime</span><span lang=ES-CO>r</span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>y</span><span lang=ES-CO
+  style='color:black'> último contacto co</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> caso</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Tipo de exposi</span></b><b><span
+  lang=ES-CO>ción</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>El</span><span lang=ES-CO style='color:black'> tipo de exposi</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> contacto co</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>caso</span><span lang=ES-CO style='color:black'> ( E</span><span
+  lang=ES-CO>j</span><span lang=ES-CO style='color:black'> :Contacto </span><span
+  lang=ES-CO>Directo</span><span lang=ES-CO style='color:black'>, Contacto
+  Indirecto,Exposi</span><span lang=ES-CO>ción</span><span lang=ES-CO
+  style='color:black'> Sexual,etc.)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Fre</span></b><b><span
+  lang=ES-CO>cuencia de Exposición</span></b><span lang=ES-CO style='color:
+  black'>: Número de ve</span><span lang=ES-CO>c</span><span lang=ES-CO
+  style='color:black'>es que </span><span lang=ES-CO>se ha producido</span><span
+  lang=ES-CO style='color:black'> esta exposi</span><span lang=ES-CO>ción.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Grupo</span></b><span
+  lang=ES-CO style='color:black'>: Vincula</span><span lang=ES-CO>ción</span><span
+  lang=ES-CO style='color:black'> co</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>cualquier</span><span
+  lang=ES-CO style='color:black'> grupo existente en </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> programa</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Dura</span></b><b><span
+  lang=ES-CO>ción</span></b><b><span lang=ES-CO style='color:black'> d</span></b><b><span
+  lang=ES-CO>e la</span></b><b><span lang=ES-CO style='color:black'> exposi</span></b><b><span
+  lang=ES-CO>ción</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>La</span><span lang=ES-CO style='color:black'> dura</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> de cada exposi</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> ( E</span><span
+  lang=ES-CO>j</span><span lang=ES-CO style='color:black'> : C</span><span
+  lang=ES-CO>o</span><span lang=ES-CO style='color:black'>rta, L</span><span
+  lang=ES-CO>ar</span><span lang=ES-CO style='color:black'>ga)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contexto d</span></b><b><span
+  lang=ES-CO>e</span></b><b><span lang=ES-CO style='color:black'> exposi</span></b><b><span
+  lang=ES-CO>ción</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>El</span><span lang=ES-CO style='color:black'> contexto d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'> exposi</span><span
+  lang=ES-CO>ción</span><span lang=ES-CO style='color:black'> d</span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> caso co</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> contacto ( E</span><span
+  lang=ES-CO>j</span><span lang=ES-CO style='color:black'> : Traba</span><span
+  lang=ES-CO>jo</span><span lang=ES-CO style='color:black'>, Familia)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Comente: </span></b><span
+  lang=ES-CO style='color:black'>Vari</span><span lang=ES-CO>able</span><span
+  lang=ES-CO style='color:black'> li</span><span lang=ES-CO>b</span><span
+  lang=ES-CO style='color:black'>re para coment</span><span lang=ES-CO>ar</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="100%"
+   style='width:100.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img width=128 height=109 id="Imagem 15"
+    src="Clase%205%20Sarampion%20Apostila_arquivos/image009.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span lang=ES-CO style='color:black'>¡Tome Nota!</span></b></p>
+    <p class=txtrec><span lang=ES-CO style='color:black'>No siempre es posible
+    obtener toda la información de un contacto, sin embargo, el número máximo
+    de variables llenas en el programa permite mejores estudios en el brote
+    relacionado</span><span lang=ES-CO style='color:black'>.</span><span
+    lang=ES-CO style='color:black'> Las variables requeridas son</span><span
+    lang=ES-CO style='color:black'>: </span><span lang=ES-CO style='color:black'>Fecha</span><span
+    lang=ES-CO style='color:black'> d</span><span lang=ES-CO style='color:black'>el</span><span
+    lang=ES-CO style='color:black'> Último Contacto.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;line-height:150%'></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de completar las variables, haga
+  clic en crear contacto y</span><span lang=ES-CO style='color:black'> finali</span><span
+  lang=ES-CO>ce</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> proceso. </span><span
+  style='color:black'>(Figura 4)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=568 height=51 id=image23.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image010.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 4. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ crear contacto” en la
+  pestaña de</span><span lang=ES-CO style='color:black'> casos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><span lang=ES-CO>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span></span><span lang=ES-CO style='font-size:7.0pt;line-height:150%;
+  font-family:"Times New Roman",serif'>  </span><a name="_Toc76079784"><span
+  lang=ES-CO>Convertir</span></a><span lang=ES-CO> u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO> Contacto e</span><span lang=ES-CO>n un</span><span lang=ES-CO>
+  Caso</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Co</span><span
+  lang=ES-CO>n las manifestaciones de síntomas en los contactos o los
+  resultados de exámenes relacionados con la lesión, es necesario convertir un
+  contacto en un caso sospechoso o confirmado</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Ingrese al menú general</span><span
+  lang=ES-CO style='color:black'> (e</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> verde) </span><span lang=ES-CO>y haga clic en
+  contactos y nuevamente en contactos para ingresar al banco de referencia</span><span
+  lang=ES-CO style='color:black'>. </span><span style='color:black'>(Figura 5)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=145 height=363 id=image12.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image011.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 5. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ contactos” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Luego</span><span lang=ES-CO
+  style='color:black'>, en la base de datos de contactos, es necesario
+  identificar el contacto referente, o</span><span lang=ES-CO> sea</span><span
+  lang=ES-CO style='color:black'>, </span><span lang=ES-CO>buscar el contacto
+  que se convertirá y hacer clic en las tres bolas y luego</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>seleccionar</span><span
+  lang=ES-CO style='color:black'> <b>convert</b></span><b><span lang=ES-CO>i</span></b><b><span
+  lang=ES-CO style='color:black'>r e</span></b><b><span lang=ES-CO>n</span></b><b><span
+  lang=ES-CO style='color:black'> caso.</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=518 height=212 id=image22.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image012.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 6. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ convertir en contacto” en la
+  pestaña de</span><span lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span style='color:black'>Após esta ação, o contato irá
+  aparecer no banco de casos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76079785"><span lang=ES-CO>4.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+  lang=ES-CO>Listas</span></a><span lang=ES-CO> de Contactos </span><span
+  lang=ES-CO>y</span><span lang=ES-CO> </span><span lang=ES-CO>Seguimiento</span><span
+  lang=ES-CO> Di</span><span lang=ES-CO>a</span><span lang=ES-CO>rio</span><span
+  lang=ES-CO> </span></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pnmeros><span lang=ES-CO>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Ahora que hemos aprendido cómo crear el
+  contacto, pasemos a aprender cómo ver la lista de contactos y realizar un
+  seguimiento diario.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Haga clic en el Menú en el lado izquierdo</span><span
+  lang=ES-CO style='color:black'> (<b>bot</b></span><b><span lang=ES-CO>ón</span></b><b><span
+  lang=ES-CO style='color:black'> verde), </span></b><span lang=ES-CO>luego
+  haga clic en contactos y nuevamente haga clic en contactos</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=164 id=image31.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image013.png"></p>
+  <p class=MsoCaption><span style='color:black'>Figura 7. Ficha Captura de </span>pantalla<span
+  style='color:black'> men</span>ú<span style='color:black'> Go.Data.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=160 height=404 id=image20.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image014.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 8. Captura de
+  </span><span lang=ES-CO>pantalla de la función “ contactos” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span style='color:black'>Logo, iremos visualizar a lista
+  de contatos referente ao surto escolhido. Neste campo conseguimos visualizar
+  a lista de contatos, a exposição, contexto e adicionar acompanhamento diários
+  dos contatos. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Podemos aplicar </span><span
+  lang=ES-CO>y crear filtros para facilitar la visualización de la base de
+  datos de contactos y también es posible crear un cuestionario específico para
+  los contactos.</span><span lang=ES-CO style='color:black'>. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=568 height=155 id=image26.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image015.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 9. Captura</span><span
+  lang=ES-CO> de pantalla de la función “ contactos” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pnmeros><span lang=ES-CO>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>En la base de datos de contactos de la pestaña
+  izquierda</span><span lang=ES-CO style='color:black'>, presentaremos tres
+  posibles acciones para ayudar en</span><span lang=ES-CO> la búsqueda de
+  datos,</span><span lang=ES-CO style='color:black'> o</span><span lang=ES-CO>
+  sea</span><span lang=ES-CO style='color:black'>, </span><span lang=ES-CO>tenemos</span><span
+  lang=ES-CO style='color:black'> la lupa </span><span style='color:black'><img
+  width=28 height=29 id=image27.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image016.png"></span><span
+  lang=ES-CO style='color:black'> para </span><span lang=ES-CO>búsqueda</span><span
+  lang=ES-CO style='color:black'> de da</span><span lang=ES-CO>t</span><span
+  lang=ES-CO style='color:black'>os, tenemos</span><span lang=ES-CO> la segunda
+  que son las variables elegidas para mostrar en la pantalla principal de
+  contactos y el filtro</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Con eso en mente, aprendamos a crear un
+  seguimiento diario</span><span lang=ES-CO style='color:black'>. En la base de
+  datos contactos, busque el contacto referente y haga clic en las tres bolas
+  donde tendrá la opción </span><span lang=ES-CO>“ Agregar seguimiento”.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=143 id=image21.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image017.png"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 10. Captura </span><span
+  lang=ES-CO>de pantalla de la función “ agregar seguimiento” en la pestaña de</span><span
+  lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=564 height=227 id=image29.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image018.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 11. </span><span
+  lang=ES-CO> Captura de pantalla de la función “ agregar seguimiento” en la
+  pestaña de contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pnmeros><span lang=ES-CO>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Al crear un seguimiento diario, tendrás dos
+  variables para completar, la fecha y el estado de este contacto. Después de
+  estas citas, puede programar la cumplimentación del cuestionario
+  preestablecido relacionado con este contacto.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=567 height=109 id=image24.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image019.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 12. Captura
+  de </span><span lang=ES-CO>pantalla de la función “ crear seguimiento” en la
+  pestaña de</span><span lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pnmeros><span lang=ES-CO>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Después de este paso, haga clic en el
+  cuestionario para marcar las respuestas de acuerdo con la información
+  obtenida del contacto</span><span lang=ES-CO style='color:black'>. Recordando
+  que el cuestionario fue </span><span lang=ES-CO>preestablecido</span><span
+  lang=ES-CO style='color:black'> para ser utilizado en el brote. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=566 height=136 id=image28.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image020.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 13. Captura
+  de </span><span lang=ES-CO>pantalla de la función “ cuestionario” en la
+  pestaña de</span><span lang=ES-CO style='color:black'> contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pnmeros><span lang=ES-CO>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO style='color:black'>A</span><span lang=ES-CO>hora
+  que hemos aprendido cómo ver la lista de contactos y cómo hacer un
+  seguimiento diario, aprendamos cómo ver estos registros diarios o en forma de
+  panel</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Para </span><span
+  lang=ES-CO>esto debemos hacer clic en el Menú de la izquierda, hacer clic en
+  contactos y luego en seguimientos diarios. Puede seleccionar una fecha para
+  ver cuántos contactos se vieron ese día, puede ver el estado de ese contacto
+  y incluso acceder al cuestionario.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=568 height=136 id=image32.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image021.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 14. Captura
+  de </span><span lang=ES-CO>pantalla de la función “ seguimiento de contactos
+  relacionados” en la pestaña de</span><span lang=ES-CO style='color:black'>
+  contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>Sin embargo, este modelo de visualización
+  es diario, pero también podemos visualizar por un intervalo de fechas en
+  forma de panel</span><span lang=ES-CO style='color:black'>. E</span><span
+  lang=ES-CO>ntonces, debemos hacer clic en el Menú de la izquierda, ir a
+  contactos y luego al panel de monitoreo. Se abrirá una ventana y tendrás
+  acceso a los casos según los días seleccionados</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Pimagem><img width=577 height=208 id=image25.png
+  src="Clase%205%20Sarampion%20Apostila_arquivos/image022.jpg"></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Figura 15. Captura
+  de </span><span lang=ES-CO>pantalla de la función “panel de seguimiento de
+  contactos” en la pestaña de </span><span lang=ES-CO style='color:black'>contactos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76079786">5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Conclusión</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase hemos aprendido cómo
+  funciona la gestión de contactos, es decir, cómo crear correctamente un
+  contacto, entendiendo sus variables obligatorias, convirtiendo un contacto en
+  un caso y también realizando el seguimiento diario de los contactos. Por lo
+  tanto, después de crear estos registros, ahora podemos ver estos datos
+  creados de dos maneras: a través de los registros diarios o el panel de
+  monitoreo como se menciona en la clase.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado style='margin-left:0cm;text-indent:0cm'><a
+  name="_Toc76079787"><span lang=es>Referencia</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). <span lang=EN-US>(2020-a). <b>Go.Data Frequently asked questions. </b></span>Disponivel
+  em https://www.who.int/godata/go.data-frequently-asked-question.acesso em :
+  09/09/2020</p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

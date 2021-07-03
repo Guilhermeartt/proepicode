@@ -1,0 +1,846 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 1 - USO DO MICROSOFT EXCEL COMO FERRAMENTA DE APOIO À ANÁLISE DE
+DADOS EPIDEMIOLÓGICOS</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:35.4pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 70.9pt 3.0cm;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection4
+	{page:WordSection4;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><a name="_Hlk75926399"></a>&nbsp;</p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251625984;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="AULA%20-%201%20EXCEL_arquivos/image001.png"
+alt="Aula 1 - USO DO MICROSOFT EXCEL COMO FERRAMENTA DE APOIO À ANÁLISE DE DADOS EPIDEMIOLÓGICOS"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895829504'><span
+style='position:absolute;left:175px;top:-522px;width:216px;height:90px'><img
+width=216 height=90 src="AULA%20-%201%20EXCEL_arquivos/image002.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Marcela<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica - </span></b><span
+  style='color:black'>Sarah Mendes</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Execução</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>ProEpi</span></p>
+  <p class=arttficha><span style='color:black'>SDS – Sala de situação –
+  Universidade de Brasília</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Parceiros</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>Project HOPE</span></p>
+  <p class=arttficha><span style='color:black'>Project ECHO</span></p>
+  <p class=arttficha><span style='color:black'>NIA TERO</span></p>
+  <p class=arttficha><span style='color:black'>Brasil Fundation</span></p>
+  <p class=arttficha><span style='color:black'>EXO plataforma</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Apoio</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><span style='color:black'>SKOLL FUNDATION</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+
+<p class=MsoToc1><a
+href="#_Toc75927188">Apresentando o Curso e o Excel<span style='color:windowtext;
+display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc75927189">I-1. Visão geral sobre o curso<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc75927190">I-2. Conhecendo o Excel<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc75927191">I-3. Começando a exploração<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927192">I-3.1. Abrindo o Excel<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927193">I-3.2. Conhecendo o Excel<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927194">I-3.2.1. A Barra de Título<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927195">I-3.2.2. O Menu de Tarefas ou Faixa de
+Opções<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927196">I-3.2.3. Guias de Planilhas<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927197">I-3.2.3. Guias de Planilhas<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927198">I-3.4.5. Barras de Rolagem e Zoom<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927199">I-3.4.6. Barra de Acesso Rápido<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927200">I-3.4.7. Menu “Página Inicial”<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927201">I-3.4.8. Editor de Equações<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>21</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc75927202">Apresentando o Município de Horizonte
+Alegre dos Altos Montes do Norte<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc75927203">I-3.4.8. Editor de Equações<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc75927204"><span lang=EN-US>Referencias</span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>56</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection4>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#538135;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 1 - USO DO MICROSOFT EXCEL COMO FERRAMENTA DE APOIO À
+  ANÁLISE DE DADOS EPIDEMIOLÓGICOS</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=629 height=317 id="Imagem 25"
+  src="AULA%20-%201%20EXCEL_arquivos/image003.jpg"></p>
+  <p class=MsoCaption>Figura 1 – Profissionais analisando gráficos e planilhas  Por
+  twenty20photos</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá<span lang=ES-CO>!</span></p>
+  <p class=PpargrafoCxSpLast>Seja bem-vindo ao curso de Microsoft Excel da Associação
+  Brasileira de Profissionais de Epidemiologia de Campo - ProEpi. Essa é mais
+  uma iniciativa educacional dessa associação, que tem o compromisso de
+  promover a formação de profissionais de saúde, visando o fortalecimento da
+  saúde pública. O uso de planilhas eletrônicas por meio do aplicativo
+  Microsoft Excel visa aprimorar os conhecimentos dos profissionais de saúde
+  relacionado as análises epidemiológicas, tendo em vista a relevância do
+  monitoramento e avaliação de indicadores de saúde em uma comunidade e seu
+  território.</p>
+  </td>
+ </tr>
+</table>
+
+<b><span lang=ES-CO style='font-size:14.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<div style='border:none;border-left:solid #538135 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+margin-left:35.4pt;margin-right:0cm'>
+
+<p class=P11Ttulonumerado style='margin-left:0cm'><span lang=ES-CO>&nbsp;</span></p>
+
+</div>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #538135 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc75927188"><span style='font-size:12.0pt;
+  line-height:150%'>Apresentando o Curso e o Excel</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #538135 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc75927189">I-1.
+  Visão</a> geral sobre o curso</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A proposta desse curso é apresentar os aplicativos de
+  planilhas eletrônicas como ferramenta para inteligência de dados associada à
+  Vigilância em Saúde. É um curso para usuários iniciantes que através da
+  prática poderão desenvolver capacidades de uso intermediárias e avançadas. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Vamos começar do básico mesmo. Em princípio, é preciso
+  saber apenas ligar e desligar um computador com Microsoft Windows do pacote
+  “Microsoft Office” instalado, além de saber usar mouse e teclado e abrir os
+  programas.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=521 height=148 id="Imagem 28"
+  src="AULA%20-%201%20EXCEL_arquivos/image004.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Microsoft Excel é considerado o principal aplicativo de
+  planilhas em uso no mundo. Isso não impede que você pratique e aprenda a
+  lógica do uso dessa ferramenta utilizando outros programas, basta reconhecer
+  que mesmo utilizando o Excel, algumas funções podem ser um pouco diferentes
+  do apresentado, a depender da versão que você estiver utilizando. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O Excel faz parte do pacote &quot;Microsoft Office&quot;,
+  que também inclui o Word, PowerPoint e outros. O Excel é uma ferramenta
+  bastante poderosa e este curso foi planejado para te ajudar a usar uma
+  parcela das funcionalidades que o aplicativo tem, com foco nas principais
+  tarefas desenvolvidas na Vigilância Epidemiológica nos municípios. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Nesse Curso você irá aprender como: </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Encontrar e abrir o Excel no Windows;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Utilizar o Menu e a Barra de Ferramentas do Excel;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Salvar pastas de trabalho;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Imprimir pastas de trabalho;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Abrir pastas de trabalho salvas;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Formatar e digitar em células;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Classificar dados;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Inserir e excluir linhas e colunas;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Copiar, recortar e colar dados;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Conhecer a e<span style='color:black'>strutura geral de uma
+  função do Excel;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Realizar equações matemáticas
+  simples;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Utilizar o recurso de fixação de
+  células em fórmulas;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Filtrar listas de dados;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Encontrar dados em planilhas;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Utilizar a alça de preenchimento;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Realizar equações de estatística
+  descritiva;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span style='color:black'>Fazer múltiplas planilhas em uma
+  pasta de trabalho;</span></p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Criar tabelas e gráficos;</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Utilizar tabelas e gráficos dinâmicos;</p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Aprender co<span style='color:black'>mo encontrar mais ajuda</span>.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Depois que você tiver treinado nessas funcionalidades,
+  certamente estará interessado em outras possibilidades que o Excel te
+  proporciona. Após esta primeira etapa estará pronto para conhecer alguns
+  “aditivos” que o aplicativo fornece. São funcionalidades adicionais que a
+  própria Microsoft desenvolve ou que permite que outros desenvolvedores
+  ofereçam aos clientes aumentando a usabilidade do Excel, inclusive para a
+  Epidemiologia. Esses aditivos serão discutidos em outras iniciativas
+  educacionais da PROEPI: </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>fique de olho!</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span style='font-size:22.0pt;line-height:150%;
+  color:#538135'>Vamos começar?</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<span style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #538135 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc75927204"><span lang=EN-US>Referencias</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Barros, MSM. <b>Excel 2019. </b>Editora SENAC: São Paulo,
+  SP. 252p. 1ª Ed. 2020.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Cinto, AF. &amp; Goés, WM. <b>Excel Avançado.</b> Editora
+  Novatec: São Paulo, SP. 254p. 2ª Ed. 2005.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Correia-Neto, J. <b>Excel Para Profissionais de Finanças -
+  Manual Prático.</b> Editora Campus: São Paulo, SP. 308p. 2ª Ed. 2011.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Lippi-Silva, L. <b>Apostila de Excel: Básico.</b> Curso de
+  Informática Aplicada à Gestão. Fatec São Sebastião: São Paulo, SP. 30p.
+  [s.d.]</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Lippi-Silva, L. <b>Apostila de Excel: Curso Intermediário.</b>
+  Curso de Informática Aplicada à Gestão. Fatec São Sebastião: São Paulo, SP.
+  47p. [s.d.]</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Manzano, ALNG. <b>Estudo Dirigido De Microsoft Excel 2019:
+  avançado.</b> Editora Érica: Rio de Janeiro, RJ. 272p. 1ª Ed. 2019. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>RIPSA - Rede Interagencial de Informação para a Saúde. <b>Indicadores
+  básicos para a saúde no Brasil: conceitos e aplicações</b>. Organização
+  Pan-Americana da Saúde: Brasília, DF. 349 p. 2ª Ed. 2008. </p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:14.0pt;text-align:justify;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

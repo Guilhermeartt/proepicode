@@ -1,0 +1,1712 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Clase 3: Instalación de Go.Data</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.Ptextotabela, li.Ptextotabela, div.Ptextotabela
+	{mso-style-name:P_texto_tabela;
+	mso-style-link:"P_texto_tabela Char";
+	margin:0cm;
+	text-align:center;
+	line-height:115%;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+span.PtextotabelaChar
+	{mso-style-name:"P_texto_tabela Char";
+	mso-style-link:P_texto_tabela;
+	font-family:"Times New Roman",serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:35.4pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P111TtulonumeradoChar
+	{mso-style-name:"P_1\.1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+p.Pbulletstipo2, li.Pbulletstipo2, div.Pbulletstipo2
+	{mso-style-name:"P_bullets tipo 2";
+	mso-style-link:"P_bullets tipo 2 Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:71.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Pbulletstipo2CxSpFirst, li.Pbulletstipo2CxSpFirst, div.Pbulletstipo2CxSpFirst
+	{mso-style-name:"P_bullets tipo 2CxSpFirst";
+	mso-style-link:"P_bullets tipo 2 Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:71.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Pbulletstipo2CxSpMiddle, li.Pbulletstipo2CxSpMiddle, div.Pbulletstipo2CxSpMiddle
+	{mso-style-name:"P_bullets tipo 2CxSpMiddle";
+	mso-style-link:"P_bullets tipo 2 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:71.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Pbulletstipo2CxSpLast, li.Pbulletstipo2CxSpLast, div.Pbulletstipo2CxSpLast
+	{mso-style-name:"P_bullets tipo 2CxSpLast";
+	mso-style-link:"P_bullets tipo 2 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:71.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.Pbulletstipo2Char
+	{mso-style-name:"P_bullets tipo 2 Char";
+	mso-style-link:"P_bullets tipo 2";
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='position:relative;z-index:251628031'><span
+style='position:absolute;left:-125px;top:-10px;width:721px;height:900px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=79></td>
+  <td width=182></td>
+  <td width=40></td>
+  <td width=241></td>
+  <td width=116></td>
+  <td width=29></td>
+  <td width=34></td>
+ </tr>
+ <tr>
+  <td height=82></td>
+  <td></td>
+  <td colspan=6 align=left valign=top><img width=642 height=82
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image001.png"
+  alt="ProEpi&#13;&#10;Associação Brasileira de Profissionais de Epidemiologia de Campo&#13;&#10;"></td>
+ </tr>
+ <tr>
+  <td height=103></td>
+ </tr>
+ <tr>
+  <td height=97></td>
+  <td colspan=2></td>
+  <td colspan=2 align=left valign=top><img width=281 height=97
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image002.png"></td>
+ </tr>
+ <tr>
+  <td height=54></td>
+ </tr>
+ <tr>
+  <td height=116></td>
+  <td colspan=3></td>
+  <td colspan=2 align=left valign=top><img width=357 height=116
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image003.png"></td>
+ </tr>
+ <tr>
+  <td height=124></td>
+ </tr>
+ <tr>
+  <td height=324></td>
+  <td colspan=6 align=left valign=top><img width=687 height=324
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image004.png"
+  alt="Clase 3: Instalación de Go.Data"></td>
+ </tr>
+</table>
+
+</span></span>&nbsp;</p>
+
+<p class=MsoNormal></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><a name="_Hlk76074048"><b><span
+  style='font-size:10.0pt;color:black'>Ficha Técnica</span></b></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación General – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación Pedagógica –</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> Hirla Arruda</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Contendista – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz, Felipe Lopes,
+  Luiz Bruno Gomes</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Diseño Instruccional</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> <b>- </b>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustración – </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Traducción – </span></b><span
+  style='color:black'>Yorrana Martins Ferreira<b>-</b></span><b><span
+  style='color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span lang=ES-CO style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Supervisión – Asociación
+  Brasileña de Profesionales de Epidemiología de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Socios</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>CDC - Centro de Control y Prevención de
+  Enfermedades</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>Tephnet - Training Programs in Epidemiology
+  and Public Health Interventions Network</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>UNB - Universidade de Brasília</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>GOARN - Global Outbreak Alert and Response
+  Network</span></p>
+  <p class=arttficha><span lang=ES-CO style='color:black'>OMS - Organización
+  Mundial de la Salud</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=ES-CO style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Copyright 2021,
+Asociación Brasileña de Profesionales de Epidemiología de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Todos los derechos
+reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>La copia total o
+parcial, sin autorización expresa del (de los) actor(es) o con el fin de lucro,
+constituye crimen contra la propiedad intelectual, conforme a lo estipulado en
+la Ley nº 9.610/1998 (Ley de Derechos de Autor), con sanciones previstas en el
+Código Penal, artículo 184, párrafos 1° al 3°, sin perjuicio de las sanciones
+aplicables a la especie.</span><span lang=ES-CO style='line-height:107%;
+font-family:"Arial",sans-serif'> </span></p>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=Ptabelasum border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'><a
+  name="_Toc76077678"></a>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado>Sumário</p>
+  </div>
+  <p class=MsoToc1><a
+  href="#_Toc76077678"></a></p>
+  <p class=MsoToc1><a href="#_Toc76077679">Contextualizando<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc2 style='line-height:normal'><a href="#_Toc76077680">Tipos de
+  Instalación<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc3 style='line-height:normal'><a href="#_Toc76077681">Instalación
+  local<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc3 style='line-height:normal'><a href="#_Toc76077682">Instalación
+  del servidor<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc3 style='line-height:normal'><a href="#_Toc76077683">Recursos
+  necesarios<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76077684">Instalación del Go.Data<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+  <p class=MsoToc2 style='line-height:normal'><a href="#_Toc76077685">Encontrando
+  archivo de instalación<span style='color:windowtext;display:none;text-decoration:
+  none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+  <p class=MsoToc2 style='line-height:normal'><a href="#_Toc76077686">Configuración<span
+  lang=ES-CO> de Go.Data y primer acceso</span><span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76077687">Conclusión<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76077688">Referencia<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula><span lang=es>Clase 3: Instalación de Go.Data</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=590 height=224 id="Imagem 3"
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image005.jpg"></p>
+  <p class=MsoCaption><span lang=es>Figura </span><span
+  lang=es>1</span><span lang=es> – Mapa mundi MMR Por twenty20photos</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst><span lang=ES-CO>Hola!</span></p>
+  <p class=PpargrafoCxSpLast><span lang=ES-CO>Este documento se basa en User
+  Guide version 2.0, Implementation version 1.0 y Guide y Go.Data It Admin
+  Guide version 0.7. Se trata de una adaptación de estos materiales, en inglés,
+  con el fin de ofrecer informaciones y conocimientos sobre la instalación del
+  Go.Data en un flujo más comprensible y práctico.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase, comprenderá los tipos de
+  instalación del Go.Data y aprenderá a identificar el tipo de instalación para
+  cada ocasión.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Al final de la clase usted será capaz de:</span></p>
+  <p class=PBulletsCxSpFirst><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Conocer los posibles tipos de instalaciones</span></p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Identificar qué tipo de instalación utilizar </span></p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Estimar recursos necesarios para la
+  instalación establecida </span></p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Identificar el archivo de instalación de la
+  versión más actual</span></p>
+  <p class=PBulletsCxSpLast><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Comprender cómo instalar Go.Data en un
+  ambiente Windows</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76077679">Contextualizando</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc76077680">Tipos
+  </a><a name="_2tlc3jrsin5s"></a>de Instalación</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Comencemos con el módulo de instalación
+  del Go.Data donde se mostrarán los pasos de instalación y configuración tanto
+  en el ambiente Windows como en el ambiente Linux (verifique el contenido del
+  ambiente Linux en los apéndices). Para esto, es necesario entender los tipos
+  de instalación que nos proporciona el software y qué tipo de instalación
+  utilizar para cada ocasión. Además, cada tipo de instalación requiere una
+  cantidad diferente de recursos de disco (cantidad de memoria de
+  almacenamiento), entonces es necesario un planeamiento previo antes de lá
+  instalación del Go.Data</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-height:150%;page-break-after:avoid'><span
+  style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+  color:black'><img width=560 height=173 id=image18.jpg
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image006.jpg"></span></p>
+  <p class=MsoCaption><span style='color:black'>Figura 2 - Texto para em
+  computador Por twenty20photos</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Es importante enfatizar que es
+  fundamental leer los Términos de uso y Licencia del Software, que se
+  encuentran en la comunidad oficial de Go.Data. Allí también encontrará varios
+  documentos sobre el software y las guías.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Hay dos tipos de instalaciones:
+  instalación local (autónoma) e instalación en servidor. </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc76077681">Instalación</a><span
+  style='color:black'> local</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>La instalación local se realiza en una
+  computadora y almacena todos los datos de Go.Data en esa misma computadora.
+  Este tipo de instalación es adecuado para pequeños brotes en los que pocas
+  personas administrarán la entrada y salida de datos en el sistema y no es
+  posible el uso simultáneo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc76077682">Instalación del servidor</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>La instalación del servidor también se
+  realiza en una computadora, pero esta actúa como un servidor. Así, luego de
+  configuraciones que mostraremos más adelante, otros clientes (computadoras y
+  celulares) pueden conectarse a este servidor para usarlo simultáneamente.
+  Este tipo de instalación es adecuada para grandes brotes y cuando es
+  necesario trabajo en equipo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Existe un tercer tipo de instalación, la
+  instalación con servidores vinculados, pero se trata de un escenario más
+  específico, que es necesario comunicarse con la OMS.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=P111Ttulonumerado><a name="_Toc76077683">Recursos necesarios</a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO> Los recursos necesarios en disco para
+  cada tipo de instalación dependen del volumen de datos que se procesarán en
+  el sistema, pueden variar de acuerdo con el tamaño del brote, la cantidad de
+  personas que tendrán acceso al sistema, la región donde será monitoreado. Se
+  monitorea (¿Una ciudad? ¿Un estado? ¿Un país?) y el número de variables que
+  estarán presentes en cada caso, contacto y monitoreo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst><span lang=ES-CO>La cantidad patrón de espacio
+  mínimo necesario en disco es de 3 GB (Gigabytes - unidad de medida de
+  información) en ambos los sistemas operativos Windows y Linux. Recordando que
+  esta cantidad de espacio libre reservado es el mínimo para instalar Go.Data
+  con los datos básicos que vienen como patrón en el programa, como el usuario
+  administrador y las plantillas de ráfaga.</span></p>
+  <p class=PpargrafoCxSpLast><span lang=ES-CO>Para tener una idea de cuánto
+  espacio libre debe reservarse en su máquina, tome como base la siguiente base
+  de datos que ocupa 150MB (Megabytes) - el equivalente a 0.15GB - sin contar
+  el espacio utilizado por el Go instalado. </span>3GB:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Para tener una idea de cuánto espacio
+  libre debe reservarse en su máquina, tome como base la siguiente base de
+  datos que ocupa 150MB (Megabytes) - el equivalente a 0.15GB - sin contar el
+  espacio utilizado por el Go instalado de 3GB:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Cerca de 1000 casos, 200 contactos, 2000
+  monitoreos diarios, 30 usuarios, 70 ubicaciones y cuestionarios con 20
+  variables</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="100%"
+   style='width:100.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img width=128 height=109 id="Imagem 15"
+    src="Clase%203%20Sarampion%20Apostila_arquivos/image007.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span lang=ES-CO style='color:black'>¡Tome Nota!</span></b></p>
+    <p class=txtrec><span lang=ES-CO style='color:black'>Recuerde reservar una
+    cantidad de memoria major que la cantidad estimada para su ocasión y
+    propósitos.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;
+  margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;line-height:normal'><span
+  lang=ES-CO style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Debajo se encuentran los requisitos
+  mínimos para cada sistema. Si no se cumplen estos requisitos, es posible que
+  la aplicación no funcione o sea muy lenta</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  normal'><b><span style='font-family:"Arial",sans-serif'>Windows</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Sistema operacional 64 bits.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Windows 7 o superior.</p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Procesador: 2 GHz (frecuencia de reloj del
+  procesador en GigaHertz).</span></p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Memoria RAM: 8GB.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  normal'><b><span style='font-family:"Arial",sans-serif'>Linux (32 ou 64 bits)</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Sistema operacional 32 o 64 bits.</p>
+  <p class=PBulletsCxSpMiddle><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Sistemas operacionales: Ubuntu 12.04, Fedora 21, Debian 8 o
+  superiores.</p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Procesador: 2 GHz (frecuencia de reloj del
+  procesador en GigaHertz).</span></p>
+  <p class=PBulletsCxSpLast><span style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>Memoria RAM: 4GB.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76077684">Instala</a><a
+  name="_3r3cl9df1hkz"></a>ción del Go.Data</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En este</span><span lang=ES-CO
+  style='color:black'> tópico se</span><span lang=ES-CO> abortará la
+  instalación y configuración de Go.Data en un entorno Windows.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc76077685"><span
+  style='color:black'>Encontrando</span></a><a name="_m8jb88nluqyh"></a>
+  archivo de instalación</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Esta instalación es válida para Windows
+  10, y debe estar con el idioma del sistema operacional (que es diferente del
+  idioma del teclado solamente) en inglés (EUA), debido a un problema con la
+  aplicación Go.Data en sí, pero que será corregido en actualizaciones
+  futuras(OMS, 2020).</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Primero accedemos al enlace de descarga
+  de Go.Data, que lo proporciona la OMS o el equipo de soporte de Go.Data
+  mediante contacto.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Se encuentran algunos archivos para
+  descarga directa, haga clic en la opción “Go.Data Setup 2.35.0.exe”, el
+  número 2.35.0 puede variar ya que es la versión más actual de Go.Data, pero
+  basta seleccionar la versión con la extensión .exe (que finalice con .<b>exe</b>).</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de bajar el archivo basta
+  ejecútalo haciendo dos clic. Se abrirá la ventana de instalación, siga estos
+  pasos:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO>1. </span></b><span lang=ES-CO>En el
+  primer paso basta que lea los Términos de Uso y haga clic en &quot; Estoy de
+  Acuerdo&quot;.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=425 height=331 id=image20.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image008.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=433 height=338 id=image10.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image009.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 3. Acuerdo de
+  licencia</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>2. </span></b><span
+  lang=ES-CO>En el segundo paso, simplemente seleccione dónde quiere realizar
+  esta instalación. ¿Pueden acceder a Go.Data todos los usuarios de esta
+  máquina o solo el usuario actual<span style='color:black'>?</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=424 height=333 id=image9.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image010.jpg"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=408 height=316 id=image21.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image011.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 4. Usuarios</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>3. </span></b><span
+  lang=ES-CO style='color:black'>En el tercer paso, simplemente seleccione la
+  ubicación de instalación, la carpeta donde estarán los archivos Go.Data. Caso
+  desea cambiar la ubicación a una carpeta diferente del patrón, haga clic en
+  &quot;Buscar ...&quot;, navegue hasta la ubicación deseada y haga clic en
+  &quot;Ok&quot;.</span><b><span lang=ES-CO style='color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=456 height=355 id=image12.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image012.jpg"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=467 height=363 id=image15.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image013.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 5. Sitio de
+  instalación</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>4. </span></b><span
+  lang=ES-CO style='color:black'>En el cuarto paso, marque las opciones:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBulletsCxSpFirst><span lang=EN-US style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US>“Application without services (recommended for
+  local stand-alone installations) - Para instalación local</span></p>
+  <p class=PBulletsCxSpMiddle><span lang=EN-US style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US>“Allow config rewrite (system will try to
+  determine domain and other settings)</span></p>
+  <p class=PBulletsCxSpLast><span lang=EN-US style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-US>“Enable Cross-Origin Resource Sharing”</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Haga clic en <span style='color:black'>“Instalar”</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Arial",sans-serif;color:black'><img width=514
+  height=394 id=image19.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image014.png"></span></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 6. Tipo de
+  instalación</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de finalizar la instalación, se
+  crea un ícono de Go.Data en el escritorio, simplemente ejecútalo como
+  administrador, haciendo clic derecho y seleccione la opción “Run as
+  administrator”.</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>5. </span></b><span
+  lang=ES-CO>En el quinto paso, mantenga o cambie las puertas del MongoDB y del
+  Go.Data, haga clic en &quot;Launch Go.Data&quot;.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=341 height=501 id=image2.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image015.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 7 Configuración
+  de puerto</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Ahora Go.Data iniciará el servicio de
+  base de datos y las configuraciones iniciales de la aplicación. Al finalizar,
+  abra Go.Data en su navegador usando la siguiente dirección “http: //
+  localhost: 3000 /”. Recordando que la dirección puede cambiar, dependiendo de
+  las configuraciones definidas.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc76077686"><span
+  lang=ES-CO>Configuración</span></a><a name="_7anxmvt1muof"></a><span
+  lang=ES-CO> de Go.Data y primer acceso</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Aquí abordaremos el primer acceso a la
+  instancia instalada, el funcionamiento de Go.Data Backups y Logs, además de
+  presentar documentación oficial.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Bien, al acceder a Go.Data por primera
+  vez, verá esta tela:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=587 height=390 id=image3.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image016.jpg"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 8. Pantalla de
+  inicio de Go.Data</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Primero, es posible cambiar el idioma en
+  la parte superior derecha, en &quot;Idioma&quot;, así se queda más fácil
+  familiarizarse con el software.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Para realizar el primer acceso, Go.Data
+  pone a disposición el usuario administrador. A partir de él es posible crear
+  otros usuarios con diversos permisos en el sistema. Realice el login con el
+  usuario administrador y luego cambie la contraseña del usuario administrador
+  a una contraseña de su elección:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:115%'><span
+  lang=ES-CO>&nbsp;</span></p>
+  <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=302
+   style='width:226.5pt;border-collapse:collapse;border:none'>
+   <tr>
+    <td width=302 valign=top style='width:8.0cm;border:solid #BFBFBF 1.0pt;
+    background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=PpargrafoCxSpFirst><b><span style='color:black'>E-mail:</span></b><span
+    style='color:black'> admin@who.int</span></p>
+    <p class=PpargrafoCxSpLast><b><span style='color:black'>Contraseña:</span></b><span
+    style='color:black'> admin</span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
+  normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Después de realizar
+  el login y cambiar la contraseña, acceda el menú lateral y vaya a
+  Administrador y luego a Usuarios:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=351 height=523 id=image16.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image017.jpg"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 9. Menú
+  Administrador</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Dentro de los usuarios haga clic en
+  “Agregar” y agregue los datos del usuario que desea incluir en el sistema,
+  caso también sea administrador, asegúrese de poner todos los permisos.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Después de crear un usuario con permisos
+  en todo el sistema, configuraremos los backups. En caso de que exista algún
+  problema de pérdida de datos, con backup es posible recuperar los datos,
+  minimizando el daño. Por lo tanto, recomendamos que los backups de los datos
+  se realicen con relativa frecuencia y más allá se guardarán también en otra máquina,
+  en caso de que el disco rígido se pierda por completo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Para configurar los backups, acceda
+  Configuración del sistema y luego a Copia de seguridad en el menú lateral:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=341 height=334 id=image7.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image018.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 10. Menú
+  Configuración del sistema</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta tela habrá una lista de todas los
+  backups ya realizados. Para configurar el backup automático, simplemente haga
+  clic en el botón<b> &quot;Acciones rápidas&quot; </b>y luego seleccione la
+  primera opción <b>&quot;Copia de seguridad de copia de seguridad
+  restaurada&quot;:</b></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=276 height=172 id=image13.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image019.png"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 11. Acciones
+  rápidas de copia de seguridad</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Se abre una ventana con información sobre
+  el directorio donde se guardarán los backups, la frecuencia con la que se
+  realizan estos backups y el tiempo que Go.Data las mantiene guardadas en su
+  computadora. Para guardar los backups automáticas, complete los campos a
+  continuación según sus necesidades y no olvide mantener o cambiar la carpeta
+  de destino para los backups en el campo Ubicación. En caso de duda, acceda al
+  directorio de instalación de Go.Data en su computadora y navegue hasta el
+  directorio / go-data / build / backups, que es el directorio predeterminado
+  para esta función.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=582 height=394 id=image24.png
+  src="Clase%203%20Sarampion%20Apostila_arquivos/image020.jpg"></p>
+  <p class=MsoCaption><span lang=es style='color:black'>Figura 12.
+  Configuración de copia de seguridad automática</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Habiendo entendido cómo funcionan los
+  backups, pasemos a los logs. Ocasionalmente, cuando Go.Data desencadena un
+  error (ya sea relacionado con la conexión, inconsistencia de la base de datos
+  o el sistema en sí), aparecerá un mensaje de error en la tela. Sin embargo,
+  estos mensajes de error no incluyen información completa sobre lo que está
+  sucediendo. Para obtener más detalles, es esencial acceder a los registros
+  del administrador para diagnosticar el problema y / o comprender el
+  comportamiento del sistema en el pasado.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En un entorno Windows, busque los
+  registros según cada módulo y tipo de instalación en las siguientes carpetas:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Si lo instaló solo para su usuario:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>1.1.
+  Logs de la aplicación: {su\carpeta\de\instalación}\Go.Data\logs\app<br>
+  Ejemplo: C:\Users\YourUser\AppData\Roaming\Go.Data\logs\app</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>1.2.Logs
+  de servicios:
+  {su\carpeta\de\instalación}\Go.Data\resources\go-data\build\logs<br>
+  Ejemplo:
+  C:\Users\YourUser\AppData\Local\Programs\Go.Data\resources\go-data\build\logs</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>1.3.
+  Logs de banco de datos: {su\carpeta\de\instalación}\Go.Data\db<br>
+  Ejemplo: C:\Users\YourUser\AppData\Roaming\Go.Data\db</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Si usted seleccionó la instalación para
+  todos los usuarios:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>2.1.
+  Logs de la aplicación: {su\carpeta\de\instalación}\Go.Data\data\logs\app<br>
+  Ejemplo: C:\Go.Data\data\logs\app</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>2.2.
+  Logs de servicios:
+  {su\carpeta\de\instalación}\Go.Data\bin\resources\go-data\build\logs<br>
+  Ejemplo: C:\Go.Data\bin\resources\go-data\build\logs</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pbulletstipo2><span lang=ES-CO style='font-family:Wingdings'>§<span
+  style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=ES-CO>2.3.
+  Logs de banco de datos: {su\carpeta\de\instalación}\Go.Data\data\logs\db<br>
+  Ejemplo: C:\Go.Data\data\logs\db</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Para visualizar los Logs, simplemente
+  ábralo con algún editor de texto. Los Logs más recientes se encuentran al
+  final del archivo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Para finalizar esta clase, siguen algunos
+  documentos oficiales (en inglés) y dónde encontrarlos, en formato de tabla:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=MZtabela border=1 cellspacing=0 cellpadding=0 width=624
+   style='width:468.0pt;border-collapse:collapse;border:none'>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;background:
+    #1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Nombre del documento</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-left:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>descripción</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-left:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Situado en</span></b></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Guía del usuario</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Guía
+    del usuario de Go.Data, con manuales e instrucciones para el uso completo
+    del Software</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Comunidad
+    Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Guía de implementación de Go.Data</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Guía
+    de implementación del plan de uso de Go.Data, alojamiento y configuraciones
+    globales</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Comunidad
+    Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Guía del administrador de GO.Data IT</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Guía
+    del administrador de infraestructura, con información completa sobre
+    instalación, alojamiento, seguridad, API y más</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Comunidad
+    Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Sincronización de la aplicación Go.Data Mobile</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Guía
+    de sincronización de la versión de Go.Data Mobile con datos de una
+    instancia de Go.Data en el equipo.</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Comunidad
+    Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Términos de uso y Contrato de licencia de software</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Términos
+    de uso, licencia y derechos de autor</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Comunidad
+    Go.Data</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>Preguntas frecuentes (FAQ)</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Documento
+    con preguntas más frecuentes</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Referencias</span></p>
+    </td>
+   </tr>
+   <tr>
+    <td width=208 style='width:156.0pt;border:solid white 2.25pt;border-top:
+    none;background:#1F4E79;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><b><span lang=es style='font-family:"Arial",sans-serif;
+    color:white'>ARCHIVO LÉAME</span></b></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Información
+    de software, requisitos requeridos e instalación paso a paso</span></p>
+    </td>
+    <td width=208 style='width:156.0pt;border-top:none;border-left:none;
+    border-bottom:solid white 2.25pt;border-right:solid white 2.25pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Ptextotabela><span lang=es style='font-family:"Arial",sans-serif'>Archivo
+    en formato .md (markdown) dentro del directorio Go.Data </span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal align=center style='margin-bottom:10.0pt;text-align:center;
+  line-height:normal'><span lang=es style='font-size:10.0pt'>Tabla 1.
+  Documentos oficiales</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76077687">Conclusión</a><a
+  name="_v9f9hpq400j6"></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase conoció sobre los tipos de
+  instalaciones y aprendió a identificar qué tipo de instalación usar en cada
+  paso. También aprendió a instalar Go.Data en un entorno Windows, realizar el
+  primer acceso en el navegador, crear copias de seguridad y buscar los logs
+  del administrador.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76077688">Referencia</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'><span lang=EN-US>Go.Data <b>User
+  Guide</b>. Geneva: World Health Organization; 2020. Licence: CC BY-NC-SA 3.0
+  IGO.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'><span lang=EN-US>Go.Data IT <b>Administrator
+  Guide</b> V0.4: World Health Organization; 2020.&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>WHO, <b>Frequently Asked Questions</b>.
+  Disponível em:&nbsp;
+  &lt;https://docs.google.com/document/d/1FH9KxxpLF0wc8PamwGWWRq7yEJKQq_IN205LOZ4O1lo/edit?ts=5e7b3d9b&gt;
+  . Acesso em: 01/10/2020.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>SINHA, Vivek. <b>Install MongoDB
+  on Ubuntu 16.04 LTS. 29</b> de Agosto de 2017. Disponível em:
+  &lt;https://hevodata.com/blog/install-mongodb-on-ubuntu/&gt;. 28/10/2020.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=641 valign=top style='width:480.4pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>CABRAL, Jean. <b>Ambiente para
+  desenvolvimento Node.js com NVM no Ubuntu 18.04. 3</b> de Agosto de 2018.
+  Disponível em:
+  &lt;https://medium.com/@jeancabral/ambiente-para-o-desenvolvimento-de-node-js-com-nvm-no-ubuntu-18-04-c636db90f998&gt;
+  Acesso em: 08/10/2020.</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

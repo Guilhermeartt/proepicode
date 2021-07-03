@@ -1,0 +1,1246 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 7 - Menu Geral e Painel de Controle</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:53.4pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.Pnmeros, li.Pnmeros, div.Pnmeros
+	{mso-style-name:P_números;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpFirst, li.PnmerosCxSpFirst, div.PnmerosCxSpFirst
+	{mso-style-name:P_númerosCxSpFirst;
+	mso-style-link:"P_números Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpMiddle, li.PnmerosCxSpMiddle, div.PnmerosCxSpMiddle
+	{mso-style-name:P_númerosCxSpMiddle;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PnmerosCxSpLast, li.PnmerosCxSpLast, div.PnmerosCxSpLast
+	{mso-style-name:P_númerosCxSpLast;
+	mso-style-link:"P_números Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PnmerosChar
+	{mso-style-name:"P_números Char";
+	mso-style-link:P_números;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:39.4pt;
+	text-indent:-21.55pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:17.85pt;
+	text-indent:-17.85pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P111Ttulonumerado, li.P111Ttulonumerado, div.P111Ttulonumerado
+	{mso-style-name:"P_1\.1\.1 Título_numerado";
+	mso-style-link:"P_1\.1\.1 Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:61.2pt;
+	text-indent:-25.2pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='position:relative;z-index:251628031'><span
+style='position:absolute;left:-125px;top:-10px;width:721px;height:900px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=79></td>
+  <td width=186></td>
+  <td width=36></td>
+  <td width=245></td>
+  <td width=112></td>
+  <td width=29></td>
+  <td width=34></td>
+ </tr>
+ <tr>
+  <td height=82></td>
+  <td></td>
+  <td colspan=6 align=left valign=top><img width=642 height=82
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image001.png"
+  alt="ProEpi&#13;&#10;Associação Brasileira de Profissionais de Epidemiologia de Campo&#13;&#10;"></td>
+ </tr>
+ <tr>
+  <td height=128></td>
+ </tr>
+ <tr>
+  <td height=97></td>
+  <td colspan=2></td>
+  <td colspan=2 align=left valign=top><img width=281 height=97
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image002.png"
+  alt="Logotipo&#10;&#10;Descrição gerada automaticamente com confiança média"></td>
+ </tr>
+ <tr>
+  <td height=29></td>
+ </tr>
+ <tr>
+  <td height=116></td>
+  <td colspan=3></td>
+  <td colspan=2 align=left valign=top><img width=357 height=116
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image003.png"></td>
+ </tr>
+ <tr>
+  <td height=124></td>
+ </tr>
+ <tr>
+  <td height=324></td>
+  <td colspan=6 align=left valign=top><img width=687 height=324
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image004.png"
+  alt="Aula 7 - Menu Geral e Painel de Controle"></td>
+ </tr>
+</table>
+
+</span></span>&nbsp;</p>
+
+<p class=MsoNormal></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><a name="_Hlk76074048"><b><span
+  style='font-size:10.0pt;color:black'>Ficha Técnica</span></b></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación General – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Coordinación Pedagógica –</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> Hirla Arruda</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Contendista – </span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Daniele Queiroz, Felipe Lopes,
+  Luiz Bruno Gomes</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span style='font-size:8.0pt;font-family:"Arial",sans-serif;
+  color:black'>Diseño Instruccional</span></b><span style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'> <b>- </b>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustración – </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Traducción – </span></b><span
+  style='color:black'>Yorrana Martins Ferreira<b>-</b></span><b><span
+  style='color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><b><span lang=ES-CO style='font-size:8.0pt;
+  font-family:"Arial",sans-serif;color:black'>Supervisión – Asociación
+  Brasileña de Profesionales de Epidemiología de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Socios</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 style='width:283.25pt;border:solid #D9D9D9 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>CDC - Centro de Control y Prevención de
+  Enfermedades</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>Tephnet - Training Programs in Epidemiology
+  and Public Health Interventions Network</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>UNB - Universidade de Brasília</span></p>
+  <p style='margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  1.0cm;text-align:justify'><span lang=ES-CO style='font-size:8.0pt;font-family:
+  "Arial",sans-serif;color:black'>GOARN - Global Outbreak Alert and Response
+  Network</span></p>
+  <p class=arttficha><span lang=ES-CO style='color:black'>OMS - Organización
+  Mundial de la Salud</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=ES-CO style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Copyright 2021,
+Asociación Brasileña de Profesionales de Epidemiología de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>Todos los derechos
+reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=ES-CO
+style='line-height:107%;font-family:"Arial",sans-serif'>La copia total o
+parcial, sin autorización expresa del (de los) actor(es) o con el fin de lucro,
+constituye crimen contra la propiedad intelectual, conforme a lo estipulado en
+la Ley nº 9.610/1998 (Ley de Derechos de Autor), con sanciones previstas en el
+Código Penal, artículo 184, párrafos 1° al 3°, sin perjuicio de las sanciones
+aplicables a la especie.</span><span lang=ES-CO style='line-height:107%;
+font-family:"Arial",sans-serif'> </span></p>
+
+</div>
+
+<span lang=ES-CO style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<div align=center>
+
+<table class=Ptabelasum border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'><a
+  name="_Toc76084853"></a>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado style='margin-left:0cm;text-indent:0cm'>Sumário</p>
+  </div>
+  <p class=MsoToc1><a
+  href="#_Toc76084853"></a></p>
+  <p class=MsoToc1><a href="#_Toc76084854">1.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Contextualización<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084855">2.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Gráficos
+  de Resumen:<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+  style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084856">3.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Cadenas
+  de Transmisión<span style='color:windowtext;display:none;text-decoration:
+  none'>.. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084857">4.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Curva
+  Epidemiológica<span style='color:windowtext;display:none;text-decoration:
+  none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084858">5.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Informe
+  de Seguimiento de contactos<span style='color:windowtext;display:none;
+  text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084859"><span lang=ES-CO>6.</span><span
+  style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+  text-decoration:none'>     </span>Casos<span lang=ES-CO> basados </span><span
+  lang=ES-CO>en el </span><span lang=ES-CO>módulo de </span><span lang=ES-CO>estado</span><span
+  lang=ES-CO> d</span><span lang=ES-CO>e</span><span lang=ES-CO> contacto</span><span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084860">7.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Indicadores
+  de Casos<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084861">8.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>     </span>Indicadores
+  de Contactos<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084862"><span lang=ES-CO>9.</span><span
+  style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+  text-decoration:none'>     </span><span lang=ES-CO>Indicadores d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO> Corrientes de Transmis</span><span
+  lang=ES-CO>ión</span><span style='color:windowtext;display:none;text-decoration:
+  none'>.. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084863">10.<span style='font-size:11.0pt;
+  font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Conclusión<span
+  style='color:windowtext;display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+  <p class=MsoToc1><a href="#_Toc76084864">Referência<span style='color:windowtext;
+  display:none;text-decoration:none'>. </span><span
+  style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula><span lang=ES-CO>Clase 7 - Menú General y Panel de Control</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-height:150%'><span style='font-size:12.0pt;
+  line-height:150%;font-family:"Arial",sans-serif;color:black'><img width=582
+  height=388 id=image22.jpg
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image005.jpg"></span></p>
+  <p class=MsoCaption><span lang=ES-CO style='color:black'>Image</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> 1- Traba</span><span
+  lang=ES-CO>j</span><span lang=ES-CO style='color:black'>ando </span><span
+  lang=ES-CO>en la </span><span lang=ES-CO style='color:black'>computadora Por
+  DragonImages</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase conoceremos el menú general
+  de</span><span lang=ES-CO style='color:black'> Go.Data </span><span
+  lang=ES-CO>y</span><span lang=ES-CO style='color:black'> aprenderemos c</span><span
+  lang=ES-CO>ó</span><span lang=ES-CO style='color:black'>mo </span><span
+  lang=ES-CO>funcionan y se generan los indicadores del programa en el panel de
+  control.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>A</span><span
+  lang=ES-CO>l</span><span lang=ES-CO style='color:black'> final d</span><span
+  lang=ES-CO>e la clase podrás</span><span lang=ES-CO style='color:black'>:</span></p>
+  <p class=PBulletsCxSpFirst><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO> Conocer los indicadores de casos y contactos
+  en el panel de control;</span></p>
+  <p class=PBulletsCxSpMiddle><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO> Conocer la visualización de gráficos en el 
+  panel de control;</span></p>
+  <p class=PBulletsCxSpLast><span lang=ES-CO style='font-family:Symbol'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Comprender las opciones y la parte
+  administrativa del menú general.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=Ppargrafo><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084854">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Contextualización</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'> El panel de control
+  tiene varios módulos que se generan automáticamente, por lo tanto, estos
+  datos están directamente relacionados con las variables que se llenan en el <i>software</i>.
+  </span>Presentaremos <span style='color:black'>cada gráfico por separado </span>y<span
+  style='color:black'> c</span>ó<span style='color:black'>mo funciona. </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084855">2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Gráficos de Resum</a><a name="_heading=h.30j0zll"></a>en: </p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Los gráficos de resumen tienen tres tipos
+  principales de vistas, </span><span lang=ES-CO style='color:black'>c</span><span
+  lang=ES-CO>ó</span><span lang=ES-CO style='color:black'>mo: Resum</span><span
+  lang=ES-CO>en</span><span lang=ES-CO style='color:black'> de casos, Casos por
+  </span><span lang=ES-CO>ubicación</span><span lang=ES-CO style='color:black'>
+  geográfic</span><span lang=ES-CO>a</span><span lang=ES-CO style='color:black'>
+  </span><span lang=ES-CO>y</span><span lang=ES-CO style='color:black'> Resum</span><span
+  lang=ES-CO>en</span><span lang=ES-CO style='color:black'> de </span><span
+  lang=ES-CO>admisión</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=160 id=image8.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image006.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>El</span><span lang=ES-CO
+  style='color:black'> gráfico <b>Resum</b></span><b><span lang=ES-CO>en</span></b><b><span
+  lang=ES-CO style='color:black'> de Casos por clasifica</span></b><b><span
+  lang=ES-CO>ción</span></b><span lang=ES-CO style='color:black'> presenta los
+  res</span><span lang=ES-CO>úmenes</span><span lang=ES-CO style='color:black'>
+  de casos de ac</span><span lang=ES-CO>uerdo</span><span lang=ES-CO
+  style='color:black'> co</span><span lang=ES-CO>n</span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>la clasificación en la pestaña
+  de epidemiología</span><span lang=ES-CO style='color:black'>. </span><span
+  lang=ES-CO>El gráfico es interactivo, al pasar el cursor sobre los ítems  es
+  posible </span><span lang=ES-CO style='color:black'>ver la </span><span
+  lang=ES-CO>cantidad</span><span lang=ES-CO style='color:black'> numérica d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'> casos </span><span
+  lang=ES-CO>y al hacer clic se le dirige a los casos según su respectiva
+  clasificación.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=282 height=199 id=image10.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image007.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>El gráfico</span><span lang=ES-CO
+  style='color:black'> <b>Resum</b></span><b><span lang=ES-CO>en</span></b><b><span
+  lang=ES-CO style='color:black'> de Casos por </span></b><b><span lang=ES-CO>ubicación</span></b><b><span
+  lang=ES-CO style='color:black'> geográfic</span></b><b><span lang=ES-CO>a</span></b><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>muestra</span><span
+  lang=ES-CO style='color:black'> u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> gráfico </span><span lang=ES-CO>circular</span><span
+  lang=ES-CO style='color:black'> que resume u</span><span lang=ES-CO>n</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>recuento</span><span
+  lang=ES-CO style='color:black'> d</span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'> casos d</span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>brotes</span><span
+  lang=ES-CO style='color:black'> activos por área. </span><span lang=ES-CO>La
+  ubicación</span><span lang=ES-CO style='color:black'> determinará las áreas
+  que se </span><span lang=ES-CO>muestran en el gráfico</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=279 height=166 id=image6.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image008.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>El</span><span lang=ES-CO
+  style='color:black'> gráfico <b>Resum</b></span><b><span lang=ES-CO>en</span></b><b><span
+  lang=ES-CO style='color:black'> de hospitali</span></b><b><span lang=ES-CO>zación</span></b><span
+  lang=ES-CO> muestra un gráfico circular que proporciona un recuento de casos
+  para el brote activo por el tipo de hospitalización/ aislamiento definido en
+  los detalles de epidemiología de un caso, por lo que al pasar el cursor sobre
+  el gráfico puede ver la cantidad numérica y hacer clic se le dirige a los
+  casos según su respectiva hospitalización</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=255 height=155 id=image12.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image009.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Luego de  conocer los gráficos  resumen,
+  ahora vamos a describir cómo son algunos paneles de control que el programa
+  ofrece, comenzaremos con la  <b>Cadenas de transmisión.</b></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084856">3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Ca</a><a name="_heading=h.1fob9te"></a>denas de Transmisión </p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Este módulo de transmisión muestra un
+  gráfico que visualiza el número de cadenas de transmisión en el brote activo,
+  por tamaño.Muestra cadenas con dos o más registros y muestra un recuento de
+  registros dentro de las cadenas de transmisión</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>La definición de cadena por parte del
+  programa sería cuando un caso se relaciona con el contacto y este contacto se
+  convierte en un caso formando una cadena</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Al hacer clic en la cadena de
+  transmisión, el programa redirige el gráfico por red de burbujas</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=75 id=image7.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image010.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084857">4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Curva Epidemiológica</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Muestra un gráfico que visualiza el
+  recuento de casos a lo largo del tiempo</span><span lang=ES-CO
+  style='color:black'>. A</span><span lang=ES-CO>demás, puede utilizar el menú
+  desplegable para ver el recuento de casos a lo largo del tiempo organizado
+  por resultado o por fecha de informe</span><span lang=ES-CO style='color:
+  black'> organizado por clas</span><span lang=ES-CO>ificación</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Por</span><span
+  lang=ES-CO> tanto, al hacer clic en las opciones el programa genera un gráfico
+  diferente, por lo que es posible visualizar, por intervalo de tiempo, cuántos
+  pacientes fueron ingresados por clasificación o resultado en el</span><span
+  lang=ES-CO style='color:black'> programa.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=165 id=image4.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image011.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084858">5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Informe</a><a name="_heading=h.2et92p0"></a><span style='color:black'>
+  de </span>Seguimiento<span style='color:black'> de contactos</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En este módulo, el informe de seguimiento
+  </span><span lang=ES-CO style='color:black'> de contactos </span><span
+  lang=ES-CO>muestra</span><span lang=ES-CO style='color:black'> u</span><span
+  lang=ES-CO>n</span><span lang=ES-CO style='color:black'> gráfico que </span><span
+  lang=ES-CO>visualiza</span><span lang=ES-CO style='color:black'> </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> número de contactos
+  de </span><span lang=ES-CO>seguimiento</span><span lang=ES-CO
+  style='color:black'>, </span><span lang=ES-CO>el</span><span lang=ES-CO
+  style='color:black'> número de contactos </span><span lang=ES-CO>sin</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>seguimientos</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>y</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>porcentaje</span><span
+  lang=ES-CO style='color:black'> relativ</span><span lang=ES-CO>o</span><span
+  lang=ES-CO style='color:black'> por </span><span lang=ES-CO>día</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO style='color:black'>Este gráfico está
+  directamente </span><span lang=ES-CO>vinculado</span><span lang=ES-CO
+  style='color:black'> a</span><span lang=ES-CO>l seguimiento</span><span
+  lang=ES-CO style='color:black'> d</span><span lang=ES-CO>e</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>contactos</span><span
+  lang=ES-CO style='color:black'> </span><span lang=ES-CO>de los que
+  conoceremos más adelante</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span style='color:black'><img width=566 height=129
+  id=image17.png src="Clase%207%20Sarampion%20Apostila_arquivos/image012.png"></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084859"><span lang=ES-CO>6.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+  lang=ES-CO>Casos</span></a><span lang=ES-CO> basados </span><a
+  name="_heading=h.tyjcwt"></a><span lang=ES-CO>en el </span><span lang=ES-CO>módulo
+  de </span><span lang=ES-CO>estado</span><span lang=ES-CO> d</span><span
+  lang=ES-CO>e</span><span lang=ES-CO> contacto</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Muestra un gráfico que visualiza los
+  casos nuevos que no son de un contacto, los casos nuevos de un contacto con
+  seguimiento completo, los casos nuevos de un contacto que se perdieron
+  durante el seguimiento y el porcentaje de casos en </span><span lang=ES-CO
+  style='color:black'> </span><span lang=ES-CO>l</span><span lang=ES-CO
+  style='color:black'>a lista de contactos.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>Esta visualización puede ayudar a
+  determinar si los  casos se originan en contactos conocidos.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span style='color:black'><img width=566 height=131
+  id=image11.png src="Clase%207%20Sarampion%20Apostila_arquivos/image013.png"></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En este módulo habrá varios bloques que
+  brindan información sobre</span><span lang=ES-CO style='color:black'>  casos
+  como:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084860">7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Indicadores</a> de Casos</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PnmerosCxSpFirst>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos que murieron </p>
+  <p class=PnmerosCxSpMiddle>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos actualmente hospitalizados</p>
+  <p class=PnmerosCxSpMiddle>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos con menos de X contactos: la cantidad de casos que tienen menos
+  contactos que el número seleccionado</p>
+  <p class=PnmerosCxSpMiddle>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Nuevos casos en los X días anteriores en cadenas de transmisión
+  conocidas: el número de casos que se notificaron en el  número de días
+  seleccionados dentro de umna cadena de tranmisión existente en  Go.Data</p>
+  <p class=PnmerosCxSpMiddle>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos que se niegan a ser trasladados a una unidad de tratamiento </p>
+  <p class=PnmerosCxSpMiddle>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos con resultados de laboratorio pendientes</p>
+  <p class=PnmerosCxSpLast>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span>Casos no identificados a través de contactos</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=206 id=image9.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image014.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084861">8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+  </span>Indicadores</a> de Contactos</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos por caso
+  (</span></b><b><span lang=ES-CO>promedio</span></b><b><span lang=ES-CO
+  style='color:black'>)</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> número prom</span><span
+  lang=ES-CO>e</span><span lang=ES-CO style='color:black'>dio de contactos </span><span
+  lang=ES-CO>para un caso en el brote activo</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos por caso
+  (mediana)</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>la mediana del número</span><span lang=ES-CO style='color:black'>
+  de contactos para </span><span lang=ES-CO>un caso</span><span lang=ES-CO
+  style='color:black'> activo </span><span lang=ES-CO>en el brote</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos </span></b><b><span
+  lang=ES-CO>en la</span></b><b><span lang=ES-CO style='color:black'> lista de </span></b><b><span
+  lang=ES-CO>seguimiento</span></b><b><span lang=ES-CO style='color:black'> (</span></b><b><span
+  lang=ES-CO>fecha</span></b><b><span lang=ES-CO style='color:black'>)</span></b><span
+  lang=ES-CO style='color:black'>: </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> número de contactos </span><span lang=ES-CO>en
+  la</span><span lang=ES-CO style='color:black'> lista de </span><span
+  lang=ES-CO>seguimiento</span><span lang=ES-CO style='color:black'> para </span><span
+  lang=ES-CO>el día</span><span lang=ES-CO style='color:black'> actual.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos perdidos
+  </span></b><b><span lang=ES-CO>durante el seguimiento</span></b><span
+  lang=ES-CO style='color:black'>: </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> número de contactos perdidos </span><span
+  lang=ES-CO>durante el seguimiento</span><span lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Contactos</span></b><b><span
+  lang=ES-CO style='color:black'> no vistos em X d</span></b><b><span
+  lang=ES-CO>í</span></b><b><span lang=ES-CO style='color:black'>as</span></b><span
+  lang=ES-CO style='color:black'>: </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> número de contactos que no </span><span
+  lang=ES-CO>se vieron en los días</span><span lang=ES-CO style='color:black'>
+  seleccionados.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos que se </span></b><b><span
+  lang=ES-CO>convierten en</span></b><b><span lang=ES-CO style='color:black'>
+  casos</span></b><span lang=ES-CO style='color:black'>: </span><span
+  lang=ES-CO>el</span><span lang=ES-CO style='color:black'> número de contactos
+  que se </span><span lang=ES-CO>tornaran</span><span lang=ES-CO
+  style='color:black'> casos </span><span lang=ES-CO>del total</span><span
+  lang=ES-CO style='color:black'> de </span><span lang=ES-CO>contactos</span><span
+  lang=ES-CO style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO>Contactos vistos (fecha)</span></b><span
+  lang=ES-CO>: el número de contactos que se han rastreado hasta la fecha.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES-CO style='color:black'>Contactos co</span></b><b><span
+  lang=ES-CO>n</span></b><b><span lang=ES-CO style='color:black'> </span></b><b><span
+  lang=ES-CO>seguimiento</span></b><b><span lang=ES-CO style='color:black'> </span></b><b><span
+  lang=ES-CO>exitoso</span></b><b><span lang=ES-CO style='color:black'> (</span></b><b><span
+  lang=ES-CO>fecha</span></b><b><span lang=ES-CO style='color:black'>)</span></b><span
+  lang=ES-CO style='color:black'>: </span><span lang=ES-CO>el</span><span
+  lang=ES-CO style='color:black'> número de contactos </span><span lang=ES-CO>a
+  los que se les ha dado seguimiento hasta el día actual de la cantidad de
+  contactos que tienen un seguimiento programado</span><span lang=ES-CO
+  style='color:black'>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=566 height=151 id=image13.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image015.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084862"><span lang=ES-CO
+  style='font-size:12.0pt;line-height:150%'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-CO>Indicadores d</span></a><a
+  name="_heading=h.4d34og8"></a><span lang=ES-CO>e</span><span lang=ES-CO>
+  Corrientes de Transmis</span><span lang=ES-CO>ión</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=86 id=image16.png
+  src="Clase%207%20Sarampion%20Apostila_arquivos/image016.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc76084863">10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Conclus</a><a name="_heading=h.2s8eyo1"></a>ión</p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES-CO>En esta clase aprendimos sobre todos los
+  gráficos a los que se puede acceder en Go.Data, curvas y indicadores desde el
+  panel de control que son importantes para visualizar el brote de forma macro
+  y ayudar en la gestión de la toma de decisiones</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=ES-CO style='font-size:12.0pt;line-height:150%;font-family:"Arial",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=Ppargrafo><span lang=ES-CO>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado style='margin-left:0cm;text-indent:0cm'><a
+  name="_Toc70697318"></a><a name="_Toc76084864">Referencia</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). <span lang=EN-US>(2020-a). <b>Go.Data Frequently asked questions. </b></span>Disponivel
+  em https://www.who.int/godata/go.data-frequently-asked-question.acesso em :
+  09/09/2020&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo style='text-indent:0cm'>ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). (2020-b), <b>Go.Data User Guide v 2.0.</b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=Ppargrafo>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

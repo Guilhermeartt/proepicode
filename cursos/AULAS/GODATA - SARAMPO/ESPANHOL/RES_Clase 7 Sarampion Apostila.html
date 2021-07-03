@@ -1,0 +1,500 @@
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <title>Clase 7 - Menú General y Panel de Control</title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
+                        <body>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <div>
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
+                                    <div class="nav-container">
+                                        <h3>Clase 7 - Menú General y Panel de Control</h3>
+                                    </div>
+                                </div>
+                                <div class="modal">
+                                    <span class="close-modal">&times;</span>
+                                    <img class="modal-content" id="img-modal">
+                                    <div id="caption"></div>
+                                </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;" valign="top">
+<p class="TtuloAula"><span lang="ES-CO">Clase 7 - Menú General y Panel de Control</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="388" id="image22.jpg" src="Clase%207%20Sarampion%20Apostila_arquivos/image005.jpg" width="582"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Image</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> 1- Traba</span><span lang="ES-CO">j</span><span lang="ES-CO" style="color:black">ando </span><span lang="ES-CO">en la </span><span lang="ES-CO" style="color:black">computadora Por
+  DragonImages</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase conoceremos el menú general
+  de</span><span lang="ES-CO" style="color:black"> Go.Data </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> aprenderemos c</span><span lang="ES-CO">ó</span><span lang="ES-CO" style="color:black">mo </span><span lang="ES-CO">funcionan y se generan los indicadores del programa en el panel de
+  control.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">A</span><span lang="ES-CO">l</span><span lang="ES-CO" style="color:black"> final d</span><span lang="ES-CO">e la clase podrás</span><span lang="ES-CO" style="color:black">:</span></p>
+<li class="PBullets"><span lang="ES-CO"> Conocer los indicadores de casos y contactos
+  en el panel de control;</span></li>
+<li class="PBullets"><span lang="ES-CO"> Conocer la visualización de gráficos en el 
+  panel de control;</span></li>
+<li class="PBullets"><span lang="ES-CO">Comprender las opciones y la parte
+  administrativa del menú general.</span></li>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084854">1.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Contextualización</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black"> El panel de control
+  tiene varios módulos que se generan automáticamente, por lo tanto, estos
+  datos están directamente relacionados con las variables que se llenan en el <i>software</i>.
+  </span>Presentaremos <span style="color:black">cada gráfico por separado </span>y<span style="color:black"> c</span>ó<span style="color:black">mo funciona. </span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084855">2.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Gráficos de Resum</a><a name="_heading=h.30j0zll"></a>en: </p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Los gráficos de resumen tienen tres tipos
+  principales de vistas, </span><span lang="ES-CO" style="color:black">c</span><span lang="ES-CO">ó</span><span lang="ES-CO" style="color:black">mo: Resum</span><span lang="ES-CO">en</span><span lang="ES-CO" style="color:black"> de casos, Casos por
+  </span><span lang="ES-CO">ubicación</span><span lang="ES-CO" style="color:black">
+  geográfic</span><span lang="ES-CO">a</span><span lang="ES-CO" style="color:black">
+</span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> Resum</span><span lang="ES-CO">en</span><span lang="ES-CO" style="color:black"> de </span><span lang="ES-CO">admisión</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="160" id="image8.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image006.png" width="566"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">El</span><span lang="ES-CO" style="color:black"> gráfico <b>Resum</b></span><b><span lang="ES-CO">en</span></b><b><span lang="ES-CO" style="color:black"> de Casos por clasifica</span></b><b><span lang="ES-CO">ción</span></b><span lang="ES-CO" style="color:black"> presenta los
+  res</span><span lang="ES-CO">úmenes</span><span lang="ES-CO" style="color:black">
+  de casos de ac</span><span lang="ES-CO">uerdo</span><span lang="ES-CO" style="color:black"> co</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">la clasificación en la pestaña
+  de epidemiología</span><span lang="ES-CO" style="color:black">. </span><span lang="ES-CO">El gráfico es interactivo, al pasar el cursor sobre los ítems  es
+  posible </span><span lang="ES-CO" style="color:black">ver la </span><span lang="ES-CO">cantidad</span><span lang="ES-CO" style="color:black"> numérica d</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black"> casos </span><span lang="ES-CO">y al hacer clic se le dirige a los casos según su respectiva
+  clasificación.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="199" id="image10.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image007.png" width="282"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">El gráfico</span><span lang="ES-CO" style="color:black"> <b>Resum</b></span><b><span lang="ES-CO">en</span></b><b><span lang="ES-CO" style="color:black"> de Casos por </span></b><b><span lang="ES-CO">ubicación</span></b><b><span lang="ES-CO" style="color:black"> geográfic</span></b><b><span lang="ES-CO">a</span></b><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">muestra</span><span lang="ES-CO" style="color:black"> u</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> gráfico </span><span lang="ES-CO">circular</span><span lang="ES-CO" style="color:black"> que resume u</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">recuento</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black"> casos d</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">brotes</span><span lang="ES-CO" style="color:black"> activos por área. </span><span lang="ES-CO">La
+  ubicación</span><span lang="ES-CO" style="color:black"> determinará las áreas
+  que se </span><span lang="ES-CO">muestran en el gráfico</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="166" id="image6.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image008.png" width="279"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">El</span><span lang="ES-CO" style="color:black"> gráfico <b>Resum</b></span><b><span lang="ES-CO">en</span></b><b><span lang="ES-CO" style="color:black"> de hospitali</span></b><b><span lang="ES-CO">zación</span></b><span lang="ES-CO"> muestra un gráfico circular que proporciona un recuento de casos
+  para el brote activo por el tipo de hospitalización/ aislamiento definido en
+  los detalles de epidemiología de un caso, por lo que al pasar el cursor sobre
+  el gráfico puede ver la cantidad numérica y hacer clic se le dirige a los
+  casos según su respectiva hospitalización</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="155" id="image12.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image009.png" width="255"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Luego de  conocer los gráficos  resumen,
+  ahora vamos a describir cómo son algunos paneles de control que el programa
+  ofrece, comenzaremos con la  <b>Cadenas de transmisión.</b></span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084856">3.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Ca</a><a name="_heading=h.1fob9te"></a>denas de Transmisión </p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Este módulo de transmisión muestra un
+  gráfico que visualiza el número de cadenas de transmisión en el brote activo,
+  por tamaño.Muestra cadenas con dos o más registros y muestra un recuento de
+  registros dentro de las cadenas de transmisión</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">La definición de cadena por parte del
+  programa sería cuando un caso se relaciona con el contacto y este contacto se
+  convierte en un caso formando una cadena</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Al hacer clic en la cadena de
+  transmisión, el programa redirige el gráfico por red de burbujas</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="75" id="image7.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image010.png" width="566"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084857">4.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Curva Epidemiológica</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Muestra un gráfico que visualiza el
+  recuento de casos a lo largo del tiempo</span><span lang="ES-CO" style="color:black">. A</span><span lang="ES-CO">demás, puede utilizar el menú
+  desplegable para ver el recuento de casos a lo largo del tiempo organizado
+  por resultado o por fecha de informe</span><span lang="ES-CO" style="color:
+  black"> organizado por clas</span><span lang="ES-CO">ificación</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Por</span><span lang="ES-CO"> tanto, al hacer clic en las opciones el programa genera un gráfico
+  diferente, por lo que es posible visualizar, por intervalo de tiempo, cuántos
+  pacientes fueron ingresados por clasificación o resultado en el</span><span lang="ES-CO" style="color:black"> programa.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="165" id="image4.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image011.png" width="566"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084858">5.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Informe</a><a name="_heading=h.2et92p0"></a><span style="color:black">
+  de </span>Seguimiento<span style="color:black"> de contactos</span></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En este módulo, el informe de seguimiento
+  </span><span lang="ES-CO" style="color:black"> de contactos </span><span lang="ES-CO">muestra</span><span lang="ES-CO" style="color:black"> u</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> gráfico que </span><span lang="ES-CO">visualiza</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos
+  de </span><span lang="ES-CO">seguimiento</span><span lang="ES-CO" style="color:black">, </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos </span><span lang="ES-CO">sin</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">seguimientos</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">porcentaje</span><span lang="ES-CO" style="color:black"> relativ</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black"> por </span><span lang="ES-CO">día</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Este gráfico está
+  directamente </span><span lang="ES-CO">vinculado</span><span lang="ES-CO" style="color:black"> a</span><span lang="ES-CO">l seguimiento</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">contactos</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">de los que
+  conoceremos más adelante</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><span style="color:black"><img height="129" id="image17.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image012.png" width="566"/></span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084859"><span lang="ES-CO">6.<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang="ES-CO">Casos</span></a><span lang="ES-CO"> basados </span><a name="_heading=h.tyjcwt"></a><span lang="ES-CO">en el </span><span lang="ES-CO">módulo
+  de </span><span lang="ES-CO">estado</span><span lang="ES-CO"> d</span><span lang="ES-CO">e</span><span lang="ES-CO"> contacto</span></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Muestra un gráfico que visualiza los
+  casos nuevos que no son de un contacto, los casos nuevos de un contacto con
+  seguimiento completo, los casos nuevos de un contacto que se perdieron
+  durante el seguimiento y el porcentaje de casos en </span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">l</span><span lang="ES-CO" style="color:black">a lista de contactos.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Esta visualización puede ayudar a
+  determinar si los  casos se originan en contactos conocidos.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><span style="color:black"><img height="131" id="image11.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image013.png" width="566"/></span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="MsoNormal" style="margin-bottom:0cm;line-"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'> </span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En este módulo habrá varios bloques que
+  brindan información sobre</span><span lang="ES-CO" style="color:black">  casos
+  como:</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084860">7.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Indicadores</a> de Casos</p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pnmeros">1.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos que murieron </p>
+<p class="Pnmeros">2.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos actualmente hospitalizados</p>
+<p class="Pnmeros">3.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos con menos de X contactos: la cantidad de casos que tienen menos
+  contactos que el número seleccionado</p>
+<p class="Pnmeros">4.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Nuevos casos en los X días anteriores en cadenas de transmisión
+  conocidas: el número de casos que se notificaron en el  número de días
+  seleccionados dentro de umna cadena de tranmisión existente en  Go.Data</p>
+<p class="Pnmeros">5.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos que se niegan a ser trasladados a una unidad de tratamiento </p>
+<p class="Pnmeros">6.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos con resultados de laboratorio pendientes</p>
+<p class="Pnmeros">7.<span style='font:7.0pt "Times New Roman"'>   
+  </span>Casos no identificados a través de contactos</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="206" id="image9.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image014.png" width="567"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084861">8.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Indicadores</a> de Contactos</p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos por caso
+  (</span></b><b><span lang="ES-CO">promedio</span></b><b><span lang="ES-CO" style="color:black">)</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número prom</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black">dio de contactos </span><span lang="ES-CO">para un caso en el brote activo</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos por caso
+  (mediana)</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">la mediana del número</span><span lang="ES-CO" style="color:black">
+  de contactos para </span><span lang="ES-CO">un caso</span><span lang="ES-CO" style="color:black"> activo </span><span lang="ES-CO">en el brote</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos </span></b><b><span lang="ES-CO">en la</span></b><b><span lang="ES-CO" style="color:black"> lista de </span></b><b><span lang="ES-CO">seguimiento</span></b><b><span lang="ES-CO" style="color:black"> (</span></b><b><span lang="ES-CO">fecha</span></b><b><span lang="ES-CO" style="color:black">)</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos </span><span lang="ES-CO">en
+  la</span><span lang="ES-CO" style="color:black"> lista de </span><span lang="ES-CO">seguimiento</span><span lang="ES-CO" style="color:black"> para </span><span lang="ES-CO">el día</span><span lang="ES-CO" style="color:black"> actual.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos perdidos
+  </span></b><b><span lang="ES-CO">durante el seguimiento</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos perdidos </span><span lang="ES-CO">durante el seguimiento</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO">Contactos</span></b><b><span lang="ES-CO" style="color:black"> no vistos em X d</span></b><b><span lang="ES-CO">í</span></b><b><span lang="ES-CO" style="color:black">as</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos que no </span><span lang="ES-CO">se vieron en los días</span><span lang="ES-CO" style="color:black">
+  seleccionados.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos que se </span></b><b><span lang="ES-CO">convierten en</span></b><b><span lang="ES-CO" style="color:black">
+  casos</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos
+  que se </span><span lang="ES-CO">tornaran</span><span lang="ES-CO" style="color:black"> casos </span><span lang="ES-CO">del total</span><span lang="ES-CO" style="color:black"> de </span><span lang="ES-CO">contactos</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO">Contactos vistos (fecha)</span></b><span lang="ES-CO">: el número de contactos que se han rastreado hasta la fecha.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contactos co</span></b><b><span lang="ES-CO">n</span></b><b><span lang="ES-CO" style="color:black"> </span></b><b><span lang="ES-CO">seguimiento</span></b><b><span lang="ES-CO" style="color:black"> </span></b><b><span lang="ES-CO">exitoso</span></b><b><span lang="ES-CO" style="color:black"> (</span></b><b><span lang="ES-CO">fecha</span></b><b><span lang="ES-CO" style="color:black">)</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> número de contactos </span><span lang="ES-CO">a
+  los que se les ha dado seguimiento hasta el día actual de la cantidad de
+  contactos que tienen un seguimiento programado</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="151" id="image13.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image015.png" width="566"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084862"><span lang="ES-CO" style="font-size:12.0pt;line-">9.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO">Indicadores d</span></a><a name="_heading=h.4d34og8"></a><span lang="ES-CO">e</span><span lang="ES-CO">
+  Corrientes de Transmis</span><span lang="ES-CO">ión</span></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="86" id="image16.png" src="Clase%207%20Sarampion%20Apostila_arquivos/image016.png" width="567"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76084863">10.<span style='font:7.0pt "Times New Roman"'>      
+  </span>Conclus</a><a name="_heading=h.2s8eyo1"></a>ión</p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase aprendimos sobre todos los
+  gráficos a los que se puede acceder en Go.Data, curvas y indicadores desde el
+  panel de control que son importantes para visualizar el brote de forma macro
+  y ayudar en la gestión de la toma de decisiones</span></p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado" style="margin-left:0cm;text-indent:0cm"><a name="_Toc70697318"></a><a name="_Toc76084864">Referencia</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo" style="text-indent:0cm">ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). <span lang="EN-US">(2020-a). <b>Go.Data Frequently asked questions. </b></span>Disponivel
+  em https://www.who.int/godata/go.data-frequently-asked-question.acesso em :
+  09/09/2020 </p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo" style="text-indent:0cm">ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). (2020-b), <b>Go.Data User Guide v 2.0.</b></p>
+</td>
+</tr>
+</table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>	
+                            </section>
+                        </body>
+                    

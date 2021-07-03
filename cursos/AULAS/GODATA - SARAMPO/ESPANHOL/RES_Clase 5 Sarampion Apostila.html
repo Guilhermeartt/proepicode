@@ -1,0 +1,484 @@
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <title>Clase 5 - Gestión de contactos </title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
+                        <body>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <div>
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
+                                    <div class="nav-container">
+                                        <h3>Clase 5 - Gestión de contactos </h3>
+                                    </div>
+                                </div>
+                                <div class="modal">
+                                    <span class="close-modal">&times;</span>
+                                    <img class="modal-content" id="img-modal">
+                                    <div id="caption"></div>
+                                </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;" valign="top">
+<p class="TtuloAula">Clase 5 - Gestión de contactos </p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="378" id="image13.jpg" src="Clase%205%20Sarampion%20Apostila_arquivos/image005.jpg" width="569"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Image</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> 1 –  Pe</span><span lang="ES-CO">rson</span><span lang="ES-CO" style="color:black">a anali</span><span lang="ES-CO">z</span><span lang="ES-CO" style="color:black">ando da</span><span lang="ES-CO">t</span><span lang="ES-CO" style="color:black">os Por twenty20photos</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:#202124;background:
+  #F8F9FA">¡</span><span lang="ES-CO">Hola</span><span lang="ES-CO" style="color:black">!</span></p>
+<p class="Ppargrafo"><span lang="ES-CO">En la última clase has aprendido
+  cómo crear un caso en</span><span lang="ES-CO" style="color:black"> Go.Data. </span><span lang="ES-CO">En esta clase aprenderás cómo crear un contacto, convertir un
+  contacto en un caso y cómo hacer un seguimiento diario</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Al final de la clase podrás:</span></p>
+<li class="PBullets">Crear lista de contactos</li>
+<li class="PBullets"><span lang="ES-CO">Aprenda a hacer un seguimiento diario</span></li>
+<li class="PBullets">Ver un seguimiento diario</li>
+<li class="PBullets"><span lang="ES-CO">Convertir un contacto en caso.</span></li>
+<li class="PBullets"><span lang="ES-CO">Conoce al panel de monitoreo</span></li>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76079782">1.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Contextualizando</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Después de aprender cómo funciona la base
+  de datos de casos en </span><span lang="ES-CO" style="color:black">Go.Data, a</span><span lang="ES-CO">hora entendamos la administración de contactos, es decir, cómo
+  crear listas de aquellos contactos que son potencialmente dañinos y aprender
+  a monitorear y ver el estado de salud de estos contactos</span><span lang="ES-CO" style="color:black">. </span><span lang="ES-CO">La base de datos de
+  contactos de</span><span lang="ES-CO" style="color:black"> Go.Data se creó de
+  acu</span><span lang="ES-CO">erdo con los pasos del seguimiento de contactos,
+  que son identificar, enumerar y monitorear contactos.</span><span lang="ES-CO" style="color:black"> </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76079783"><span lang="ES-CO">2.<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang="ES-CO">Crear</span></a><span lang="ES-CO"> u</span><span lang="ES-CO">n</span><span lang="ES-CO"> Contacto </span><span lang="ES-CO">en</span><span lang="ES-CO">
+  Go.Data</span></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">A</span><span lang="ES-CO">ún en la base de datos de casos</span><span lang="ES-CO" style="color:black">, el prime</span><span lang="ES-CO">r paso es identificar
+  el origen de este contacto, es decir</span><span lang="ES-CO" style="color:
+  black">, visuali</span><span lang="ES-CO">z</span><span lang="ES-CO" style="color:black">ar </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> caso referente </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> hacer clic </span><span lang="ES-CO">en las
+  tres bolas</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="131" id="image14.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image006.png" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 1. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ tres bolas” en la pestaña de</span><span lang="ES-CO" style="color:black"> casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style='font-size:7.0pt;line-;
+  font-family:"Times New Roman",serif;color:black'>  </span><span lang="ES-CO" style="color:black">Por </span><span lang="ES-CO">lo tanto</span><span lang="ES-CO" style="color:black">, de</span><span lang="ES-CO">ben</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">hacer clic en agregar
+  contacto para empezar  el proceso de registro en el sistema</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="332" id="image4.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image007.png" width="134"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 2. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ agregar contacto” en la
+  pestaña de </span><span lang="ES-CO" style="color:black">casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Entonces, vamos a presentar tres pasos
+  para crear un contacto: personal, dirección y relación</span><span lang="ES-CO" style="color:black">. </span><span lang="ES-CO">En otras palabras,
+  estos dos primeros pasos son lo mismo que la creación de un caso, por lo que,
+  como se mencionó anteriormente iremos directamente al tercer paso, que es la </span><b><span lang="ES-CO" style="color:black">relac</span></b><b><span lang="ES-CO">ión</span></b><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="177" id="image11.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image008.png" width="566"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 3. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ relación” en la pestaña de</span><span lang="ES-CO" style="color:black"> casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO">Fecha del Primer</span></b><b><span lang="ES-CO" style="color:black"> Contacto </span></b><b><span lang="ES-CO">y</span></b><b><span lang="ES-CO" style="color:black"> Último Contacto</span></b><span lang="ES-CO" style="color:black">:  </span><span lang="ES-CO">Fecha</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> prime</span><span lang="ES-CO">r</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> último contacto co</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> caso</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Tipo de exposi</span></b><b><span lang="ES-CO">ción</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">El</span><span lang="ES-CO" style="color:black"> tipo de exposi</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> contacto co</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">caso</span><span lang="ES-CO" style="color:black"> ( E</span><span lang="ES-CO">j</span><span lang="ES-CO" style="color:black"> :Contacto </span><span lang="ES-CO">Directo</span><span lang="ES-CO" style="color:black">, Contacto
+  Indirecto,Exposi</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> Sexual,etc.)</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Fre</span></b><b><span lang="ES-CO">cuencia de Exposición</span></b><span lang="ES-CO" style="color:
+  black">: Número de ve</span><span lang="ES-CO">c</span><span lang="ES-CO" style="color:black">es que </span><span lang="ES-CO">se ha producido</span><span lang="ES-CO" style="color:black"> esta exposi</span><span lang="ES-CO">ción.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Grupo</span></b><span lang="ES-CO" style="color:black">: Vincula</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> co</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">cualquier</span><span lang="ES-CO" style="color:black"> grupo existente en </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> programa</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Dura</span></b><b><span lang="ES-CO">ción</span></b><b><span lang="ES-CO" style="color:black"> d</span></b><b><span lang="ES-CO">e la</span></b><b><span lang="ES-CO" style="color:black"> exposi</span></b><b><span lang="ES-CO">ción</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">La</span><span lang="ES-CO" style="color:black"> dura</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> de cada exposi</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> ( E</span><span lang="ES-CO">j</span><span lang="ES-CO" style="color:black"> : C</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rta, L</span><span lang="ES-CO">ar</span><span lang="ES-CO" style="color:black">ga)</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Contexto d</span></b><b><span lang="ES-CO">e</span></b><b><span lang="ES-CO" style="color:black"> exposi</span></b><b><span lang="ES-CO">ción</span></b><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO">El</span><span lang="ES-CO" style="color:black"> contexto d</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black"> exposi</span><span lang="ES-CO">ción</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> caso co</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> contacto ( E</span><span lang="ES-CO">j</span><span lang="ES-CO" style="color:black"> : Traba</span><span lang="ES-CO">jo</span><span lang="ES-CO" style="color:black">, Familia)</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><b><span lang="ES-CO" style="color:black">Comente: </span></b><span lang="ES-CO" style="color:black">Vari</span><span lang="ES-CO">able</span><span lang="ES-CO" style="color:black"> li</span><span lang="ES-CO">b</span><span lang="ES-CO" style="color:black">re para coment</span><span lang="ES-CO">ar</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width:100.0%" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img height="109" id="Imagem 15" src="Clase%205%20Sarampion%20Apostila_arquivos/image009.png" width="128"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span lang="ES-CO" style="color:black">¡Tome Nota!</span></b></p>
+<p class="txtrec"><span lang="ES-CO" style="color:black">No siempre es posible
+    obtener toda la información de un contacto, sin embargo, el número máximo
+    de variables llenas en el programa permite mejores estudios en el brote
+    relacionado</span><span lang="ES-CO" style="color:black">.</span><span lang="ES-CO" style="color:black"> Las variables requeridas son</span><span lang="ES-CO" style="color:black">: </span><span lang="ES-CO" style="color:black">Fecha</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO" style="color:black">el</span><span lang="ES-CO" style="color:black"> Último Contacto.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;line-"></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Después de completar las variables, haga
+  clic en crear contacto y</span><span lang="ES-CO" style="color:black"> finali</span><span lang="ES-CO">ce</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> proceso. </span><span style="color:black">(Figura 4)</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="51" id="image23.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image010.png" width="568"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 4. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ crear contacto” en la
+  pestaña de</span><span lang="ES-CO" style="color:black"> casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><span lang="ES-CO">3.<span style='font:7.0pt "Times New Roman"'>  
+  </span></span><span lang="ES-CO" style='font-size:7.0pt;line-;
+  font-family:"Times New Roman",serif'>  </span><a name="_Toc76079784"><span lang="ES-CO">Convertir</span></a><span lang="ES-CO"> u</span><span lang="ES-CO">n</span><span lang="ES-CO"> Contacto e</span><span lang="ES-CO">n un</span><span lang="ES-CO">
+  Caso</span></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Co</span><span lang="ES-CO">n las manifestaciones de síntomas en los contactos o los
+  resultados de exámenes relacionados con la lesión, es necesario convertir un
+  contacto en un caso sospechoso o confirmado</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Ingrese al menú general</span><span lang="ES-CO" style="color:black"> (e</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> verde) </span><span lang="ES-CO">y haga clic en
+  contactos y nuevamente en contactos para ingresar al banco de referencia</span><span lang="ES-CO" style="color:black">. </span><span style="color:black">(Figura 5)</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="363" id="image12.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image011.png" width="145"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 5. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ contactos” en la pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Luego</span><span lang="ES-CO" style="color:black">, en la base de datos de contactos, es necesario
+  identificar el contacto referente, o</span><span lang="ES-CO"> sea</span><span lang="ES-CO" style="color:black">, </span><span lang="ES-CO">buscar el contacto
+  que se convertirá y hacer clic en las tres bolas y luego</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">seleccionar</span><span lang="ES-CO" style="color:black"> <b>convert</b></span><b><span lang="ES-CO">i</span></b><b><span lang="ES-CO" style="color:black">r e</span></b><b><span lang="ES-CO">n</span></b><b><span lang="ES-CO" style="color:black"> caso.</span></b></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="212" id="image22.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image012.png" width="518"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 6. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ convertir en contacto” en la
+  pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span style="color:black">Após esta ação, o contato irá
+  aparecer no banco de casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76079785"><span lang="ES-CO">4.<span style='font:7.0pt "Times New Roman"'>   </span></span><span lang="ES-CO">Listas</span></a><span lang="ES-CO"> de Contactos </span><span lang="ES-CO">y</span><span lang="ES-CO"> </span><span lang="ES-CO">Seguimiento</span><span lang="ES-CO"> Di</span><span lang="ES-CO">a</span><span lang="ES-CO">rio</span><span lang="ES-CO"> </span></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pnmeros"><span lang="ES-CO">1.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO">Ahora que hemos aprendido cómo crear el
+  contacto, pasemos a aprender cómo ver la lista de contactos y realizar un
+  seguimiento diario.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Haga clic en el Menú en el lado izquierdo</span><span lang="ES-CO" style="color:black"> (<b>bot</b></span><b><span lang="ES-CO">ón</span></b><b><span lang="ES-CO" style="color:black"> verde), </span></b><span lang="ES-CO">luego
+  haga clic en contactos y nuevamente haga clic en contactos</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="164" id="image31.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image013.png" width="566"/></p>
+<p class="MsoCaption"><span style="color:black">Figura 7. Ficha Captura de </span>pantalla<span style="color:black"> men</span>ú<span style="color:black"> Go.Data.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="404" id="image20.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image014.jpg" width="160"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 8. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ contactos” en la pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span style="color:black">Logo, iremos visualizar a lista
+  de contatos referente ao surto escolhido. Neste campo conseguimos visualizar
+  a lista de contatos, a exposição, contexto e adicionar acompanhamento diários
+  dos contatos. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Podemos aplicar </span><span lang="ES-CO">y crear filtros para facilitar la visualización de la base de
+  datos de contactos y también es posible crear un cuestionario específico para
+  los contactos.</span><span lang="ES-CO" style="color:black">. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="155" id="image26.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image015.jpg" width="568"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 9. Captura</span><span lang="ES-CO"> de pantalla de la función “ contactos” en la pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pnmeros"><span lang="ES-CO">2.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO">En la base de datos de contactos de la pestaña
+  izquierda</span><span lang="ES-CO" style="color:black">, presentaremos tres
+  posibles acciones para ayudar en</span><span lang="ES-CO"> la búsqueda de
+  datos,</span><span lang="ES-CO" style="color:black"> o</span><span lang="ES-CO">
+  sea</span><span lang="ES-CO" style="color:black">, </span><span lang="ES-CO">tenemos</span><span lang="ES-CO" style="color:black"> la lupa </span><span style="color:black"><img height="29" id="image27.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image016.png" width="28"/></span><span lang="ES-CO" style="color:black"> para </span><span lang="ES-CO">búsqueda</span><span lang="ES-CO" style="color:black"> de da</span><span lang="ES-CO">t</span><span lang="ES-CO" style="color:black">os, tenemos</span><span lang="ES-CO"> la segunda
+  que son las variables elegidas para mostrar en la pantalla principal de
+  contactos y el filtro</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Con eso en mente, aprendamos a crear un
+  seguimiento diario</span><span lang="ES-CO" style="color:black">. En la base de
+  datos contactos, busque el contacto referente y haga clic en las tres bolas
+  donde tendrá la opción </span><span lang="ES-CO">“ Agregar seguimiento”.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="143" id="image21.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image017.png" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 10. Captura </span><span lang="ES-CO">de pantalla de la función “ agregar seguimiento” en la pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="227" id="image29.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image018.jpg" width="564"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 11. </span><span lang="ES-CO"> Captura de pantalla de la función “ agregar seguimiento” en la
+  pestaña de contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pnmeros"><span lang="ES-CO">3.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO">Al crear un seguimiento diario, tendrás dos
+  variables para completar, la fecha y el estado de este contacto. Después de
+  estas citas, puede programar la cumplimentación del cuestionario
+  preestablecido relacionado con este contacto.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="109" id="image24.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image019.jpg" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 12. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ crear seguimiento” en la
+  pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pnmeros"><span lang="ES-CO">4.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO">Después de este paso, haga clic en el
+  cuestionario para marcar las respuestas de acuerdo con la información
+  obtenida del contacto</span><span lang="ES-CO" style="color:black">. Recordando
+  que el cuestionario fue </span><span lang="ES-CO">preestablecido</span><span lang="ES-CO" style="color:black"> para ser utilizado en el brote. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="136" id="image28.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image020.jpg" width="566"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 13. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ cuestionario” en la
+  pestaña de</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pnmeros"><span lang="ES-CO">5.<span style='font:7.0pt "Times New Roman"'>   
+  </span></span><span lang="ES-CO" style="color:black">A</span><span lang="ES-CO">hora
+  que hemos aprendido cómo ver la lista de contactos y cómo hacer un
+  seguimiento diario, aprendamos cómo ver estos registros diarios o en forma de
+  panel</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Para </span><span lang="ES-CO">esto debemos hacer clic en el Menú de la izquierda, hacer clic en
+  contactos y luego en seguimientos diarios. Puede seleccionar una fecha para
+  ver cuántos contactos se vieron ese día, puede ver el estado de ese contacto
+  y incluso acceder al cuestionario.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="136" id="image32.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image021.jpg" width="568"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 14. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ seguimiento de contactos
+  relacionados” en la pestaña de</span><span lang="ES-CO" style="color:black">
+  contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Sin embargo, este modelo de visualización
+  es diario, pero también podemos visualizar por un intervalo de fechas en
+  forma de panel</span><span lang="ES-CO" style="color:black">. E</span><span lang="ES-CO">ntonces, debemos hacer clic en el Menú de la izquierda, ir a
+  contactos y luego al panel de monitoreo. Se abrirá una ventana y tendrás
+  acceso a los casos según los días seleccionados</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="208" id="image25.png" src="Clase%205%20Sarampion%20Apostila_arquivos/image022.jpg" width="577"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 15. Captura
+  de </span><span lang="ES-CO">pantalla de la función “panel de seguimiento de
+  contactos” en la pestaña de </span><span lang="ES-CO" style="color:black">contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc76079786">5.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Conclusión</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase hemos aprendido cómo
+  funciona la gestión de contactos, es decir, cómo crear correctamente un
+  contacto, entendiendo sus variables obligatorias, convirtiendo un contacto en
+  un caso y también realizando el seguimiento diario de los contactos. Por lo
+  tanto, después de crear estos registros, ahora podemos ver estos datos
+  creados de dos maneras: a través de los registros diarios o el panel de
+  monitoreo como se menciona en la clase.</span></p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado" style="margin-left:0cm;text-indent:0cm"><a name="_Toc76079787"><span lang="es">Referencia</span></a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo" style="text-indent:0cm">ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). <span lang="EN-US">(2020-a). <b>Go.Data Frequently asked questions. </b></span>Disponivel
+  em https://www.who.int/godata/go.data-frequently-asked-question.acesso em :
+  09/09/2020</p>
+<p class="MsoNormal" style="margin-bottom:0cm;line-"> </p>
+</td>
+</tr>
+</table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>	
+                            </section>
+                        </body>
+                    

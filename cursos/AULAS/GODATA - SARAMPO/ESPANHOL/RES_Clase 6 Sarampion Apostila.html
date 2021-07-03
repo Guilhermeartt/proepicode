@@ -1,0 +1,484 @@
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <title>Clase 6 -
+  Resultados de Laboratorios y Eventos </title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
+                        <body>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <div>
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
+                                    <div class="nav-container">
+                                        <h3>Clase 6 -
+  Resultados de Laboratorios y Eventos </h3>
+                                    </div>
+                                </div>
+                                <div class="modal">
+                                    <span class="close-modal">&times;</span>
+                                    <img class="modal-content" id="img-modal">
+                                    <div id="caption"></div>
+                                </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="background:#23A8B0;padding:
+  0cm 2.0cm 0cm 3.0cm;" valign="top">
+<p class="TtuloAula"><a name="_Hlk76082122"><span lang="ES-CO">Clase 6 -
+  Resultados de Laboratorios y Eventos </span></a></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="385" id="image11.jpg" src="Clase%206%20Sarampion%20Apostila_arquivos/image005.jpg" width="579"/></p>
+<p class="MsoCaption"><span style="color:black">Image</span>n<span style="color:black"> 1 - Técnico de laborat</span>o<span style="color:black">rio
+  concentrado usando microsc</span>o<span style="color:black">pio Por
+  seventyfourimages</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:#202124;background:
+  #F8F9FA">¡</span><span lang="ES-CO">Hola</span><span lang="ES-CO" style="color:black">!</span></p>
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase aprenderemos cómo
+  crear un resultado de laboratorio y cómo verlo usando el administrador de
+  resultados.</span><span lang="ES-CO" style="color:black">Tamb</span><span lang="ES-CO">ién comprenderemos la creación de eventos y la vinculación con
+  exhibiciones de casos </span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y contactos.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">A</span><span lang="ES-CO">l</span><span lang="ES-CO" style="color:black"> final d</span><span lang="ES-CO">e la clase podrás</span><span lang="ES-CO" style="color:black">:</span></p>
+<li class="PBullets"><span lang="ES-CO">Describir los pasos para crear un resultado de
+  caso y un evento;</span></li>
+<li class="PBullets"><span lang="ES-CO">Comprender la gestión y las variables de
+  resultados de laboratorio;</span></li>
+<li class="PBullets"><span lang="ES-CO">Conocer las exposiciones en el</span><span lang="ES-CO" style="color:black"> Go.Data.</span></li>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado">1.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Contextualizando</p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Como vimos</span><span lang="ES-CO"> en las clases</span><span lang="ES-CO" style="color:black">
+  anteriores, </span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> Go.Data presenta </span><span lang="ES-CO">diferentes bases
+  de datos como la base de datos de casos y contactos</span><span lang="ES-CO" style="color:black">. </span><span lang="ES-CO">En esta clase aprenderemos que
+  a través del programa es posible crear resultados de laboratorio de un caso,
+  o sea, ingresar información de las muestras recolectadas y actualizarlas de
+  acuerdo al avance del caso y también aprender cómo es posible crear eventos y
+  relacionarlos como exposiciones de caso y contacto</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Inicialmente, de</span><span lang="ES-CO">bemos ir a la base de datos de </span><span lang="ES-CO" style="color:black">casos, o sea, </span><span lang="ES-CO">hacer </span><span lang="ES-CO" style="color:black">clic </span><span lang="ES-CO">en el</span><span lang="ES-CO" style="color:black"> </span><b><span lang="ES-CO">Menú</span></b><span lang="ES-CO" style="color:black"> (e</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> verde).</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="163" src="Clase%206%20Sarampion%20Apostila_arquivos/image006.png" width="566"/></p>
+<p class="Pimagem"><span lang="ES-CO" style="font-size:8.0pt;line-
+  150%;color:black">Figura 1. Captura de </span><span lang="ES-CO" style="font-size:8.0pt;line-">pantalla</span><span lang="ES-CO" style="font-size:8.0pt;line-;color:black"> </span><span lang="ES-CO" style="font-size:8.0pt;line-">la pestaña </span><span lang="ES-CO" style="font-size:8.0pt;line-;color:black">men</span><span lang="ES-CO" style="font-size:8.0pt;line-">ú</span><span lang="ES-CO" style="font-size:8.0pt;line-;color:black"> Go.Data.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Y luego haga clic </span><span lang="ES-CO" style="color:black"> e</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> <b>+ Casos</b>.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="179" id="image7.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image007.png" width="82"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 2 - </span><span lang="ES-CO">Captura de pantalla la pestaña menú </span><span lang="ES-CO" style="color:black">Go.Data.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">1 - Debe seleccionar las tres bolas</span><span lang="ES-CO" style="color:black"> </span><span style="color:black"><img height="23" id="image8.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image008.png" width="28"/></span><span style="color:black"> </span><span lang="ES-CO">en el caso seleccionado</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y hacer clic en ver</span><span lang="ES-CO" style="color:black"> <b>Resultados de laborat</b></span><b><span lang="ES-CO">o</span></b><b><span lang="ES-CO" style="color:black">rio.</span></b></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="131" id="image12.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image009.png" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 3. Captura</span><span lang="ES-CO"> de pantalla de la función “ tres bolas” en la pestaña de</span><span lang="ES-CO" style="color:black"> casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="241" id="image17.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image010.jpg" width="542"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 4. Captura </span><span lang="ES-CO">de pantalla de la función “ resultados de laboratorio” en la
+  pestaña de</span><span lang="ES-CO" style="color:black"> casos</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">2 - Pronto, será redirigido a la creación
+  de un resultado de laboratorio, así que haga clic en </span><span lang="ES-CO" style="color:black"> <b>A</b></span><b><span lang="ES-CO">gregar</span></b><b><span lang="ES-CO" style="color:black"> (+)</span></b><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO"> en verde en la parte superior
+  de la pantalla.</span><span lang="ES-CO" style="color:black">. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="143" id="image14.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image011.jpg" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 5. Captura de
+  </span><span lang="ES-CO">pantalla de la función “agregar” en la pestaña de</span><span lang="ES-CO" style="color:black"> resultado del laborat</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rio.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">3 - Después de eso, tendremos un proceso
+  de creación de resultados de laboratorio con las siguientes variables.</span><span lang="ES-CO" style="color:black">: </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="147" id="image26.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image012.jpg" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 6. Captura de
+  </span><span lang="ES-CO">pantalla de la función “ detalles” al crear un </span><span lang="ES-CO" style="color:black"> resultado de laborat</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rio.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><b><span lang="ES-CO">ID de la Muestra: </span></b><span lang="ES-CO">Número de Identificación del Laboratorio </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Fecha del Resultado: </span></b><span lang="ES-CO">La fecha del resultado del examen. </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Resultado: </span></b><span lang="ES-CO">El </span>resultado<span lang="ES-CO"> del examen </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Muestra recolectada: </span></b><span lang="ES-CO">La fecha en que se tomó la muestra </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Muestra entregada al laboratorio: </span></b><span lang="ES-CO">La fecha en que se entregó la muestra al laboratorio </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Muestra analizada:  </span></b><span lang="ES-CO">La fecha en que el laboratorio analizó la muestra. </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Nombre del Laboratorio: </span></b><span lang="ES-CO">Opción para marcar el nombre del Laboratorio </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Tipo de Muestra: </span></b><span lang="ES-CO">El tipo de muestra realizada </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Tipo de Prueba: </span></b><span lang="ES-CO">El tipo de prueba realizada</span></li>
+<li class="PBullets"><b><span lang="ES-CO">Analizado por: </span></b><span lang="ES-CO">El
+  nombre de la persona que analizó la prueba</span></li>
+<li class="PBullets"><b><span lang="ES-CO">Estado: </span></b><span lang="ES-CO">El
+  estado de la prueba </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Notas:  </span></b><span lang="ES-CO">Campo
+  para escribir observaciones. </span></li>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">4 - Finalmente, haga clic een <b>Crear
+  resultados de laboratorio</b> para confirmar el proceso de completar el
+  examen. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="69" id="image16.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image013.jpg" width="568"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 7. Captura </span><span lang="ES-CO">de pantalla de la función “crear resultado de laboratorio” en la
+  pestaña de </span><span lang="ES-CO" style="color:black">resultado de laborat</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rio.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">5 - Después del examen creado en</span><span lang="ES-CO" style="color:black"> Go. Data, </span><span lang="ES-CO">haremos</span><span lang="ES-CO" style="color:black"> clic </span><span lang="ES-CO">en el </span><span lang="ES-CO" style="color:black"> bot</span><span lang="ES-CO">ón</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">izquierdo</span><span lang="ES-CO" style="color:black"> d</span><span lang="ES-CO">el</span><span lang="ES-CO" style="color:black"> </span><b><span lang="ES-CO">Menú</span></b><span lang="ES-CO" style="color:black">. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="163" src="Clase%206%20Sarampion%20Apostila_arquivos/image014.png" width="566"/></p>
+<p class="MsoCaption"><span style="color:black">Figura 8.Ficha  Captura de </span>pantall<span style="color:black">a men</span>ú<span style="color:black"> Go.Data.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">6 - Haga clic en</span><span lang="ES-CO" style="color:black"> <b>Resultados de laborat</b></span><b><span lang="ES-CO">o</span></b><b><span lang="ES-CO" style="color:black">rio</span></b><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> n</span><span lang="ES-CO">ue</span><span lang="ES-CO" style="color:black">vamente</span><span lang="ES-CO"> </span><span lang="ES-CO" style="color:black">e</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> <b>Resultados de </b></span><b><span lang="ES-CO">laboratorio</span></b><b><span lang="ES-CO" style="color:black">.</span></b><span lang="ES-CO" style="color:
+  black"> </span><span lang="ES-CO">Después de este proceso, podemos ver y
+  administrar los resultados creados</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="337" id="image23.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image015.png" width="121"/></p>
+<p class="MsoCaption"><span style="color:black">Figura 9 -</span>Ficha  Captura
+  de pantalla menú Go.Data<span style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="141" id="image18.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image016.jpg" width="567"/></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 10. Captura
+  de </span><span lang="ES-CO">pantalla de la función </span><span lang="ES-CO" style="color:black"> “resultados de laborat</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rio".</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">7 - Continuando</span><span lang="ES-CO" style="color:black">, </span><span lang="ES-CO">aprendamos cómo crear un evento
+  en el programa y vincularlo con caso o contacto</span><span lang="ES-CO" style="color:black">. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Para </span><span lang="ES-CO">empezar</span><span lang="ES-CO" style="color:black">, de</span><span lang="ES-CO">b</span><span lang="ES-CO" style="color:black">emos ir </span><span lang="ES-CO">a la base </span><span lang="ES-CO" style="color:black"> de casos, o
+  se</span><span lang="ES-CO">a</span><span lang="ES-CO" style="color:black">,
+  hacer clic</span><span lang="ES-CO"> en</span><span lang="ES-CO" style="color:black"> <b>Men</b></span><b><span lang="ES-CO">ú</span></b><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">luego hacer clic en</span><span lang="ES-CO" style="color:black"> <b>Eventos</b>.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="163" id="image15.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image014.png" width="566"/></p>
+<p class="MsoCaption">Figura 11.  Captura de pantalla menú Go.Datata.</p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Pimagem"><img height="277" id="image24.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image017.jpg" width="121"/></p>
+<p class="MsoCaption"><span style="color:black">Figura 12.</span>Captura de
+  pantalla menú Go.Datata.</p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">8 - Será redirigido a la pestaña</span><span lang="ES-CO" style="color:black"> <b>Eventos</b> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> de</span><span lang="ES-CO">b</span><span lang="ES-CO" style="color:black">e hacer clic </span><span lang="ES-CO">en</span><span lang="ES-CO" style="color:black"> <b>A</b></span><b><span lang="ES-CO">gregar</span></b><b><span lang="ES-CO" style="color:black"> + </span></b><span lang="ES-CO" style="color:black">para </span><span lang="ES-CO">empezar</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">el proceso</span><span lang="ES-CO" style="color:black"> de </span><span lang="ES-CO">creación</span><span lang="ES-CO" style="color:black"> de u</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> evento.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="129" id="image20.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image018.png" width="567"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 13. Captura
+  de </span><span lang="ES-CO">pantalla de eventos de la pestaña</span><span lang="ES-CO" style="color:black"> Go.Data.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Aparecerá </span><span lang="ES-CO">el primer paso de creación que es</span><span lang="ES-CO" style="color:black"> <b>“Detal</b></span><b><span lang="ES-CO">l</span></b><b><span lang="ES-CO" style="color:black">es”</span></b><span lang="ES-CO" style="color:black">, donde</span><span lang="ES-CO"> presentará las siguientes
+  variables para el </span><span lang="ES-CO" style="color:black">registro:</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><b>Nombre: </b>El nombre del Evento </li>
+<li class="PBullets"><b><span lang="ES-CO">Fecha: </span></b><span lang="ES-CO">La fecha
+  realizada del evento </span></li>
+<li class="PBullets"><b><span lang="ES-CO">Fecha de Notificación: </span></b><span lang="ES-CO">La Fecha de notificación del evento </span></li>
+<li class="PBullets"><b>Descripción: </b>Descripción del Evento </li>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width:100.0%" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="26%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img height="109" id="Imagem 48" src="Clase%206%20Sarampion%20Apostila_arquivos/image019.png" width="128"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#DCF3F8;padding:0cm 5.4pt 0cm 5.4pt" width="67%">
+<p class="txtrec"><b><span lang="ES-CO" style="color:black">¡Tome Nota!</span></b></p>
+<p class="txtrec"><span lang="ES-CO" style="color:black">Las variables
+    obligatorias para crear un evento son: Nombre, Fecha y  fecha de
+    Notificación.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="MsoNormal" style="margin-bottom:0cm;line-"></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="125" id="image21.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image020.png" width="566"/></span></p>
+<p align="left" class="MsoCaption" style="text-align:left"><span lang="ES-CO" style="color:black">Figura 14. Captura de </span><span lang="ES-CO">pantalla de
+  la función “ crear evento nuevo” al crear </span><span lang="ES-CO" style="color:black"> u</span><span lang="ES-CO">n</span><span lang="ES-CO" style="color:black"> evento.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">9 - El segundo paso es completar la
+  dirección del evento que tiene las siguientes variables</span><span lang="ES-CO" style="color:black">:</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><b><span lang="ES-CO">Ubicación</span></b><b><span lang="ES-CO" style="color:black">:</span></b><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">esta variable cambia según las ubicaciones preestablecidas en el
+  brote</span><span lang="ES-CO" style="color:black">.</span></li>
+<li class="PBullets"><b><span lang="ES-CO">Dirección</span></b><b><span lang="ES-CO" style="color:black">: </span></b><span lang="ES-CO">completando la dirección
+  del</span><span lang="ES-CO" style="color:black"> caso.</span></li>
+<li class="PBullets"><b><span lang="ES-CO" style="color:black">Ciudad </span></b><b><span lang="ES-CO">y</span></b><b><span lang="ES-CO" style="color:black"> Código
+  Postal: </span></b><span lang="ES-CO">Complete la ciudad y ingrese el código
+  postal del</span><span lang="ES-CO" style="color:black"> caso.</span></li>
+<li class="PBullets"><b><span lang="ES-CO" style="color:black">Latitud </span></b><b><span lang="ES-CO">y</span></b><b><span lang="ES-CO" style="color:black"> Longitud: </span></b><span lang="ES-CO">También puede marcar la latitud y la longitud de una ubicación</span><span lang="ES-CO" style="color:black">.</span></li>
+<li class="PBullets"><b><span lang="ES-CO" style="color:black">Número d</span></b><b><span lang="ES-CO">el</span></b><b><span lang="ES-CO" style="color:black"> </span></b><b><span lang="ES-CO">Teléfono:</span></b><b><span lang="ES-CO" style="color:black"> </span></b><span lang="ES-CO">Llenar el teléfono del</span><span lang="ES-CO" style="color:black">
+  caso.</span></li>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="141" id="image22.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image021.png" width="566"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 15. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ dirección” al crear un
+  evento de caso.</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">Después de completar las variables,
+  aparecerá la opción </span><span lang="ES-CO" style="color:black"> <b>Cr</b></span><b><span lang="ES-CO">e</span></b><b><span lang="ES-CO" style="color:black">ar evento</span></b><span lang="ES-CO" style="color:black">. </span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="83" id="image3.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image022.jpg" width="567"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 16. Captura
+  de</span><span lang="ES-CO"> pantalla de la función “ crear nuevo evento” al
+  crear un </span><span lang="ES-CO" style="color:black">evento.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">10 - Después de este proceso,
+  aprenderemos cómo vincular un caso o contacto a este evento.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Inicialmente, </span><span lang="ES-CO">en la base de datos de casos o contactos, haga clic en las tres
+  bolas en el caso/ contacto seleccionado y luego vaya a la opción</span><span lang="ES-CO" style="color:black"> <b>Ver exposi</b></span><b><span lang="ES-CO">ciones</span></b><b><span lang="ES-CO" style="color:black">. </span></b></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="241" id="image5.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image023.jpg" width="568"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 17. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ ver exposiciones” en la
+  pestaña</span><span lang="ES-CO" style="color:black"> de casos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">11 - El segundo paso será marcar el
+  evento correspondiente y hacer clic en</span><span lang="ES-CO" style="color:black"> <b>A</b></span><b><span lang="ES-CO">gregar</span></b><span lang="ES-CO" style="color:black"> para cr</span><span lang="ES-CO">ear la
+  relación de caso/contacto con el</span><span lang="ES-CO" style="color:black">
+  evento.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="132" id="image9.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image024.png" width="566"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 18. Captura
+  de </span><span lang="ES-CO">pantalla de la función “vincular un caso con un evento”
+  en la pestaña de exposiciones.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="176" id="image2.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image025.png" width="567"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 19. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ relación” en la pestaña
+  de exposiciones.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase</span><span lang="ES-CO" style="color:black"> aprendemos c</span><span lang="ES-CO">ó</span><span lang="ES-CO" style="color:black">mo cr</span><span lang="ES-CO">e</span><span lang="ES-CO" style="color:black">ar resultados de laborat</span><span lang="ES-CO">o</span><span lang="ES-CO" style="color:black">rio </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> eventos para  </span><span lang="ES-CO">vincularlos con casos</span><span lang="ES-CO" style="color:black"> </span><span lang="ES-CO">y</span><span lang="ES-CO" style="color:black"> contactos.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:0cm;line-"><span style='font-size:12.0pt;
+  line-;font-family:"Arial",sans-serif;color:black'><img height="72" id="image13.png" src="Clase%206%20Sarampion%20Apostila_arquivos/image026.png" width="566"/></span></p>
+<p class="MsoCaption"><span lang="ES-CO" style="color:black">Figura 20. Captura
+  de </span><span lang="ES-CO">pantalla de la función “ crear relación” en la
+  pestaña de exposiciones.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado">2.<span style='font:7.0pt "Times New Roman"'>  
+  </span>Conclusión </p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">En esta clase, dado lo que se presentó,
+  aprendió cómo crear un resultado de laboratorio, cómo ver la gestión de
+  exámenes de</span><span lang="ES-CO" style="color:black"> Go.Data </span><span lang="ES-CO">y cómo cambiar la información de un examen ya registrada.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO" style="color:black">Tamb</span><span lang="ES-CO">ién vimos cómo es posible crear un evento en el programa y
+  vincularlo a un caso a través de la pestaña de relaciones</span><span lang="ES-CO" style="color:black">.</span></p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #23A8B0 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado" style="margin-left:0cm;text-indent:0cm"><a name="_Toc70697318">Referência</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo" style="text-indent:0cm">ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). <span lang="EN-US">(2020-a). <b>Go.Data Frequently asked questions. </b></span>Disponivel
+  em https://www.who.int/godata/go.data-frequently-asked-question.acesso em :
+  09/09/2020 </p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo" style="text-indent:0cm">ORGANIZAÇÃO MUNDIAL DA SAÚDE
+  (OMS). (2020-b), <b>Go.Data User Guide v 2.0.</b></p>
+</td>
+</tr>
+</table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>	
+                            </section>
+                        </body>
+                    
