@@ -7,6 +7,10 @@
   z-index: 1;
   overflow: auto;
 }
+#sidebar-nav.nav-opened {
+  width: 100%;
+  display: block;
+}
 .nav-card {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -54,6 +58,9 @@ button.nav-button {
 .proepi#main {
   transition: margin-left 0.4s;
 }
+.proepi#main.nav-opened {
+  margin-left: 100%;
+}
 
 .nav-container {
   padding: 0.01em 16px;
@@ -98,6 +105,9 @@ button.nav-button {
   top: 0;
   z-index: 1000;
 }
+#open-nav.nav-opened {
+  display: none;
+}
 
 p.P1Ttulonumerado,
 .P11Ttulonumerado,
@@ -114,8 +124,7 @@ button#close-nav:hover {
   background-color: #0077b6 !important;
 }
 
-/*Scrolbar in*/
-
+/* Scrolbar in */
 #sidebar-nav::-webkit-scrollbar-track {
   background-color: #0f6da3;
 }
@@ -126,4 +135,14 @@ button#close-nav:hover {
 #sidebar-nav::-webkit-scrollbar-thumb {
   background: #eff7ff;
 }
-/*Scrolbar out*/
+/* Scrolbar out */
+
+@media screen and (min-width: 992px) {
+  #sidebar-nav.nav-opened {
+    width: 25%;
+    display: block;
+  }
+  .proepi#main.nav-opened {
+    margin-left: 25%;
+  }
+}

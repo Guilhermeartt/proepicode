@@ -3,18 +3,17 @@
 
 // Nav button behavior
 $('#open-nav').click(function() {
-  $('.proepi#main').css('margin-left', '25%');
-  $('#sidebar-nav').css('width', '25%');
-  $('#sidebar-nav').css('display', 'block');
-  $('#open-nav').css('display', 'none');
-  console.log ("botão assionado")
+  $('.proepi#main').addClass("nav-opened");
+  $('#sidebar-nav').addClass("nav-opened");
+  $('#open-nav').addClass("nav-opened");
+  console.log("botão acionado")
 });
 
 $('#close-nav').click(function() {
-  $('.proepi#main').css('margin-left', '0%');
-  $('#sidebar-nav').css('display', 'none');
-  $('#open-nav').css('display', 'inline-block');
-  console.log ("botão fechado")
+  $('.proepi#main').removeClass("nav-opened");
+  $('#sidebar-nav').removeClass("nav-opened");
+  $('#open-nav').removeClass("nav-opened");
+  console.log("botão fechado")
 });
 
 // Create titles for nav
