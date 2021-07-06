@@ -8,7 +8,7 @@
   overflow: auto;
 }
 #sidebar-nav.nav-opened {
-  width: 100%;
+  width: 25%;
   display: block;
 }
 .nav-card {
@@ -59,7 +59,7 @@ button.nav-button {
   transition: margin-left 0.4s;
 }
 .proepi#main.nav-opened {
-  margin-left: 100%;
+  margin-left: 25%;
 }
 
 .nav-container {
