@@ -1,12 +1,14 @@
 /* botão quadro */
 td {
-  overflow: hidden;
   max-height: 1000px;
   transition: max-height 1s ease-in-out;
 }
 td.hide {
   max-height: 0;
   pointer-events: none;
+}
+.tabelaneuro tr td:last-child {
+  overflow: hidden;
 }
 .txtrec img {
   cursor: pointer;
@@ -52,13 +54,12 @@ tr.hide-tr {
 }
 
 .PCliqueAqui {
-    padding: 6px 5px;
-    background-color: #185f99;
-    color: #fff;
-    border-radius: 5px;
+  padding: 6px 5px;
+  background-color: #185f99;
+  color: #fff;
+  border-radius: 5px;
 }
-
-.PCliqueAqui:hover{
+.PCliqueAqui:hover {
   padding: 6px 5px;
   background-color: #fff;
   color: #185f99;
