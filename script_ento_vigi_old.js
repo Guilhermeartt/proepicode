@@ -62,7 +62,7 @@ function loadCSS(url) {
   document.getElementsByTagName("head").item(0).appendChild(lnk);
   
 }
-loadCSS(URL)
+window.onload = loadCSS(URL)
 
 
 $(document).ready(function() {
