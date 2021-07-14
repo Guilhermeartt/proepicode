@@ -2,7 +2,7 @@
 
 // Change Questionary navigation
 $(document).ready(function() {
-    var container = $('#page-mod-quiz-view .activity-navigation');
+    var container = $('.activity-navigation');
 
     var courseA = $('.breadcrumb-item a');
     var courseLink = courseA[1].getAttribute('href');
