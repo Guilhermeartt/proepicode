@@ -5,7 +5,7 @@ $(document).ready(function() {
     var container = $('.activity-navigation');
 
     var courseA = $('.breadcrumb-item a');
-    var courseLink = courseA[3].getAttribute('href');
+    var courseLink = courseA[1].getAttribute('href');
     var courseID = courseLink.split('=')[1];
 
     var continuebutton = '<div class="continuebutton"></div>';
