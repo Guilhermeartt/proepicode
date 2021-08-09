@@ -23,7 +23,7 @@ print (' ')
 
 
 # Codigo correspondente ao formato .pdf
-wdFormatFilteredHTML = 10
+wdFormatPDF = 17
 
 path = file_path.split('/')
 path = "\\".join(path)
@@ -33,7 +33,7 @@ in_file = path
 print ('aqruvio de entrada: ' + in_file)
 
 html = path.split('.')
-html[1] = "html"
+html[1] = "pdf"
 html = ".".join(html)
 print ('aqruvio de saida: ' + html)
 
@@ -46,7 +46,7 @@ word = comtypes.client.CreateObject('Word.Application')
 doc = word.Documents.Open(in_file)
 
 # Salva arquivo de saida em formato .pdf
-doc.SaveAs(out_file, FileFormat=wdFormatFilteredHTML)
+doc.SaveAs(out_file, FileFormat=wdFormatPDF)
 
 # Fecha arquivo de Entrada
 doc.Close()

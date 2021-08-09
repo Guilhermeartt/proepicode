@@ -1,0 +1,518 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Clase 1 - Comprensión del rastreo de contactos</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+span.MsoSubtleEmphasis
+	{color:#404040;
+	font-style:italic;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div align=center>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#2F5496;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula><u>Actividades prácticas</u></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Como se ha mencionado durante la clase,
+  tenemos varias metodologías que nos ayudan a orientar el trabajo de una sala
+  de situación. Para esta actividad vamos a utilizar algunas.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado><span lang=ES>Actividad 1</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>¿Vamos a construir nuestro primer Kanban? 
+  Para ello seguiremos los siguientes pasos:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES>Paso 1:</span></b><span lang=ES>
+  Necesitamos crear un archivo en Hojas de cálculo en </span><span lang=es-419>Google
+  Sheets</span><span lang=ES> con el siguiente formato:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=601 height=268 id=image6.png
+  src="SDS_atividade_2_arquivos/image001.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>¿Sabe cómo crear un archivo en Google
+  Sheets? Si no lo sabe, acceda a </span><a
+  href="https://www.google.com/sheets/"><span lang=ES style='color:#1155CC'>https://www.google.com</span></a><a
+  href="https://www.google.com/sheets/"><span lang=ES style='color:#1155CC'>/sheets/</span></a><span
+  lang=ES>  y elija la opción &quot;Personal&quot;. Para ello, deberá iniciar
+  una sesión a través de la cuenta Google que ha creado en la primera clase.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>El formato que se construye son las dos
+  columnas visualizadas anteriormente. El primero se llama
+  &quot;Actividades&quot; y el segundo &quot;Estado&quot; (status). El primero
+  hará referencia a las actividades que realizará, está haciendo o ya ha
+  realizado y el segundo indicará en qué etapa se encuentra esta actividad.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>En el ejemplo he enumerado las siguientes
+  actividades: </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=Tabeladestaque border=0 cellspacing=19 cellpadding=0 width="80%"
+   style='width:80.0%'>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar los principales recursos humanos</span></p>
+    </td>
+   </tr>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar los principales recursos físicos</span></p>
+    </td>
+   </tr>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar los principales socios</span></p>
+    </td>
+   </tr>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar los principales problemas a atacar</span></p>
+    </td>
+   </tr>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar las fuentes de datos para analizar
+    este problema</span></p>
+    </td>
+   </tr>
+   <tr style='height:15.75pt'>
+    <td width=346 style='width:259.5pt;background:#F2F2F2;padding:5.65pt 5.4pt 5.65pt 5.4pt;
+    height:15.75pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;text-align:justify;line-height:
+    150%'><span lang=ES style='font-size:12.0pt;line-height:150%;font-family:
+    "Arial",sans-serif;color:black'>Enumerar los posibles análisis que serán
+    realizados</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=Ppargrafo></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Y en la segunda he colocado algunas fases,
+  recordando de incluir el (</span><span lang=es-419>backlog)</span><span
+  lang=ES> atraso. ¿No recuerda el atraso? Puede echar un vistazo en la clase
+  que hablamos del backlog.  Nombra a esta hoja de cálculo 
+  &quot;Kanban_Clase_2 _Módulo _I&quot;.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES>Paso 2: </span></b><span lang=ES>Con la
+  hoja de cálculo creada, vaya al informe de Data Studio que ha creado en la
+  última clase e incluya la hoja de cálculo como fuente de datos. Para ello,
+  debe abrir su Data Studio en el sitio </span><a
+  href="https://datastudio.google.com/u/0/navigation/reporting"><span lang=ES>https://datastudio.google.com/u/0/navigation/reporting</span></a><span
+  lang=ES> y elegir el informe que ha hecho en la clase anterior. A
+  continuación, haga clic en &quot;Editar&quot;. Debe tener en cuenta que solo
+  está habilitado el botón para añadir origen de datos. Haz clic en el botón.
+  En las opciones señaladas, elija &quot;Hojas de cálculo de Google&quot;.
+  Suena difícil, pero sigue los pasos que logrará. Más adelante tendremos un
+  módulo que se ocupará específicamente de Data Studio y explicará todas las
+  posibilidades de edición. </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><span class=MsoSubtleEmphasis><span style='color:windowtext;
+  font-style:normal'><img border=0 width=602 height=203 id=image4.png
+  src="SDS_atividade_2_arquivos/image002.png"></span></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>En la siguiente página que se abrirá puede
+  elegir el archivo, en mi caso, como se sugiere, el nombre es como
+  &quot;Kanban_Clase_2_Módulo_I&quot;.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=199 id=image5.png
+  src="SDS_atividade_2_arquivos/image003.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b><span lang=ES>Paso 3: </span></b><span lang=ES>Al hacer
+  clic, pedirá algunas confirmaciones. Y haga clic en Añadir. Tenga en cuenta
+  que las otras opciones ahora están habilitadas. Haga clic en &quot;Añadir un
+  gráfico.&quot;</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=276 id=image3.png
+  src="SDS_atividade_2_arquivos/image004.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>A continuación, haga clic en &quot;Tabla
+  dinámica&quot;.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=276 id=image2.png
+  src="SDS_atividade_2_arquivos/image005.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Sitúe el panel como mejor le parezca.
+  También puede ayudar a adaptarse mejor al espacio disponible. En el menú de
+  la derecha, puede elegir lo que mostrará en la tabla. Es importante que deje
+  &quot;Actividades&quot; en la parte &quot;Dimensión de línea&quot; y
+  &quot;Status&quot; en la &quot;Dimensión de columna&quot;. Esto garantizará
+  una observación en el siguiente formato:</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=277 id=image7.png
+  src="SDS_atividade_2_arquivos/image006.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Aquí podrá identificar cada una de las actividades
+  que ha enumerado en la hoja de cálculo y el estado. Al hacer clic en
+  &quot;Vista previa&quot; obtendrá una visualización de su Kanban.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=602 height=275 id=image1.png
+  src="SDS_atividade_2_arquivos/image007.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Cada vez que haga una actualización de su
+  hoja de cálculo, incluidas las actividades se actualizará automáticamente en
+  Data Studio y obtendrás una vista actualizada del progreso de las
+  actividades.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Recuerde de compartir con nosotros el enlace
+  de su panel para el seguimiento de su desarrollo.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado>Actividad<span lang=ES> 2</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Como hemos enumerado en las actividades de
+  kanban, ahora vamos a enumerar los principales recursos humanos adjuntos a
+  nuestra sala. Enumere los profesionales para ayudarle en esta lucha, recuerde
+  de enumerar los contactos de estas personas y el área de actuación.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F3864 6.0pt;padding:0cm 0cm 0cm 10.0pt'>
+  <p class=P11Ttulonumerado>Actividad<span lang=ES> 3</span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span lang=ES>Ahora es el momento de enumerar los recursos
+  físicos que tendrá su habitación. ¿Tiene una ubicación? Qué materiales
+  necesitará. Vamos a empezar a poner todo en papel, o más bien en la
+  computadora. Para ello, también puede utilizar hojas google.   </span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=Ppargrafo><span lang=ES-CO>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
