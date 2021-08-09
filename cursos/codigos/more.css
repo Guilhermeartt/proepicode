@@ -1,6 +1,6 @@
 /* botão quadro */
 td {
-  max-height: 1000px;
+  max-height: 2000px;
   transition: max-height 1s ease-in-out;
 }
 td.hide {
