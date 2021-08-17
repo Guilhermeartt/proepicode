@@ -1,0 +1,479 @@
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <title>Aula 3 - Compreendendo a especificidade de um teste e a
+  sua capacidade de identificar corretamente a ausência de infecção.</title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
+                        <body>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <div>
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
+                                    <div class="nav-container">
+                                        <h3>Aula 3 - Compreendendo a especificidade de um teste e a
+  sua capacidade de identificar corretamente a ausência de infecção.</h3>
+                                    </div>
+                                </div>
+                                <div class="modal">
+                                    <span class="close-modal">&times;</span>
+                                    <img class="modal-content" id="img-modal">
+                                    <div id="caption"></div>
+                                </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="background:#1F4E79;padding:
+  0cm 2.0cm 0cm 3.0cm;" valign="top">
+<p class="TtuloAula">Aula 3 - Compreendendo a especificidade de um teste e a
+  sua capacidade de identificar corretamente a ausência de infecção.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="259" id="Imagem 6" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image003.png" width="567"/></p>
+<p class="MsoCaption">Figura 1 –<a href="https://www.freepik.com/vectors/background"><span style="color:windowtext;
+  text-decoration:none">Background vector</span></a> created by pikisuperstar -
+  www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Olá,</p>
+<p class="Ppargrafo">Ao final desta aula, você compreenderá o conceito
+  de especificidade de testes diagnósticos e sua contribuição para as ações de contenção
+  de cadeias de transmissão. Aprenderá sobre a aplicabilidade da especificidade
+  de cada teste e também conhecerá as vantagens, limitações e aplicabilidades
+  de cada teste, de acordo com a especificidade.</p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79539656">Contextualização</a> </p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Como vimos nas aulas 1 e 2, os testes diagnósticos
+  laboratoriais da Covid-19 receberam muita atenção na pandemia, em parte
+  devido ao importante papel que indivíduos pré-sintomáticos, e mesmo
+  assintomáticos, possivelmente têm na transmissão do vírus. Um entendimento do
+  papel e das limitações dos métodos utilizados é de fundamental importância
+  para a compreensão das análises do curso da pandemia.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width="100%"" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img border="0" height="127" id="Imagem 3" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image004.png" width="127"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span style="color:black">Saiba Mais!</span></b></p>
+<p class="txtrec"><span style="color:black">Em abril de 2020, já havia
+    evidências de que o controle efetivo da pandemia dependia, dentre outras
+    medidas, da implantação de <b>medidas de distanciamento físico</b> (MAIER;
+    BROCKMAN, 2020) e <b>da realização intensiva de testes</b> (HUMANITY, 2020)
+    devido às características da enfermidade. <b>Houve um consenso de que
+    testagem de forma extensiva e medidas de isolamento salvariam vidas na
+    pandemia da Covid-19.</b></span></p>
+<p class="Pbutton"><button border="0"><a href="https://www.nature.com/articles/s41551-020-0553-6" target="_blank">Clique aqui!</a></button></p>
+<p class="MsoCaption" style="margin-bottom:6.0pt"><span style="color:black">https://www.nature.com/articles/s41551-020-0553-6</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="Ppargrafo"></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">O estabelecimento de um diagnóstico é um processo
+  imperfeito baseado em probabilidade. Quanto mais elementos se tem para
+  reduzir a incerteza, maior a probabilidade da tomada de decisão correta. Em
+  relação ao teste, é fundamental se atentar para as suas características
+  intrínsecas, sensibilidade e especificidade, e também para o seu valor
+  preditivo positivo, o qual depende da frequência do evento na população
+  testada.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Conforme vimos na aula 2, as características intrínsecas
+  do teste,<b> sensibilidade e especificidade</b>, são importantes para
+  orientar a escolha de quais dos testes disponíveis devem ser utilizados, e
+  após o resultado do teste, na análise do paciente, é importante considerar
+  também o Valor Preditivo Positivo (VPP) e o Valor Preditivo Negativo (VPN)
+  dos mesmos.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79539657">Especificidade dos testes:
+  conceitos e interpretações</a> </p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="241" id="Imagem 8" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image006.png" width="304"/></p>
+<p class="MsoCaption"><a href="https://www.freepik.com/vectors/medical"><span style="color:windowtext;text-decoration:none">Medical vector</span></a>
+  created by stories - www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Ao contrário da sensibilidade, a especificidade é a
+  probabilidade de resultado negativo entre os não-doentes (verdadeiro
+  negativo). Na prática, quando a intenção for o diagnóstico de uma doença,
+  como nos casos de exames de rastreamento, o melhor teste é aquele com <b>alta
+  especificidade, </b>porque terá mais impacto no valor preditivo positivo, ou
+  seja, se o teste der resultado positivo é muito pouco provável que a pessoa
+  não esteja, de fato, doente.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">É importante destacar que alguns <b>fatores externos</b>
+  podem influenciar na sensibilidade e especificidade de um teste para
+  Covid-19, por exemplo:</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets">o tipo de amostra e a quantidade do material coletado;</li>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><span style="color:#333333">o tempo decorrido entre o início
+  dos sintomas e o momento de coleta do exame;</span></li>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><span style="color:#333333">a técnica da coleta e condição de
+  armazenamento da amostra;</span></li>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<li class="PBullets"><span style="color:#333333">presença ou não de sintomas
+  sugestivos de Covid-19.</span></li>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">A especificidade demonstra, então, a quantidade de
+  verdadeiros negativos entre aqueles que realmente não estão com a doença,
+  aferindo as chances de um teste dar o negativo necessário quando não se há a
+  presença da doença. <span style="background:white">Se um teste possui uma
+  especificidade alta, diminuem as chances de um tratamento/isolamento
+  desnecessário em casos de um falso-negativo. No caso da Covid-19 é
+  importante, por exemplo, para que não seja recomendado o isolamento social ou
+  afastamento do trabalho de pessoas que não necessitam passar por isso.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width="100%"" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p class="txtrec"><span style="color:black"><img border="0" height="127" id="Imagem 32" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image007.png" width="127"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span style="color:black">Fica a Dica</span></b></p>
+<p class="txtrec"><span style="color:black">A especificidade e a
+    sensibilidade se relacionam nesse sentido, em que um busca identificar os
+    casos positivos e o outro aponta os casos negativos, informando a acurácia
+    dos testes. Porém, sendo difícil encontrar sensibilidade e especificidade
+    em níveis 100% de um teste, busca-se ainda assim, elevar os percentuais
+    desses dois fatores importantíssimos para a precisão dos testes. Esses
+    valores podem variar em virtude não apenas do tipo de teste, mas da marca
+    comercial a ser utilizada.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="Ppargrafo"></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79539658">Especificidades dos testes de
+  Covid-19</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="237" id="Imagem 13" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image008.png" width="355"/></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">Assim como vimos na aula 2
+  sobre a sensibilidade dos testes de Covid-19 disponíveis, aqui veremos acerca
+  de especificidade. </span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">Uma meta-análise realizada em
+  2020 por Castro avaliou alguns tipos de testes para a identificação do
+  SARS-CoV-2, e os achados são apresentados abaixo.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm">
+<p class="P11Ttulonumerado" style="margin-left:0cm"><a name="_Toc79539659"><span style="color:#3A3A3A">3.1 </span>Identificação de anticorpos</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="136" id="Imagem 14" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image009.png" width="329"/></p>
+<p class="MsoCaption"><a href="https://www.freepik.com/vectors/background"><span lang="EN-US" style="color:windowtext;text-decoration:none">Background vector</span></a><span lang="EN-US"> created by pikisuperstar - www.freepik.com</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">Foi identificado que testes
+  para detecção de IgM apresentam, em média, sensibilidade de 82% (IC 95% 76 –
+  87%) e <b>especificidade </b>de 97% (IC 95% 96 – 98%). Testes baseados em
+  detecção de IgG apresentaram sensibilidade de 97% (IC 95% 90 – 99%) e <b>especificidade
+  </b>de 98% (IC 95% 97 – 99%).</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm">
+<p class="P11Ttulonumerado" style="margin-left:0cm"><a name="_Toc79539660">3.2
+  Testes rápidos para detecção de antígenos</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="151" id="Imagem 15" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image010.jpg" width="344"/></p>
+<p class="MsoCaption"><a href="https://www.freepik.com/photos/medical"><span style="color:windowtext;text-decoration:none">Medical photo</span></a>
+  created by jcomp - www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">Os testes rápidos para
+  detecção de antígeno em amostras de orofaringe e nasofaringe, coletados por
+  meio de <i>swab</i>, inicialmente foram lançados no mercado com relato de
+  alta sensibilidade.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">A meta-análise que mencionamos
+  identificou sensibilidade de 97% (IC 95% 85 – 99%), e <b>especificidade </b>de
+  99% (IC 95% 77 – 100%), tendo como referência o RT-PCR. Entretanto, análises
+  posteriores e independentes demonstraram sensibilidade substancialmente mais
+  baixa que as anteriormente declaradas (em torno de 72 - 81%).</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm">
+<p class="P11Ttulonumerado" style="margin-left:0cm"><a name="_Toc79539661"><span style="color:#3A3A3A">3.3 </span>Testes sorológicos</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="141" id="Imagem 16" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image011.jpg" width="348"/></p>
+<p class="MsoCaption"><a href="https://www.freepik.com/photos/medical"><span style="color:windowtext;text-decoration:none">Medical photo</span></a>
+  created by freepik - www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">A respeito dos exames sorológicos, diferentes metodologias
+  foram analisadas por Lisboa (2020) em uma outra meta-análise. Nos métodos
+  ELISA, LFIA (lateral flow immunoassays) e CLIA (chemiluminescent
+  immunoassays) as especificidades variaram de 96,6% a 99,7% medindo IgG ou
+  IgM. </p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm">
+<p class="P11Ttulonumerado" style="margin-left:0cm"><a name="_Toc79539662">3.4
+  RT-PCR</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="147" id="Imagem 17" src="AULA%20-%203%20TESTE_DIAGNÓSTICO_arquivos/image012.jpg" width="513"/></p>
+<p class="MsoCaption"><span class="MsoHyperlink"><span style="color:windowtext;
+  text-decoration:none">Safety photo</span></span> created by freepik -
+  www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">O teste molecular para detecção do RNA viral é considerado
+  o padrão-ouro, ao qual os demais testes são comparados. Ele é capaz de
+  identificar a partícula viral em amostras de orofaringe e nasofaringe.
+  Contudo, é preciso salientar que ele não detecta apenas vírus viáveis,
+  podendo, em alguns casos, persistir com resultado positivo por semanas após a
+  cura do paciente. A especificidade encontrada em uma meta-análise realizada
+  por Floriano (2020) foi de 96% (IC 95% 94 – 97%), do RT-PCR para diagnóstico
+  da Covid-19.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79539663">Conclusão</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="color:#3A3A3A">Nesta aula pudemos compreender
+  que a especificidade de um teste diagnóstico de Covid-19 é essencial, pois
+  mede </span>a probabilidade de resultado negativo entre os não-doentes, <span style="background:white">diminuindo assim as chances de um tratamento/isolamento
+  desnecessário em casos de um falso-negativo.</span></p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79539664"><span lang="EN-US">Referencias</span></a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US" style="background:white">Castro R, Luz
+  PM, Wakimoto MD, Veloso VG, Grinsztejn B, Perazzo H. <b>COVID-19: a
+  meta-analysis of diagnostic test accuracy of commercial assays registered in
+  Brazil.</b> </span><span style="background:white">Braz J Infect Dis. 2020
+  Mar-Apr;24(2):180-187. doi. Disponível em: &lt;</span><a href="https://doi.org/10.1016/j.bjid.2020.04.003"><span style="background:
+  white">https://doi.org/10.1016/j.bjid.2020.04.003</span></a><span style="background:white">&gt;. Acesso em: 06 jul. 2021.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US" style="background:white">Gremmels, H.,
+  Winkel, B. M. F., Schuurman, R., Rosingh, A., Rigter, N. A. M., Rodriguez,
+  O., Hofstra, L. M. (2020). <b>Real-life validation of the Panbio™ COVID-19
+  antigen rapid test (Abbott) in community-dwelling subjects with symptoms of
+  potential SARS-CoV-2 infection.</b> </span><span style="background:white">EClinicalMedicine
+  doi. Disponível em:&lt; https:/doi.org/10.1016/j.eclinm.2020.100677&gt;. 
+  Acesso em:  06 jul. 2021.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US" style="background:white">Lisboa Bastos M,
+  Tavaziva G, Abidi SK, Campbell JR, Haraoui LP, Johnston JC, Lan Z, Law S,
+  MacLean E, Trajman A, Menzies D, Benedetti A, Ahmad Khan F. <b>Diagnostic
+  accuracy of serological tests for covid-19: systematic review and
+  meta-analysis.</b> </span><span style="background:white">BMJ. 2020 Jul
+  1;370:m2516. doi. Disponível em: </span>&lt;<a href="https://doi.org/10.1136/bmj.m2516">https://doi.org/10.1136/bmj.m2516</a><span style="background:white">&gt;. Acesso em:  06 jul. 2021.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US" style="background:white">Floriano I,
+  Silvinato A, Bernardo WM, Reis JC, Soledade G. <b>Accuracy of the Polymerase
+  Chain Reaction (PCR) test in the diagnosis of acute respiratory syndrome due
+  to coronavirus: a systematic review and meta-analysis.</b> </span><span style="background:white">Rev Assoc Med Bras (1992). 2020 Jul;66(7):880-888.
+  doi. Disponível em: &lt;</span><a href="https://doi.org/10.1590/1806-9282.66.7.880"><span style="background:
+  white">https://doi.org/10.1590/1806-9282.66.7.880</span></a><span style="background:white">&gt;. Acesso em:  06 jul. 2021.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US">HUMANITY tested. <b>Nature Biomedical
+  Engineering</b>, London, v. 4, p. 355-356, 2020. </span>Editorial. DOI: https://doi.org/10.1038/s41551-020-0553-6.
+  Disponível em: https:// www.nature.com/articles/s41551-020-0553-6. Acesso em:
+  5 ago. 2020.</p>
+</td>
+</tr>
+</table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>	
+                            </section>
+                        </body>
+                    

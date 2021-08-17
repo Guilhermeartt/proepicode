@@ -1,0 +1,862 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 4 – Compreendendo conceitos e aplicabilidades dos testes de
+biologia molecular</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:35.4pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 70.9pt 3.0cm;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection4
+	{page:WordSection4;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><a name="_Hlk75926399"></a><img width=566 height=319
+id="Imagem 2" src="AULA%20-%204%20TESTE_DIAGNÓSTICO_arquivos/image001.jpg"></p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251621888;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="AULA%20-%204%20TESTE_DIAGNÓSTICO_arquivos/image002.png"
+alt="Aula 4 – Compreendendo conceitos e aplicabilidades dos testes de biologia molecular"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895833600'><span
+style='position:absolute;left:0px;top:-490px;width:338px;height:119px'><img
+width=338 height=119
+src="AULA%20-%204%20TESTE_DIAGNÓSTICO_arquivos/image003.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – </span></b><span
+  style='color:black'>Marcela Santos</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Sarah Mendes<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica – </span></b><span
+  style='color:black'>Veruska Maia</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+
+<p class=MsoToc1><a
+href="#_Toc79532040">Contextualização<span style='color:windowtext;display:
+none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79532041"><span style='background:white'>RT-PCR</span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79532042">RT LAMP<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc79532043">3.1. Como funciona o RT-LAMP?<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79532044">Conclusão<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79532045"><span lang=EN-US>Referencias</span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection4>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#1F4E79;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 4 – Compreendendo conceitos e aplicabilidades dos
+  testes de biologia molecular</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=252 id="Imagem 3"
+  src="AULA%20-%204%20TESTE_DIAGNÓSTICO_arquivos/image004.jpg"></p>
+  <p class=MsoCaption><a href="https://br.freepik.com/fotos/tecnologia"><span
+  style='color:windowtext;text-decoration:none'>Tecnologia foto</span></a>
+  criado por DCStudio - br.freepik.com</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá, </p>
+  <p class=PpargrafoCxSpLast>Ao final desta aula, você compreenderá os
+  conceitos e aplicabilidades dos testes, considerando as vantagens e
+  limitações dos testes de biologia molecular do tipo <b>RT-PCR em tempo real
+  (RT-qPCR) e RT-LAMP.</b></p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79532040">Contextualização</a> </p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A pandemia da Covid-19 trouxe o campo dos diagnósticos
+  para o centro das atenções.A melhor e mais robusta evidência de infecção
+  viral ocorre a partir da detecção de fragmentos do vírus,<b> como proteínas
+  ou ácidos nucléicos</b>, em testes virológicos no organismo humano. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes de amplificação de ácido nucleico (do inglês: <i>nucleic
+  acid amplification tests</i> - NAATs) permitem identificar a presença do
+  material genético (RNA) do vírus SARS-CoV-2 em amostras de secreção
+  respiratória, por meio das metodologias de RT-PCR em tempo real (RT-qPCR) e
+  RT-LAMP (amplificação isotérmica mediada por alça com transcrição reversa).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo> Apesar de serem os mais indicados, o alto custo desses
+  testes também pode limitar a cobertura de testagem a ser alcançada,
+  essencialmente em países de baixo desenvolvimento socioeconômico.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79532041"><span style='background:white'>RT-PCR</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>O RT-PCR é o teste
+  recomendado pela OMS para o diagnóstico e monitoração <b>de indivíduos com
+  infecções ativas</b>. No caso de pessoas sintomáticas, o RNA viral torna-se
+  detectável desde o<b> primeiro dia dos sintomas e seu pico ocorre na primeira
+  semana dos sintomas</b>. </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>O declínio da carga viral
+  começa a ocorrer a partir do 10º ao 11º dia do início da sintomatologia, mas
+  em alguns casos, ainda pode ser detectada até o 28º dia do início dos
+  sintomas em pacientes recuperados. </span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>Ressalta-se que alguns
+  estudos mostram que a carga viral detectada a mais de 20 dias ocorreu em um
+  terço dos pacientes, sendo que a detecção prolongada representa um desafio
+  para as <b>limitadas instalações de isolamento hospitalar</b>, uma vez que os
+  pacientes podem não receber alta até o RNA (ácido ribonucleico<span
+  style='color:#202124'>)</span> viral se tornar indetectável. Entretanto,
+  ainda não se sabe se esses pacientes continuam eliminando vírus vivos, já que
+  a soropositividade concomitante pode caracterizar que os <i>virions</i> estão
+  revestidos com anticorpos do hospedeiro, tornando-os não infecciosos.
+  Significa que mesmo com teste detectável, a probabilidade de infectar outros
+  indivíduos após 20 dias é reduzida, pois o vírus está “inativado” pelos
+  anticorpos.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=437 height=334 id="Imagem 57"
+  src="AULA%20-%204%20TESTE_DIAGNÓSTICO_arquivos/image005.png"></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O teste de RT-PCR possui alta sensibilidade e
+  especificidade para detectar a infecção por SARS-CoV-2. Os indivíduos
+  infectados podem testar positivo mesmo <b>sem sintomas</b> (assintomáticos), <b>antes
+  do início dos sintomas</b> (período pré-sintomático) e <b>durante a doença</b>
+  (sintomáticos). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>É importante destacar que <b>resultados negativos</b> não
+  excluem, necessariamente, a infecção por SARS-CoV-2 (principalmente em
+  indivíduos com clínica sugestiva). Uma série de fatores podem levar a um
+  resultado falso negativo em um indivíduo infectado, incluindo:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>amostra coletada no final do curso da doença, ou amostra
+  retirada de uma parte do corpo que não continha o vírus naquele momento;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>amostra não manuseada e/ou transportada e/ou armazenada
+  apropriadamente; e</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>razões técnicas próprias do teste, por exemplo, inibição da PCR
+  ou mutação viral.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Algumas limitações são observadas para a ampla utilização
+  do teste RT-PCR, pois uma demanda sem precedentes por diagnósticos RT-PCR tem
+  sobrecarregado todos os aspectos da condução desses ensaios laboratoriais. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Apesar da disponibilidade de protocolos desenvolvidos
+  rapidamente, a escassez de materiais (por exemplo, cotonetes, reagentes e
+  consumíveis) e de infraestrutura (instalações aprovadas, técnicos e
+  equipamento) têm inviabilizado o teste, rastreamento e isolamento eficientes
+  de indivíduos infecciosos. Essas carências levaram a uma crise global de
+  saúde pública de consequências ainda imprevistas.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79532042">RT LAMP</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Entre os métodos rápidos de direcionamento aos ácidos
+  nucleicos, a <b>amplificação isotérmica mediada por loop de transcrição
+  reversa</b> (RT-LAMP - <i>Reverse transcription loop-mediated isothermal
+  amplification</i>) ganhou destaque durante o curso da pandemia de Covid-19.
+  Além de sua natureza isotérmica, o que elimina a necessidade de instrumentos
+  complexos como termocicladores necessários para PCR, o RT-LAMP é atraente,
+  pois produz uma imensa quantidade de produtos de amplificação que permitem a
+  detecção visual a olho nu por meio de diversos métodos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Desde o surgimento da Covid-19, vários conjuntos de
+  primers para SARS-CoV-2 e variações no método RT-LAMP foram publicadas e
+  alguns receberam autorização para uso de emergência pela <i>Food and Drug
+  Administration</i> dos EUA (FDA).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Mesmo que o fluxo de trabalho RT-LAMP ofereça resultados
+  mais rápidos do que RT-PCR e seja altamente escalonável, ainda requer um
+  técnico treinado para realizar o ensaio, bem como envio e armazenamento a
+  frio de reagentes. No entanto, um teste rápido habilitado para LAMP acessível
+  foi desenvolvido para resolver algumas das deficiências. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Portanto, o teste RT-LAMP é um dos testes que chegou com a
+  promessa de ter boa capacidade de detecção populacional para Covid-19, devido
+  ao seu processamento rápido, principalmente, por não ter a etapa de extração
+  e de purificação do RNA do vírus. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc79532043">3.1.
+  Como funciona o RT-LAMP?</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Durante o procedimento do teste RT-LAMP, ocorre a
+  transcrição reversa (RT), que é o momento em que o RNA viral é transcrito
+  reversamente em DNA. Com base nisso, regiões específicas do <b>genoma viral
+  são amplificadas por meio da metodologia LAMP </b><i>(Loop-mediated
+  isothermal amplification</i>). No RT-LAMP, a amplificação é feita de forma
+  isotérmica, ou seja, em temperatura fixa, por cerca de uma hora, visando a
+  detecção molecular do RNA do vírus causador da Covid-19. Ele é um teste que
+  deve ser utilizado durante a fase precoce da doença, até o término da
+  primeira semana desde o aparecimento dos sintomas.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A saliva é o material utilizado para esse tipo de teste, o
+  que facilita e auxilia na coleta, evitando os inconvenientes inerentes ao
+  Swab de naso e orofaríngeo, utilizado no RT-PCR. Além disso, essa forma de
+  coleta diminui o risco de contaminação do responsável pela coleta e o gasto
+  com Equipamentos de Proteção Individual (EPIs). Após a coleta, a amostra tem
+  estabilidade de<b> até três dias em temperatura ambiente.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Apesar da sua praticidade, o RT-LAMP ainda não deve ser
+  considerado um teste substituto do RT-PCR. Uma das limitações é a sua menor
+  sensibilidade quando comparado ao RT-PCR. Desenvolvedores do RT-LAMP estão
+  buscando aumentar sua sensibilidade de detecção, tornando o procedimento
+  capaz de detectar o vírus mesmo quando presente em número muito baixo de
+  cópias de RNA viral na saliva.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Mesmo que a coleta de saliva tenha inúmeras vantagens, ela
+  contém substâncias que podem<b> inibir a ação das enzimas usadas para a
+  detecção viral,</b> além de degradar o próprio material genético do vírus e
+  interferir na reação de amplificação. Por esse motivo, está em andamento um processo
+  de padronização do teste com a utilização de soluções químicas que são
+  capazes de manter o RNA viral estável por mais tempo, não sofrendo ação de
+  enzimas presentes na saliva. Além disso, estudos realizados por grupos
+  internacionais desenvolvendo o RT-LAMP para a detecção de outros vírus, além
+  do coronavírus causador da Covid-19, tiveram que recorrer a alterações do
+  protocolo original para aumentar a sensibilidade para um nível próximo da
+  sensibilidade do RT-PCR. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Devido à praticidade e ao menor tempo de execução, e após
+  a melhoria na sensibilidade, o RT LAMP poderá se tornar adequado para a
+  investigação da presença de SARS-CoV-2 em grandes grupos de pessoas. Para a
+  investigação de amostras vindas de pacientes com suspeita clínica ou
+  pacientes que apresentem vínculo epidemiológico com indivíduos
+  diagnosticados,o RT-PCR permanece como a técnica mais recomendada (padrão
+  ouro). </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79532044">Conclusão</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Na aula de hoje, você conheceu detalhes acerca dos dois
+  testes de biologia molecular disponíveis no momento para diagnóstico
+  laboratorial de Covid-19. <span style='background:white'>O RT-PCR é o teste
+  recomendado para o diagnóstico e monitoração de indivíduos com infecções
+  ativas. </span>Algumas limitações são observadas para a ampla utilização do
+  teste RT-PCR, dentre elas a escassez de materiais e de infraestrutura. O RT
+  LAMP ganhou destaque durante o curso da pandemia de Covid-19, pois além de
+  sua natureza isotérmica, o que elimina a necessidade de instrumentos
+  complexos como termocicladores necessários, a saliva é o material utilizado
+  para este tipo de teste, o que facilita a coleta e ajuda a evitar os
+  inconvenientes inerentes ao Swab de naso e orofaríngeo, utilizado no RT-PCR.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif;
+color:white'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>&nbsp;</span></p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79532045"><span lang=EN-US>Referencias</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>BULA  kit In vitro diagnostic medical
+  device AllplexTM 2019-nCoV Assay – Seegene Inc. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>BULA kit in vitro diagnostic Xpert®
+  Xpress SARS-CoV-2 . </span>Cepheid®. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>BULA kit in vitro diagnostic Abbott
+  RealTime SARS-CoV-2. </span>Abbott Laboratories. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>Alisson, Elton. Agências Fapesp. <b>Pesquisadores da USP
+  desenvolvem teste de diagnóstico de COVID-19 pela saliva. </b>Disponível em:
+  &lt;<a
+  href="https://agencia.fapesp.br/pesquisadores-da-usp-desenvolvem-teste-de-diagnostico-de-covid-19-pela-saliva/33998/"><span
+  style='color:#1155CC'>https://agencia.fapesp.br/pesquisadores-da-usp-desenvolvem-teste-de-diagnostico-de-covid-19-pela-saliva/33998/</span></a>&gt;.
+  Acesso em: 22 mar. 2021.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:14.0pt;text-align:justify;line-height:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

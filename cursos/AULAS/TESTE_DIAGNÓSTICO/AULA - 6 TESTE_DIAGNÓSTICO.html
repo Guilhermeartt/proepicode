@@ -1,0 +1,1219 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 6 – Compreendendo os testes sorológicos e as situações especiais de
+testagem para diagnóstico de Covid-19</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.PBullets, li.PBullets, div.PBullets
+	{mso-style-name:P_Bullets;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpFirst, li.PBulletsCxSpFirst, div.PBulletsCxSpFirst
+	{mso-style-name:P_BulletsCxSpFirst;
+	mso-style-link:"P_Bullets Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpMiddle, li.PBulletsCxSpMiddle, div.PBulletsCxSpMiddle
+	{mso-style-name:P_BulletsCxSpMiddle;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PBulletsCxSpLast, li.PBulletsCxSpLast, div.PBulletsCxSpLast
+	{mso-style-name:P_BulletsCxSpLast;
+	mso-style-link:"P_Bullets Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:105.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PBulletsChar
+	{mso-style-name:"P_Bullets Char";
+	mso-style-link:P_Bullets;
+	font-family:"Arial",sans-serif;}
+p.P11Ttulonumerado, li.P11Ttulonumerado, div.P11Ttulonumerado
+	{mso-style-name:"P_1\.1 Título_numerado";
+	mso-style-link:"P_1\.1 Título_numerado Char";
+	margin-top:36.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:35.4pt;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P11TtulonumeradoChar
+	{mso-style-name:"P_1\.1 Título_numerado Char";
+	mso-style-link:"P_1\.1 Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+p.Pimgrec, li.Pimgrec, div.Pimgrec
+	{mso-style-name:P_img_rec;
+	mso-style-link:"P_img_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+span.PimgrecChar
+	{mso-style-name:"P_img_rec Char";
+	mso-style-link:P_img_rec;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Pbutton, li.Pbutton, div.Pbutton
+	{mso-style-name:P_button;
+	mso-style-link:"P_button Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:center;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+span.PbuttonChar
+	{mso-style-name:"P_button Char";
+	mso-style-link:P_button;
+	font-family:"Arial",sans-serif;
+	color:black;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 70.9pt 3.0cm;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection4
+	{page:WordSection4;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><a name="_Hlk75926399"></a>&nbsp;</p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251621888;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image001.png"
+alt="Aula 6 – Compreendendo os testes sorológicos e as situações especiais de testagem para diagnóstico de Covid-19"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895833600'><span
+style='position:absolute;left:0px;top:-490px;width:338px;height:119px'><img
+width=338 height=119
+src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image002.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – </span></b><span
+  style='color:black'>Marcela Santos</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Sarah Mendes<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica – </span></b><span
+  style='color:black'>Veruska Maia</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+
+<p class=MsoToc1><a
+href="#_Toc79533426">Contextualização<span style='color:windowtext;display:
+none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533427">Testes sorológicos<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533428">Aplicando os testes em situações
+especiais<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc79533429">3.1 Assintomáticos com exposição
+recente ao SARS-CoV-2<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc79533430">3.2 Assintomático sem exposição
+recente ao SARS-CoV-2<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc79533431">3.3 Post-mortem<span style='color:
+windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc79533432">3.4 Testagem pós-vacina<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533433">Conclusão<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533434"><span lang=EN-US>Referencias</span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection4>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#1F4E79;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 6 – Compreendendo os testes sorológicos e as
+  situações especiais de testagem para diagnóstico de Covid-19</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem> <img width=567 height=378 id="Imagem 3"
+  src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image003.jpg"></p>
+  <p class=MsoCaption><span lang=EN-US>Figura </span><span
+  lang=EN-US>1</span> <span lang=EN-US>– </span><a
+  href="https://www.freepik.com/photos/medical"><span lang=EN-US>Medical photo
+  created</span></a><span lang=EN-US> by freepik - www.freepik.com</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá, </p>
+  <p class=PpargrafoCxSpLast>Ao final desta aula, você será capaz de
+  compreender a aplicabilidade e limitações dos testes sorológicos e as
+  situações especiais para a testagem da Covid-19, entender qual teste aplicar
+  e como realizar a testagem no <i>post</i> <i>mortem</i> em pacientes
+  assintomáticos. Aprenderá também como deve ser realizada a testagem em pós
+  vacinados da Covid-19.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533426">Contextualização</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O segundo semestre de 2020 foi marcado pelo avanço da
+  pandemia de Covid-19 no mundo inteiro, com números crescentes de indivíduos contaminados,
+  casos graves, óbitos, e infecções em grande contingente de profissionais da
+  saúde. Esse período trouxe também uma nova fase para o diagnóstico
+  laboratorial da infecção pelo SARS-Cov-2, tendo como objetivo identificação
+  de casos, contenção da epidemia e retorno ao trabalho dos profissionais da
+  saúde. Com o passar dos meses, diversos tipos de testes com aplicabilidades
+  distintas foram disponibilizados. Hoje, entretanto, é preciso cautela na
+  utilização de cada um desses insumos, pois como vimos ao longo deste curso,
+  cada um apresenta suas peculiaridades. Nesta aula falaremos sobre os testes
+  sorológicos e as situações especiais de testagens.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533427">Testes sorológicos</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os ensaios sorológicos ou imunológicos detectam os
+  anticorpos produzidos pelo corpo humano em resposta às infecções, inclusive
+  por SARS-CoV-2. Em geral, presume-se que um teste de anticorpos positivo
+  significa que uma pessoa foi infectada pelo vírus em algum momento no
+  passado, não significando, portanto, que esteja na fase aguda da doença. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A produção de anticorpos pode levar cerca de uma a três
+  semanas após a infecção por SARS-CoV-2, em algumas pessoas pode demorar mais.
+  Espera-se que os níveis máximos de anticorpos ocorram entre a terceira e a
+  quarta semana após o início dos sintomas.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes sorológicos podem ser úteis em alguns cenários,
+  como nos inquéritos para conhecer o perfil sorológico de uma população
+  específica. Individualmente, o diagnóstico sorológico poderá, eventualmente,
+  ser útil para aqueles que perderam a oportunidade de diagnóstico laboratorial
+  por biologia molecular ou teste de antígeno na fase aguda, ou para detectar
+  infecção prévia com SARS-CoV-2 em manifestações tardias, como na Síndrome
+  Inflamatória Multissistêmica em crianças e em adultos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Estes testes são baseados nos métodos de Ensaio
+  Imunoenzimático (<i>Enzyme-Linked Immunosorbent Assay</i> – ELISA),
+  Imunoensaio por Quimioluminescência (CLIA) e Imunoensaio por
+  Eletroquimioluminescência (ECLIA), realizados dentro de ambiente laboratorial
+  por técnicas automatizadas, apresentam desempenho analítico superior aos
+  testes imunocromatográficos (testes rápidos).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O desempenho dos ensaios sorológicos varia amplamente em
+  diferentes grupos, a depender do curso clínico da infecção (leve, moderada ou
+  grave), faixa etária, momento da testagem e proteína viral alvo.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Um diagnóstico confiável de infecção por SARS-CoV-2 com
+  base na resposta de anticorpos dos pacientes, muitas vezes, só será possível
+  na fase de recuperação, quando as oportunidades para intervenção clínica, ou interrupção
+  da transmissão do vírus tiverem passado.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 1. Variação estimada ao longo do tempo em testes
+  de diagnóstico para detecção de infecção por SARS-CoV-2 em relação ao início
+  dos sintomas.</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=626 height=353 id="Imagem 2"
+  src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image004.png"></p>
+  <p class=MsoCaption>Fonte: Adaptado por <a
+  href="https://www.epidemiologista.org/"><span style='color:windowtext;
+  text-decoration:none'>https://www.epidemiologista.org/</span></a></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Alguns pontos importantes precisam ser considerados com
+  relação aos testes imunológicos e sua aplicação na infecção pelo coronavírus:
+  </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>a resposta imunológica depende de<b> fatores individuais tanto
+  do hospedeiro, quanto das características do antígeno utilizado</b>, o que
+  significa que o aparecimento de anticorpos pode ser mais precoce ou mais
+  tardio a depender do indivíduo. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>a literatura médica disponível a respeito da resposta imune ao
+  SARS-CoV-2 ainda é bastante limitada e indica o aparecimento de anticorpos
+  das classes IgA e IgM, em média,<b> a partir do 7º dia desde o início dos
+  sintomas, seguido pela elevação dos níveis de IgG</b> - o que significa que o
+  teste, aplicado em pacientes na fase aguda da doença, possui um <b>baixo
+  valor preditivo negativo</b>, ou seja, um resultado negativo não exclui a
+  doença nem possibilidade de infectar outros indivíduos. Por outro lado, um
+  resultado positivo possui elevado valor preditivo.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>para a realização de ensaios imunológicos estão disponíveis
+  algumas tecnologias a saber: ELISA, quimioluminescência e imunocromatografia,
+  sendo o último conhecido popularmente como “teste rápido”(vimos sobre esse
+  teste na aula 3). Alguns deles são baseados na detecção de anticorpos totais,
+  e outros fazem a identificação em separado de IgM e IgG raros e também IgA.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>independentemente das características do aparecimento de
+  anticorpos no indivíduo, o poder de detecção destes anticorpos pelas técnicas
+  laboratoriais depende de uma série de propriedades do ensaio, que se traduzem
+  nas características de desempenho do teste, como por exemplo a sensibilidade
+  analítica (limite de detecção) e a especificidade analítica (menor
+  interferência de outras substâncias ou antígenos).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>um resultado negativo para o SARS-CoV-2 por métodos
+  imunológicos não exclui a possibilidade de infecção, principalmente nas fases
+  iniciais da doença (primeiros 7-10 dias desde o início dos sintomas).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>os testes imunológicos não possuem acurácia suficiente para
+  serem utilizados como triagem de quadros respiratórios quanto à etiologia por
+  SARS-CoV-2. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>plataformas analíticas baseadas em ELISA e quimioluminescência
+  (realizadas dentro de ambiente laboratorial por técnicas automatizadas)
+  apresentam desempenho analítico superior aos testes imunocromatográficos
+  (rápidos), porém mesmo assim tem demonstrado valor preditivo negativo
+  inferior a 50% na fase inicial da doença (primeiros 7 dias desde o início dos
+  sintomas).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Considerando os pontos acima, lista-se como potencial
+  contribuição dos testes imunológicos ao diagnóstico de SARS-CoV-2:</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>diagnóstico de pacientes hospitalizados com quadro tardio (após
+  o sétimo dia desde o início dos sintomas), como primeira opção antes da
+  reação de RT-PCR. Entretanto, um resultado negativo neste contexto não
+  descarta o diagnóstico, sendo recomendada a realização de exame molecular
+  específico (RT-PCR).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>avaliação de retorno ao trabalho para profissionais de saúde, a
+  partir do sétimo dia de sintomas. Da mesma forma que no item anterior, um
+  resultado negativo não descarta o diagnóstico, sendo recomendada a realização
+  de RT-PCR. A demonstração da infecção pelo coronavírus respalda o afastamento
+  dos profissionais de saúde conforme as recomendações e critérios da
+  Organização Mundial da Saúde.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PBullets><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span>informações epidemiológicas referentes à “imunidade de rebanho”
+  (percentual de pessoas já expostas na população e que já desenvolveram
+  anticorpos), no decorrer dos meses.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533428">Aplicando os testes em
+  situações especiais</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc79533429">3.1
+  Assintomáticos com exposição recente ao SARS-CoV-2</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes de biologia molecular (RT-qPCR ou RT-LAMP) devem
+  ser priorizados para teste em pessoas assintomáticas. Embora algumas
+  evidências sugiram que os casos assintomáticos têm cargas virais semelhantes
+  às dos casos sintomáticos, os testes de antígeno só serão utilizados na
+  ausência daqueles de biologia molecular. Apesar de sua grande utilidade para
+  direcionar medidas de isolamento e ampliar os esforços de rastreamento de
+  contatos quando positivos, os resultados negativos de testes de antígeno não
+  são suficientes para remover um contato dos requisitos de quarentena.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os contatos próximos de casos de Covid-19 devem ser <b>testados
+  imediatamente </b>após serem identificados e, se negativos, testados
+  novamente entre 5 e 7 dias após a última exposição ou, imediatamente, no caso
+  de desenvolverem sintomas durante a quarentena. Esse procedimento será
+  fundamental, por exemplo, no cenário de retorno escolar e rastreamento de
+  contatos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimgrec><img border=0 width=127 height=127 id="Imagem 32"
+    src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image005.png"></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica</span></b></p>
+    <p class=txtrec><b><span style='color:black'>O teste NÃO precisa ser
+    repetido para</span></b><span style='color:black'> determinar o fim do
+    isolamento. Pessoas com resultados positivos devem concluir o isolamento
+    conforme critérios de interrupção definidos pelas autoridades sanitárias
+    locais. Pessoas com resultados negativos devem permanecer em quarentena por
+    14 dias.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc79533430">3.2
+  Assintomático sem exposição recente ao SARS-CoV-2</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Assintomáticos que não tenham exposição conhecida ou
+  presumida ao vírus, somente serão testados em cenários específicos,
+  objetivando a identificação precoce, isolamento e prevenção de adoecimentos.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>A testagem em massa ou
+  triagem em unidades de saúde ajuda a identificar casos não identificados
+  previamente, para que medidas possam ser tomadas a fim de interromper
+  possíveis cadeias de transmissão.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O teste nesses casos é usado principalmente para obter informações
+  a nível populacional, e não a nível individual. Este tipo de testagem não
+  pode ser usado para manejo clínico de um indivíduo ou ações individuais de
+  saúde pública, como isolamento ou quarentena.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc79533431">3.3
+  Post-mortem</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Quando há a ocorrência de um óbito suspeito de Covid-19,
+  deve-se proceder a coleta no serviço de saúde após óbito, caso a coleta de
+  material biológico não tenha sido realizada em vida, para que possa agregar à
+  investigação realizada pela equipe de vigilância local. Os testes póstumos de
+  casos suspeitos de Covid-19 devem ser realizados até 3 dias após a morte do
+  doente. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>As recomendações sobre o tipo de amostras <i>post mortem</i>
+  a serem coletadas variam de acordo com a suspeita ou confirmação do caso de
+  Covid-19, bem como da realização de autópsia ou não. Um <i>swab</i> <i>post
+  mortem</i>, biópsia com agulha ou amostras de tecido da autópsia, incluindo
+  tecido pulmonar, para testes citológicos e microbiológicos adicionais podem
+  ser considerados..</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>No caso de <b>não realização de autópsia</b>, as amostras
+  deverão ser coletadas por meio de<i> swab</i> da nasofaringe ou aspirado
+  traqueal, devendo acontecer imediatamente após a constatação do óbito, mas
+  caso seja necessário, a coleta pode ser feita em até 12 horas após a
+  ocorrência. Todas as normas de biossegurança para coleta de amostras devem
+  ser respeitadas para a realização desse procedimento.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=Pimgrec><img border=0 width=127 height=127 id="Imagem 29"
+    src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image006.png"></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Saiba Mais!</span></b></p>
+    <p class=txtrec><span style='color:black'>Saiba mais sobre tipos de amostra
+    na realização de autópsia, práticas de biossegurança e controle e prevenção
+    de infecção em: </span></p>
+    <p class=Pbutton><img border=0 width=156 height=42
+    src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image007.png"
+    alt="Clique aqui!"></p>
+    <p class=MsoCaption><span style='color:black'><a
+    href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-postmortem-specimens.html#collection-specimens"><span
+    style='color:black;text-decoration:none'>https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-postmortem-specimens.html#collection-specimens</span></a></span></p>
+    <p class=txtrec><span style='color:black'>ou nas versões da OMS em português
+    </span></p>
+    <p class=Pbutton><img border=0 width=156 height=42
+    src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image008.png"
+    alt="Clique aqui!"></p>
+    <p class=MsoCaption><span style='color:black'><a
+    href="https://iris.paho.org/handle/10665.2/52914"><span style='color:black;
+    text-decoration:none'>https://iris.paho.org/handle/10665.2/52914</span></a></span></p>
+    <p class=txtrec><span style='color:black'>e espanhol</span></p>
+    <p class=Pbutton><img border=0 width=156 height=42
+    src="AULA%20-%206%20TESTE_DIAGNÓSTICO_arquivos/image008.png"
+    alt="Clique aqui!"></p>
+    <p class=MsoCaption><span style='color:black'><a
+    href="https://apps.who.int/iris/handle/10665/334321"><span
+    style='color:black;text-decoration:none'>https://apps.who.int/iris/handle/10665/334321</span></a></span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O <b>RT-qPCR</b> continua sendo o “padrão ouro” para a
+  detecção de diagnóstico clínico de SARS-CoV-2, sendo assim, o mais indicado
+  para o diagnóstico, mesmo após o óbito.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os <b>testes sorológicos</b>, dependendo do momento da
+  infecção e da coleta, podem não encontrar anticorpos em um caso de Covid-19
+  na ocasião da morte. Assim, de acordo com as orientações da <i>Food and Drug
+  Administration</i> (FDA) – órgão regulatório dos Estados Unidos da América – <b>os
+  testes de anticorpos não foram validados para o diagnóstico imediato de
+  COVID-19</b> de um paciente suspeito que tenha evoluído para óbito.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Após a realização dos testes de laboratório, os resultados
+  devem ser transmitidos tanto aos familiares (com apoio psicológico) como à
+  equipe de vigilância. Se o teste RT-PCR for positivo, todos os contactos
+  devem ser identificados, acompanhados ou testados, dependendo da estratégia
+  local de testagem. Um teste negativo deve descartar a morte devido à Covid-19
+  e deve ser notificado em conformidade.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 10.0pt;
+  margin-left:35.4pt;margin-right:0cm'>
+  <p class=P11Ttulonumerado style='margin-left:0cm'><a name="_Toc79533432">3.4
+  Testagem pós-vacina</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A imunidade ao vírus da Covid-19 pode se desenvolver por
+  meio de infecção ou pela vacinação. A imunidade adquirida pode ser expressa
+  como imunidade humoral, mediada por respostas de anticorpos específicos ou
+  imunidade celular, mediada por respostas de células T. A resposta imune
+  humoral produz anticorpos contra antígenos virais específicos, como a
+  proteína do nucleocapsídeo (N) e a proteína <i>spike</i> (S).</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Considerando que existem diferentes vacinas e que estas
+  induzem anticorpos para alvos específicos de proteínas virais, os resultados
+  do teste sorológico pós-vacinação serão negativos em pessoas sem histórico de
+  infecção natural prévia, caso o teste usado não possa detectar anticorpos
+  induzidos pela vacina. Por este motivo, o CDC <b>não recomenda</b> <b>os
+  testes de anticorpos para avaliar a imunidade à doença após a vacinação</b>
+  ou para avaliar a necessidade de vacinação em pessoas não vacinadas.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Estudos acerca da eficácia das vacinas contra a
+  transmissão do SARS-CoV-2 continuam em desenvolvimento. Considerando esses
+  fatores de variação da resposta imunológica dos indivíduos e mutações no
+  vírus que vêm originando variantes de preocupação por propiciarem novas
+  possibilidades do vírus se disseminar e driblar o sistema imune, algumas
+  considerações relativas à testagem de pessoas vacinadas merecem destaque.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Embora o risco de que pessoas totalmente vacinadas possam
+  ser infectadas com Covid-19 seja mais baixo, qualquer pessoa totalmente
+  vacinada que apresentar sintomas consistentes de Covid-19 deve ser testada
+  para SARS-CoV- 2 por biologia molecular ou teste de antígeno.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Atualmente o teste de anticorpos não é recomendado para
+  avaliar a imunidade ao SARS-CoV-2 após a vacinação, ou para avaliar a
+  necessidade de vacinação em uma pessoa não vacinada.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533433">Conclusão</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os ensaios sorológicos ou imunológicos detectam os
+  anticorpos produzidos pelo corpo humano em resposta às infecções. Devido à
+  produção de anticorpos levar cerca de uma a três semanas após a infecção por
+  SARS-CoV-2, esses testes podem ser úteis nos inquéritos para conhecer o
+  perfil sorológico de uma população específica. Em pessoas assintomáticas, os
+  testes de biologia molecular (RT-qPCR ou RT-LAMP) são a preferência para
+  detectar a infecção. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>A testagem em massa ou
+  triagem em unidades de saúde ajuda a identificar casos não identificados
+  previamente, para que medidas possam ser tomadas a fim de interromper cadeias
+  de transmissão.</span>O RT-qPCR é o “padrão ouro” para a detecção de
+  diagnóstico clínico de SARS-CoV-2, portanto é o mais indicado para o
+  diagnóstico após o óbito. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes póstumos de casos suspeitos de Covid-19 devem
+  ser realizados, preferencialmente, até 3 dias após a morte do doente. E em
+  casos de evolução para óbito, todos os meios possíveis devem ser envidados na
+  perspectiva de confirmação diagnóstica. Atualmente o teste de anticorpos não
+  é recomendado para avaliar a imunidade ao SARS-CoV-2 após a vacinação ou para
+  avaliar a necessidade de vacinação em uma pessoa não vacinada. Considerando
+  que existem diferentes vacinas e que estas induzem anticorpos para alvos
+  específicos de proteínas virais, os resultados do teste sorológico
+  pós-vacinação serão negativos em pessoas sem histórico de infecção natural
+  prévia, caso o teste usado não possa detectar anticorpos induzidos pela
+  vacina.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533434"><span lang=EN-US>Referencias</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CDC. <b>Interim Guidelines for COVID-19
+  Antibody Testing</b>. Centers for Disease Control and Prevention. </span>Washington,
+  DC: Mar. 17, 2021. 2021b.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CDC. <b>Interim Public Health
+  Recommendations for Fully Vaccinated People</b>. Centers for Disease Control
+  and Prevention. Washington, DC: Apr. 2, 2021, p. 5. </span>2021c.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CDC. <b>Overview of Testing for
+  SARS-CoV-2 (COVID-19)</b>.  </span>2021d. Disponível em: <a
+  href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print"><span
+  style='color:blue'>https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print</span></a>.
+  Acesso em: 15/07/2021.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>LOIBNER, M.; LANGNER, C.; REGITNIG, P.;
+  GORKIEWICZ, G.<i> et al.</i> Biosafety Requirements for Autopsies of Patients
+  with COVID-19: Example of a BSL-3 Autopsy Facility Designed for Highly
+  Pathogenic Agents. <b>Pathobiology</b>, 88, n. 1, p. 37-45, 2021.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>MORRIS, S. B.; SCHWARTZ, N. G.; PATEL,
+  P.; ABBO, L.<i> et al.</i> Case Series of Multisystem Inflammatory Syndrome
+  in Adults Associated with SARS-CoV-2 Infection - United Kingdom and United
+  States, March-August 2020. <b>MMWR Morb Mortal Wkly Rep</b>, 69, n. 40, p.
+  1450-1456, Oct 9 2020.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>BERGER, A.; NSOGA, M. T. N.;
+  PEREZ-RODRIGUEZ, F. J.; AAD, Y. A.<i> et al.</i> </span><span lang=EN-US>Diagnostic
+  accuracy of two commercial SARS-CoV-2 antigen-detecting rapid tests at the
+  point of care in community-based testing centers. <b>PLoS One</b>, 16, n. 3,
+  p. e0248921, 2021.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CARREÑO, J. M.; MENDU, D. R.; SIMON, V.;
+  SHARIFF, M. A.<i> et al.</i> Longitudinal analysis of SARS-CoV-2
+  seroprevalence using multiple serology platforms. <b>medRxiv</b>, p.
+  2021.2002.2024.21252340, 2021.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CDC. <b>COVID-19 Guidance Postmortem
+  Specimens</b>. Centers for Disease Control and Prevention, p. 13. </span>2020a.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:14.0pt;text-align:justify;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

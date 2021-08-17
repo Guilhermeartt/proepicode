@@ -1,0 +1,985 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Aula 5 - Compreendendo conceitos e aplicabilidades dos testes rápidos</title>
+
+<style id="dynCom" type="text/css"><!-- --></style>
+<script language="JavaScript"><!--
+function msoCommentShow(anchor_id, com_id)
+{
+	if(msoBrowserCheck()) 
+		{
+		c = document.all(com_id);
+		a = document.all(anchor_id);
+		if (null != c && null == c.length && null != a && null == a.length)
+			{
+			var cw = c.offsetWidth;
+			var ch = c.offsetHeight;
+			var aw = a.offsetWidth;
+			var ah = a.offsetHeight;
+			var x  = a.offsetLeft;
+			var y  = a.offsetTop;
+			var el = a;
+			while (el.tagName != "BODY") 
+				{
+				el = el.offsetParent;
+				x = x + el.offsetLeft;
+				y = y + el.offsetTop;
+				}
+			var bw = document.body.clientWidth;
+			var bh = document.body.clientHeight;
+			var bsl = document.body.scrollLeft;
+			var bst = document.body.scrollTop;
+			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
+				{ c.style.left = x + aw - ah / 2 - cw; }
+			else 
+				{ c.style.left = x + ah / 2; }
+			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
+				{ c.style.top = y + ah / 2 - ch; }
+			else 
+				{ c.style.top = y + ah / 2; }
+			c.style.visibility = "visible";
+}	}	}
+function msoCommentHide(com_id) 
+{
+	if(msoBrowserCheck())
+		{
+		c = document.all(com_id);
+		if (null != c && null == c.length)
+		{
+		c.style.visibility = "hidden";
+		c.style.left = -1000;
+		c.style.top = -1000;
+		} } 
+}
+function msoBrowserCheck()
+{
+	ms = navigator.appVersion.indexOf("MSIE");
+	vers = navigator.appVersion.substring(ms + 5, ms + 6);
+	ie4 = (ms > 0) && (parseInt(vers) >= 4);
+	return ie4;
+}
+if (msoBrowserCheck())
+{
+	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
+	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
+	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
+	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
+	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
+	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
+	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
+	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
+}
+// --></script>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Cabeçalho Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Rodapé Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Legenda\,P_Legenda";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:4.95pt;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.CabealhoChar
+	{mso-style-name:"Cabeçalho Char";
+	mso-style-link:Cabeçalho;}
+span.RodapChar
+	{mso-style-name:"Rodapé Char";
+	mso-style-link:Rodapé;}
+p.arttficha, li.arttficha, div.arttficha
+	{mso-style-name:artt_ficha;
+	mso-style-link:"artt_ficha Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+span.arttfichaChar
+	{mso-style-name:"artt_ficha Char";
+	mso-style-link:artt_ficha;
+	font-family:"Arial",sans-serif;}
+p.TtuloAula, li.TtuloAula, div.TtuloAula
+	{mso-style-name:"Título Aula";
+	mso-style-link:"Título Aula Char";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:24.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+span.TtuloAulaChar
+	{mso-style-name:"Título Aula Char";
+	mso-style-link:"Título Aula";
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.Ppargrafo, li.Ppargrafo, div.Ppargrafo
+	{mso-style-name:P_parágrafo;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpFirst, li.PpargrafoCxSpFirst, div.PpargrafoCxSpFirst
+	{mso-style-name:P_parágrafoCxSpFirst;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpMiddle, li.PpargrafoCxSpMiddle, div.PpargrafoCxSpMiddle
+	{mso-style-name:P_parágrafoCxSpMiddle;
+	mso-style-link:"P_parágrafo Char";
+	margin:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PpargrafoCxSpLast, li.PpargrafoCxSpLast, div.PpargrafoCxSpLast
+	{mso-style-name:P_parágrafoCxSpLast;
+	mso-style-link:"P_parágrafo Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PpargrafoChar
+	{mso-style-name:"P_parágrafo Char";
+	mso-style-link:P_parágrafo;
+	font-family:"Arial",sans-serif;}
+p.P1Ttulonumerado, li.P1Ttulonumerado, div.P1Ttulonumerado
+	{mso-style-name:"P_1\. Título_numerado";
+	mso-style-link:"P_1\. Título_numerado Char";
+	margin-top:30.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.P1TtulonumeradoChar
+	{mso-style-name:"P_1\. Título_numerado Char";
+	mso-style-link:"P_1\. Título_numerado";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Pimagem, li.Pimagem, div.Pimagem
+	{mso-style-name:P_imagem;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpFirst, li.PimagemCxSpFirst, div.PimagemCxSpFirst
+	{mso-style-name:P_imagemCxSpFirst;
+	mso-style-link:"P_imagem Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpMiddle, li.PimagemCxSpMiddle, div.PimagemCxSpMiddle
+	{mso-style-name:P_imagemCxSpMiddle;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.PimagemCxSpLast, li.PimagemCxSpLast, div.PimagemCxSpLast
+	{mso-style-name:P_imagemCxSpLast;
+	mso-style-link:"P_imagem Char";
+	margin:0cm;
+	text-align:center;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.PimagemChar
+	{mso-style-name:"P_imagem Char";
+	mso-style-link:P_imagem;
+	font-family:"Arial",sans-serif;}
+p.txtrec, li.txtrec, div.txtrec
+	{mso-style-name:txt_rec;
+	mso-style-link:"txt_rec Char";
+	margin-top:12.0pt;
+	margin-right:5.65pt;
+	margin-bottom:6.0pt;
+	margin-left:5.65pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.txtrecChar
+	{mso-style-name:"txt_rec Char";
+	mso-style-link:txt_rec;
+	font-family:"Arial",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 70.9pt 3.0cm;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 0cm 2.0cm 0cm;}
+div.WordSection4
+	{page:WordSection4;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><a name="_Hlk75926399"></a>&nbsp;</p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251621888;left:-46px;
+top:555px;width:331px;height:669px'><img width=331 height=114
+src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image001.png"
+alt="Aula 5 - Compreendendo conceitos e aplicabilidades dos testes rápidos"></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span><br clear=ALL>
+
+<div class=WordSection2>
+
+<p class=MsoNormal><span style='position:relative;z-index:-1895833600'><span
+style='position:absolute;left:0px;top:-490px;width:338px;height:119px'><img
+width=338 height=119
+src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image002.png"></span></span><br
+clear=all style='page-break-before:always'>
+</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha style='margin-left:0cm'><b><span style='font-size:10.0pt;
+  color:black'>Ficha Técnica</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – </span></b><span
+  style='color:black'>Marcela Santos</span></p>
+  <p class=arttficha><b><span style='color:black'>Coordenação Pedagógica – </span></b><span
+  style='color:black'>Hirla Arruda</span></p>
+  <p class=arttficha><b><span style='color:black'>Conteudista – </span></b><span
+  style='color:black'>Sarah Mendes<b> </b></span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão técnica – </span></b><span
+  style='color:black'>Veruska Maia</span></p>
+  <p class=arttficha><b><span style='color:black'>Revisão – </span></b><span
+  style='color:black'>Yorrana Martins</span></p>
+  <p class=arttficha><b><span style='color:black'>Design Instrucional</span></b><span
+  style='color:black'> – Guilherme Duarte</span></p>
+  <p class=arttficha><b><span style='color:black'>Ilustração - </span></b><span
+  style='color:black'>Guilherme Duarte</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=378 valign=top style='width:283.25pt;border:solid #D9D9D9 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Associação
+  Brasileira de Profissionais de Epidemiologia de Campo – ProEpi</span></b></p>
+  <p class=arttficha><span style='color:black'>Sara Ferraz</span></p>
+  <p class=arttficha><b><span style='color:black'>Supervisão – Sala de Situação
+  – Universidade de Brasília </span></b></p>
+  <p class=arttficha><span style='color:black'>Jonas Brant</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Copyright © 2021, Associação Brasileira de
+Profissionais de Epidemiologia de Campo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>Todos os direitos reservados.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='line-height:107%;
+font-family:"Arial",sans-serif'>A cópia total ou parcial, sem autorização
+expressa do(s) autor(es) ou com o intuito de lucro, constitui crime contra a
+propriedade intelectual, conforme estipulado na Lei nº 9.610/1998 (Lei de
+Direitos Autorais), com sanções previstas no Código Penal, artigo 184,
+parágrafos 1° ao 3°, sem prejuízo das sanções cabíveis à espécie. </span></p>
+
+</div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class=MsoTocHeading style='margin-left:0cm'>Sumário</p>
+
+<p class=MsoToc1><a
+href="#_Toc79533537">Contextualização <span style='color:windowtext;display:
+none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533538">Conceitos do teste rápido
+imunocromatográfico para pesquisa de antígeno viral <span style='color:windowtext;
+display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533539">Aplicabilidades do teste de antígeno<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533540">Testes rápidos de anticorpos<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533541">Conclusão<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc79533542"><span lang=EN-US>Referencias</span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection4>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;background:#1F4E79;padding:
+  0cm 2.0cm 0cm 3.0cm;height:1.0pt'>
+  <p class=TtuloAula>Aula 5 - Compreendendo conceitos e aplicabilidades dos
+  testes rápidos</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=604 height=339 id="Imagem 3"
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image003.png"></p>
+  <p class=MsoCaption><span class=MsoHyperlink><span lang=EN-US>Background
+  vector</span></span><span lang=EN-US> created by freepik - www.freepik.com</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=PpargrafoCxSpFirst>Olá, </p>
+  <p class=PpargrafoCxSpLast>Ao final desta aula, você compreenderá os
+  conceitos e aplicabilidade dos testes rápidos de imunocromatografia para
+  pesquisa de antígeno viral e de anticorpo para Covid-19.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533537">Contextualização </a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img width=567 height=215 id="Imagem 6"
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image004.jpg"></p>
+  <p class=MsoCaption><span class=MsoHyperlink><span style='color:windowtext;
+  text-decoration:none'>People photo</span></span> created by prostooleh -
+  www.freepik.com</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Como é do conhecimento de todos, uma das grandes
+  estratégias para o enfrentamento da pandemia de Covid-19 já empregada com
+  sucesso por alguns países, <b>é baseada na </b><a
+  href="https://pebmed.com.br/covid-19-opas-pede-a-governantes-que-aumentem-a-capacidade-de-testagem/"><b>testagem</b></a><b>
+  laboratorial em massa da população</b>. Dessa maneira, é possível
+  diagnosticar os indivíduos agudamente infectados (sintomáticos ou
+  assintomáticos), auxiliando assim, na tomada de decisão para o imediato
+  isolamento social dos pacientes e de seus contactantes diretos, a fim de
+  interromper o ciclo de transmissão da doença.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>Os antígenos virais são
+  proteínas com capacidade imunogênica que podem ser detectadas diretamente por
+  alguns ensaios laboratoriais. Notadamente durante a primeira semana do início
+  dos sintomas, esses antígenos virais do SARS-CoV-2 podem ser detectados por
+  meio da coleta de um <i>swab</i> nas secreções respiratórias dos pacientes.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os <b>testes rápidos</b> para o diagnóstico de Covid-19
+  que estão disponíveis, utilizam a metodologia de imunocromatografia. Eles são
+  rápidos e fáceis de manusear, podem ser utilizados no local de atendimento ou
+  próximo dele, sem a necessidade de infraestrutura de laboratório ou
+  equipamentos caros. Existem dois tipos de testes rápidos para SARS-CoV-2:
+  testes que detectam diretamente <b>antígenos </b>(Ag) do vírus SARS-CoV-2, e
+  testes de<b> anticorpos</b> (Ab) que detectam um ou mais tipos de anticorpos
+  produzidos pela resposta imune do hospedeiro contra o vírus.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img border=0 width=127 height=127 id="Imagem 29"
+    src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image005.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Saiba Mais!</span></b></p>
+    <p class=txtrec><span style='color:black'>Como funciona o teste
+    imunocromatográfico ou imunocromatografia?</span></p>
+    <p class=txtrec><span style='color:black'>Apesar do nome complicado, o
+    conceito é simples. O <b>teste imunocromatográfico</b> é um tipo de teste
+    rápido que identifica doenças infecciosas, hormônios e outros analitos por
+    associação específica aos anticorpos com partículas coloridas conjugadas.</span></p>
+    <p class=txtrec><span style='color:black'>O sistema é realizado em uma
+    matriz constituída de membrana de nitrocelulose ou de náilon coberta por
+    acetato transparente para facilitar a visualização do teste. O antígeno ou
+    o anticorpo é fixado na membrana na forma de linhas ou pontos e o restante
+    da membrana é bloqueado com proteína inerte como nos testes
+    imunoenzimáticos (ELISA). Para detecção de antígenos podem ser utilizados
+    anticorpos fixados na linha de captura e como conjugado um segundo anticorpo
+    conjugado ao corante. Um dos métodos imunológicos desses testes emprega
+    corante insolúvel, como ouro coloidal (róseo) ou prata coloidal (azul
+    marinho) como revelador da interação antígeno-anticorpo. A amostra aplicada
+    se liga ao conjugado colorido, e após a migração por cromatografia a
+    formação do imunocomplexo é revelada pelo depósito do corante coloidal na
+    linha de captura. Para assegurar a qualidade dos reagentes e a realização
+    adequada do procedimento, esses testes rápidos utilizam controles internos como
+    nos testes imunoenzimáticos.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533538">Conceitos do teste rápido
+  imunocromatográfico para pesquisa de antígeno</a><a> viral </a><span
+  class=MsoCommentReference><span style='font-size:11.0pt;line-height:150%'><a
+  class=msocomanchor id="_anchor_1"
+  onmouseover="msoCommentShow('_anchor_1','_com_1')"
+  onmouseout="msoCommentHide('_com_1')" href="#_msocom_1" language=JavaScript
+  name="_msoanchor_1">[1]</a>&nbsp;</span></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O teste rápido para o <b>antígeno</b> (Ag) da Covid-19 é
+  um ensaio imunocromatográfico, para detecção qualitativa do antígeno do
+  SARS-CoV-2 em amostras de <i>swab</i> da nasofaringe e orofaringe,
+  identificam a <b>presença de proteínas virais</b> que são produzidas pelo
+  vírus durante sua replicação. Essa replicação ocorre nas secreções
+  respiratórias, portanto é nessas secreções que a coleta deverá ser feita. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img border=0 width=127 height=127 id="Imagem 2"
+    src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image006.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica</span></b></p>
+    <p class=txtrec><span style='color:black'>Os ensaios laboratoriais que
+    detectam <b>diretamente partículas virais</b> (material genético/RNA ou
+    antígenos) <b>são os únicos que nos permitem identificar os pacientes na
+    fase precoce da doença</b>, auxiliando na decisão sobre o isolamento e
+    acompanhamento desses casos.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=574 height=296 id="Imagem 8"
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image007.jpg"></p>
+  <p class=MsoCaption><a
+  href="https://www.fiocruzimagens.fiocruz.br/image.php?mediaID=MTUzNzc2NGFhNjA0ZTE=&amp;type=sample&amp;folderID=NzYxNzY0YWE2MDRlMQ==&amp;seo=Testagem-para-Covid-19"><span
+  style='color:windowtext;text-decoration:none'>Testagem para Covid-19</span></a>
+  - Fiocruz Imagens</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes de antígeno geralmente têm especificidade
+  semelhante aos testes de biologia molecular, mas são menos sensíveis. Apesar
+  da sensibilidade dos diferentes testes de antígeno, em comparação com RT-qPCR
+  em amostras do trato respiratório superior (<i>swabs</i> nasofaríngeos),
+  parecer ser altamente variável, a especificidade é consistentemente relatada
+  como alta. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>É importante ressaltar que os testes rápidos apresentam
+  importantes limitações, como ausência de padronização dos kits, diferentes
+  antígenos e métodos utilizados para a detecção dos anticorpos, resultando em
+  heterogeneidade nos valores de sensibilidade e especificidade; dependendo da
+  marca comercial utilizada.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533539">Aplicabilidades do teste de
+  antígeno</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=599 height=288 id="Imagem 13"
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image008.jpg"></p>
+  <p class=MsoCaption><a href="https://www.freepik.com/photos/safety"><span
+  style='color:windowtext;text-decoration:none'>Safety photo</span></a> created
+  by freepik - www.freepik.com</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O teste rápido para<b> pesquisa de antígeno viral,</b>
+  assim como o teste molecular, é aplicável para detectar a <b>Covid-19 na fase
+  aguda</b> (infecção viral atual), tendo melhor desempenho quando as cargas
+  virais são mais altas e os pacientes são mais infecciosos - <b>normalmente 1
+  a 3 dias antes do início dos sintomas e durante os primeiros 5 a 7 dias após
+  o início dos mesmos</b> - e tornando-se na maioria das vezes, negativo após
+  este período.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A coleta de amostras se dá a partir de esfregaço <b>nasofaríngeo
+  ou nasal</b> e os resultados são liberados em aproximadamente 15 minutos. A
+  interpretação adequada dos resultados do teste de antígeno é importante para
+  o <b>manejo clínico preciso de pacientes</b> com suspeita de Covid-19, ou
+  para identificação de pessoas <b>potencialmente infectadas</b> quando usado
+  para triagem.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><span style='background:white'>Devido à sua capacidade de
+  detectar <b>diretamente partículas virais</b> (material genético/RNA ou
+  antígenos) <b>esses testes permitem identificar os pacientes na fase precoce
+  da doença</b>, auxiliando na decisão sobre o isolamento desses casos.</span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 1. Instruções para a coleta de amostra de teste
+  de antígeno</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Pimagem><img border=0 width=634 height=320
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image009.png"></p>
+  <p class=MsoCaption>Fonte: Centrlab - disponível em: &lt;<a
+  href="https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html"><span
+  style='color:windowtext;text-decoration:none'>https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html</span></a>&gt;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo><b>Figura 2. Interpretação dos resultados</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><img
+  border=0 width=603 height=156 id=image1.png
+  src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image010.png"></p>
+  <p class=MsoCaption>Fonte: Centrlab - disponível em: &lt;<a
+  href="https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html"><span
+  style='color:windowtext;text-decoration:none'>https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html</span></a>&gt;</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533540">Testes rápidos de anticorpos</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes rápidos de anticorpos para o Covid-19,
+  identificam a resposta imunológica pela verificação da presença de anticorpos
+  da classe IgG e/ou IgM que são produzidos após o contato com vírus
+  SARS-CoV-2. Atualmente, os testes rápidos <b>não </b> <b>devem ser usados
+  para identificar a viremia</b>, ou seja, período da infecção ativa por
+  SARS-CoV-2 que são os primeiros dias da infecção, pois não detectam o vírus
+  ou partículas virais. </p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>De forma geral, para ter maior sensibilidade na detecção
+  dos anticorpos, é indicado que o exame seja realizado após o 8º dia, contados
+  a partir do início dos sintomas. No entanto, as instruções dos diferentes
+  fabricantes devem ser seguidas quanto ao melhor período de realização do
+  exame, pois existem limitações e variações de sensibilidade do teste conforme
+  o tempo de doença. O exame é realizado com uma gota de sangue e o resultado
+  fica disponível entre 15 a 20 minutos após a realização, mediante instruções
+  do fabricante.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>O teste rápido de anticorpos detecta IgM e IgG (fase
+  convalescente), em amostras de sangue total, soro ou plasma. Esses testes
+  detectam a resposta imune do corpo ao vírus na forma de anticorpos e costumam
+  ser mais precisos em torno de 15 a 21 dias após a infecção.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Uma questão crucial bastante limitadora à sua utilização é
+  o fato de que, apesar de sua especificidade ser frequentemente relatada como
+  alta (&gt;99%), a sensibilidade pode variar muito entre as diferentes marcas
+  de testes rápidos comercializados, resultando num elevado número de
+  falso-negativos. Em alguns estudos encontraram-se sensibilidades que variaram
+  de 56,3% a 81,6% entre os diferentes testes rápidos de anticorpos avaliados.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>A presença de anticorpos que se ligam ao SARS-CoV-2 não
+  garante que sejam anticorpos neutralizantes ou que ofereçam imunidade
+  protetora. Fatores como exposição prévia, tempo de doença, morbidade clínica,
+  cenário epidemiológico, o tipo de teste usado e a confiabilidade do
+  resultado, devem ser considerados. Desta forma, os ensaios de detecção de
+  anticorpos de fluxo lateral (ou outros ensaios não quantitativos) não são
+  atualmente recomendados para diagnóstico agudo e manejo clínico, e seu papel
+  em investigações epidemiológicas está sendo estudado.</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div align=center>
+  <table class=tabelaneuro border=0 cellspacing=11 cellpadding=0 width="115%"
+   style='width:115.0%'>
+   <tr>
+    <td width="20%" style='width:20.0%;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec align=center style='text-align:center'><span
+    style='color:black'><img border=0 width=127 height=127 id="Imagem 32"
+    src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image011.png"></span></p>
+    </td>
+    <td width="80%" style='width:80.0%;background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=txtrec><b><span style='color:black'>Fica a Dica</span></b></p>
+    <p class=txtrec><span style='color:black'>O resultado do teste rápido, de
+    forma isolada, não pode ser usado como diagnóstico da Covid-19. Ele somente
+    pode ser utilizado para fins de triagem, auxílio diagnóstico,
+    acompanhamento imunológico e epidemiológico da doença, pois não apresenta
+    níveis de acurácia que lhe permitam ser utilizado como critério diagnóstico
+    de forma isolada.</span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533541">Conclusão</a></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=794 valign=top style='width:595.3pt;padding:0cm 2.0cm 0cm 3.0cm;
+  height:1.0pt'>
+  <p class=Ppargrafo>Os testes rápidos de detecção de antígeno vieram como uma
+  excelente alternativa para colocar em prática a testagem em massa da
+  população com resultado em tempo oportuno, auxiliando assim, na tomada de
+  decisão para o imediato isolamento social dos pacientes e de seus
+  contactantes diretos, a fim de interromper o ciclo natural de transmissão da
+  doença. O teste rápido do antígeno (Ag) da Covid-19 é um ensaio imunocromatográfico
+  para detecção qualitativa do antígeno do SARS-CoV-2 em amostras de <i>swab</i>
+  da nasofaringe e orofaringe, identificando a presença de proteínas virais que
+  são produzidas pelo vírus durante sua replicação.</p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=Ptabela border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <div style='border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt'>
+  <p class=P1Ttulonumerado><a name="_Toc79533542"><span lang=EN-US>Referencias</span></a></p>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo>BRASIL. Ministério da Saúde. secretaria de Ciência,
+  Tecnologia, Inovação e Insumos Estratégicos em Saúde. Departamento de Gestão
+  e Incorporação de Tecnologias e Inovação em Saúde. Coordenação-geral de
+  Gestão de Tecnologias em Saúde Coordenação de Monitoramento e Avaliação de
+  Tecnologias em Saúde. <b>Acurácia dos testes diagnósticos registrados na
+  ANVISA para a COVID-19.</b> Brasília – DF. maio de 2020. Disponível em: <a
+  href="https://portalarquivos2.saude.gov.br/images/pdf/2020/June/02/AcuraciaDiagnostico-COVID19-atualizacaoC.pdf"><span
+  style='color:#1155CC'>https://portalarquivos2.saude.gov.br/images/pdf/2020/June/02/AcuraciaDiagnostico-COVID19-atualizacaoC.pdf</span></a>.
+  Acesso em: 12 jun. 2021. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>WHO. <b>Diagnostic testing for
+  SARS-CoV-2: interim guidance, 11 September 2020</b>. World Health Organization.
+  Geneva: 2020. 2020c.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>WHO. <b>Laboratory testing strategy
+  recommendations for COVID-19: interim guidance, 21 March 2020</b>. World
+  Health Organization. Geneva: 2020. 2020d.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>CDC. <b>Overview of Testing for
+  SARS-CoV-2 (COVID-19)</b>.  </span>2021d. Disponível em: <a
+  href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print">https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print</a>.
+  Acesso em: 15 abr. 2021.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=EN-US>WHO. <b>COVID-19 clinical management:
+  living guidance, 25 January 2021</b>. World Health Organization. Geneva:
+  2021. 2021.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=792 valign=top style='width:593.8pt;padding:0cm 2.0cm 0cm 3.0cm'>
+  <p class=Ppargrafo><span lang=ES-CO>PERU. <b>Ministerio de Salud del Perú.
+  Entre las pruebas moleculares, de antígenos y serológicas.</b> </span>Disponível
+  em: <a
+  href="https://www.minsa.gob.pe/newsletter/2020/edicion-40/nota2/index.html"><span
+  style='color:#1155CC'>https://www.minsa.gob.pe/newsletter/2020/edicion-40/nota2/index.html</span></a>.
+  Acesso em: 12 jun. 2021</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:14.0pt;text-align:justify;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+<div>
+
+<hr class=msocomoff align=left size=1 width="33%">
+
+<div>
+
+<div id="_com_1" class=msocomtxt language=JavaScript
+onmouseover="msoCommentShow('_anchor_1','_com_1')"
+onmouseout="msoCommentHide('_com_1')"><a name="_msocom_1"></a>
+
+<p class=MsoNormal style='line-height:normal'><span style='color:black'>Inserir
+imagem de amostra do teste&nbsp;https://www.shutterstock.com/pt/image-photo/closeup-man-wearing-blue-surgical-gloves-1903319050</span></p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

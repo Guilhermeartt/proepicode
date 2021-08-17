@@ -1,0 +1,484 @@
+
+                        <!doctype html>
+                        <html>
+                        <head>
+                            <title>Aula 5 - Compreendendo conceitos e aplicabilidades dos
+  testes rápidos</title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                            <script src="https://guilhermeartt.github.io/proepicode/cursos/scripts_cursos.js"></script>	
+                        </head>
+                        <body>
+                            <div id="sidebar-nav" class="nav-sidebar nav-bar-block nav-card nav-animate-left">
+                                <button id="close-nav" class="nav-bar-item nav-button">
+                                    &times; Fechar
+                                </button>
+                            </div>
+                            <section id="main" class="proepi">
+                                <div class="nav-teal">
+                                    <div>
+                                        <button  class="nav-button nav-teal" id="open-nav">
+                                            ☰ 
+                                        </button>
+                                    </div>
+                                    <div class="nav-container">
+                                        <h3>Aula 5 - Compreendendo conceitos e aplicabilidades dos
+  testes rápidos</h3>
+                                    </div>
+                                </div>
+                                <div class="modal">
+                                    <span class="close-modal">&times;</span>
+                                    <img class="modal-content" id="img-modal">
+                                    <div id="caption"></div>
+                                </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="background:#1F4E79;padding:
+  0cm 2.0cm 0cm 3.0cm;" valign="top">
+<p class="TtuloAula">Aula 5 - Compreendendo conceitos e aplicabilidades dos
+  testes rápidos</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="339" id="Imagem 3" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image003.png" width="604"/></p>
+<p class="MsoCaption"><span class="MsoHyperlink"><span lang="EN-US">Background
+  vector</span></span><span lang="EN-US"> created by freepik - www.freepik.com</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Olá, </p>
+<p class="Ppargrafo">Ao final desta aula, você compreenderá os
+  conceitos e aplicabilidade dos testes rápidos de imunocromatografia para
+  pesquisa de antígeno viral e de anticorpo para Covid-19.</p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:collapse" width="100%">
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533537">Contextualização </a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img height="215" id="Imagem 6" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image004.jpg" width="567"/></p>
+<p class="MsoCaption"><span class="MsoHyperlink"><span style="color:windowtext;
+  text-decoration:none">People photo</span></span> created by prostooleh -
+  www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Como é do conhecimento de todos, uma das grandes
+  estratégias para o enfrentamento da pandemia de Covid-19 já empregada com
+  sucesso por alguns países, <b>é baseada na </b><a href="https://pebmed.com.br/covid-19-opas-pede-a-governantes-que-aumentem-a-capacidade-de-testagem/"><b>testagem</b></a><b>
+  laboratorial em massa da população</b>. Dessa maneira, é possível
+  diagnosticar os indivíduos agudamente infectados (sintomáticos ou
+  assintomáticos), auxiliando assim, na tomada de decisão para o imediato
+  isolamento social dos pacientes e de seus contactantes diretos, a fim de
+  interromper o ciclo de transmissão da doença.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="background:white">Os antígenos virais são
+  proteínas com capacidade imunogênica que podem ser detectadas diretamente por
+  alguns ensaios laboratoriais. Notadamente durante a primeira semana do início
+  dos sintomas, esses antígenos virais do SARS-CoV-2 podem ser detectados por
+  meio da coleta de um <i>swab</i> nas secreções respiratórias dos pacientes.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Os <b>testes rápidos</b> para o diagnóstico de Covid-19
+  que estão disponíveis, utilizam a metodologia de imunocromatografia. Eles são
+  rápidos e fáceis de manusear, podem ser utilizados no local de atendimento ou
+  próximo dele, sem a necessidade de infraestrutura de laboratório ou
+  equipamentos caros. Existem dois tipos de testes rápidos para SARS-CoV-2:
+  testes que detectam diretamente <b>antígenos </b>(Ag) do vírus SARS-CoV-2, e
+  testes de<b> anticorpos</b> (Ab) que detectam um ou mais tipos de anticorpos
+  produzidos pela resposta imune do hospedeiro contra o vírus.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width="100%"" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img border="0" height="127" id="Imagem 29" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image005.png" width="127"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span style="color:black">Saiba Mais!</span></b></p>
+<p class="txtrec"><span style="color:black">Como funciona o teste
+    imunocromatográfico ou imunocromatografia?</span></p>
+<p class="txtrec"><span style="color:black">Apesar do nome complicado, o
+    conceito é simples. O <b>teste imunocromatográfico</b> é um tipo de teste
+    rápido que identifica doenças infecciosas, hormônios e outros analitos por
+    associação específica aos anticorpos com partículas coloridas conjugadas.</span></p>
+<p class="txtrec"><span style="color:black">O sistema é realizado em uma
+    matriz constituída de membrana de nitrocelulose ou de náilon coberta por
+    acetato transparente para facilitar a visualização do teste. O antígeno ou
+    o anticorpo é fixado na membrana na forma de linhas ou pontos e o restante
+    da membrana é bloqueado com proteína inerte como nos testes
+    imunoenzimáticos (ELISA). Para detecção de antígenos podem ser utilizados
+    anticorpos fixados na linha de captura e como conjugado um segundo anticorpo
+    conjugado ao corante. Um dos métodos imunológicos desses testes emprega
+    corante insolúvel, como ouro coloidal (róseo) ou prata coloidal (azul
+    marinho) como revelador da interação antígeno-anticorpo. A amostra aplicada
+    se liga ao conjugado colorido, e após a migração por cromatografia a
+    formação do imunocomplexo é revelada pelo depósito do corante coloidal na
+    linha de captura. Para assegurar a qualidade dos reagentes e a realização
+    adequada do procedimento, esses testes rápidos utilizam controles internos como
+    nos testes imunoenzimáticos.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="MsoNormal" style="margin-bottom:0cm;line-"></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533538">Conceitos do teste rápido
+  imunocromatográfico para pesquisa de antígeno</a><a> viral </a><span class="MsoCommentReference"><span style="font-size:11.0pt;line-"><a class="msocomanchor" href="#_msocom_1" id="_anchor_1" language="JavaScript" name="_msoanchor_1" onmouseout="msoCommentHide('_com_1')" onmouseover="msoCommentShow('_anchor_1','_com_1')">[1]</a> </span></span></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">O teste rápido para o <b>antígeno</b> (Ag) da Covid-19 é
+  um ensaio imunocromatográfico, para detecção qualitativa do antígeno do
+  SARS-CoV-2 em amostras de <i>swab</i> da nasofaringe e orofaringe,
+  identificam a <b>presença de proteínas virais</b> que são produzidas pelo
+  vírus durante sua replicação. Essa replicação ocorre nas secreções
+  respiratórias, portanto é nessas secreções que a coleta deverá ser feita. </p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width="100%"" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img border="0" height="127" id="Imagem 2" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image006.png" width="127"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span style="color:black">Fica a Dica</span></b></p>
+<p class="txtrec"><span style="color:black">Os ensaios laboratoriais que
+    detectam <b>diretamente partículas virais</b> (material genético/RNA ou
+    antígenos) <b>são os únicos que nos permitem identificar os pacientes na
+    fase precoce da doença</b>, auxiliando na decisão sobre o isolamento e
+    acompanhamento desses casos.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="MsoNormal" style="margin-bottom:0cm;line-"></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="296" id="Imagem 8" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image007.jpg" width="574"/></p>
+<p class="MsoCaption"><a href="https://www.fiocruzimagens.fiocruz.br/image.php?mediaID=MTUzNzc2NGFhNjA0ZTE=&amp;type=sample&amp;folderID=NzYxNzY0YWE2MDRlMQ==&amp;seo=Testagem-para-Covid-19"><span style="color:windowtext;text-decoration:none">Testagem para Covid-19</span></a>
+  - Fiocruz Imagens</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Os testes de antígeno geralmente têm especificidade
+  semelhante aos testes de biologia molecular, mas são menos sensíveis. Apesar
+  da sensibilidade dos diferentes testes de antígeno, em comparação com RT-qPCR
+  em amostras do trato respiratório superior (<i>swabs</i> nasofaríngeos),
+  parecer ser altamente variável, a especificidade é consistentemente relatada
+  como alta. </p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">É importante ressaltar que os testes rápidos apresentam
+  importantes limitações, como ausência de padronização dos kits, diferentes
+  antígenos e métodos utilizados para a detecção dos anticorpos, resultando em
+  heterogeneidade nos valores de sensibilidade e especificidade; dependendo da
+  marca comercial utilizada.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533539">Aplicabilidades do teste de
+  antígeno</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="288" id="Imagem 13" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image008.jpg" width="599"/></p>
+<p class="MsoCaption"><a href="https://www.freepik.com/photos/safety"><span style="color:windowtext;text-decoration:none">Safety photo</span></a> created
+  by freepik - www.freepik.com</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">O teste rápido para<b> pesquisa de antígeno viral,</b>
+  assim como o teste molecular, é aplicável para detectar a <b>Covid-19 na fase
+  aguda</b> (infecção viral atual), tendo melhor desempenho quando as cargas
+  virais são mais altas e os pacientes são mais infecciosos - <b>normalmente 1
+  a 3 dias antes do início dos sintomas e durante os primeiros 5 a 7 dias após
+  o início dos mesmos</b> - e tornando-se na maioria das vezes, negativo após
+  este período.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">A coleta de amostras se dá a partir de esfregaço <b>nasofaríngeo
+  ou nasal</b> e os resultados são liberados em aproximadamente 15 minutos. A
+  interpretação adequada dos resultados do teste de antígeno é importante para
+  o <b>manejo clínico preciso de pacientes</b> com suspeita de Covid-19, ou
+  para identificação de pessoas <b>potencialmente infectadas</b> quando usado
+  para triagem.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><span style="background:white">Devido à sua capacidade de
+  detectar <b>diretamente partículas virais</b> (material genético/RNA ou
+  antígenos) <b>esses testes permitem identificar os pacientes na fase precoce
+  da doença</b>, auxiliando na decisão sobre o isolamento desses casos.</span></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b>Figura 1. Instruções para a coleta de amostra de teste
+  de antígeno</b></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Pimagem"><img border="0" height="320" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image009.png" width="634"/></p>
+<p class="MsoCaption">Fonte: Centrlab - disponível em: &lt;<a href="https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html"><span style="color:windowtext;text-decoration:none">https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html</span></a>&gt;</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo"><b>Figura 2. Interpretação dos resultados</b></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="MsoNormal" style="margin-bottom:0cm;line-"><img border="0" height="156" id="image1.png" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image010.png" width="603"/></p>
+<p class="MsoCaption">Fonte: Centrlab - disponível em: &lt;<a href="https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html"><span style="color:windowtext;text-decoration:none">https://www.centerlab.com/teste-rapido-covid-19-ag-eco.html</span></a>&gt;</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533540">Testes rápidos de anticorpos</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Os testes rápidos de anticorpos para o Covid-19,
+  identificam a resposta imunológica pela verificação da presença de anticorpos
+  da classe IgG e/ou IgM que são produzidos após o contato com vírus
+  SARS-CoV-2. Atualmente, os testes rápidos <b>não </b> <b>devem ser usados
+  para identificar a viremia</b>, ou seja, período da infecção ativa por
+  SARS-CoV-2 que são os primeiros dias da infecção, pois não detectam o vírus
+  ou partículas virais. </p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">De forma geral, para ter maior sensibilidade na detecção
+  dos anticorpos, é indicado que o exame seja realizado após o 8º dia, contados
+  a partir do início dos sintomas. No entanto, as instruções dos diferentes
+  fabricantes devem ser seguidas quanto ao melhor período de realização do
+  exame, pois existem limitações e variações de sensibilidade do teste conforme
+  o tempo de doença. O exame é realizado com uma gota de sangue e o resultado
+  fica disponível entre 15 a 20 minutos após a realização, mediante instruções
+  do fabricante.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">O teste rápido de anticorpos detecta IgM e IgG (fase
+  convalescente), em amostras de sangue total, soro ou plasma. Esses testes
+  detectam a resposta imune do corpo ao vírus na forma de anticorpos e costumam
+  ser mais precisos em torno de 15 a 21 dias após a infecção.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Uma questão crucial bastante limitadora à sua utilização é
+  o fato de que, apesar de sua especificidade ser frequentemente relatada como
+  alta (&gt;99%), a sensibilidade pode variar muito entre as diferentes marcas
+  de testes rápidos comercializados, resultando num elevado número de
+  falso-negativos. Em alguns estudos encontraram-se sensibilidades que variaram
+  de 56,3% a 81,6% entre os diferentes testes rápidos de anticorpos avaliados.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">A presença de anticorpos que se ligam ao SARS-CoV-2 não
+  garante que sejam anticorpos neutralizantes ou que ofereçam imunidade
+  protetora. Fatores como exposição prévia, tempo de doença, morbidade clínica,
+  cenário epidemiológico, o tipo de teste usado e a confiabilidade do
+  resultado, devem ser considerados. Desta forma, os ensaios de detecção de
+  anticorpos de fluxo lateral (ou outros ensaios não quantitativos) não são
+  atualmente recomendados para diagnóstico agudo e manejo clínico, e seu papel
+  em investigações epidemiológicas está sendo estudado.</p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div align="center">
+
+<div class="more"><table border="0" cellpadding="0" cellspacing="11" class="tabelaneuro" style="width="100%"" width="100%">
+<tr class="anime">
+<td style="padding:0cm 5.4pt 0cm 5.4pt" width="20%">
+<p align="center" class="txtrec" style="text-align:center"><span style="color:black"><img border="0" height="127" id="Imagem 32" src="AULA%20-%205%20TESTE_DIAGNÓSTICO_arquivos/image011.png" width="127"/></span></p>
+<div class="text"><p></p><p class="PCliqueAqui">Clique aqui</p></div></td>
+<td style="background:#F1F9F1;padding:0cm 5.4pt 0cm 5.4pt" width="80%">
+<p class="txtrec"><b><span style="color:black">Fica a Dica</span></b></p>
+<p class="txtrec"><span style="color:black">O resultado do teste rápido, de
+    forma isolada, não pode ser usado como diagnóstico da Covid-19. Ele somente
+    pode ser utilizado para fins de triagem, auxílio diagnóstico,
+    acompanhamento imunológico e epidemiológico da doença, pois não apresenta
+    níveis de acurácia que lhe permitam ser utilizado como critério diagnóstico
+    de forma isolada.</span></p>
+</td>
+</tr>
+</table></div></div>
+<p class="MsoNormal" style="margin-bottom:0cm;line-"></p>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533541">Conclusão</a></p>
+</div>
+</td>
+</tr>
+<tr class="anime" style="">
+<td style="padding:0cm 2.0cm 0cm 3.0cm;
+  " valign="top">
+<p class="Ppargrafo">Os testes rápidos de detecção de antígeno vieram como uma
+  excelente alternativa para colocar em prática a testagem em massa da
+  população com resultado em tempo oportuno, auxiliando assim, na tomada de
+  decisão para o imediato isolamento social dos pacientes e de seus
+  contactantes diretos, a fim de interromper o ciclo natural de transmissão da
+  doença. O teste rápido do antígeno (Ag) da Covid-19 é um ensaio imunocromatográfico
+  para detecção qualitativa do antígeno do SARS-CoV-2 em amostras de <i>swab</i>
+  da nasofaringe e orofaringe, identificando a presença de proteínas virais que
+  são produzidas pelo vírus durante sua replicação.</p>
+</td>
+</tr>
+</table><table border="0" cellpadding="0" cellspacing="0" class="Ptabela" style="border-collapse:
+ collapse">
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<div style="border:none;border-left:solid #1F4E79 6.0pt;padding:0cm 0cm 0cm 15.0pt">
+<p class="P1Ttulonumerado"><a name="_Toc79533542"><span lang="EN-US">Referencias</span></a></p>
+</div>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo">BRASIL. Ministério da Saúde. secretaria de Ciência,
+  Tecnologia, Inovação e Insumos Estratégicos em Saúde. Departamento de Gestão
+  e Incorporação de Tecnologias e Inovação em Saúde. Coordenação-geral de
+  Gestão de Tecnologias em Saúde Coordenação de Monitoramento e Avaliação de
+  Tecnologias em Saúde. <b>Acurácia dos testes diagnósticos registrados na
+  ANVISA para a COVID-19.</b> Brasília – DF. maio de 2020. Disponível em: <a href="https://portalarquivos2.saude.gov.br/images/pdf/2020/June/02/AcuraciaDiagnostico-COVID19-atualizacaoC.pdf"><span style="color:#1155CC">https://portalarquivos2.saude.gov.br/images/pdf/2020/June/02/AcuraciaDiagnostico-COVID19-atualizacaoC.pdf</span></a>.
+  Acesso em: 12 jun. 2021. </p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US">WHO. <b>Diagnostic testing for
+  SARS-CoV-2: interim guidance, 11 September 2020</b>. World Health Organization.
+  Geneva: 2020. 2020c.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US">WHO. <b>Laboratory testing strategy
+  recommendations for COVID-19: interim guidance, 21 March 2020</b>. World
+  Health Organization. Geneva: 2020. 2020d.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US">CDC. <b>Overview of Testing for
+  SARS-CoV-2 (COVID-19)</b>.  </span>2021d. Disponível em: <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print">https://www.cdc.gov/coronavirus/2019-ncov/hcp/testing-overview.html#print</a>.
+  Acesso em: 15 abr. 2021.</p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="EN-US">WHO. <b>COVID-19 clinical management:
+  living guidance, 25 January 2021</b>. World Health Organization. Geneva:
+  2021. 2021.</span></p>
+</td>
+</tr>
+<tr class="anime">
+<td style="padding:0cm 2.0cm 0cm 3.0cm" valign="top">
+<p class="Ppargrafo"><span lang="ES-CO">PERU. <b>Ministerio de Salud del Perú.
+  Entre las pruebas moleculares, de antígenos y serológicas.</b> </span>Disponível
+  em: <a href="https://www.minsa.gob.pe/newsletter/2020/edicion-40/nota2/index.html"><span style="color:#1155CC">https://www.minsa.gob.pe/newsletter/2020/edicion-40/nota2/index.html</span></a>.
+  Acesso em: 12 jun. 2021</p>
+</td>
+</tr>
+</table>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>	
+                            </section>
+                        </body>
+                    
