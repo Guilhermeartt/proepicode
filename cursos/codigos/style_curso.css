@@ -109,7 +109,7 @@
 	  font-family: "Arial", sans-serif;
 	}
 	ol li {
-	  list-style: none;
+	  list-style: none !important;;
 	  }
 	td li span {
 	  font-size: 16.0pt !important;
